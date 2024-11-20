@@ -1,4 +1,4 @@
-import { ArrowRight, Flame, Tool, Monitor } from "lucide-react";
+import { ArrowRight, Flame, Wrench, Monitor } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
@@ -46,7 +46,7 @@ const Hero = () => {
               <p className="text-gray-400">Configuration personnalisée selon vos besoins et votre budget</p>
             </div>
             <div className="glass-card p-6 rounded-lg">
-              <Tool className="h-8 w-8 text-forge-orange mx-auto mb-4" />
+              <Wrench className="h-8 w-8 text-forge-orange mx-auto mb-4" />
               <h3 className="text-lg font-bold mb-2">Amélioration</h3>
               <p className="text-gray-400">Optimisation de votre configuration existante</p>
             </div>

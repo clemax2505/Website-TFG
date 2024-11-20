@@ -19,6 +19,14 @@ export default {
     },
     extend: {
       colors: {
+        forge: {
+          black: "#1A1A1A",
+          dark: "#2D2D2D",
+          orange: "#FF4D00",
+          red: "#CC0000",
+          lava: "#FF6B35",
+          metal: "#4A4A4A",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -67,10 +75,15 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        lava: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-5px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        lava: "lava 3s ease-in-out infinite",
       },
     },
   },

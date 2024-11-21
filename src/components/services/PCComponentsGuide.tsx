@@ -74,7 +74,7 @@ const PCComponentsGuide = () => {
                   <p className="text-sm text-gray-400">{component.description}</p>
                   <div className="mt-2">
                     <p className="text-sm font-semibold text-forge-orange">Comment trouver l'information :</p>
-                    <p className="text-sm text-gray-400">{component.howTo}</p>
+                    <p className="text-sm text-gray-400">Appuyez simultanément sur les touche Windows + R, Entrez le code suivant : msinfo32 puis Entrée,Une fenêtre d'affichage avec les informations du système windows, consultez les éléments fabricant, produit, version de la carte de base.</p>
                   </div>
                 </div>
               </AccordionContent>

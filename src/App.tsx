@@ -8,6 +8,9 @@ import Services from "./pages/Services";
 import Portfolio from "./pages/Portfolio";
 import Quote from "./pages/Quote";
 import Contact from "./pages/Contact";
+import CustomPC from "./pages/CustomPC";
+import Upgrade from "./pages/Upgrade";
+import Maintenance from "./pages/Maintenance";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +26,9 @@ const App = () => (
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/quote" element={<Quote />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/custom-pc" element={<CustomPC />} />
+          <Route path="/upgrade" element={<Upgrade />} />
+          <Route path="/maintenance" element={<Maintenance />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

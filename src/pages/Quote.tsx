@@ -5,12 +5,18 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { useToast } from "@/components/ui/use-toast";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 
 const Quote = () => {
   const { toast } = useToast();
   const [budget, setBudget] = useState([1000]);
   const [usage, setUsage] = useState("");
   const [email, setEmail] = useState("");
+  const [os, setOs] = useState("windows10");
+  const [customOs, setCustomOs] = useState("");
+  const [additionalDetails, setAdditionalDetails] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -50,6 +56,42 @@ const Quote = () => {
                   placeholder="Ex: Gaming, Streaming, Montage vidéo..."
                   value={usage}
                   onChange={(e) => setUsage(e.target.value)}
+                />
+              </div>
+
+              <div className="space-y-4">
+                <label className="text-sm font-medium">Système d'exploitation</label>
+                <RadioGroup value={os} onValueChange={setOs} className="space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="windows10" id="windows10" />
+                    <Label htmlFor="windows10">Windows 10</Label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="windows11" id="windows11" />
+                    <Label htmlFor="windows11">Windows 11</Label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="other" id="other" />
+                    <Label htmlFor="other">Autre</Label>
+                  </div>
+                </RadioGroup>
+                {os === "other" && (
+                  <Input
+                    placeholder="Précisez votre système d'exploitation"
+                    value={customOs}
+                    onChange={(e) => setCustomOs(e.target.value)}
+                    className="mt-2"
+                  />
+                )}
+              </div>
+
+              <div className="space-y-2">
+                <label className="text-sm font-medium">Détails supplémentaires</label>
+                <Textarea
+                  placeholder="Ajoutez ici toute information complémentaire concernant votre projet..."
+                  value={additionalDetails}
+                  onChange={(e) => setAdditionalDetails(e.target.value)}
+                  className="min-h-[100px]"
                 />
               </div>
 

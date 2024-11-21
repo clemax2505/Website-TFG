@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Cpu, HardDrive, Microchip, Power, Box, Motherboard, Fan } from "lucide-react";
+import { Cpu, HardDrive, Microchip, Power, Box, CircuitBoard, Fan } from "lucide-react";
 
 const PCComponentsGuide = () => {
   const components = [
@@ -34,7 +34,7 @@ const PCComponentsGuide = () => {
       description: "Protège et ventile les composants de votre PC"
     },
     {
-      icon: <Motherboard className="w-8 h-8 text-forge-orange" />,
+      icon: <CircuitBoard className="w-8 h-8 text-forge-orange" />,
       title: "Carte Mère",
       description: "Connecte et fait communiquer tous les composants entre eux"
     },

@@ -3,6 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Monitor, Wrench, Wind, Laptop } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
 import PCComponentsGuide from "@/components/services/PCComponentsGuide";
 import PCUpgradeForm from "@/components/services/PCUpgradeForm";
 import LaptopServiceForm from "@/components/services/LaptopServiceForm";

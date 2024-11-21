@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Wind, Thermometer, Tool, Brush, Shield, Settings } from "lucide-react";
+import { Wind, Thermometer, Wrench, Brush, Shield, Settings } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -17,7 +17,7 @@ const Maintenance = () => {
       description: "Remplacement de la pâte thermique du processeur"
     },
     {
-      icon: <Tool className="w-8 h-8 text-forge-orange" />,
+      icon: <Wrench className="w-8 h-8 text-forge-orange" />,
       title: "Vérification Matérielle",
       description: "Diagnostic complet des composants"
     },

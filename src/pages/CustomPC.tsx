@@ -1,23 +1,23 @@
 import Navbar from "@/components/Navbar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Cpu, Gpu, Fan, Memory, HardDrive, Power } from "lucide-react";
+import { Microchip, HardDrive, Fan, Power } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const CustomPC = () => {
   const features = [
     {
-      icon: <Cpu className="w-8 h-8 text-forge-orange" />,
+      icon: <Microchip className="w-8 h-8 text-forge-orange" />,
       title: "Processeur sur mesure",
       description: "Sélection du meilleur CPU adapté à vos besoins spécifiques"
     },
     {
-      icon: <Gpu className="w-8 h-8 text-forge-orange" />,
+      icon: <Microchip className="w-8 h-8 text-forge-orange" />,
       title: "Carte graphique optimale",
       description: "Configuration graphique puissante pour vos jeux préférés"
     },
     {
-      icon: <Memory className="w-8 h-8 text-forge-orange" />,
+      icon: <HardDrive className="w-8 h-8 text-forge-orange" />,
       title: "Mémoire performante",
       description: "RAM haute vitesse pour un multitâche fluide"
     },

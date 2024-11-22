@@ -44,7 +44,7 @@ const PCComponentsGuide = () => {
       icon: <CircuitBoard className="w-8 h-8 text-forge-orange" />,
       title: "Carte Mère",
       description: "Connecte et fait communiquer tous les composants entre eux",
-      howTo: "Clic droit sur 'Démarrer' > 'Système' > 'À propos' > 'Informations système' > 'Résumé système' > voir 'Fabricant de la carte de base'"
+      howTo: "Appuyez simultanément sur les touche Windows + R > Entrez le code suivant : msinfo32 puis Entrée > Une fenêtre d'affichage avec les informations du système windows, consultez les éléments fabricant, produit, version de la carte de base."
     },
     {
       icon: <Fan className="w-8 h-8 text-forge-orange" />,

@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Flame } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const navItems = [
     { name: "Accueil", path: "/" },
@@ -12,6 +13,10 @@ const Navbar = () => {
     { name: "Devis", path: "/quote" },
     { name: "Contact", path: "/contact" },
   ];
+
+  const isCurrentPath = (path: string) => {
+    return location.pathname === path;
+  };
 
   return (
     <nav className="fixed top-0 w-full z-50 glass-card">
@@ -31,7 +36,11 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="text-gray-300 hover:text-forge-orange px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                    isCurrentPath(item.path)
+                      ? "text-forge-orange bg-forge-dark"
+                      : "text-gray-300 hover:text-forge-orange"
+                  }`}
                 >
                   {item.name}
                 </Link>
@@ -59,7 +68,11 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className="text-gray-300 hover:text-forge-orange block px-3 py-2 rounded-md text-base font-medium"
+                className={`block px-3 py-2 rounded-md text-base font-medium ${
+                  isCurrentPath(item.path)
+                    ? "text-forge-orange bg-forge-dark"
+                    : "text-gray-300 hover:text-forge-orange"
+                }`}
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}

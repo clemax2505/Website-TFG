@@ -18,8 +18,14 @@ const PCUpgradeForm = () => {
     });
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+    }
+  };
+
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} onKeyDown={handleKeyDown} className="space-y-4">
       <div className="space-y-2">
         <Label>Configuration actuelle</Label>
         {components.map((component) => (

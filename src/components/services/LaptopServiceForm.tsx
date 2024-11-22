@@ -14,10 +14,16 @@ const LaptopServiceForm = () => {
     });
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+    }
+  };
+
   const replacementParts = ["Stockage", "RAM", "Écran"];
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} onKeyDown={handleKeyDown} className="space-y-4">
       <div className="space-y-2">
         <Label>Services de maintenance</Label>
         <div className="space-y-2">

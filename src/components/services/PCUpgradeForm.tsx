@@ -18,25 +18,46 @@ const PCUpgradeForm = () => {
     setIsSubmitting(true);
 
     const formData = new FormData(e.target as HTMLFormElement);
+    const data = Object.fromEntries(formData.entries());
     
-    try {
-      const response = await fetch('https://formsubmit.co/clementmontagepc@gmail.com', {
-        method: 'POST',
-        body: formData
-      });
+    // Préparer les données pour l'email
+    const currentConfig = components
+      .map(comp => `${comp}: ${data[comp.toLowerCase()]}`)
+      .join('\n');
+    
+    const componentsToUpgrade = components
+      .filter(comp => data[`upgrade-${comp}`] === 'on')
+      .join(', ');
 
-      if (response.ok) {
-        toast({
-          title: "Demande d'amélioration enregistrée",
-          description: "Nous vous contacterons pour discuter des options d'amélioration.",
-        });
-      } else {
-        throw new Error('Erreur lors de l\'envoi');
-      }
+    const emailBody = `
+      Nouvelle demande d'amélioration PC
+      
+      Email client: ${data.email}
+      Budget: ${data.budget}€
+      
+      Configuration actuelle:
+      ${currentConfig}
+      
+      Composants à améliorer:
+      ${componentsToUpgrade}
+      
+      Détails supplémentaires:
+      ${data.details}
+    `;
+
+    try {
+      // Ouvrir le client email par défaut avec les informations pré-remplies
+      const mailtoLink = `mailto:clementmontagepc@gmail.com?subject=Nouvelle demande d'amélioration PC&body=${encodeURIComponent(emailBody)}`;
+      window.location.href = mailtoLink;
+
+      toast({
+        title: "Demande d'amélioration préparée",
+        description: "Votre client email va s'ouvrir avec les informations pré-remplies.",
+      });
     } catch (error) {
       toast({
         title: "Erreur",
-        description: "Une erreur est survenue lors de l'envoi de la demande.",
+        description: "Une erreur est survenue lors de la préparation de l'email.",
         variant: "destructive"
       });
     } finally {
@@ -52,9 +73,6 @@ const PCUpgradeForm = () => {
 
   return (
     <form onSubmit={handleSubmit} onKeyDown={handleKeyDown} className="space-y-4">
-      <input type="hidden" name="_subject" value="Nouvelle demande d'amélioration PC" />
-      <input type="hidden" name="_template" value="table" />
-      
       <div className="space-y-2">
         <Label>Configuration actuelle</Label>
         {components.map((component) => (
@@ -107,7 +125,7 @@ const PCUpgradeForm = () => {
         className="w-full bg-forge-orange hover:bg-forge-red"
         disabled={isSubmitting}
       >
-        {isSubmitting ? "Envoi en cours..." : "Demander un devis"}
+        {isSubmitting ? "Préparation..." : "Demander un devis"}
       </Button>
     </form>
   );

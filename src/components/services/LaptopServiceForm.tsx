@@ -14,25 +14,38 @@ const LaptopServiceForm = () => {
     setIsSubmitting(true);
 
     const formData = new FormData(e.target as HTMLFormElement);
+    const data = Object.fromEntries(formData.entries());
     
-    try {
-      const response = await fetch('https://formsubmit.co/clementmontagepc@gmail.com', {
-        method: 'POST',
-        body: formData
-      });
+    // Préparer les données pour l'email
+    const maintenanceServices = ['Changement de pâte thermique', 'Dépoussiérage']
+      .filter(service => data[`service-${service}`] === 'on')
+      .join(', ');
+    
+    const replacementParts = ['Stockage', 'RAM', 'Écran']
+      .filter(part => data[`part-${part}`] === 'on')
+      .join(', ');
 
-      if (response.ok) {
-        toast({
-          title: "Demande de service laptop enregistrée",
-          description: "Nous vous contacterons pour évaluer les besoins de votre portable.",
-        });
-      } else {
-        throw new Error('Erreur lors de l\'envoi');
-      }
+    const emailBody = `
+      Nouvelle demande de service laptop
+      
+      Email client: ${data.email}
+      Services de maintenance demandés: ${maintenanceServices}
+      Pièces à remplacer: ${replacementParts}
+    `;
+
+    try {
+      // Ouvrir le client email par défaut avec les informations pré-remplies
+      const mailtoLink = `mailto:clementmontagepc@gmail.com?subject=Nouvelle demande de service laptop&body=${encodeURIComponent(emailBody)}`;
+      window.location.href = mailtoLink;
+
+      toast({
+        title: "Demande de service laptop préparée",
+        description: "Votre client email va s'ouvrir avec les informations pré-remplies.",
+      });
     } catch (error) {
       toast({
         title: "Erreur",
-        description: "Une erreur est survenue lors de l'envoi de la demande.",
+        description: "Une erreur est survenue lors de la préparation de l'email.",
         variant: "destructive"
       });
     } finally {
@@ -50,9 +63,6 @@ const LaptopServiceForm = () => {
 
   return (
     <form onSubmit={handleSubmit} onKeyDown={handleKeyDown} className="space-y-4">
-      <input type="hidden" name="_subject" value="Nouvelle demande de service laptop" />
-      <input type="hidden" name="_template" value="table" />
-      
       <div className="space-y-2">
         <Label>Services de maintenance</Label>
         <div className="space-y-2">
@@ -89,7 +99,7 @@ const LaptopServiceForm = () => {
         className="w-full bg-forge-orange hover:bg-forge-red"
         disabled={isSubmitting}
       >
-        {isSubmitting ? "Envoi en cours..." : "Demander un devis"}
+        {isSubmitting ? "Préparation..." : "Demander un devis"}
       </Button>
     </form>
   );

@@ -14,11 +14,11 @@ const Hero = () => {
       </div>
 
       <div className="relative z-10 container mx-auto px-4">
-        <div className="text-center">
+        <div className="text-center -mt-32">
           <div className="flex items-center justify-center mb-6">
             <Flame className="h-12 w-12 text-forge-orange animate-lava" />
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-forge-orange to-forge-red">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-forge-orange to-forge-red">
             Forgez Votre PC Gaming Idéal
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -26,9 +26,9 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-12">
-            <Link to="/quote" className="w-full md:w-auto">
+            <Link to="/custom-pc" className="w-full md:w-auto">
               <button className="w-full md:w-auto px-8 py-4 bg-forge-orange hover:bg-forge-red text-white rounded-lg font-bold flex items-center justify-center gap-2 transition-colors">
-                Obtenir un devis
+                PC Sur Mesure
                 <ArrowRight className="h-5 w-5" />
               </button>
             </Link>

@@ -1,11 +1,15 @@
 import Navbar from "@/components/Navbar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Wind, Thermometer, Wrench, Brush, Shield, Settings } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Wind, Thermometer, Brush, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/components/ui/use-toast";
 
 const Maintenance = () => {
+  const { toast } = useToast();
   const services = [
     {
       icon: <Wind className="w-8 h-8 text-forge-orange" />,
@@ -16,16 +20,6 @@ const Maintenance = () => {
       icon: <Thermometer className="w-8 h-8 text-forge-orange" />,
       title: "Pâte Thermique",
       description: "Remplacement de la pâte thermique du processeur"
-    },
-    {
-      icon: <Wrench className="w-8 h-8 text-forge-orange" />,
-      title: "Vérification Matérielle",
-      description: "Diagnostic complet des composants"
-    },
-    {
-      icon: <Settings className="w-8 h-8 text-forge-orange" />,
-      title: "Optimisation Système",
-      description: "Configuration optimale de Windows"
     },
     {
       icon: <Shield className="w-8 h-8 text-forge-orange" />,
@@ -39,16 +33,24 @@ const Maintenance = () => {
     }
   ];
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    toast({
+      title: "Demande de maintenance enregistrée",
+      description: "Nous vous contacterons pour planifier l'intervention.",
+    });
+  };
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="container mx-auto px-4 py-24">
+      <main className="container mx-auto px-4 py-24 flex-grow">
         <h1 className="text-4xl font-bold text-center mb-8">Maintenance PC</h1>
         <p className="text-xl text-gray-400 text-center mb-12 max-w-2xl mx-auto">
           Gardez votre PC gaming en parfait état avec notre service de maintenance professionnelle
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
           {services.map((service, index) => (
             <Card key={index} className="glass-card hover:scale-105 transition-transform duration-300">
               <CardHeader>
@@ -62,13 +64,26 @@ const Maintenance = () => {
           ))}
         </div>
 
-        <div className="text-center">
-          <Link to="/quote">
-            <Button className="bg-forge-orange hover:bg-forge-red text-white px-8 py-6 text-lg">
-              Réserver une maintenance
-            </Button>
-          </Link>
-        </div>
+        <Card className="glass-card max-w-2xl mx-auto">
+          <CardHeader>
+            <CardTitle>Demande de maintenance</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="space-y-2">
+                <Label>Description de votre configuration actuelle</Label>
+                <Textarea placeholder="Décrivez votre configuration actuelle..." />
+              </div>
+              <div className="space-y-2">
+                <Label>Problèmes rencontrés</Label>
+                <Textarea placeholder="Décrivez les problèmes que vous rencontrez..." />
+              </div>
+              <Button type="submit" className="w-full bg-forge-orange hover:bg-forge-red">
+                Demander une maintenance
+              </Button>
+            </form>
+          </CardContent>
+        </Card>
       </main>
       <Footer />
     </div>

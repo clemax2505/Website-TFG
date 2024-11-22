@@ -17,7 +17,7 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center -mt-48">
           <div className="flex items-center justify-center mb-6">
-            <Logo className="h-24 w-24 text-forge-orange animate-lava" />
+            <Logo className="h-32 w-32 text-forge-orange animate-lava" />
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-forge-orange to-forge-red leading-relaxed">
             Forgez Votre PC Gaming Idéal<br></br><br></br><br></br>
@@ -52,7 +52,7 @@ const Hero = () => {
               <p className="text-gray-400">Optimisation de votre configuration existante</p>
             </Link>
             <Link to="/maintenance" className="glass-card p-6 rounded-lg hover:scale-105 transition-transform duration-300">
-              <Logo className="h-8 w-8 text-forge-orange mx-auto mb-4" />
+              <Logo className="h-12 w-12 text-forge-orange mx-auto mb-4" />
               <h3 className="text-lg font-bold mb-2">Maintenance</h3>
               <p className="text-gray-400">Nettoyage et entretien professionnel de votre machine</p>
             </Link>

@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <Logo />
+              <Logo className="h-12 w-12" />
               <span className="text-xl font-bold text-white">The Gaming Forge</span>
             </Link>
           </div>

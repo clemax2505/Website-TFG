@@ -14,7 +14,7 @@ const Hero = () => {
       </div>
 
       <div className="relative z-10 container mx-auto px-4">
-        <div className="text-center -mt-32">
+        <div className="text-center -mt-48">
           <div className="flex items-center justify-center mb-6">
             <Flame className="h-12 w-12 text-forge-orange animate-lava" />
           </div>

@@ -9,7 +9,6 @@ import { useToast } from "@/components/ui/use-toast";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import emailjs from '@emailjs/browser';
 
 const Quote = () => {
   const { toast } = useToast();
@@ -21,39 +20,62 @@ const Quote = () => {
   const [additionalDetails, setAdditionalDetails] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const components = [
+    "CPU", "GPU", "RAM", "Stockage", "Alimentation", "Boîtier", "Carte Mère", "Refroidissement CPU"
+  ];
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    try {
-      const templateParams = {
-        to_email: 'clementmontagepc@gmail.com',
-        from_email: email,
-        budget: budget[0],
-        usage,
-        os: os === 'other' ? customOs : os,
-        additional_details: additionalDetails
-      };
+    const formData = new FormData(e.target as HTMLFormElement);
+    const data = Object.fromEntries(formData.entries());
+    
+    // Préparer les données pour l'email
+    const currentConfig = components
+      .map(comp => `${comp}: ${data[comp.toLowerCase()]}`)
+      .join('\n');
 
-      await emailjs.send(
-        'service_2qvzwzp', // Service ID from EmailJS
-        'template_devis', // Template ID from EmailJS
-        templateParams,
-        'Votre_Public_Key' // Public Key from EmailJS
-      );
+    const emailBody = `
+      Nouvelle demande de PC sur mesure
+      
+      Email client: ${email}
+      Budget: ${budget[0]}€
+      
+      Configuration actuelle:
+      ${currentConfig}
+      
+      Système d'exploitation: ${os === 'other' ? customOs : os}
+      
+      Usage principal: ${usage}
+      
+      Détails supplémentaires:
+      ${additionalDetails}
+    `;
+
+    try {
+      // Ouvrir le client email par défaut avec les informations pré-remplies
+      const mailtoLink = `mailto:clementmontagepc@gmail.com?subject=Nouvelle demande de PC sur mesure&body=${encodeURIComponent(emailBody)}`;
+      window.location.href = mailtoLink;
 
       toast({
-        title: "Devis envoyé !",
-        description: "Nous vous contacterons rapidement pour discuter de votre projet de PC gaming sur mesure.",
+        title: "Demande préparée",
+        description: "Votre client email va s'ouvrir avec les informations pré-remplies.",
       });
     } catch (error) {
       toast({
         title: "Erreur",
-        description: "Une erreur est survenue lors de l'envoi du devis. Veuillez réessayer.",
+        description: "Une erreur est survenue lors de la préparation de l'email.",
         variant: "destructive"
       });
     } finally {
       setIsSubmitting(false);
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
     }
   };
 
@@ -67,9 +89,20 @@ const Quote = () => {
             <CardTitle className="text-2xl text-center">Configurez votre projet</CardTitle>
           </CardHeader>
           <CardContent>
-            <form onSubmit={handleSubmit} className="space-y-8">
+            <form onSubmit={handleSubmit} onKeyDown={handleKeyDown} className="space-y-8">
               <div className="space-y-2">
-                <label className="text-sm font-medium">Budget approximatif (€)</label>
+                <Label>Configuration actuelle</Label>
+                {components.map((component) => (
+                  <Input
+                    key={component}
+                    name={component.toLowerCase()}
+                    placeholder={component}
+                    className="mb-2"
+                  />
+                ))}
+              </div>
+              <div className="space-y-2">
+                <Label>Budget approximatif (€)</Label>
                 <Slider
                   value={budget}
                   onValueChange={setBudget}
@@ -80,9 +113,8 @@ const Quote = () => {
                 />
                 <p className="text-right text-forge-orange font-semibold">{budget[0]}€</p>
               </div>
-
               <div className="space-y-2">
-                <label className="text-sm font-medium">Usage principal</label>
+                <Label>Usage principal</Label>
                 <Input
                   placeholder="Ex: Gaming, Streaming, Montage vidéo..."
                   value={usage}
@@ -90,9 +122,8 @@ const Quote = () => {
                   required
                 />
               </div>
-
               <div className="space-y-4">
-                <label className="text-sm font-medium">Système d'exploitation</label>
+                <Label>Système d'exploitation</Label>
                 <RadioGroup value={os} onValueChange={setOs} className="space-y-2">
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="windows10" id="windows10" />
@@ -117,34 +148,31 @@ const Quote = () => {
                   />
                 )}
               </div>
-
               <div className="space-y-2">
-                <label className="text-sm font-medium">Détails supplémentaires</label>
-                <Textarea 
-                  placeholder="Ajoutez ici toute information complémentaire concernant votre projet..."
-                  value={additionalDetails}
-                  onChange={(e) => setAdditionalDetails(e.target.value)}
-                  className="min-h-[100px]"
-                />
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-sm font-medium">Email</label>
+                <Label>Email</Label>
                 <Input
                   type="email"
-                  placeholder="votre@email.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  placeholder="votre@email.com"
                   required
                 />
               </div>
-
+              <div className="space-y-2">
+                <Label>Détails supplémentaires</Label>
+                <Textarea 
+                  value={additionalDetails}
+                  onChange={(e) => setAdditionalDetails(e.target.value)}
+                  placeholder="Ajoutez ici toute information complémentaire concernant votre projet..."
+                  className="min-h-[100px]"
+                />
+              </div>
               <Button 
                 type="submit" 
                 className="w-full bg-forge-orange hover:bg-forge-red"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? "Envoi en cours..." : "Obtenir mon devis"}
+                {isSubmitting ? "Préparation..." : "Demander un devis"}
               </Button>
             </form>
           </CardContent>

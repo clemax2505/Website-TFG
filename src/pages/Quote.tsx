@@ -22,7 +22,7 @@ const Quote = () => {
     e.preventDefault();
     toast({
       title: "Devis envoyé !",
-      description: "Nous vous contacterons rapidement pour discuter de votre projet.",
+      description: "Nous vous contacterons rapidement pour discuter de votre projet de PC gaming sur mesure.",
     });
   };
 
@@ -30,7 +30,7 @@ const Quote = () => {
     <div className="min-h-screen">
       <Navbar />
       <main className="container mx-auto px-4 py-24">
-        <h1 className="text-4xl font-bold text-center mb-12">Demande de Devis</h1>
+        <h1 className="text-4xl font-bold text-center mb-12">Devis PC Gaming Sur Mesure</h1>
         <Card className="glass-card max-w-2xl mx-auto">
           <CardHeader>
             <CardTitle className="text-2xl text-center">Configurez votre projet</CardTitle>
@@ -112,6 +112,7 @@ const Quote = () => {
           </CardContent>
         </Card>
       </main>
+      <Footer />
     </div>
   );
 };

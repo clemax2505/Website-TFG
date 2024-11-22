@@ -38,23 +38,23 @@ const Hero = () => {
               </button>
             </Link>
           </div>
-
+          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="glass-card p-6 rounded-lg">
+            <Link to="/custom-pc" className="glass-card p-6 rounded-lg hover:scale-105 transition-transform duration-300">
               <Monitor className="h-8 w-8 text-forge-orange mx-auto mb-4" />
               <h3 className="text-lg font-bold mb-2">PC Sur Mesure</h3>
               <p className="text-gray-400">Configuration personnalisée selon vos besoins et votre budget</p>
-            </div>
-            <div className="glass-card p-6 rounded-lg">
+            </Link>
+            <Link to="/upgrade" className="glass-card p-6 rounded-lg hover:scale-105 transition-transform duration-300">
               <Wrench className="h-8 w-8 text-forge-orange mx-auto mb-4" />
               <h3 className="text-lg font-bold mb-2">Amélioration</h3>
               <p className="text-gray-400">Optimisation de votre configuration existante</p>
-            </div>
-            <div className="glass-card p-6 rounded-lg">
+            </Link>
+            <Link to="/maintenance" className="glass-card p-6 rounded-lg hover:scale-105 transition-transform duration-300">
               <Flame className="h-8 w-8 text-forge-orange mx-auto mb-4" />
               <h3 className="text-lg font-bold mb-2">Maintenance</h3>
               <p className="text-gray-400">Nettoyage et entretien professionnel de votre machine</p>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

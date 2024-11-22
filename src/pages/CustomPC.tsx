@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Microchip, HardDrive, Fan, Power } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import Footer from "@/components/Footer";
 
 const CustomPC = () => {
   const features = [
@@ -69,6 +70,7 @@ const CustomPC = () => {
           </Link>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

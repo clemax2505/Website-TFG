@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Wind, Thermometer, Wrench, Brush, Shield, Settings } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import Footer from "@/components/Footer";
 
 const Maintenance = () => {
   const services = [
@@ -69,6 +70,7 @@ const Maintenance = () => {
           </Link>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

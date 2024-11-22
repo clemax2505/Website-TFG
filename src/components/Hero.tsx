@@ -18,7 +18,7 @@ const Hero = () => {
           <div className="flex items-center justify-center mb-6">
             <Flame className="h-12 w-12 text-forge-orange animate-lava" />
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-forge-orange to-forge-red">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-forge-orange to-forge-red leading-relaxed">
             Forgez Votre PC Gaming Idéal
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">

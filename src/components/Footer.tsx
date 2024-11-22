@@ -26,7 +26,6 @@ const Footer = () => {
             <h3 className="text-forge-orange font-bold mb-4">Liens Utiles</h3>
             <ul className="space-y-2">
               <li><Link to="/contact" className="text-gray-400 hover:text-forge-orange">Contact</Link></li>
-              <li><Link to="/quote" className="text-gray-400 hover:text-forge-orange">Devis</Link></li>
               <li><Link to="/services" className="text-gray-400 hover:text-forge-orange">Services</Link></li>
             </ul>
           </div>

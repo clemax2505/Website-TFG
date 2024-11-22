@@ -4,8 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
+import { Wrench, Shield, Settings } from "lucide-react";
 
 const Maintenance = () => {
   const { toast } = useToast();
@@ -26,6 +26,50 @@ const Maintenance = () => {
         <p className="text-xl text-gray-400 text-center mb-12 max-w-2xl mx-auto">
           Gardez votre PC gaming en parfait état avec notre service de maintenance professionnelle
         </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <Card className="glass-card">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Wrench className="w-6 h-6 text-forge-orange" />
+                Nettoyage Matériel
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-gray-400">
+                Nettoyage complet de votre PC pour optimiser ses performances et sa durée de vie
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="glass-card">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Shield className="w-6 h-6 text-forge-orange" />
+                Diagnostic Complet
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-gray-400">
+                Analyse approfondie de l'état de vos composants et de leurs performances
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="glass-card">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Settings className="w-6 h-6 text-forge-orange" />
+                Solutions Personnalisées
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-gray-400">
+                Recommandations et interventions adaptées aux besoins spécifiques de votre configuration
+              </p>
+            </CardContent>
+          </Card>
+        </div>
 
         <Card className="glass-card max-w-2xl mx-auto">
           <CardHeader>

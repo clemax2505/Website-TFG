@@ -9,6 +9,7 @@ import { useToast } from "@/components/ui/use-toast";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import emailjs from '@emailjs/browser';
 
 const Quote = () => {
   const { toast } = useToast();
@@ -18,13 +19,42 @@ const Quote = () => {
   const [os, setOs] = useState("windows10");
   const [customOs, setCustomOs] = useState("");
   const [additionalDetails, setAdditionalDetails] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Devis envoyé !",
-      description: "Nous vous contacterons rapidement pour discuter de votre projet de PC gaming sur mesure.",
-    });
+    setIsSubmitting(true);
+
+    try {
+      const templateParams = {
+        to_email: 'clementmontagepc@gmail.com',
+        from_email: email,
+        budget: budget[0],
+        usage,
+        os: os === 'other' ? customOs : os,
+        additional_details: additionalDetails
+      };
+
+      await emailjs.send(
+        'service_2qvzwzp', // Service ID from EmailJS
+        'template_devis', // Template ID from EmailJS
+        templateParams,
+        'Votre_Public_Key' // Public Key from EmailJS
+      );
+
+      toast({
+        title: "Devis envoyé !",
+        description: "Nous vous contacterons rapidement pour discuter de votre projet de PC gaming sur mesure.",
+      });
+    } catch (error) {
+      toast({
+        title: "Erreur",
+        description: "Une erreur est survenue lors de l'envoi du devis. Veuillez réessayer.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -57,6 +87,7 @@ const Quote = () => {
                   placeholder="Ex: Gaming, Streaming, Montage vidéo..."
                   value={usage}
                   onChange={(e) => setUsage(e.target.value)}
+                  required
                 />
               </div>
 
@@ -82,13 +113,14 @@ const Quote = () => {
                     value={customOs}
                     onChange={(e) => setCustomOs(e.target.value)}
                     className="mt-2"
+                    required
                   />
                 )}
               </div>
 
               <div className="space-y-2">
                 <label className="text-sm font-medium">Détails supplémentaires</label>
-                <Textarea
+                <Textarea 
                   placeholder="Ajoutez ici toute information complémentaire concernant votre projet..."
                   value={additionalDetails}
                   onChange={(e) => setAdditionalDetails(e.target.value)}
@@ -103,11 +135,16 @@ const Quote = () => {
                   placeholder="votre@email.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  required
                 />
               </div>
 
-              <Button type="submit" className="w-full">
-                Obtenir mon devis
+              <Button 
+                type="submit" 
+                className="w-full bg-forge-orange hover:bg-forge-red"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Envoi en cours..." : "Obtenir mon devis"}
               </Button>
             </form>
           </CardContent>

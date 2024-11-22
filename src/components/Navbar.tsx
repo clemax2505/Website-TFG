@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Flame } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import Logo from "./Logo";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +24,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <Flame className="h-8 w-8 text-forge-orange" />
+              <Logo />
               <span className="text-xl font-bold text-white">The Gaming Forge</span>
             </Link>
           </div>

@@ -24,7 +24,7 @@ const PCUpgradeForm = () => {
     try {
       await emailjs.send(
         'service_2qvzwzp',
-        'template_upgrade',
+        'template_83mj8a6',
         {
           to_email: 'clementmontagepc@gmail.com',
           from_email: data.email,

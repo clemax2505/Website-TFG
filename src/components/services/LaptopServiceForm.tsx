@@ -20,7 +20,7 @@ const LaptopServiceForm = () => {
     try {
       await emailjs.send(
         'service_2qvzwzp',
-        'template_laptop',
+        'template_83mj8a6',
         {
           to_email: 'clementmontagepc@gmail.com',
           from_email: data.email,

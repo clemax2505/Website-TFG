@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -16,9 +16,9 @@ const Footer = () => {
           <div>
             <h3 className="text-forge-orange font-bold mb-4">Contact</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>contact@gamingforge.fr</li>
+              <li>clementmontagepc@gmail.com</li>
               <li>01 23 45 67 89</li>
-              <li>123 rue du Gaming, Paris</li>
+              <li>Champagne Au Mont D'Or, Rhônes</li>
             </ul>
           </div>
           
@@ -37,11 +37,8 @@ const Footer = () => {
               <a href="#" className="text-gray-400 hover:text-forge-orange">
                 <Facebook className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-forge-orange">
+              <a href="https://www.instagram.com/the_gaming_forge/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-forge-orange">
                 <Instagram className="w-6 h-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-forge-orange">
-                <Twitter className="w-6 h-6" />
               </a>
             </div>
             <p className="mt-4 text-sm text-gray-400">

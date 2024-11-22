@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 
 const PCUpgradeForm = () => {
@@ -53,6 +54,13 @@ const PCUpgradeForm = () => {
             </div>
           ))}
         </div>
+      </div>
+      <div className="space-y-2">
+        <Label>Détails supplémentaires</Label>
+        <Textarea 
+          placeholder="Ajoutez ici toute information complémentaire concernant votre projet..."
+          className="min-h-[100px]"
+        />
       </div>
       <Button type="submit" className="w-full bg-forge-orange hover:bg-forge-red">
         Demander un devis

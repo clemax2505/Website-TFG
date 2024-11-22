@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Star } from "lucide-react";
 
@@ -37,9 +38,9 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="container mx-auto px-4 py-24">
+      <main className="container mx-auto px-4 py-24 flex-grow">
         <h1 className="text-4xl font-bold text-center mb-12">Nos Réalisations</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
@@ -68,6 +69,7 @@ const Portfolio = () => {
           ))}
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

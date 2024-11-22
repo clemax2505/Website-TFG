@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -18,7 +19,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="container mx-auto px-4 py-24">
         <h1 className="text-4xl font-bold text-center mb-12">Contactez-nous</h1>
@@ -91,6 +92,7 @@ const Contact = () => {
           </Card>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

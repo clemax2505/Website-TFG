@@ -4,7 +4,6 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
-import emailjs from '@emailjs/browser';
 import { useState } from "react";
 
 const PCUpgradeForm = () => {
@@ -19,29 +18,21 @@ const PCUpgradeForm = () => {
     setIsSubmitting(true);
 
     const formData = new FormData(e.target as HTMLFormElement);
-    const data = Object.fromEntries(formData.entries());
     
     try {
-      await emailjs.send(
-        'service_2qvzwzp',
-        'template_83mj8a6',
-        {
-          to_email: 'clementmontagepc@gmail.com',
-          from_email: data.email,
-          current_config: components.map(comp => `${comp}: ${data[comp.toLowerCase()]}`).join('\n'),
-          budget: data.budget,
-          components_to_upgrade: components
-            .filter(comp => (data[`upgrade-${comp}`] === 'on'))
-            .join(', '),
-          additional_details: data.details
-        },
-        'Votre_Public_Key'
-      );
-
-      toast({
-        title: "Demande d'amélioration enregistrée",
-        description: "Nous vous contacterons pour discuter des options d'amélioration.",
+      const response = await fetch('https://formsubmit.co/clementmontagepc@gmail.com', {
+        method: 'POST',
+        body: formData
       });
+
+      if (response.ok) {
+        toast({
+          title: "Demande d'amélioration enregistrée",
+          description: "Nous vous contacterons pour discuter des options d'amélioration.",
+        });
+      } else {
+        throw new Error('Erreur lors de l\'envoi');
+      }
     } catch (error) {
       toast({
         title: "Erreur",
@@ -61,6 +52,9 @@ const PCUpgradeForm = () => {
 
   return (
     <form onSubmit={handleSubmit} onKeyDown={handleKeyDown} className="space-y-4">
+      <input type="hidden" name="_subject" value="Nouvelle demande d'amélioration PC" />
+      <input type="hidden" name="_template" value="table" />
+      
       <div className="space-y-2">
         <Label>Configuration actuelle</Label>
         {components.map((component) => (

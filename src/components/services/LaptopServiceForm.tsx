@@ -3,7 +3,6 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
-import emailjs from '@emailjs/browser';
 import { useState } from "react";
 
 const LaptopServiceForm = () => {
@@ -15,29 +14,21 @@ const LaptopServiceForm = () => {
     setIsSubmitting(true);
 
     const formData = new FormData(e.target as HTMLFormElement);
-    const data = Object.fromEntries(formData.entries());
     
     try {
-      await emailjs.send(
-        'service_2qvzwzp',
-        'template_83mj8a6',
-        {
-          to_email: 'clementmontagepc@gmail.com',
-          from_email: data.email,
-          maintenance_services: ['Changement de pâte thermique', 'Dépoussiérage']
-            .filter(service => data[`service-${service}`] === 'on')
-            .join(', '),
-          replacement_parts: ['Stockage', 'RAM', 'Écran']
-            .filter(part => data[`part-${part}`] === 'on')
-            .join(', ')
-        },
-        'Votre_Public_Key'
-      );
-
-      toast({
-        title: "Demande de service laptop enregistrée",
-        description: "Nous vous contacterons pour évaluer les besoins de votre portable.",
+      const response = await fetch('https://formsubmit.co/clementmontagepc@gmail.com', {
+        method: 'POST',
+        body: formData
       });
+
+      if (response.ok) {
+        toast({
+          title: "Demande de service laptop enregistrée",
+          description: "Nous vous contacterons pour évaluer les besoins de votre portable.",
+        });
+      } else {
+        throw new Error('Erreur lors de l\'envoi');
+      }
     } catch (error) {
       toast({
         title: "Erreur",
@@ -59,6 +50,9 @@ const LaptopServiceForm = () => {
 
   return (
     <form onSubmit={handleSubmit} onKeyDown={handleKeyDown} className="space-y-4">
+      <input type="hidden" name="_subject" value="Nouvelle demande de service laptop" />
+      <input type="hidden" name="_template" value="table" />
+      
       <div className="space-y-2">
         <Label>Services de maintenance</Label>
         <div className="space-y-2">

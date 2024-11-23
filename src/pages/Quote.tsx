@@ -18,6 +18,7 @@ const Quote = () => {
   const [os, setOs] = useState("windows10");
   const [customOs, setCustomOs] = useState("");
   const [additionalDetails, setAdditionalDetails] = useState("");
+  const [preference, setPreference] = useState("nvidia-intel");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -31,12 +32,12 @@ const Quote = () => {
         Budget: ${budget[0]}€
         Usage principal: ${usage}
         Système d'exploitation: ${os === 'other' ? customOs : os}
+        Préférence GPU/CPU: ${preference}
         
         Détails supplémentaires:
         ${additionalDetails}
       `;
 
-      // Ouvrir le client email par défaut avec les informations pré-remplies
       const mailtoLink = `mailto:clementmontagepc@gmail.com?subject=Nouvelle demande de devis PC Gaming Sur Mesure&body=${encodeURIComponent(emailBody)}`;
       window.location.href = mailtoLink;
 
@@ -87,6 +88,36 @@ const Quote = () => {
                   onChange={(e) => setUsage(e.target.value)}
                   required
                 />
+              </div>
+
+              <div className="space-y-4">
+                <label className="text-sm font-medium">Préférence GPU/CPU</label>
+                <RadioGroup value={preference} onValueChange={setPreference} className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="nvidia-intel" id="nvidia-intel" />
+                    <Label htmlFor="nvidia-intel">Nvidia + Intel</Label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="nvidia-amd" id="nvidia-amd" />
+                    <Label htmlFor="nvidia-amd">Nvidia + AMD</Label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="amd-intel" id="amd-intel" />
+                    <Label htmlFor="amd-intel">AMD + Intel</Label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="amd-amd" id="amd-amd" />
+                    <Label htmlFor="amd-amd">AMD + AMD</Label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="intel-intel" id="intel-intel" />
+                    <Label htmlFor="intel-intel">Intel + Intel</Label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="intel-amd" id="intel-amd" />
+                    <Label htmlFor="intel-amd">Intel + AMD</Label>
+                  </div>
+                </RadioGroup>
               </div>
 
               <div className="space-y-4">

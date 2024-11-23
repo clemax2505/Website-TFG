@@ -9,7 +9,6 @@ import { useToast } from "@/components/ui/use-toast";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import emailjs from '@emailjs/browser';
 
 const Quote = () => {
   const { toast } = useToast();
@@ -26,30 +25,29 @@ const Quote = () => {
     setIsSubmitting(true);
 
     try {
-      const templateParams = {
-        to_email: 'clementmontagepc@gmail.com',
-        from_email: email,
-        budget: budget[0],
-        usage,
-        os: os === 'other' ? customOs : os,
-        additional_details: additionalDetails
-      };
+      const emailBody = `
+        Nouvelle demande de devis PC Gaming Sur Mesure
+        
+        Budget: ${budget[0]}€
+        Usage principal: ${usage}
+        Système d'exploitation: ${os === 'other' ? customOs : os}
+        
+        Détails supplémentaires:
+        ${additionalDetails}
+      `;
 
-      await emailjs.send(
-        'service_2qvzwzp', // Service ID from EmailJS
-        'template_devis', // Template ID from EmailJS
-        templateParams,
-        'Votre_Public_Key' // Public Key from EmailJS
-      );
+      // Ouvrir le client email par défaut avec les informations pré-remplies
+      const mailtoLink = `mailto:clementmontagepc@gmail.com?subject=Nouvelle demande de devis PC Gaming Sur Mesure&body=${encodeURIComponent(emailBody)}`;
+      window.location.href = mailtoLink;
 
       toast({
-        title: "Devis envoyé !",
-        description: "Nous vous contacterons rapidement pour discuter de votre projet de PC gaming sur mesure.",
+        title: "Devis préparé !",
+        description: "Votre client email va s'ouvrir avec les informations pré-remplies.",
       });
     } catch (error) {
       toast({
         title: "Erreur",
-        description: "Une erreur est survenue lors de l'envoi du devis. Veuillez réessayer.",
+        description: "Une erreur est survenue lors de la préparation du devis. Veuillez réessayer.",
         variant: "destructive"
       });
     } finally {
@@ -144,7 +142,7 @@ const Quote = () => {
                 className="w-full bg-forge-orange hover:bg-forge-red"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? "Envoi en cours..." : "Obtenir mon devis"}
+                {isSubmitting ? "Préparation..." : "Obtenir mon devis"}
               </Button>
             </form>
           </CardContent>

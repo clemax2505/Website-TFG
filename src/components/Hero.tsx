@@ -20,7 +20,7 @@ const Hero = () => {
             <Logo className="h-32 w-32 text-forge-orange animate-lava" />
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-forge-orange to-forge-red leading-relaxed">
-            Forgez Votre PC Gaming Idéal<br></br><br></br>
+            Forgez Votre PC Gaming Idéal<br></br>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Création sur mesure, amélioration et maintenance de PC gaming par des experts passionnés

@@ -5,6 +5,9 @@ import { Star } from "lucide-react";
 
 const Portfolio = () => {
   const projects = [
+
+<h2>Le site étant sorti ce samedi 23 novembre, il n'y a pas encore de retour !</h2>
+    
   ];
 
   return (

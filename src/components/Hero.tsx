@@ -1,4 +1,4 @@
-import { ArrowRight, Wrench, Monitor } from "lucide-react";
+import { ArrowRight, Settings, Monitor, Laptop } from "lucide-react";
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
 
@@ -27,9 +27,9 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-12">
-            <Link to="/custom-pc" className="w-full md:w-auto">
+            <Link to="/laptop-service" className="w-full md:w-auto">
               <button className="w-full md:w-auto px-8 py-4 bg-forge-orange hover:bg-forge-red text-white rounded-lg font-bold flex items-center justify-center gap-2 transition-colors">
-                PC Sur Mesure
+                PC Portable Gaming
                 <ArrowRight className="h-5 w-5" />
               </button>
             </Link>
@@ -41,18 +41,18 @@ const Hero = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <Link to="/custom-pc" className="glass-card p-6 rounded-lg hover:scale-105 transition-transform duration-300">
-              <Monitor className="h-8 w-8 text-forge-orange mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2">PC Sur Mesure</h3>
+            <Link to="/laptop-service" className="glass-card p-6 rounded-lg hover:scale-105 transition-transform duration-300">
+              <Laptop className="h-8 w-8 text-forge-orange mx-auto mb-4" />
+              <h3 className="text-lg font-bold mb-2">PC Portable Gaming</h3>
               <p className="text-gray-400">Configuration personnalisée selon vos besoins et votre budget</p>
             </Link>
             <Link to="/upgrade" className="glass-card p-6 rounded-lg hover:scale-105 transition-transform duration-300">
-              <Wrench className="h-8 w-8 text-forge-orange mx-auto mb-4" />
+              <Monitor className="h-8 w-8 text-forge-orange mx-auto mb-4" />
               <h3 className="text-lg font-bold mb-2">Amélioration</h3>
               <p className="text-gray-400">Optimisation de votre configuration existante</p>
             </Link>
             <Link to="/maintenance" className="glass-card p-6 rounded-lg hover:scale-105 transition-transform duration-300">
-              <Logo className="h-12 w-12 text-forge-orange mx-auto mb-4" />
+              <Settings className="h-8 w-8 text-forge-orange mx-auto mb-4" />
               <h3 className="text-lg font-bold mb-2">Maintenance</h3>
               <p className="text-gray-400">Nettoyage et entretien professionnel de votre machine</p>
             </Link>

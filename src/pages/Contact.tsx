@@ -6,16 +6,46 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { useState } from "react";
 
 const Contact = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message envoyé !",
-      description: "Nous vous répondrons dans les plus brefs délais.",
-    });
+    setIsSubmitting(true);
+
+    try {
+      const emailBody = `
+        Nouveau message de contact
+        
+        Nom: ${name}
+        Email: ${email}
+        
+        Message:
+        ${message}
+      `;
+
+      const mailtoLink = `mailto:clementmontagepc@gmail.com?subject=Nouveau message de contact&body=${encodeURIComponent(emailBody)}`;
+      window.location.href = mailtoLink;
+
+      toast({
+        title: "Message préparé !",
+        description: "Votre client email va s'ouvrir avec les informations pré-remplies.",
+      });
+    } catch (error) {
+      toast({
+        title: "Erreur",
+        description: "Une erreur est survenue lors de la préparation du message.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -33,7 +63,7 @@ const Contact = () => {
               <CardContent className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Mail className="text-forge-orange w-5 h-5" />
-                  <p className="text-gray-300">contact@gamingforge.fr</p>
+                  <p className="text-gray-300">clementmontagepc@gmail.com</p>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="text-forge-orange w-5 h-5" />
@@ -68,12 +98,23 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Nom</label>
-                  <Input placeholder="Votre nom" />
+                  <Input 
+                    placeholder="Votre nom" 
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                  />
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Email</label>
-                  <Input type="email" placeholder="votre@email.com" />
+                  <Input 
+                    type="email" 
+                    placeholder="votre@email.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
                 </div>
 
                 <div className="space-y-2">
@@ -81,11 +122,18 @@ const Contact = () => {
                   <Textarea
                     placeholder="Comment pouvons-nous vous aider ?"
                     className="min-h-[150px]"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    required
                   />
                 </div>
 
-                <Button type="submit" className="w-full">
-                  Envoyer
+                <Button 
+                  type="submit" 
+                  className="w-full bg-forge-orange hover:bg-forge-red"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Préparation..." : "Envoyer"}
                 </Button>
               </form>
             </CardContent>

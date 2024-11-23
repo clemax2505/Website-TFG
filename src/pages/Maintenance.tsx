@@ -4,18 +4,49 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
 import { Wrench, Shield, Settings } from "lucide-react";
+import { useState } from "react";
 
 const Maintenance = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [email, setEmail] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Demande de maintenance enregistrée",
-      description: "Nous vous contacterons pour planifier l'intervention.",
-    });
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.target as HTMLFormElement);
+    const services = ['depoussierage', 'pate-thermique', 'checkup']
+      .filter(service => formData.get(service) === 'on')
+      .join(', ');
+
+    const emailBody = `
+      Nouvelle demande de maintenance
+      
+      Email client: ${email}
+      Services demandés: ${services}
+    `;
+
+    try {
+      const mailtoLink = `mailto:clementmontagepc@gmail.com?subject=Nouvelle demande de maintenance&body=${encodeURIComponent(emailBody)}`;
+      window.location.href = mailtoLink;
+
+      toast({
+        title: "Demande de maintenance préparée",
+        description: "Votre client email va s'ouvrir avec les informations pré-remplies.",
+      });
+    } catch (error) {
+      toast({
+        title: "Erreur",
+        description: "Une erreur est survenue lors de la préparation de l'email.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -79,21 +110,36 @@ const Maintenance = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-4">
                 <div className="flex items-center space-x-2">
-                  <Checkbox id="depoussierage" />
+                  <Checkbox id="depoussierage" name="depoussierage" />
                   <Label htmlFor="depoussierage">Dépoussiérage en profondeur</Label>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Checkbox id="pate-thermique" />
+                  <Checkbox id="pate-thermique" name="pate-thermique" />
                   <Label htmlFor="pate-thermique">Changement de la pâte thermique</Label>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Checkbox id="checkup" />
+                  <Checkbox id="checkup" name="checkup" />
                   <Label htmlFor="checkup">Check up général</Label>
                 </div>
               </div>
 
-              <Button type="submit" className="w-full bg-forge-orange hover:bg-forge-red">
-                Demander une maintenance
+              <div className="space-y-2">
+                <Label>Email</Label>
+                <Input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="votre@email.com"
+                  required
+                />
+              </div>
+
+              <Button 
+                type="submit" 
+                className="w-full bg-forge-orange hover:bg-forge-red"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Préparation..." : "Demander une maintenance"}
               </Button>
             </form>
           </CardContent>

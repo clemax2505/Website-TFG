@@ -33,9 +33,6 @@ const Footer = () => {
           <div>
             <h3 className="text-forge-orange font-bold mb-4">Suivez-nous</h3>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-forge-orange">
-                <Facebook className="w-6 h-6" />
-              </a>
               <a href="https://www.instagram.com/the_gaming_forge/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-forge-orange">
                 <Instagram className="w-6 h-6" />
               </a>

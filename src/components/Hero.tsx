@@ -16,7 +16,10 @@ const Hero = () => {
 
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center -mt-48">
-          
+          <h1><br></br></h1>
+          <div className="flex items-center justify-center mb-6">
+            <Logo className="h-32 w-32 text-forge-orange animate-lava" />
+          </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-forge-orange to-forge-red leading-relaxed">
             Forgez Votre PC Gaming Idéal<br></br>
           </h1>

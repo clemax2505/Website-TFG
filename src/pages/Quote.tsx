@@ -117,6 +117,10 @@ const Quote = () => {
                     <RadioGroupItem value="intel-amd" id="intel-amd" />
                     <Label htmlFor="intel-amd">Intel + AMD</Label>
                   </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="Pas de préférence" id="Pas de prédérence" />
+                    <Label htmlFor="intel-amd">Pas de préférence</Label>
+                  </div>
                 </RadioGroup>
               </div>
 

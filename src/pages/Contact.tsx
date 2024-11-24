@@ -67,7 +67,7 @@ const Contact = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <MapPin className="text-forge-orange w-5 h-5" />
-                  <p className="text-gray-300">Paris, France</p>
+                  <p className="text-gray-300">Champagne Au Mont D'Or, Rhône</p>
                 </div>
               </CardContent>
             </Card>

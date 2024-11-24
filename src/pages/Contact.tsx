@@ -66,25 +66,8 @@ const Contact = () => {
                   <p className="text-gray-300">clementmontagepc@gmail.com</p>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Phone className="text-forge-orange w-5 h-5" />
-                  <p className="text-gray-300">01 23 45 67 89</p>
-                </div>
-                <div className="flex items-center gap-3">
                   <MapPin className="text-forge-orange w-5 h-5" />
                   <p className="text-gray-300">Paris, France</p>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="glass-card">
-              <CardHeader>
-                <CardTitle className="text-2xl">Horaires d'ouverture</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2">
-                  <p className="text-gray-300">Lundi - Vendredi: 9h - 19h</p>
-                  <p className="text-gray-300">Samedi: 10h - 18h</p>
-                  <p className="text-gray-300">Dimanche: Fermé</p>
                 </div>
               </CardContent>
             </Card>

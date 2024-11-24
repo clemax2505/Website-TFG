@@ -11,21 +11,24 @@ const Blog = () => {
       description: "Guide complet des GPU pour le gaming",
       icon: Monitor,
       date: "15 Mars 2024",
-      category: "Hardware"
+      category: "Hardware",
+      content: "Découvrez notre sélection des meilleures cartes graphiques pour le gaming en 2024, avec des recommandations pour tous les budgets."
     },
     {
       title: "Comment Choisir son Processeur",
       description: "Comparatif des derniers CPU gaming",
       icon: Cpu,
       date: "10 Mars 2024",
-      category: "Guides"
+      category: "Guides",
+      content: "Un guide détaillé pour vous aider à choisir le meilleur processeur en fonction de vos besoins et de votre budget."
     },
     {
       title: "SSD vs HDD pour le Gaming",
       description: "Impact sur les performances en jeu",
       icon: HardDrive,
       date: "5 Mars 2024",
-      category: "Performance"
+      category: "Performance",
+      content: "Analyse comparative des performances entre SSD et HDD dans les jeux, et leur impact sur les temps de chargement."
     }
   ];
 
@@ -46,10 +49,11 @@ const Blog = () => {
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-300">{article.description}</p>
-                <Link to="#" className="text-forge-orange hover:text-forge-red transition-colors mt-4 inline-block">
+                <p className="text-gray-300 mb-4">{article.description}</p>
+                <p className="text-gray-300 line-clamp-3 mb-4">{article.content}</p>
+                <button className="text-forge-orange hover:text-forge-red transition-colors">
                   Lire la suite →
-                </Link>
+                </button>
               </CardContent>
             </Card>
           ))}

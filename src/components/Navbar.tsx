@@ -12,6 +12,7 @@ const Navbar = () => {
     { name: "Services", path: "/services" },
     { name: "Portfolio", path: "/portfolio" },
     { name: "Contact", path: "/contact" },
+    { name: "Suggestions", path: "/suggestions" },
   ];
 
   const isCurrentPath = (path: string) => {

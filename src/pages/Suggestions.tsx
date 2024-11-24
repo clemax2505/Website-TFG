@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { useState } from "react";
+import PageTransition from "@/components/PageTransition";
 
 const Suggestions = () => {
   const { toast } = useToast();
@@ -46,55 +47,57 @@ const Suggestions = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <main className="container mx-auto px-4 py-24 flex-grow">
-        <h1 className="text-4xl font-bold text-center mb-8">Des idées pour le site ?</h1>
-        <p className="text-xl text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-          Vos suggestions sont précieuses ! N'hésitez pas à partager vos idées pour améliorer le site.
-        </p>
+    <PageTransition>
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
+        <main className="container mx-auto px-4 py-24 flex-grow">
+          <h1 className="text-4xl font-bold text-center mb-8">Des idées pour le site ?</h1>
+          <p className="text-xl text-gray-400 text-center mb-12 max-w-2xl mx-auto">
+            Vos suggestions sont précieuses ! N'hésitez pas à partager vos idées pour améliorer le site.
+          </p>
 
-        <Card className="glass-card max-w-2xl mx-auto">
-          <CardHeader>
-            <CardTitle className="text-2xl text-center">Envoyez votre suggestion</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="space-y-2">
-                <label className="text-sm font-medium">Email</label>
-                <Input
-                  type="email"
-                  placeholder="votre@email.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-              </div>
+          <Card className="glass-card max-w-2xl mx-auto">
+            <CardHeader>
+              <CardTitle className="text-2xl text-center">Envoyez votre suggestion</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="space-y-2">
+                  <label className="text-sm font-medium">Email</label>
+                  <Input
+                    type="email"
+                    placeholder="votre@email.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                </div>
 
-              <div className="space-y-2">
-                <label className="text-sm font-medium">Votre suggestion</label>
-                <Textarea
-                  placeholder="Partagez vos idées pour améliorer le site..."
-                  value={suggestion}
-                  onChange={(e) => setSuggestion(e.target.value)}
-                  className="min-h-[150px]"
-                  required
-                />
-              </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-medium">Votre suggestion</label>
+                  <Textarea
+                    placeholder="Partagez vos idées pour améliorer le site..."
+                    value={suggestion}
+                    onChange={(e) => setSuggestion(e.target.value)}
+                    className="min-h-[150px]"
+                    required
+                  />
+                </div>
 
-              <Button 
-                type="submit" 
-                className="w-full bg-forge-orange hover:bg-forge-red"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? "Préparation..." : "Envoyer ma suggestion"}
-              </Button>
-            </form>
-          </CardContent>
-        </Card>
-      </main>
-      <Footer />
-    </div>
+                <Button 
+                  type="submit" 
+                  className="w-full bg-forge-orange hover:bg-forge-red"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Préparation..." : "Envoyer ma suggestion"}
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+        </main>
+        <Footer />
+      </div>
+    </PageTransition>
   );
 };
 

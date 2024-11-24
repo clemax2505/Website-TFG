@@ -13,8 +13,6 @@ import CustomPC from "./pages/CustomPC";
 import Upgrade from "./pages/Upgrade";
 import Maintenance from "./pages/Maintenance";
 import LaptopService from "./pages/LaptopService";
-import Blog from "./pages/Blog";
-import Comparator from "./pages/Comparator";
 
 const ScrollToTop = () => {
   const location = useLocation();
@@ -45,8 +43,6 @@ const App = () => (
           <Route path="/upgrade" element={<Upgrade />} />
           <Route path="/maintenance" element={<Maintenance />} />
           <Route path="/laptop-service" element={<LaptopService />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/comparator" element={<Comparator />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

@@ -53,25 +53,6 @@ const Contact = () => {
       <Navbar />
       <main className="container mx-auto px-4 py-24">
         <h1 className="text-4xl font-bold text-center mb-12">Contactez-nous</h1>
-        
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          <div className="space-y-6">
-            <Card className="glass-card">
-              <CardHeader>
-                <CardTitle className="text-2xl">Informations de contact</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <Mail className="text-forge-orange w-5 h-5" />
-                  <p className="text-gray-300">clementmontagepc@gmail.com</p>
-                </div>
-                <div className="flex items-center gap-3">
-                  <MapPin className="text-forge-orange w-5 h-5" />
-                  <p className="text-gray-300">Champagne Au Mont D'Or, Rhône</p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
 
           <Card className="glass-card">
             <CardHeader>

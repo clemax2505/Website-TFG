@@ -17,7 +17,7 @@ const Footer = () => {
             <h3 className="text-forge-orange font-bold mb-4">Contact</h3>
             <ul className="space-y-2 text-gray-400">
               <li>clementmontagepc@gmail.com</li>
-              <li>Champagne Au Mont D'Or, Rhônes</li>
+              <li>Champagne Au Mont D'Or, Rhône</li>
             </ul>
           </div>
           

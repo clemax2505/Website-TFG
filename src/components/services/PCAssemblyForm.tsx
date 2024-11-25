@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/components/ui/use-toast";
 import { useState } from "react";
 
@@ -8,6 +9,7 @@ const PCAssemblyForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState<string>("");
+  const [isRecommended, setIsRecommended] = useState(false);
 
   const components = [
     "CPU", "Carte mère", "RAM", "Carte graphique", 
@@ -30,6 +32,7 @@ const PCAssemblyForm = () => {
       
       Forfait choisi: ${selectedPlan}
       Email client: ${data.email}
+      Configuration conseillée par Clément: ${isRecommended ? 'Oui' : 'Non'}
       
       Liste des composants:
       ${componentsList}
@@ -124,6 +127,17 @@ const PCAssemblyForm = () => {
           placeholder="votre@email.com"
           required
         />
+      </div>
+
+      <div className="flex items-center space-x-2">
+        <Checkbox
+          id="recommended"
+          checked={isRecommended}
+          onCheckedChange={(checked) => setIsRecommended(checked as boolean)}
+        />
+        <Label htmlFor="recommended" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+          Configuration conseillée par Clément
+        </Label>
       </div>
 
       <Button 

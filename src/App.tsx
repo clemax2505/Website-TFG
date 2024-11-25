@@ -15,6 +15,7 @@ import Upgrade from "./pages/Upgrade";
 import Maintenance from "./pages/Maintenance";
 import LaptopService from "./pages/LaptopService";
 import Suggestions from "./pages/Suggestions";
+import PCAssembly from "./pages/PCAssembly";
 
 const ScrollToTop = () => {
   const location = useLocation();
@@ -42,6 +43,7 @@ const AnimatedRoutes = () => {
         <Route path="/maintenance" element={<Maintenance />} />
         <Route path="/laptop-service" element={<LaptopService />} />
         <Route path="/suggestions" element={<Suggestions />} />
+        <Route path="/pc-assembly" element={<PCAssembly />} />
       </Routes>
     </AnimatePresence>
   );

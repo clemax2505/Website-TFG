@@ -70,7 +70,7 @@ const PCAssemblyForm = () => {
           <ul className="list-disc list-inside space-y-2 text-gray-300">
             <li>Montage complet du PC</li>
             <li>Mise à jour du BIOS</li>
-            <li>Gestion des câbles soignée</li>
+            <li>Cable management soigné</li>
             <li>Sans Windows</li>
           </ul>
         </div>
@@ -85,7 +85,7 @@ const PCAssemblyForm = () => {
           <ul className="list-disc list-inside space-y-2 text-gray-300">
             <li>Montage complet du PC</li>
             <li>Mise à jour du BIOS</li>
-            <li>Gestion des câbles</li>
+            <li>Cable management soigné</li>
             <li>Installation Windows (sans activation)</li>
           </ul>
         </div>
@@ -101,6 +101,7 @@ const PCAssemblyForm = () => {
             <li>Montage complet du PC</li>
             <li>Réglage BIOS (XMP)</li>
             <li>Installation drivers & logiciels</li>
+            <li>Cable management soigné</li>
             <li>Configuration complète</li>
             <li>Windows avec activation</li>
           </ul>

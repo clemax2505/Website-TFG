@@ -100,10 +100,10 @@ const PCAssemblyForm = () => {
           <ul className="list-disc list-inside space-y-2 text-gray-300">
             <li>Montage complet du PC</li>
             <li>Réglage BIOS (XMP)</li>
-            <li>Installation drivers & logiciels</li>
             <li>Cable management soigné</li>
-            <li>Configuration complète</li>
             <li>Windows avec activation</li>
+            <li>Installation drivers & logiciels</li>
+            <li>Configuration complète</li>
           </ul>
         </div>
       </div>

@@ -13,7 +13,7 @@ const PCAssemblyForm = () => {
 
   const components = [
     "CPU", "Carte mère", "RAM", "Carte graphique", 
-    "Stockage", "Alimentation", "Boîtier", "Ventilateurs"
+    "Stockage", "Alimentation", "Boîtier", "Watercooling / ventirad"
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -71,6 +71,7 @@ const PCAssemblyForm = () => {
             <li>Montage complet du PC</li>
             <li>Mise à jour du BIOS</li>
             <li>Gestion des câbles soignée</li>
+            <li>Sans Windows</li>
           </ul>
         </div>
 
@@ -82,10 +83,10 @@ const PCAssemblyForm = () => {
         >
           <h3 className="text-xl font-bold mb-2">Montage Standard - 45€</h3>
           <ul className="list-disc list-inside space-y-2 text-gray-300">
-            <li>Installation Windows (sans activation)</li>
             <li>Montage complet du PC</li>
             <li>Mise à jour du BIOS</li>
             <li>Gestion des câbles</li>
+            <li>Installation Windows (sans activation)</li>
           </ul>
         </div>
 
@@ -97,10 +98,11 @@ const PCAssemblyForm = () => {
         >
           <h3 className="text-xl font-bold mb-2">Montage Premium - 75€</h3>
           <ul className="list-disc list-inside space-y-2 text-gray-300">
-            <li>Windows avec activation</li>
-            <li>Installation drivers & logiciels</li>
+            <li>Montage complet du PC</li>
             <li>Réglage BIOS (XMP)</li>
+            <li>Installation drivers & logiciels</li>
             <li>Configuration complète</li>
+            <li>Windows avec activation</li>
           </ul>
         </div>
       </div>
@@ -136,7 +138,7 @@ const PCAssemblyForm = () => {
           onCheckedChange={(checked) => setIsRecommended(checked as boolean)}
         />
         <Label htmlFor="recommended" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-          Configuration conseillée par Clément
+          Configuration conseillée par mes soins
         </Label>
       </div>
 
@@ -145,7 +147,7 @@ const PCAssemblyForm = () => {
         className="w-full bg-forge-orange hover:bg-forge-red"
         disabled={isSubmitting || !selectedPlan}
       >
-        {isSubmitting ? "Préparation..." : "Demander un devis"}
+        {isSubmitting ? "Préparation..." : "Demander un montage"}
       </Button>
     </form>
   );

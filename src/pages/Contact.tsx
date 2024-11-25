@@ -5,7 +5,6 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
-import { Mail, Phone, MapPin } from "lucide-react";
 import { useState } from "react";
 
 const Contact = () => {
@@ -53,56 +52,54 @@ const Contact = () => {
       <Navbar />
       <main className="container mx-auto px-4 py-24">
         <h1 className="text-4xl font-bold text-center mb-12">Contactez-nous</h1>
+        <Card className="glass-card">
+          <CardHeader>
+            <CardTitle className="text-2xl">Envoyez-nous un message</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="space-y-2">
+                <label className="text-sm font-medium">Nom</label>
+                <Input 
+                  placeholder="Votre nom" 
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                />
+              </div>
 
-          <Card className="glass-card">
-            <CardHeader>
-              <CardTitle className="text-2xl">Envoyez-nous un message</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">Nom</label>
-                  <Input 
-                    placeholder="Votre nom" 
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                  />
-                </div>
+              <div className="space-y-2">
+                <label className="text-sm font-medium">Email</label>
+                <Input 
+                  type="email" 
+                  placeholder="votre@email.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </div>
 
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">Email</label>
-                  <Input 
-                    type="email" 
-                    placeholder="votre@email.com"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                  />
-                </div>
+              <div className="space-y-2">
+                <label className="text-sm font-medium">Message</label>
+                <Textarea
+                  placeholder="Comment pouvons-nous vous aider ?"
+                  className="min-h-[150px]"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  required
+                />
+              </div>
 
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">Message</label>
-                  <Textarea
-                    placeholder="Comment pouvons-nous vous aider ?"
-                    className="min-h-[150px]"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    required
-                  />
-                </div>
-
-                <Button 
-                  type="submit" 
-                  className="w-full bg-forge-orange hover:bg-forge-red"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? "Préparation..." : "Envoyer"}
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
-        </div>
+              <Button 
+                type="submit" 
+                className="w-full bg-forge-orange hover:bg-forge-red"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Préparation..." : "Envoyer"}
+              </Button>
+            </form>
+          </CardContent>
+        </Card>
       </main>
       <Footer />
     </div>

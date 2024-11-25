@@ -43,7 +43,7 @@ const CustomPC = () => {
     <div className="min-h-screen">
       <Navbar />
       <main className="container mx-auto px-4 py-24">
-        <h1 className="text-4xl font-bold text-center mb-8">PC Gaming Sur Mesure</h1>
+        <h1 className="text-4xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-forge-orange to-forge-red">PC Gaming Sur Mesure</h1>
         <p className="text-xl text-gray-400 text-center mb-12 max-w-2xl mx-auto">
           Nous créons votre PC gaming idéal en fonction de vos besoins spécifiques et de votre budget
         </p>

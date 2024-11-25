@@ -53,11 +53,7 @@ const Maintenance = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="container mx-auto px-4 py-24 flex-grow">
-        <h1 className="text-4xl font-bold text-center mb-8">Maintenance PC</h1>
-        <p className="text-xl text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-          Gardez votre PC gaming en parfait état avec notre service de maintenance professionnelle
-        </p>
-
+        <h1 className="text-4xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-forge-orange to-forge-red">Maintenance PC</h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <Card className="glass-card">
             <CardHeader>

@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Monitor, Wrench, Wind, Laptop, Tool } from "lucide-react";
+import { Monitor, Wrench, Wind, Laptop } from "lucide-react";
 import { Link } from "react-router-dom";
 import PCComponentsGuide from "@/components/services/PCComponentsGuide";
 
@@ -36,7 +36,7 @@ const Services = () => {
             <Card className="glass-card hover:scale-105 transition-transform duration-300">
               <CardHeader>
                 <div className="flex justify-center mb-4">
-                  <Tool className="w-12 h-12 text-forge-orange" />
+                  <Wrench className="w-12 h-12 text-forge-orange" />
                 </div>
                 <CardTitle className="text-xl text-center">Montage PC</CardTitle>
               </CardHeader>

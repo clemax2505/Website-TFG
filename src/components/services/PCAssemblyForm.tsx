@@ -69,9 +69,9 @@ const PCAssemblyForm = () => {
           <h3 className="text-xl font-bold mb-2">Montage Basique - 35€</h3>
           <ul className="list-disc list-inside space-y-2 text-gray-300">
             <li>Montage complet du PC</li>
-            <li>Mise à jour du BIOS</li>
+            <li>Mise à jour + Réglage BIOS (XMP)</li>
             <li>Cable management soigné</li>
-            <li>Sans Windows</li>
+            <li>Sans Windows (Pour ceux qui veulent un autre OS)</li>
           </ul>
         </div>
 
@@ -84,7 +84,7 @@ const PCAssemblyForm = () => {
           <h3 className="text-xl font-bold mb-2">Montage Standard - 45€</h3>
           <ul className="list-disc list-inside space-y-2 text-gray-300">
             <li>Montage complet du PC</li>
-            <li>Mise à jour du BIOS</li>
+            <li>Mise à jour + Réglage BIOS (XMP)</li>
             <li>Cable management soigné</li>
             <li>Installation Windows (sans activation)</li>
           </ul>
@@ -99,11 +99,12 @@ const PCAssemblyForm = () => {
           <h3 className="text-xl font-bold mb-2">Montage Premium - 75€</h3>
           <ul className="list-disc list-inside space-y-2 text-gray-300">
             <li>Montage complet du PC</li>
-            <li>Réglage BIOS (XMP)</li>
+            <li>Mise à jour + Réglage BIOS (XMP)</li>
             <li>Cable management soigné</li>
             <li>Windows avec activation</li>
             <li>Installation drivers & logiciels</li>
             <li>Configuration complète</li>
+            <li>Test de chauffe & Benchmark</li>
           </ul>
         </div>
       </div>

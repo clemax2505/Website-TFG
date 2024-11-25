@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen flex items-center justify-center pt-16">
+    <div className="relative min-h-screen flex items-center justify-center">
       <div className="relative z-10 container mx-auto px-4">
-        <div className="text-center -mt-48">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-forge-orange to-forge-red leading-relaxed">
-            Forgez Votre PC Gaming Idéal<br></br><br></br></h1>
+        <div className="text-center mt-16 md:mt-0">
+          <h1 className="text-4xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-forge-orange to-forge-red leading-relaxed">
+            Forgez Votre PC Gaming Idéal
+          </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Création sur mesure, amélioration et maintenance de PC gaming par des experts passionnés
           </p>

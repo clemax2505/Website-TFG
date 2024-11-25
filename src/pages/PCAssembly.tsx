@@ -13,7 +13,7 @@ const PCAssembly = () => {
             Service de Montage PC
           </h1>
           <p className="text-xl text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-            Choisissez votre forfait et listez vos composants pour obtenir un devis personnalisé
+            Choisissez votre forfait et listez vos composants pour faire une demande personnalisée
           </p>
 
           <div className="max-w-4xl mx-auto">

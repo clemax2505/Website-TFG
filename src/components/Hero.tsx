@@ -10,7 +10,7 @@ const Hero = () => {
             Forgez Votre PC Gaming Idéal
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            <br></br>Création sur mesure, amélioration et maintenance de PC gaming par des experts passionnés
+            <br></br><br></br>Création sur mesure, amélioration et maintenance de PC gaming par des experts passionnés
           </p>
           
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-12">

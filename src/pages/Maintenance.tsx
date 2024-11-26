@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
 import { Wrench, Shield, Settings } from "lucide-react";
 import { openEmailClient } from "@/utils/emailUtils";
+import { useState } from "react";
 
 const Maintenance = () => {
   const { toast } = useToast();

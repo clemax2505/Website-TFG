@@ -13,7 +13,7 @@ const PCAssemblyForm = () => {
 
   const components = [
     "CPU", "Carte mère", "RAM", "Carte graphique", 
-    "Stockage", "Alimentation", "Boîtier", "Watercooling / ventirad"
+    "Stockage", "Boîtier", "Alimentation", "Refroidissement"
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -43,7 +43,7 @@ const PCAssemblyForm = () => {
       window.location.href = mailtoLink;
 
       toast({
-        title: "Demande de montage préparée",
+        title: "Demande envoyée !",
         description: "Votre client email va s'ouvrir avec les informations pré-remplies.",
       });
     } catch (error) {
@@ -59,57 +59,55 @@ const PCAssemblyForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div 
-          className={`glass-card p-6 rounded-lg cursor-pointer transition-all ${
-            selectedPlan === "Basique (35€)" ? "ring-2 ring-forge-orange" : ""
-          }`}
-          onClick={() => setSelectedPlan("Basique (35€)")}
-        >
-          <h3 className="text-xl font-bold mb-2">Montage Basique - 35€</h3>
-          <ul className="list-disc list-inside space-y-2 text-gray-300">
-            <li>Montage complet du PC</li>
-            <li>Mise à jour + Réglage BIOS (XMP)</li>
-            <li>Cable management soigné</li>
-            <li>Sans Windows (Pour ceux qui veulent un autre OS)</li>
-          </ul>
-        </div>
+      <div className="space-y-4">
+        <Label>Choisissez votre forfait</Label>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <Button
+            type="button"
+            variant={selectedPlan === "Basic" ? "default" : "outline"}
+            className={`p-4 h-auto ${
+              selectedPlan === "Basic" ? "bg-forge-orange" : ""
+            }`}
+            onClick={() => setSelectedPlan("Basic")}
+          >
+            <div className="text-left">
+              <div className="font-bold">Basic</div>
+              <div className="text-sm text-gray-400">Montage simple</div>
+              <div className="mt-2">30€</div>
+            </div>
+          </Button>
 
-        <div 
-          className={`glass-card p-6 rounded-lg cursor-pointer transition-all ${
-            selectedPlan === "Standard (45€)" ? "ring-2 ring-forge-orange" : ""
-          }`}
-          onClick={() => setSelectedPlan("Standard (45€)")}
-        >
-          <h3 className="text-xl font-bold mb-2">Montage Standard - 45€</h3>
-          <ul className="list-disc list-inside space-y-2 text-gray-300">
-            <li>Montage complet du PC</li>
-            <li>Mise à jour + Réglage BIOS (XMP)</li>
-            <li>Cable management soigné</li>
-            <li>Installation Windows (sans activation)</li>
-          </ul>
-        </div>
+          <Button
+            type="button"
+            variant={selectedPlan === "Standard" ? "default" : "outline"}
+            className={`p-4 h-auto ${
+              selectedPlan === "Standard" ? "bg-forge-orange" : ""
+            }`}
+            onClick={() => setSelectedPlan("Standard")}
+          >
+            <div className="text-left">
+              <div className="font-bold">Standard</div>
+              <div className="text-sm text-gray-400">Montage + Installation Windows</div>
+              <div className="mt-2">50€</div>
+            </div>
+          </Button>
 
-        <div 
-          className={`glass-card p-6 rounded-lg cursor-pointer transition-all ${
-            selectedPlan === "Premium (75€)" ? "ring-2 ring-forge-orange" : ""
-          }`}
-          onClick={() => setSelectedPlan("Premium (75€)")}
-        >
-          <h3 className="text-xl font-bold mb-2">Montage Premium - 75€</h3>
-          <ul className="list-disc list-inside space-y-2 text-gray-300">
-            <li>Montage complet du PC</li>
-            <li>Mise à jour + Réglage BIOS (XMP)</li>
-            <li>Cable management soigné</li>
-            <li>Windows avec activation</li>
-            <li>Installation drivers & logiciels</li>
-            <li>Configuration complète</li>
-            <li>Test de chauffe & Benchmark</li>
-          </ul>
+          <Button
+            type="button"
+            variant={selectedPlan === "Premium" ? "default" : "outline"}
+            className={`p-4 h-auto ${
+              selectedPlan === "Premium" ? "bg-forge-orange" : ""
+            }`}
+            onClick={() => setSelectedPlan("Premium")}
+          >
+            <div className="text-left">
+              <div className="font-bold">Premium</div>
+              <div className="text-sm text-gray-400">Montage + Windows + Optimisation</div>
+              <div className="mt-2">70€</div>
+            </div>
+          </Button>
         </div>
       </div>
-
-      <input type="hidden" name="plan" value={selectedPlan} />
 
       <div className="space-y-4">
         <Label>Liste des composants</Label>
@@ -118,7 +116,7 @@ const PCAssemblyForm = () => {
             key={component}
             name={component.toLowerCase()}
             placeholder={component}
-            required
+            className="mb-2"
           />
         ))}
       </div>
@@ -140,7 +138,7 @@ const PCAssemblyForm = () => {
           onCheckedChange={(checked) => setIsRecommended(checked as boolean)}
         />
         <Label htmlFor="recommended" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-          Configuration conseillée par mes soins
+          Configuration conseillée par Clément
         </Label>
       </div>
 
@@ -149,7 +147,7 @@ const PCAssemblyForm = () => {
         className="w-full bg-forge-orange hover:bg-forge-red"
         disabled={isSubmitting || !selectedPlan}
       >
-        {isSubmitting ? "Préparation..." : "Demander un montage"}
+        {isSubmitting ? "Envoi en cours..." : "Envoyer la demande"}
       </Button>
     </form>
   );

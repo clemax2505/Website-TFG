@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { useState } from "react";
+import { openEmailClient } from "@/utils/emailUtils";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -20,17 +21,15 @@ const Contact = () => {
 
     try {
       const emailBody = `
-        Nouveau message de contact
-        
-        Nom: ${name}
-        Email: ${email}
-        
-        Message:
-        ${message}
-      `;
+Nouveau message de contact
 
-      const mailtoLink = `mailto:clementmontagepc@gmail.com?subject=Nouveau message de contact&body=${encodeURIComponent(emailBody)}`;
-      window.location.href = mailtoLink;
+Nom: ${name}
+Email: ${email}
+
+Message:
+${message}`;
+
+      openEmailClient("Nouveau message de contact", emailBody);
 
       toast({
         title: "Message préparé !",

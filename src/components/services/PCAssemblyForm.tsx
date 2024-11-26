@@ -4,6 +4,7 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/components/ui/use-toast";
 import { useState } from "react";
+import { openEmailClient } from "@/utils/emailUtils";
 
 const PCAssemblyForm = () => {
   const { toast } = useToast();
@@ -28,19 +29,17 @@ const PCAssemblyForm = () => {
       .join('\n');
 
     const emailBody = `
-      Nouvelle demande de montage PC
-      
-      Forfait choisi: ${selectedPlan}
-      Email client: ${data.email}
-      Configuration conseillée par Clément: ${isRecommended ? 'Oui' : 'Non'}
-      
-      Liste des composants:
-      ${componentsList}
-    `;
+Nouvelle demande de montage PC
+
+Forfait choisi: ${selectedPlan}
+Email client: ${data.email}
+Configuration conseillée par Clément: ${isRecommended ? 'Oui' : 'Non'}
+
+Liste des composants:
+${componentsList}`;
 
     try {
-      const mailtoLink = `mailto:clementmontagepc@gmail.com?subject=Nouvelle demande de montage PC&body=${encodeURIComponent(emailBody)}`;
-      window.location.href = mailtoLink;
+      openEmailClient("Nouvelle demande de montage PC", emailBody);
 
       toast({
         title: "Demande envoyée !",

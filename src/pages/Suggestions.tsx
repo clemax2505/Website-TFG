@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { useState } from "react";
 import PageTransition from "@/components/PageTransition";
+import { openEmailClient } from "@/utils/emailUtils";
 
 const Suggestions = () => {
   const { toast } = useToast();
@@ -28,8 +29,7 @@ const Suggestions = () => {
         ${suggestion}
       `;
 
-      const mailtoLink = `mailto:clementmontagepc@gmail.com?subject=Nouvelle suggestion pour le site&body=${encodeURIComponent(emailBody)}`;
-      window.location.href = mailtoLink;
+      openEmailClient("Nouvelle suggestion pour le site", emailBody);
 
       toast({
         title: "Suggestion préparée !",

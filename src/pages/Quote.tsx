@@ -9,6 +9,7 @@ import { useToast } from "@/components/ui/use-toast";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { openEmailClient } from "@/utils/emailUtils";
 
 const Quote = () => {
   const { toast } = useToast();
@@ -27,19 +28,17 @@ const Quote = () => {
 
     try {
       const emailBody = `
-        Nouvelle demande de devis PC Gaming Sur Mesure
-        
-        Budget: ${budget[0]}€
-        Usage principal: ${usage}
-        Système d'exploitation: ${os === 'other' ? customOs : os}
-        Préférence GPU/CPU: ${preference}
-        
-        Détails supplémentaires:
-        ${additionalDetails}
-      `;
+Nouvelle demande de devis PC Gaming Sur Mesure
 
-      const mailtoLink = `mailto:clementmontagepc@gmail.com?subject=Nouvelle demande de devis PC Gaming Sur Mesure&body=${encodeURIComponent(emailBody)}`;
-      window.location.href = mailtoLink;
+Budget: ${budget[0]}€
+Usage principal: ${usage}
+Système d'exploitation: ${os === 'other' ? customOs : os}
+Préférence GPU/CPU: ${preference}
+
+Détails supplémentaires:
+${additionalDetails}`;
+
+      openEmailClient("Nouvelle demande de devis PC Gaming Sur Mesure", emailBody);
 
       toast({
         title: "Devis préparé !",

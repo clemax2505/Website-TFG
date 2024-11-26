@@ -4,6 +4,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
 import { useState } from "react";
+import { openEmailClient } from "@/utils/emailUtils";
 
 const LaptopServiceForm = () => {
   const { toast } = useToast();
@@ -16,7 +17,6 @@ const LaptopServiceForm = () => {
     const formData = new FormData(e.target as HTMLFormElement);
     const data = Object.fromEntries(formData.entries());
     
-    // Préparer les données pour l'email
     const maintenanceServices = ['Changement de pâte thermique', 'Dépoussiérage']
       .filter(service => data[`service-${service}`] === 'on')
       .join(', ');
@@ -26,17 +26,14 @@ const LaptopServiceForm = () => {
       .join(', ');
 
     const emailBody = `
-      Nouvelle demande de service laptop
-      
-      Email client: ${data.email}
-      Services de maintenance demandés: ${maintenanceServices}
-      Pièces à remplacer: ${replacementParts}
-    `;
+Nouvelle demande de service laptop
+
+Email client: ${data.email}
+Services de maintenance demandés: ${maintenanceServices}
+Pièces à remplacer: ${replacementParts}`;
 
     try {
-      // Ouvrir le client email par défaut avec les informations pré-remplies
-      const mailtoLink = `mailto:clementmontagepc@gmail.com?subject=Nouvelle demande de service laptop&body=${encodeURIComponent(emailBody)}`;
-      window.location.href = mailtoLink;
+      openEmailClient("Nouvelle demande de service laptop", emailBody);
 
       toast({
         title: "Demande de service laptop préparée",

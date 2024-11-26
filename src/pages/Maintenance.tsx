@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
 import { Wrench, Shield, Settings } from "lucide-react";
+import { openEmailClient } from "@/utils/emailUtils";
 import { useState } from "react";
 
 const Maintenance = () => {
@@ -24,15 +25,13 @@ const Maintenance = () => {
       .join(', ');
 
     const emailBody = `
-      Nouvelle demande de maintenance
-      
-      Email client: ${email}
-      Services demandés: ${services}
-    `;
+Nouvelle demande de maintenance
+
+Email client: ${email}
+Services demandés: ${services}`;
 
     try {
-      const mailtoLink = `mailto:clementmontagepc@gmail.com?subject=Nouvelle demande de maintenance&body=${encodeURIComponent(emailBody)}`;
-      window.location.href = mailtoLink;
+      openEmailClient("Nouvelle demande de maintenance", emailBody);
 
       toast({
         title: "Demande de maintenance préparée",

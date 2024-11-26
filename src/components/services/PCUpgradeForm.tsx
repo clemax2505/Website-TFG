@@ -5,6 +5,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { useState } from "react";
+import { openEmailClient } from "@/utils/emailUtils";
 
 const PCUpgradeForm = () => {
   const { toast } = useToast();
@@ -20,7 +21,6 @@ const PCUpgradeForm = () => {
     const formData = new FormData(e.target as HTMLFormElement);
     const data = Object.fromEntries(formData.entries());
     
-    // Préparer les données pour l'email
     const currentConfig = components
       .map(comp => `${comp}: ${data[comp.toLowerCase()]}`)
       .join('\n');
@@ -30,25 +30,22 @@ const PCUpgradeForm = () => {
       .join(', ');
 
     const emailBody = `
-      Nouvelle demande d'amélioration PC
-      
-      Email client: ${data.email}
-      Budget: ${data.budget}€
-      
-      Configuration actuelle:
-      ${currentConfig}
-      
-      Composants à améliorer:
-      ${componentsToUpgrade}
-      
-      Détails supplémentaires:
-      ${data.details}
-    `;
+Nouvelle demande d'amélioration PC
+
+Email client: ${data.email}
+Budget: ${data.budget}€
+
+Configuration actuelle:
+${currentConfig}
+
+Composants à améliorer:
+${componentsToUpgrade}
+
+Détails supplémentaires:
+${data.details}`;
 
     try {
-      // Ouvrir le client email par défaut avec les informations pré-remplies
-      const mailtoLink = `mailto:clementmontagepc@gmail.com?subject=Nouvelle demande d'amélioration PC&body=${encodeURIComponent(emailBody)}`;
-      window.location.href = mailtoLink;
+      openEmailClient("Nouvelle demande d'amélioration PC", emailBody);
 
       toast({
         title: "Demande d'amélioration préparée",

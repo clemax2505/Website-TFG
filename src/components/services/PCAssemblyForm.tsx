@@ -78,7 +78,7 @@ ${componentsList}`;
                   <li>Mise à jour du Bios si nécessaire + XMP</li>
                 </ul>
               </div>
-              <div className="mt-2">30€</div>
+              <div className="mt-2">40€</div>
             </div>
           </Button>
 

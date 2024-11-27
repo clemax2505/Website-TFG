@@ -1,7 +1,48 @@
 import { ArrowRight, Settings, Monitor, Laptop, Wrench } from "lucide-react";
 import { Link } from "react-router-dom";
+import { memo } from "react";
 
-const Hero = () => {
+const ServiceCard = memo(({ to, icon: Icon, title, description }: {
+  to: string;
+  icon: typeof Settings;
+  title: string;
+  description: string;
+}) => (
+  <Link to={to} className="glass-card p-6 rounded-lg hover:scale-105 transition-transform duration-300">
+    <Icon className="h-8 w-8 text-forge-orange mx-auto mb-4" />
+    <h3 className="text-lg font-bold mb-2">{title}</h3>
+    <p className="text-gray-400">{description}</p>
+  </Link>
+));
+
+const Hero = memo(() => {
+  const services = [
+    {
+      to: "/laptop-service",
+      icon: Laptop,
+      title: "PC Portable Gaming",
+      description: "Configuration personnalisée selon vos besoins"
+    },
+    {
+      to: "/upgrade",
+      icon: Monitor,
+      title: "Amélioration",
+      description: "Optimisation de votre configuration"
+    },
+    {
+      to: "/maintenance",
+      icon: Settings,
+      title: "Maintenance",
+      description: "Nettoyage et entretien professionnel"
+    },
+    {
+      to: "/pc-assembly",
+      icon: Wrench,
+      title: "Montage PC",
+      description: "Service professionnel de montage"
+    }
+  ];
+
   return (
     <div className="relative min-h-screen flex items-center justify-center">
       <div className="relative z-10 container mx-auto px-4">
@@ -28,31 +69,16 @@ const Hero = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            <Link to="/laptop-service" className="glass-card p-6 rounded-lg hover:scale-105 transition-transform duration-300">
-              <Laptop className="h-8 w-8 text-forge-orange mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2">PC Portable Gaming</h3>
-              <p className="text-gray-400">Configuration personnalisée selon vos besoins</p>
-            </Link>
-            <Link to="/upgrade" className="glass-card p-6 rounded-lg hover:scale-105 transition-transform duration-300">
-              <Monitor className="h-8 w-8 text-forge-orange mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2">Amélioration</h3>
-              <p className="text-gray-400">Optimisation de votre configuration</p>
-            </Link>
-            <Link to="/maintenance" className="glass-card p-6 rounded-lg hover:scale-105 transition-transform duration-300">
-              <Settings className="h-8 w-8 text-forge-orange mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2">Maintenance</h3>
-              <p className="text-gray-400">Nettoyage et entretien professionnel</p>
-            </Link>
-            <Link to="/pc-assembly" className="glass-card p-6 rounded-lg hover:scale-105 transition-transform duration-300">
-              <Wrench className="h-8 w-8 text-forge-orange mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2">Montage PC</h3>
-              <p className="text-gray-400">Service professionnel de montage</p>
-            </Link>
+            {services.map((service) => (
+              <ServiceCard key={service.to} {...service} />
+            ))}
           </div>
         </div>
       </div>
     </div>
   );
-};
+});
+
+Hero.displayName = 'Hero';
 
 export default Hero;

@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <footer className="bg-forge-dark mt-auto">
       <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="sm:col-span-2 lg:col-span-1">
             <h3 className="text-forge-orange font-bold mb-4">The Gaming Forge</h3>
             <p className="text-gray-400">
               Votre partenaire de confiance pour tous vos besoins en PC gaming
@@ -29,7 +29,7 @@ const Footer = () => {
             </ul>
           </div>
           
-          <div>
+          <div className="sm:col-span-2 lg:col-span-1">
             <h3 className="text-forge-orange font-bold mb-4">Suivez-nous</h3>
             <div className="flex space-x-4">
               <a href="https://www.instagram.com/the_gaming_forge/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-forge-orange">

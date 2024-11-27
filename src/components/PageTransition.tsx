@@ -24,7 +24,7 @@ const PageTransition = ({ children }: PageTransitionProps) => {
   const pageTransition = {
     type: "tween",
     ease: "anticipate",
-    duration: 0.4,
+    duration: 0.5,
   };
 
   return (
@@ -34,6 +34,7 @@ const PageTransition = ({ children }: PageTransitionProps) => {
       animate="animate"
       exit="exit"
       transition={pageTransition}
+      style={{ width: '100%' }}
     >
       {children}
     </motion.div>

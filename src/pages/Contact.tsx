@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { useState } from "react";
 import { openEmailClient } from "@/utils/emailUtils";
+import PageTransition from "@/components/PageTransition";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -47,9 +48,10 @@ ${message}`;
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <main className="container mx-auto px-4 py-24">
+    <PageTransition>
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
+        <main className="container mx-auto px-4 py-24">
         <h1 className="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-forge-orange to-forge-red">Contactez-nous</h1>
         <Card className="glass-card">
           <CardHeader>
@@ -99,9 +101,10 @@ ${message}`;
             </form>
           </CardContent>
         </Card>
-      </main>
-      <Footer />
-    </div>
+        </main>
+        <Footer />
+      </div>
+    </PageTransition>
   );
 };
 

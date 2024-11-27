@@ -24,7 +24,7 @@ const PageTransition = ({ children }: PageTransitionProps) => {
   const pageTransition = {
     type: "tween",
     ease: "anticipate",
-    duration: 0.6,
+    duration: 0.4,
   };
 
   return (

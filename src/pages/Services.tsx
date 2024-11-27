@@ -4,12 +4,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Monitor, Wrench, Wind, Laptop } from "lucide-react";
 import { Link } from "react-router-dom";
 import PCComponentsGuide from "@/components/services/PCComponentsGuide";
+import PageTransition from "@/components/PageTransition";
 
 const Services = () => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <main className="container mx-auto px-4 py-24 flex-grow">
+    <PageTransition>
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
+        <main className="container mx-auto px-4 py-24 flex-grow">
         <h1 className="text-4xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-forge-orange to-forge-red">Nos Services</h1>
         <p className="text-xl text-gray-400 text-center mb-12 max-w-2xl mx-auto">
           Découvrez nos services professionnels pour votre PC gaming
@@ -88,9 +90,10 @@ const Services = () => {
             </Card>
           </Link>
         </div>
-      </main>
-      <Footer />
-    </div>
+        </main>
+        <Footer />
+      </div>
+    </PageTransition>
   );
 };
 

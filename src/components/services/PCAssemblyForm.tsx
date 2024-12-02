@@ -71,8 +71,14 @@ ${componentsList}`;
           >
             <div className="text-left">
               <div className="font-bold">Basic</div>
-              <div className="text-sm text-gray-400">Montage simple</div>
-              <div className="mt-2">30€</div>
+              <div className="text-sm text-gray-400">
+                <li>
+                  <ul>Montage PC</ul>
+                  <ul>Cable management</ul>
+                  <ul>Mise à jour du bios + XMP</ul>
+                </li>
+              </div>
+              <div className="mt-2">35€</div>
             </div>
           </Button>
 
@@ -86,8 +92,16 @@ ${componentsList}`;
           >
             <div className="text-left">
               <div className="font-bold">Standard</div>
-              <div className="text-sm text-gray-400">Montage + Installation Windows</div>
-              <div className="mt-2">50€</div>
+              <div className="text-sm text-gray-400">
+                <li>
+                  <ul>Montage PC</ul>
+                  <ul>Cable management</ul>
+                  <ul>Mise à jour du bios + XMP</ul>
+                  <ul>Installation de windows (sans activation)</ul>
+                  <ul>Installation des drivers</ul>
+                </li>
+              </div>
+              <div className="mt-2">45€</div>
             </div>
           </Button>
 
@@ -101,8 +115,17 @@ ${componentsList}`;
           >
             <div className="text-left">
               <div className="font-bold">Premium</div>
-              <div className="text-sm text-gray-400">Montage + Windows + Optimisation</div>
-              <div className="mt-2">70€</div>
+              <div className="text-sm text-gray-400">
+                <li>
+                  <ul>Montage PC</ul>
+                  <ul>Cable management</ul>
+                  <ul>Mise à jour du bios + XMP</ul>
+                  <ul>Installation de windows (sans activation)</ul>
+                  <ul>Installation des drivers</ul>
+                  <ul>Installation des differents logiciels de gestion</ul>
+                </li>
+              </div>
+              <div className="mt-2">75€</div>
             </div>
           </Button>
         </div>

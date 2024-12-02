@@ -9,7 +9,7 @@ const Portfolio = () => {
     {
       title: "PC Gaming",
       specs: "RTX 4060 ti, R5 7500f, 32GB RAM",
-      image: "/placeholder.svg", // Using the placeholder image that comes with the project
+      image: "/Gloo.png",
       review: {
         author: "Gloo",
         rating: 5,

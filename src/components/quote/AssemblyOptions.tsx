@@ -17,13 +17,14 @@ const AssemblyOptions = ({
 }: AssemblyOptionsProps) => {
   return (
     <div className="space-y-4">
-      <div className="flex items-center space-x-2">
+      <div className="flex items-start space-x-2">
         <Checkbox
           id="include-assembly"
           checked={includeAssembly}
           onCheckedChange={(checked) => setIncludeAssembly(checked as boolean)}
+          className="mt-1"
         />
-        <Label htmlFor="include-assembly">Inclure un forfait de montage</Label>
+        <Label htmlFor="include-assembly" className="leading-tight">Inclure un forfait de montage</Label>
       </div>
 
       {includeAssembly && (
@@ -33,12 +34,12 @@ const AssemblyOptions = ({
             <Button
               type="button"
               variant={selectedAssemblyPlan === "Basic" ? "default" : "outline"}
-              className={`p-4 h-auto ${
+              className={`p-4 h-auto flex flex-col items-start w-full ${
                 selectedAssemblyPlan === "Basic" ? "bg-forge-orange" : ""
               }`}
               onClick={() => setSelectedAssemblyPlan("Basic")}
             >
-              <div className="text-left">
+              <div className="text-left w-full">
                 <div className="font-bold">Basic</div>
                 <div className="text-sm text-gray-400">Montage simple</div>
                 <div className="mt-2">30€</div>
@@ -48,12 +49,12 @@ const AssemblyOptions = ({
             <Button
               type="button"
               variant={selectedAssemblyPlan === "Standard" ? "default" : "outline"}
-              className={`p-4 h-auto ${
+              className={`p-4 h-auto flex flex-col items-start w-full ${
                 selectedAssemblyPlan === "Standard" ? "bg-forge-orange" : ""
               }`}
               onClick={() => setSelectedAssemblyPlan("Standard")}
             >
-              <div className="text-left">
+              <div className="text-left w-full">
                 <div className="font-bold">Standard</div>
                 <div className="text-sm text-gray-400">Montage + Installation Windows</div>
                 <div className="mt-2">50€</div>
@@ -63,12 +64,12 @@ const AssemblyOptions = ({
             <Button
               type="button"
               variant={selectedAssemblyPlan === "Premium" ? "default" : "outline"}
-              className={`p-4 h-auto ${
+              className={`p-4 h-auto flex flex-col items-start w-full ${
                 selectedAssemblyPlan === "Premium" ? "bg-forge-orange" : ""
               }`}
               onClick={() => setSelectedAssemblyPlan("Premium")}
             >
-              <div className="text-left">
+              <div className="text-left w-full">
                 <div className="font-bold">Premium</div>
                 <div className="text-sm text-gray-400">Montage + Windows + Optimisation</div>
                 <div className="mt-2">70€</div>

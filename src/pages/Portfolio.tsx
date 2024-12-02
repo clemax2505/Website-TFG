@@ -31,6 +31,9 @@ const Portfolio = () => {
                   src={project.image}
                   alt={project.title}
                   className="w-full h-48 object-cover"
+                  onError={(e) => {
+                    e.currentTarget.src = "/placeholder.svg";
+                  }}
                 />
                 <CardHeader>
                   <CardTitle className="text-xl">{project.title}</CardTitle>

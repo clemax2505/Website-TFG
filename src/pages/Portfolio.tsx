@@ -3,14 +3,13 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Star } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
-import GlooImage from '@/pages/Gloo.png';
 
 const Portfolio = () => {
   const projects = [
     {
       title: "PC Gaming",
       specs: "RTX 4060 ti, R5 7500f, 32GB RAM",
-      image: GlooImage,
+      image: "/placeholder.svg", // Using the placeholder image that comes with the project
       review: {
         author: "Gloo",
         rating: 5,

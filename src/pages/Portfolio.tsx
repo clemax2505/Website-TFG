@@ -9,7 +9,7 @@ const Portfolio = () => {
     {
       title: "PC Gaming",
       specs: "RTX 4060 ti, R5 7500f, 32GB RAM",
-      image: "/Gloo.svg",
+      image: "/lovable-uploads/63f481a5-f036-45d7-81ab-201926c66c18.png",
       review: {
         author: "Gloo",
         rating: 5,

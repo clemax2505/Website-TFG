@@ -71,14 +71,8 @@ ${componentsList}`;
           >
             <div className="text-left">
               <div className="font-bold">Basic</div>
-              <div className="text-sm text-gray-400">
-                <ul>
-                  <li>Montage</li>
-                  <li>Cable management</li>
-                  <li>Mise à jour du Bios si nécessaire + XMP</li>
-                </ul>
-              </div>
-              <div className="mt-2">40€</div>
+              <div className="text-sm text-gray-400">Montage simple</div>
+              <div className="mt-2">30€</div>
             </div>
           </Button>
 
@@ -92,14 +86,7 @@ ${componentsList}`;
           >
             <div className="text-left">
               <div className="font-bold">Standard</div>
-              <div className="text-sm text-gray-400">
-                <ul>
-                  <li>Montage</li>
-                  <li>Cable management</li>
-                  <li>Mise à jour du bios si nécessaire + XMP</li>
-                  <li>Instalation de windows (sans activation)</li>
-                </ul>
-              </div>
+              <div className="text-sm text-gray-400">Montage + Installation Windows</div>
               <div className="mt-2">50€</div>
             </div>
           </Button>
@@ -114,15 +101,7 @@ ${componentsList}`;
           >
             <div className="text-left">
               <div className="font-bold">Premium</div>
-              <div className="text-sm text-gray-400">
-                <ul>
-                  <li>Montag</li>
-                  <li>Cable management</li>
-                  <li>Mise à jour du bios si nécessaire + XMP</li>
-                  <li>Installation de windows (avec activation)</li>
-                  <li>Installation des drivers essentiels</li>
-                </ul>
-              </div>
+              <div className="text-sm text-gray-400">Montage + Windows + Optimisation</div>
               <div className="mt-2">70€</div>
             </div>
           </Button>

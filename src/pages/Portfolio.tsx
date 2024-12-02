@@ -7,33 +7,13 @@ import PageTransition from "@/components/PageTransition";
 const Portfolio = () => {
   const projects = [
     {
-      title: "PC Gaming Haute Performance",
-      specs: "RTX 4080, i9-13900K, 32GB RAM",
-      image: "photo-1488590528505-98d2b5aba04b",
+      title: "PC Gaming",
+      specs: "RTX 4060 ti, R5 7500f, 32GB RAM",
+      image: "/placeholder.svg", // Using the placeholder image that comes with the project
       review: {
-        author: "Thomas M.",
+        author: "Gloo",
         rating: 5,
-        comment: "Configuration exceptionnelle, performances au rendez-vous !"
-      }
-    },
-    {
-      title: "Setup Streaming Pro",
-      specs: "RTX 4070, Ryzen 9 7900X, 64GB RAM",
-      image: "photo-1461749280684-dccba630e2f6",
-      review: {
-        author: "Sarah L.",
-        rating: 5,
-        comment: "Parfait pour mes sessions de streaming, aucune latence !"
-      }
-    },
-    {
-      title: "PC Portable Gaming",
-      specs: "RTX 4060, i7-13700H, 32GB RAM",
-      image: "photo-1518770660439-4636190af475",
-      review: {
-        author: "Marc D.",
-        rating: 5,
-        comment: "Excellent rapport performance/mobilité"
+        comment: "Un excellent service, super bien réalisé et super réactif. Rien à dire c'était parfait avec pleins d'explications"
       }
     }
   ];
@@ -44,12 +24,11 @@ const Portfolio = () => {
         <Navbar />
         <main className="container mx-auto px-4 py-24 flex-grow">
           <h1 className="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-forge-orange to-forge-red">Nos Réalisations</h1>
-          <h2>Le site aillant été mis en ligne le samedi 23 novembre, ces avis sont faux. <br></br>Cependant, tout le reste du site est factuelle !</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <Card key={index} className="glass-card overflow-hidden hover:scale-105 transition-transform duration-300">
                 <img
-                  src={`https://images.unsplash.com/${project.image}?auto=format&fit=crop&w=800&q=80`}
+                  src={project.image}
                   alt={project.title}
                   className="w-full h-48 object-cover"
                 />

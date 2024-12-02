@@ -122,7 +122,7 @@ ${componentsList}`;
                   <ul>Mise à jour du bios + XMP</ul>
                   <ul>Installation de windows (sans activation)</ul>
                   <ul>Installation des drivers</ul>
-                  <ul>Installation des differents logiciels de gestion</ul>
+                  <ul>Installation des logiciels de gestion</ul>
                 </li>
               </div>
               <div className="mt-2">75€</div>

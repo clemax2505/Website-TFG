@@ -48,7 +48,7 @@ const AssemblyOptions = ({
                   <li>Mise à jour du bios + XMP</li>
                   </ul>
                 </div>
-                <div className="mt-2">30€</div>
+                <div className="mt-2">35€</div>
               </div>
             </Button>
 
@@ -71,7 +71,7 @@ const AssemblyOptions = ({
                   <li>Installation des drivers</li>
                   </ul>
                 </div>
-                <div className="mt-2">50€</div>
+                <div className="mt-2">45€</div>
               </div>
             </Button>
 
@@ -95,7 +95,7 @@ const AssemblyOptions = ({
                   <li>Installation des logiciels de gestion </li>
                   </ul>
                 </div>
-                <div className="mt-2">70€</div>
+                <div className="mt-2">75€</div>
               </div>
             </Button>
           </div>

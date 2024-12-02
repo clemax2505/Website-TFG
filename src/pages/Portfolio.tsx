@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Star } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
-import GlooImage from 'Gloo.png';
 
 const Portfolio = () => {
   const projects = [
@@ -29,7 +28,7 @@ const Portfolio = () => {
             {projects.map((project, index) => (
               <Card key={index} className="glass-card overflow-hidden hover:scale-105 transition-transform duration-300">
                 <img
-                  src={`https://images.unsplash.com/${project.image}?auto=format&fit=crop&w=800&q=80`}
+                  src={project.image}
                   alt={project.title}
                   className="w-full h-48 object-cover"
                 />

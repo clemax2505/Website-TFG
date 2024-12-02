@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Star } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
-import GlooImage from './Gloo.png';
+import GlooImage from '@/pages/Gloo.png';
 
 const Portfolio = () => {
   const projects = [

@@ -21,12 +21,17 @@ const Quote = () => {
   const [additionalDetails, setAdditionalDetails] = useState("");
   const [preference, setPreference] = useState("nvidia-intel");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [includeAssembly, setIncludeAssembly] = useState(false);
+  const [selectedAssemblyPlan, setSelectedAssemblyPlan] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
+      const formData = new FormData(e.target as HTMLFormElement);
+      const data = Object.fromEntries(formData.entries());
+
       const emailBody = `
 Nouvelle demande de devis PC Gaming Sur Mesure
 
@@ -34,6 +39,7 @@ Budget: ${budget[0]}€
 Usage principal: ${usage}
 Système d'exploitation: ${os === 'other' ? customOs : os}
 Préférence GPU/CPU: ${preference}
+${includeAssembly ? `Forfait de montage choisi: ${selectedAssemblyPlan}` : ''}
 
 Détails supplémentaires:
 ${additionalDetails}`;
@@ -77,16 +83,6 @@ ${additionalDetails}`;
                   className="py-4"
                 />
                 <p className="text-right text-forge-orange font-semibold">{budget[0]}€</p>
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-sm font-medium">Usage principal</label>
-                <Input
-                  placeholder="Ex: Gaming, Streaming, Montage vidéo..."
-                  value={usage}
-                  onChange={(e) => setUsage(e.target.value)}
-                  required
-                />
               </div>
 
               <div className="space-y-4">
@@ -150,13 +146,76 @@ ${additionalDetails}`;
                 )}
               </div>
 
+              <div className="space-y-4">
+                <div className="flex items-center space-x-2">
+                  <Checkbox
+                    id="include-assembly"
+                    checked={includeAssembly}
+                    onCheckedChange={(checked) => setIncludeAssembly(checked as boolean)}
+                  />
+                  <Label htmlFor="include-assembly">Inclure un forfait de montage</Label>
+                </div>
+
+                {includeAssembly && (
+                  <div className="space-y-4 mt-4">
+                    <Label>Choisissez votre forfait de montage</Label>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      <Button
+                        type="button"
+                        variant={selectedAssemblyPlan === "Basic" ? "default" : "outline"}
+                        className={`p-4 h-auto ${
+                          selectedAssemblyPlan === "Basic" ? "bg-forge-orange" : ""
+                        }`}
+                        onClick={() => setSelectedAssemblyPlan("Basic")}
+                      >
+                        <div className="text-left">
+                          <div className="font-bold">Basic</div>
+                          <div className="text-sm text-gray-400">Montage simple</div>
+                          <div className="mt-2">30€</div>
+                        </div>
+                      </Button>
+
+                      <Button
+                        type="button"
+                        variant={selectedAssemblyPlan === "Standard" ? "default" : "outline"}
+                        className={`p-4 h-auto ${
+                          selectedAssemblyPlan === "Standard" ? "bg-forge-orange" : ""
+                        }`}
+                        onClick={() => setSelectedAssemblyPlan("Standard")}
+                      >
+                        <div className="text-left">
+                          <div className="font-bold">Standard</div>
+                          <div className="text-sm text-gray-400">Montage + Installation Windows</div>
+                          <div className="mt-2">50€</div>
+                        </div>
+                      </Button>
+
+                      <Button
+                        type="button"
+                        variant={selectedAssemblyPlan === "Premium" ? "default" : "outline"}
+                        className={`p-4 h-auto ${
+                          selectedAssemblyPlan === "Premium" ? "bg-forge-orange" : ""
+                        }`}
+                        onClick={() => setSelectedAssemblyPlan("Premium")}
+                      >
+                        <div className="text-left">
+                          <div className="font-bold">Premium</div>
+                          <div className="text-sm text-gray-400">Montage + Windows + Optimisation</div>
+                          <div className="mt-2">70€</div>
+                        </div>
+                      </Button>
+                    </div>
+                  </div>
+                )}
+              </div>
+
               <div className="space-y-2">
-                <label className="text-sm font-medium">Détails supplémentaires</label>
-                <Textarea 
-                  placeholder="Ajoutez ici toute information complémentaire concernant votre projet..."
-                  value={additionalDetails}
-                  onChange={(e) => setAdditionalDetails(e.target.value)}
-                  className="min-h-[100px]"
+                <label className="text-sm font-medium">Usage principal</label>
+                <Input
+                  placeholder="Ex: Gaming, Streaming, Montage vidéo..."
+                  value={usage}
+                  onChange={(e) => setUsage(e.target.value)}
+                  required
                 />
               </div>
 
@@ -168,6 +227,16 @@ ${additionalDetails}`;
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
+                />
+              </div>
+
+              <div className="space-y-2">
+                <label className="text-sm font-medium">Détails supplémentaires</label>
+                <Textarea 
+                  placeholder="Ajoutez ici toute information complémentaire concernant votre projet..."
+                  value={additionalDetails}
+                  onChange={(e) => setAdditionalDetails(e.target.value)}
+                  className="min-h-[100px]"
                 />
               </div>
 

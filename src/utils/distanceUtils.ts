@@ -1,25 +1,31 @@
-// Function to check if a zip code is valid (French postal code format)
+import axios from 'axios';
+
+const FRENCH_ZIP_CODE_REGEX = /^\d{5}$/;
+const HOME_ZIP_CODE = "69410";
+const HOME_ADDRESS = "69410 France"; // Home address to be used in the API request
+const API_KEY = "AIzaSyBdduejZbESgRpm4wKScL3PQ4lARDbWyhQ"; // Replace with your actual API key
+const FEE_PER_KM = 0.66; // Travel fee per kilometer
+
 export const isValidZipCode = (zipCode: string): boolean => {
-  return /^\d{5}$/.test(zipCode);
+  return FRENCH_ZIP_CODE_REGEX.test(zipCode);
 };
 
-// Function to calculate travel fee based on zip code
-export const calculateTravelFee = (zipCode: string): number => {
-  // Base case: if zip code is invalid or same as home (69410)
-  if (!isValidZipCode(zipCode) || zipCode === "69410") {
+export const calculateTravelFee = async (zipCode: string): Promise<number> => {
+  if (!isValidZipCode(zipCode) || zipCode === HOME_ZIP_CODE) {
     return 0;
   }
 
-  // Simple distance calculation based on first two digits difference
-  // This is a simplified version - in real world, you'd want to use a proper distance API
-  const clientDepartment = parseInt(zipCode.substring(0, 2));
-  const homeDepartment = 69;
-  
-  // Calculate rough distance (this is a simplified calculation)
-  const departmentDifference = Math.abs(clientDepartment - homeDepartment);
-  const estimatedDistance = departmentDifference * 15; // Rough estimate: 15km per department difference
-  
-  // Calculate fee: 10€ per 15km
-  const numberOfSegments = Math.ceil(estimatedDistance / 15);
-  return numberOfSegments * 10;
+  const clientAddress = `${zipCode} France`;
+  const url = `https://maps.googleapis.com/maps/api/distancematrix/json?origins=${HOME_ADDRESS}&destinations=${clientAddress}&key=${API_KEY}`;
+
+  try {
+    const response = await axios.get(url);
+    const distanceInMeters = response.data.rows[0].elements[0].distance.value;
+    const distanceInKm = distanceInMeters / 1000;
+
+    return distanceInKm * FEE_PER_KM;
+  } catch (error) {
+    console.error("Error fetching distance from Google Maps API:", error);
+    return 0;
+  }
 };

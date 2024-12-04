@@ -151,7 +151,7 @@ ${componentsList}`;
         />
         {travelFee > 0 && (
           <p className="text-forge-orange mt-2">
-            Frais de déplacement : {travelFee}€ (distance {'>'} 15km)
+            Frais de déplacement : {travelFee}€ (distance {'>'}15km)
           </p>
         )}
       </div>

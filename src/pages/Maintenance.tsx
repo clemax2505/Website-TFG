@@ -10,11 +10,26 @@ import { Wind, Thermometer, Wrench } from "lucide-react";
 import { openEmailClient } from "@/utils/emailUtils";
 import { useState } from "react";
 import PageTransition from "@/components/PageTransition";
+import { calculateTravelFee, isValidZipCode } from "@/utils/distanceUtils";
 
 const Maintenance = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [email, setEmail] = useState("");
+  const [zipCode, setZipCode] = useState("");
+  const [travelFee, setTravelFee] = useState(0);
+
+  const handleZipCodeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newZipCode = e.target.value;
+    setZipCode(newZipCode);
+    
+    if (isValidZipCode(newZipCode)) {
+      const fee = calculateTravelFee(newZipCode);
+      setTravelFee(fee);
+    } else {
+      setTravelFee(0);
+    }
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -29,6 +44,8 @@ const Maintenance = () => {
 Nouvelle demande de maintenance
 
 Email client: ${email}
+Code postal: ${zipCode}
+Frais de déplacement: ${travelFee}€
 Services demandés: ${services}`;
 
     try {
@@ -123,6 +140,25 @@ Services demandés: ${services}`;
                 </div>
 
                 <div className="space-y-2">
+                  <Label htmlFor="zipcode">Code Postal</Label>
+                  <Input
+                    id="zipcode"
+                    type="text"
+                    value={zipCode}
+                    onChange={handleZipCodeChange}
+                    placeholder="XXXXX"
+                    pattern="\d{5}"
+                    title="Code postal français (5 chiffres)"
+                    required
+                  />
+                  {travelFee > 0 && (
+                    <p className="text-forge-orange mt-2">
+                      Frais de déplacement : {travelFee}€ (10€ par tranche de 15km)
+                    </p>
+                  )}
+                </div>
+
+                <div className="space-y-2">
                   <Label>Email</Label>
                   <Input
                     type="email"
@@ -136,7 +172,7 @@ Services demandés: ${services}`;
                 <Button 
                   type="submit" 
                   className="w-full bg-forge-orange hover:bg-forge-red"
-                  disabled={isSubmitting}
+                  disabled={isSubmitting || !isValidZipCode(zipCode)}
                 >
                   {isSubmitting ? "Préparation..." : "Demander une maintenance"}
                 </Button>

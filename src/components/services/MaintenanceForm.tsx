@@ -84,14 +84,14 @@ Services demandés: ${services}`;
           type="text"
           value={zipCode}
           onChange={handleZipCodeChange}
-          placeholder="69XXX"
-          pattern="69\d{3}"
-          title="Code postal du Rhône (69XXX)"
+          placeholder="XXXXX"
+          pattern="\d{5}"
+          title="Code postal français (5 chiffres)"
           required
         />
         {travelFee > 0 && (
           <p className="text-forge-orange mt-2">
-            Frais de déplacement : {travelFee}€ (distance {'>'}15km)
+            Frais de déplacement : {travelFee}€ (10€ par tranche de 15km)
           </p>
         )}
       </div>

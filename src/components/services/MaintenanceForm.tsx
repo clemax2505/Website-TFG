@@ -61,7 +61,7 @@ Services demandés: ${services}`;
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-6 p-6">
       <div className="space-y-4">
         <div className="flex items-center space-x-2">
           <Checkbox id="depoussierage" name="depoussierage" />
@@ -78,8 +78,9 @@ Services demandés: ${services}`;
       </div>
 
       <div className="space-y-2">
-        <Label>Code Postal</Label>
+        <Label htmlFor="zipcode">Code Postal</Label>
         <Input
+          id="zipcode"
           type="text"
           value={zipCode}
           onChange={handleZipCodeChange}
@@ -90,14 +91,15 @@ Services demandés: ${services}`;
         />
         {travelFee > 0 && (
           <p className="text-forge-orange mt-2">
-            Frais de déplacement : {travelFee}€ (distance > 15km)
+            Frais de déplacement : {travelFee}€ (distance {'>'} 15km)
           </p>
         )}
       </div>
 
       <div className="space-y-2">
-        <Label>Email</Label>
+        <Label htmlFor="email">Email</Label>
         <Input
+          id="email"
           type="email"
           name="email"
           placeholder="votre@email.com"

@@ -14,19 +14,32 @@ const PCAssemblyForm = () => {
   const [isRecommended, setIsRecommended] = useState(false);
   const [zipCode, setZipCode] = useState("");
   const [travelFee, setTravelFee] = useState(0);
+  const [isCalculating, setIsCalculating] = useState(false);
 
   const components = [
     "CPU", "Carte mère", "RAM", "Carte graphique", 
     "Stockage", "Boîtier", "Alimentation", "Refroidissement"
   ];
 
-  const handleZipCodeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleZipCodeChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const newZipCode = e.target.value;
     setZipCode(newZipCode);
     
     if (isValidZipCode(newZipCode)) {
-      const fee = calculateTravelFee(newZipCode);
-      setTravelFee(fee);
+      setIsCalculating(true);
+      try {
+        const fee = await calculateTravelFee(newZipCode);
+        setTravelFee(fee);
+      } catch (error) {
+        console.error("Error calculating travel fee:", error);
+        toast({
+          title: "Erreur",
+          description: "Impossible de calculer les frais de déplacement.",
+          variant: "destructive"
+        });
+      } finally {
+        setIsCalculating(false);
+      }
     } else {
       setTravelFee(0);
     }

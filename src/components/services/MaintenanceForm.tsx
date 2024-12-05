@@ -12,14 +12,27 @@ const MaintenanceForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [zipCode, setZipCode] = useState("");
   const [travelFee, setTravelFee] = useState(0);
+  const [isCalculating, setIsCalculating] = useState(false);
 
-  const handleZipCodeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleZipCodeChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const newZipCode = e.target.value;
     setZipCode(newZipCode);
     
     if (isValidZipCode(newZipCode)) {
-      const fee = calculateTravelFee(newZipCode);
-      setTravelFee(fee);
+      setIsCalculating(true);
+      try {
+        const fee = await calculateTravelFee(newZipCode);
+        setTravelFee(fee);
+      } catch (error) {
+        console.error("Error calculating travel fee:", error);
+        toast({
+          title: "Erreur",
+          description: "Impossible de calculer les frais de déplacement.",
+          variant: "destructive"
+        });
+      } finally {
+        setIsCalculating(false);
+      }
     } else {
       setTravelFee(0);
     }
@@ -89,7 +102,9 @@ Services demandés: ${services}`;
           title="Code postal français (5 chiffres)"
           required
         />
-        {travelFee > 0 && (
+        {isCalculating ? (
+          <p className="text-forge-orange mt-2">Calcul des frais en cours...</p>
+        ) : travelFee > 0 && (
           <p className="text-forge-orange mt-2">
             Frais de déplacement : {travelFee}€ (10€ par tranche de 15km)
           </p>
@@ -110,7 +125,7 @@ Services demandés: ${services}`;
       <Button 
         type="submit" 
         className="w-full bg-forge-orange hover:bg-forge-red"
-        disabled={isSubmitting || !isValidZipCode(zipCode)}
+        disabled={isSubmitting || !isValidZipCode(zipCode) || isCalculating}
       >
         {isSubmitting ? "Préparation..." : "Demander une maintenance"}
       </Button>

@@ -11,7 +11,7 @@ const Quote = () => {
         <h1 className="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-forge-orange to-forge-red">
           Devis PC Gaming Sur Mesure
         </h1>
-        <Card className="glass-card max-w-2xl mx-auto">
+        <Card className="glass-card w-full">
           <CardHeader>
             <CardTitle className="text-2xl text-center">Configurez votre projet</CardTitle>
           </CardHeader>

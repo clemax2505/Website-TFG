@@ -5,32 +5,17 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/components/ui/use-toast";
 import { useState } from "react";
 import { openEmailClient } from "@/utils/emailUtils";
-import { calculateTravelFee, isValidZipCode } from "@/utils/distanceUtils";
 
 const PCAssemblyForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState<string>("");
   const [isRecommended, setIsRecommended] = useState(false);
-  const [zipCode, setZipCode] = useState("");
-  const [travelFee, setTravelFee] = useState(0);
 
   const components = [
     "CPU", "Carte mère", "RAM", "Carte graphique", 
     "Stockage", "Boîtier", "Alimentation", "Refroidissement"
   ];
-
-  const handleZipCodeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newZipCode = e.target.value;
-    setZipCode(newZipCode);
-    
-    if (isValidZipCode(newZipCode)) {
-      const fee = calculateTravelFee(newZipCode);
-      setTravelFee(fee);
-    } else {
-      setTravelFee(0);
-    }
-  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -48,8 +33,6 @@ Nouvelle demande de montage PC
 
 Forfait choisi: ${selectedPlan}
 Email client: ${data.email}
-Code postal: ${zipCode}
-Frais de déplacement: ${travelFee}€
 Configuration conseillée par Clément: ${isRecommended ? 'Oui' : 'Non'}
 
 Liste des composants:
@@ -161,25 +144,6 @@ ${componentsList}`;
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="zipcode">Code Postal</Label>
-        <Input
-          id="zipcode"
-          type="text"
-          value={zipCode}
-          onChange={handleZipCodeChange}
-          placeholder="69XXX"
-          pattern="69\d{3}"
-          title="Code postal du Rhône (69XXX)"
-          required
-        />
-        {travelFee > 0 && (
-          <p className="text-forge-orange mt-2">
-            Frais de déplacement : {travelFee}€ (distance {'>'}15km)
-          </p>
-        )}
-      </div>
-
-      <div className="space-y-2">
         <Label htmlFor="email">Email</Label>
         <Input
           id="email"
@@ -204,7 +168,7 @@ ${componentsList}`;
       <Button 
         type="submit" 
         className="w-full bg-forge-orange hover:bg-forge-red"
-        disabled={isSubmitting || !selectedPlan || !isValidZipCode(zipCode)}
+        disabled={isSubmitting || !selectedPlan}
       >
         {isSubmitting ? "Envoi en cours..." : "Envoyer la demande"}
       </Button>

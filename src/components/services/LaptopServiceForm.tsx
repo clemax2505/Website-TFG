@@ -3,41 +3,41 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
+import { Checkbox } from "@/components/ui/checkbox";
 import { useState } from "react";
 import { openEmailClient } from "@/utils/emailUtils";
-import { calculateTravelFee, isValidZipCode } from "@/utils/distanceUtils";
 
 const LaptopServiceForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [zipCode, setZipCode] = useState("");
-  const [travelFee, setTravelFee] = useState(0);
+  const [selectedServices, setSelectedServices] = useState<string[]>([]);
 
-  const handleZipCodeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newZipCode = e.target.value;
-    setZipCode(newZipCode);
-    
-    if (isValidZipCode(newZipCode)) {
-      const fee = calculateTravelFee(newZipCode);
-      setTravelFee(fee);
-    } else {
-      setTravelFee(0);
-    }
-  };
+  const services = [
+    { id: "screen", label: "Changement écran" },
+    { id: "ram", label: "Changement RAM" },
+    { id: "ssd", label: "Changement SSD" },
+    { id: "battery", label: "Changement batterie" },
+    { id: "cleaning", label: "Nettoyage poussière" },
+    { id: "thermal", label: "Changement pâte thermique" },
+  ];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     const formData = new FormData(e.target as HTMLFormElement);
+    const selectedServicesText = selectedServices.length > 0 
+      ? `\nServices demandés:\n${selectedServices.map(service => 
+          services.find(s => s.id === service)?.label
+        ).join('\n')}`
+      : '';
+
     const emailBody = `
 Nouvelle demande de service PC portable
 
 Email client: ${formData.get('email')}
-Code postal: ${zipCode}
-Frais de déplacement: ${travelFee}€
 Modèle PC portable: ${formData.get('model')}
-Description du problème: ${formData.get('description')}`;
+Description du problème: ${formData.get('description')}${selectedServicesText}`;
 
     try {
       openEmailClient("Nouvelle demande de service PC portable", emailBody);
@@ -69,23 +69,26 @@ Description du problème: ${formData.get('description')}`;
         />
       </div>
 
-      <div className="space-y-2">
-        <Label htmlFor="zipcode">Code Postal</Label>
-        <Input
-          id="zipcode"
-          type="text"
-          value={zipCode}
-          onChange={handleZipCodeChange}
-          placeholder="69XXX"
-          pattern="69\d{3}"
-          title="Code postal du Rhône (69XXX)"
-          required
-        />
-        {travelFee > 0 && (
-          <p className="text-forge-orange mt-2">
-            Frais de déplacement : {travelFee}€ (distance {'>'} 15km)
-          </p>
-        )}
+      <div className="space-y-4">
+        <Label>Services requis</Label>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {services.map((service) => (
+            <div key={service.id} className="flex items-center space-x-2">
+              <Checkbox
+                id={service.id}
+                checked={selectedServices.includes(service.id)}
+                onCheckedChange={(checked) => {
+                  setSelectedServices(prev =>
+                    checked
+                      ? [...prev, service.id]
+                      : prev.filter(id => id !== service.id)
+                  );
+                }}
+              />
+              <Label htmlFor={service.id}>{service.label}</Label>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="space-y-2">
@@ -113,7 +116,7 @@ Description du problème: ${formData.get('description')}`;
       <Button 
         type="submit" 
         className="w-full bg-forge-orange hover:bg-forge-red"
-        disabled={isSubmitting || !isValidZipCode(zipCode)}
+        disabled={isSubmitting}
       >
         {isSubmitting ? "Envoi en cours..." : "Envoyer la demande"}
       </Button>

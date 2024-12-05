@@ -20,7 +20,7 @@ export const calculateTravelFee = async (zipCode: string): Promise<number> => {
     const originResponse = await client.geocode({
       params: {
         address: `${BASE_LOCATION}, France`,
-        key: GOOGLE_MAPS_API_KEY || "",
+        key: AIzaSyBdduejZbESgRpm4wKScL3PQ4lARDbWyhQ || "",
       },
     });
 
@@ -28,7 +28,7 @@ export const calculateTravelFee = async (zipCode: string): Promise<number> => {
     const destinationResponse = await client.geocode({
       params: {
         address: `${zipCode}, France`,
-        key: GOOGLE_MAPS_API_KEY || "",
+        key: AIzaSyBdduejZbESgRpm4wKScL3PQ4lARDbWyhQ || "",
       },
     });
 
@@ -45,7 +45,7 @@ export const calculateTravelFee = async (zipCode: string): Promise<number> => {
       params: {
         origins: [originResponse.data.results[0].formatted_address],
         destinations: [destinationResponse.data.results[0].formatted_address],
-        key: GOOGLE_MAPS_API_KEY || "",
+        key: AIzaSyBdduejZbESgRpm4wKScL3PQ4lARDbWyhQ || "",
       },
     });
 

@@ -13,7 +13,7 @@ const Upgrade = () => {
           Optimisez les performances de votre PC gaming existant
         </p>
         
-        <Card className="glass-card max-w-2xl mx-auto">
+        <Card className="glass-card max-w-4xl mx-auto">
           <PCUpgradeForm />
         </Card>
       </main>

@@ -69,7 +69,7 @@ ${data.details}`;
   };
 
   return (
-    <form onSubmit={handleSubmit} onKeyDown={handleKeyDown} className="space-y-4">
+    <form onSubmit={handleSubmit} onKeyDown={handleKeyDown} className="space-y-4 p-6">
       <div className="space-y-2">
         <Label>Configuration actuelle</Label>
         {components.map((component) => (

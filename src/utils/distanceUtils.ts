@@ -1,25 +1,70 @@
+import { Client } from "@googlemaps/google-maps-services-js";
+
+const GOOGLE_MAPS_API_KEY = process.env.VITE_GOOGLE_MAPS_API_KEY;
+const BASE_LOCATION = "69410"; // Code postal de base
+
+const client = new Client({});
+
 // Function to check if a zip code is valid (French postal code format)
 export const isValidZipCode = (zipCode: string): boolean => {
   return /^\d{5}$/.test(zipCode);
 };
 
-// Function to calculate travel fee based on zip code
-export const calculateTravelFee = (zipCode: string): number => {
-  // Base case: if zip code is invalid or same as home (69410)
-  if (!isValidZipCode(zipCode) || zipCode === "69410") {
+// Function to calculate travel fee based on actual distance using Google Maps API
+export const calculateTravelFee = async (zipCode: string): Promise<number> => {
+  if (!isValidZipCode(zipCode) || zipCode === BASE_LOCATION) {
     return 0;
   }
 
-  // Simple distance calculation based on first two digits difference
-  // This is a simplified version - in real world, you'd want to use a proper distance API
-  const clientDepartment = parseInt(zipCode.substring(0, 2));
-  const homeDepartment = 69;
-  
-  // Calculate rough distance (this is a simplified calculation)
-  const departmentDifference = Math.abs(clientDepartment - homeDepartment);
-  const estimatedDistance = departmentDifference * 15; // Rough estimate: 15km per department difference
-  
-  // Calculate fee: 10€ per 15km
-  const numberOfSegments = Math.ceil(estimatedDistance / 15);
-  return numberOfSegments * 10;
+  try {
+    // Get coordinates for the base location
+    const originResponse = await client.geocode({
+      params: {
+        address: `${BASE_LOCATION}, France`,
+        key: GOOGLE_MAPS_API_KEY || "",
+      },
+    });
+
+    // Get coordinates for the destination
+    const destinationResponse = await client.geocode({
+      params: {
+        address: `${zipCode}, France`,
+        key: GOOGLE_MAPS_API_KEY || "",
+      },
+    });
+
+    if (
+      originResponse.data.results.length === 0 ||
+      destinationResponse.data.results.length === 0
+    ) {
+      console.error("Could not find coordinates for one or both locations");
+      return 0;
+    }
+
+    // Calculate the distance between the two points
+    const distanceResponse = await client.distancematrix({
+      params: {
+        origins: [originResponse.data.results[0].formatted_address],
+        destinations: [destinationResponse.data.results[0].formatted_address],
+        key: GOOGLE_MAPS_API_KEY || "",
+      },
+    });
+
+    if (
+      !distanceResponse.data.rows[0]?.elements[0]?.distance?.value
+    ) {
+      console.error("Could not calculate distance");
+      return 0;
+    }
+
+    // Convert distance from meters to kilometers
+    const distanceInKm = distanceResponse.data.rows[0].elements[0].distance.value / 1000;
+    
+    // Calculate fee: 10€ per 15km
+    const numberOfSegments = Math.ceil(distanceInKm / 15);
+    return numberOfSegments * 10;
+  } catch (error) {
+    console.error("Error calculating distance:", error);
+    return 0;
+  }
 };

@@ -5,25 +5,10 @@ import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
 import { useState } from "react";
 import { openEmailClient } from "@/utils/emailUtils";
-import { calculateTravelFee, isValidZipCode } from "@/utils/distanceUtils";
 
 const MaintenanceForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [zipCode, setZipCode] = useState("");
-  const [travelFee, setTravelFee] = useState(0);
-
-  const handleZipCodeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newZipCode = e.target.value;
-    setZipCode(newZipCode);
-    
-    if (isValidZipCode(newZipCode)) {
-      const fee = calculateTravelFee(newZipCode);
-      setTravelFee(fee);
-    } else {
-      setTravelFee(0);
-    }
-  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,8 +23,6 @@ const MaintenanceForm = () => {
 Nouvelle demande de maintenance
 
 Email client: ${formData.get('email')}
-Code postal: ${zipCode}
-Frais de déplacement: ${travelFee}€
 Services demandés: ${services}`;
 
     try {
@@ -78,25 +61,6 @@ Services demandés: ${services}`;
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="zipcode">Code Postal</Label>
-        <Input
-          id="zipcode"
-          type="text"
-          value={zipCode}
-          onChange={handleZipCodeChange}
-          placeholder="XXXXX"
-          pattern="\d{5}"
-          title="Code postal français (5 chiffres)"
-          required
-        />
-        {travelFee > 0 && (
-          <p className="text-forge-orange mt-2">
-            Frais de déplacement : {travelFee}€ (10€ par tranche de 15km)
-          </p>
-        )}
-      </div>
-
-      <div className="space-y-2">
         <Label htmlFor="email">Email</Label>
         <Input
           id="email"
@@ -110,7 +74,7 @@ Services demandés: ${services}`;
       <Button 
         type="submit" 
         className="w-full bg-forge-orange hover:bg-forge-red"
-        disabled={isSubmitting || !isValidZipCode(zipCode)}
+        disabled={isSubmitting}
       >
         {isSubmitting ? "Préparation..." : "Demander une maintenance"}
       </Button>

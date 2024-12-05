@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import LaptopServiceForm from "@/components/services/LaptopServiceForm";
 import { Card } from "@/components/ui/card";
 import PageTransition from "@/components/PageTransition";
-import { Laptop, Tool, Clock, Shield } from "lucide-react";
+import { Laptop, Wrench, Clock, Shield } from "lucide-react";
 
 const LaptopService = () => {
   return (
@@ -23,7 +23,7 @@ const LaptopService = () => {
             </Card>
 
             <Card className="p-6 glass-card">
-              <Tool className="w-12 h-12 text-forge-orange mb-4" />
+              <Wrench className="w-12 h-12 text-forge-orange mb-4" />
               <h3 className="text-xl font-bold mb-2">Réparation Expert</h3>
               <p className="text-gray-400">Intervention professionnelle sur tous types de pannes matérielles</p>
             </Card>

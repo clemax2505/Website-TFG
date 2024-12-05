@@ -72,7 +72,7 @@ const CustomPC = () => {
             </Link>
           </div>
         </main>
-        <Footer/>
+        <Footer />
       </div>
     </PageTransition>
   );

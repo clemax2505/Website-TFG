@@ -14,32 +14,19 @@ const PCAssemblyForm = () => {
   const [isRecommended, setIsRecommended] = useState(false);
   const [zipCode, setZipCode] = useState("");
   const [travelFee, setTravelFee] = useState(0);
-  const [isCalculating, setIsCalculating] = useState(false);
 
   const components = [
     "CPU", "Carte mère", "RAM", "Carte graphique", 
     "Stockage", "Boîtier", "Alimentation", "Refroidissement"
   ];
 
-  const handleZipCodeChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleZipCodeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newZipCode = e.target.value;
     setZipCode(newZipCode);
     
     if (isValidZipCode(newZipCode)) {
-      setIsCalculating(true);
-      try {
-        const fee = await calculateTravelFee(newZipCode);
-        setTravelFee(fee);
-      } catch (error) {
-        console.error("Error calculating travel fee:", error);
-        toast({
-          title: "Erreur",
-          description: "Impossible de calculer les frais de déplacement.",
-          variant: "destructive"
-        });
-      } finally {
-        setIsCalculating(false);
-      }
+      const fee = calculateTravelFee(newZipCode);
+      setTravelFee(fee);
     } else {
       setTravelFee(0);
     }
@@ -101,14 +88,8 @@ ${componentsList}`;
           >
             <div className="text-left">
               <div className="font-bold">Basic</div>
-              <div className="text-sm text-gray-400">
-                <ul>
-                <li>Montage PC</li>
-                <li>Cable management</li>
-                <li>Mise à jour du bios + XMP</li>
-                </ul>
-              </div>
-              <div className="mt-2">35€</div>
+              <div className="text-sm text-gray-400">Montage simple</div>
+              <div className="mt-2">30€</div>
             </div>
           </Button>
 
@@ -122,16 +103,8 @@ ${componentsList}`;
           >
             <div className="text-left">
               <div className="font-bold">Standard</div>
-              <div className="text-sm text-gray-400">
-                <ul>
-                <li>Montage PC</li>
-                <li>Cable management</li>
-                <li>Mise à jour du bios + XMP</li>
-                <li>Installation de windows (sans activation)</li>
-                <li>Installation des drivers</li>
-                </ul>
-              </div>
-              <div className="mt-2">45€</div>
+              <div className="text-sm text-gray-400">Montage + Installation Windows</div>
+              <div className="mt-2">50€</div>
             </div>
           </Button>
 
@@ -145,17 +118,8 @@ ${componentsList}`;
           >
             <div className="text-left">
               <div className="font-bold">Premium</div>
-              <div className="text-sm text-gray-400">
-                <ul>
-                <li>Montage PC</li>
-                <li>Cable management</li>
-                <li>Mise à jour du bios + XMP</li>
-                <li>Installation de windows (avec activation)</li>
-                <li>Installation des drivers</li>
-                <li>Installation des logiciels de gestion </li>
-                </ul>
-              </div>
-              <div className="mt-2">75€</div>
+              <div className="text-sm text-gray-400">Montage + Windows + Optimisation</div>
+              <div className="mt-2">70€</div>
             </div>
           </Button>
         </div>

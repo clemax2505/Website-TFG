@@ -1,3 +1,4 @@
+
 import { Client } from "@googlemaps/google-maps-services-js";
 
 const GOOGLE_MAPS_API_KEY = process.env.VITE_GOOGLE_MAPS_API_KEY;
@@ -5,11 +6,9 @@ const BASE_LOCATION = "69410"; // Code postal de base
 
 const client = new Client({});
 
-// Function to check if a zip code is valid (French postal code format)
 export const isValidZipCode = (zipCode: string): boolean => {
-  return /^\d{5}$/.test(zipCode);
+  return FRENCH_ZIP_CODE_REGEX.test(zipCode);
 };
-
 // Function to calculate travel fee based on actual distance using Google Maps API
 export const calculateTravelFee = async (zipCode: string): Promise<number> => {
   if (!isValidZipCode(zipCode) || zipCode === BASE_LOCATION) {

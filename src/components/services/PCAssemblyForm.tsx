@@ -88,8 +88,14 @@ ${componentsList}`;
           >
             <div className="text-left">
               <div className="font-bold">Basic</div>
-              <div className="text-sm text-gray-400">Montage simple</div>
-              <div className="mt-2">30€</div>
+              <div className="text-sm text-gray-400">
+                <ul>
+                <li>Montage PC</li>
+                <li>Cable management</li>
+                <li>Mise à jour du bios + XMP</li>
+                </ul>
+              </div>
+              <div className="mt-2">35€</div>
             </div>
           </Button>
 
@@ -103,8 +109,16 @@ ${componentsList}`;
           >
             <div className="text-left">
               <div className="font-bold">Standard</div>
-              <div className="text-sm text-gray-400">Montage + Installation Windows</div>
-              <div className="mt-2">50€</div>
+              <div className="text-sm text-gray-400">
+                <ul>
+                <li>Montage PC</li>
+                <li>Cable management</li>
+                <li>Mise à jour du bios + XMP</li>
+                <li>Installation de windows (sans activation)</li>
+                <li>Installation des drivers</li>
+                </ul>
+              </div>
+              <div className="mt-2">45€</div>
             </div>
           </Button>
 
@@ -118,8 +132,17 @@ ${componentsList}`;
           >
             <div className="text-left">
               <div className="font-bold">Premium</div>
-              <div className="text-sm text-gray-400">Montage + Windows + Optimisation</div>
-              <div className="mt-2">70€</div>
+              <div className="text-sm text-gray-400">
+                <ul>
+                <li>Montage PC</li>
+                <li>Cable management</li>
+                <li>Mise à jour du bios + XMP</li>
+                <li>Installation de windows (avec activation)</li>
+                <li>Installation des drivers</li>
+                <li>Installation des logiciels de gestion </li>
+                </ul>
+              </div>
+              <div className="mt-2">75€</div>
             </div>
           </Button>
         </div>

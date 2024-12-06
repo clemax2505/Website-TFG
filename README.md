@@ -1,58 +1,24 @@
-# Welcome to your Lovable project
+# The Gaming Forge
 
-## Project info
+## À propos
+
+The Gaming Forge est votre partenaire de confiance pour tous vos besoins en matière de PC Gaming. Nous proposons :
+
+- Montage de PC sur mesure
+- Service d'amélioration de PC
+- Maintenance et nettoyage
+- Service de réparation pour ordinateurs portables
+- Conseils personnalisés
+
+Notre objectif est de vous fournir des solutions gaming adaptées à vos besoins et à votre budget.
+
+## Accéder au site
 
 **URL**: https://lovable.dev/projects/d95c83a7-8884-4929-a1f4-c564c12a382b
 
-## How can I edit this code?
+## Informations techniques
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/d95c83a7-8884-4929-a1f4-c564c12a382b) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
+Ce projet est construit avec :
 
 - Vite
 - TypeScript
@@ -60,10 +26,56 @@ This project is built with .
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## Comment éditer ce code ?
 
-Simply open [Lovable](https://lovable.dev/projects/d95c83a7-8884-4929-a1f4-c564c12a382b) and click on Share -> Publish.
+Il existe plusieurs façons de modifier l'application.
 
-## I want to use a custom domain - is that possible?
+**Utiliser Lovable**
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+Visitez simplement le [Projet Lovable](https://lovable.dev/projects/d95c83a7-8884-4929-a1f4-c564c12a382b) et commencez à faire des modifications.
+
+Les changements effectués via Lovable seront automatiquement commités sur ce repo.
+
+**Utiliser votre IDE préféré**
+
+Si vous souhaitez travailler localement en utilisant votre propre IDE, vous pouvez cloner ce repo et pousser les changements. Les modifications poussées seront également reflétées dans Lovable.
+
+La seule exigence est d'avoir Node.js & npm installés - [installer avec nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+
+Suivez ces étapes :
+
+```sh
+# Étape 1 : Clonez le dépôt en utilisant l'URL Git du projet.
+git clone <YOUR_GIT_URL>
+
+# Étape 2 : Naviguez vers le répertoire du projet.
+cd <YOUR_PROJECT_NAME>
+
+# Étape 3 : Installez les dépendances nécessaires.
+npm i
+
+# Étape 4 : Démarrez le serveur de développement avec rechargement automatique et aperçu instantané.
+npm run dev
+```
+
+**Éditer un fichier directement dans GitHub**
+
+- Naviguez vers le(s) fichier(s) souhaité(s).
+- Cliquez sur le bouton "Edit" (icône crayon) en haut à droite de la vue du fichier.
+- Effectuez vos modifications et validez les changements.
+
+**Utiliser GitHub Codespaces**
+
+- Naviguez vers la page principale de votre dépôt.
+- Cliquez sur le bouton "Code" (bouton vert) en haut à droite.
+- Sélectionnez l'onglet "Codespaces".
+- Cliquez sur "New codespace" pour lancer un nouvel environnement Codespace.
+- Modifiez les fichiers directement dans le Codespace et validez et poussez vos modifications une fois terminé.
+
+## Comment déployer ce projet ?
+
+Ouvrez simplement [Lovable](https://lovable.dev/projects/d95c83a7-8884-4929-a1f4-c564c12a382b) et cliquez sur Share -> Publish.
+
+## Je veux utiliser un domaine personnalisé - est-ce possible ?
+
+Nous ne prenons pas en charge les domaines personnalisés (pour le moment). Si vous souhaitez déployer votre projet sous votre propre domaine, nous vous recommandons d'utiliser Netlify. Visitez notre documentation pour plus de détails : [Domaines personnalisés](https://docs.lovable.dev/tips-tricks/custom-domain/)

@@ -17,6 +17,7 @@ const Upgrade = () => {
           
           <Card className="glass-card max-w-2xl mx-auto">
             <PCUpgradeForm />
+            <p className="text-sm text-gray-400 p-6 text-center">Des frais de déplacement peuvent être appliqués selon votre localisation.</p>
           </Card>
         </main>
         <Footer />

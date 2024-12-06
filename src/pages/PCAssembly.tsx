@@ -18,6 +18,7 @@ const PCAssembly = () => {
 
           <div className="max-w-4xl mx-auto">
             <PCAssemblyForm />
+            <p className="text-sm text-gray-400 mt-4 text-center">Des frais de déplacement peuvent être appliqués selon votre localisation.</p>
           </div>
         </main>
         <Footer />

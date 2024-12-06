@@ -64,6 +64,7 @@ const Maintenance = () => {
             </CardHeader>
             <CardContent>
               <MaintenanceForm />
+              <p className="text-sm text-gray-400 mt-4 text-center">Des frais de déplacement peuvent être appliqués selon votre localisation.</p>
             </CardContent>
           </Card>
         </main>

@@ -7,10 +7,10 @@ The Gaming Forge est votre partenaire de confiance pour tous vos besoins en mati
 - Montage de PC sur mesure
 - Service d'amélioration de PC
 - Maintenance et nettoyage
-- Service de réparation pour ordinateurs portables
+- Service de réparation, de maintenance et de nettoyage pour ordinateurs portables
 - Conseils personnalisés
 
-Notre objectif est de vous fournir des solutions gaming adaptées à vos besoins et à votre budget.
+Notre objectif est de vous fournir des solutions gaming ou professionnelle adaptées à vos besoins et à votre budget.
 
 ## Accéder au site
 

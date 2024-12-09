@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Star } from "lucide-react";
+import { Star, X } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
 import {
   Dialog,
@@ -77,7 +77,7 @@ const Portfolio = () => {
                 onClick={() => setSelectedProject(project)}
               >
                 {'images' in project ? (
-                  <Carousel className="w-full">
+                  <Carousel className="w-full relative">
                     <CarouselContent>
                       {project.images?.map((image, imageIndex) => (
                         <CarouselItem key={imageIndex}>
@@ -92,8 +92,14 @@ const Portfolio = () => {
                         </CarouselItem>
                       ))}
                     </CarouselContent>
-                    <CarouselPrevious />
-                    <CarouselNext />
+                    <div className="absolute inset-0 flex items-center justify-between p-2 pointer-events-none">
+                      <div className="pointer-events-auto">
+                        <CarouselPrevious className="relative -left-0 h-8 w-8 bg-black/50 hover:bg-black/70" />
+                      </div>
+                      <div className="pointer-events-auto">
+                        <CarouselNext className="relative -right-0 h-8 w-8 bg-black/50 hover:bg-black/70" />
+                      </div>
+                    </div>
                   </Carousel>
                 ) : (
                   <img
@@ -128,14 +134,20 @@ const Portfolio = () => {
 
         <Dialog open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>
           {selectedProject && (
-            <DialogContent className="max-w-4xl w-full bg-forge-dark">
-              <DialogHeader>
+            <DialogContent className="max-w-4xl w-[95vw] bg-forge-dark p-0 sm:p-6">
+              <DialogHeader className="p-6 relative">
+                <button
+                  onClick={() => setSelectedProject(null)}
+                  className="absolute right-4 top-4 p-2 rounded-full bg-black/50 hover:bg-black/70 transition-colors"
+                >
+                  <X className="h-6 w-6" />
+                </button>
                 <DialogTitle className="text-2xl font-bold">{selectedProject.title}</DialogTitle>
                 <p className="text-gray-400">{selectedProject.specs}</p>
               </DialogHeader>
               
               {'images' in selectedProject ? (
-                <Carousel className="w-full">
+                <Carousel className="w-full relative">
                   <CarouselContent>
                     {selectedProject.images?.map((image, imageIndex) => (
                       <CarouselItem key={imageIndex}>
@@ -150,8 +162,14 @@ const Portfolio = () => {
                       </CarouselItem>
                     ))}
                   </CarouselContent>
-                  <CarouselPrevious />
-                  <CarouselNext />
+                  <div className="absolute inset-0 flex items-center justify-between p-4 pointer-events-none">
+                    <div className="pointer-events-auto">
+                      <CarouselPrevious className="relative -left-0 h-8 w-8 bg-black/50 hover:bg-black/70" />
+                    </div>
+                    <div className="pointer-events-auto">
+                      <CarouselNext className="relative -right-0 h-8 w-8 bg-black/50 hover:bg-black/70" />
+                    </div>
+                  </div>
                 </Carousel>
               ) : selectedProject.image && (
                 <img
@@ -164,7 +182,7 @@ const Portfolio = () => {
                 />
               )}
 
-              <div className="mt-4">
+              <div className="p-6">
                 <div className="flex items-center gap-1 mb-2">
                   {[...Array(selectedProject.review.rating)].map((_, i) => (
                     <Star key={i} className="w-6 h-6 fill-forge-orange text-forge-orange" />

@@ -80,15 +80,17 @@ const Portfolio = () => {
                   <Carousel className="w-full relative">
                     <CarouselContent>
                       {project.images?.map((image, imageIndex) => (
-                        <CarouselItem key={imageIndex}>
-                          <img
-                            src={image}
-                            alt={`${project.title} - Vue ${imageIndex + 1}`}
-                            className="w-full h-48 object-cover"
-                            onError={(e) => {
-                              e.currentTarget.src = "/placeholder.svg";
-                            }}
-                          />
+                        <CarouselItem key={imageIndex} className="flex items-center justify-center">
+                          <div className="aspect-[4/3] w-full relative">
+                            <img
+                              src={image}
+                              alt={`${project.title} - Vue ${imageIndex + 1}`}
+                              className="w-full h-full object-contain"
+                              onError={(e) => {
+                                e.currentTarget.src = "/placeholder.svg";
+                              }}
+                            />
+                          </div>
                         </CarouselItem>
                       ))}
                     </CarouselContent>
@@ -102,14 +104,16 @@ const Portfolio = () => {
                     </div>
                   </Carousel>
                 ) : (
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-48 object-cover"
-                    onError={(e) => {
-                      e.currentTarget.src = "/placeholder.svg";
-                    }}
-                  />
+                  <div className="aspect-[4/3] w-full relative">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-contain"
+                      onError={(e) => {
+                        e.currentTarget.src = "/placeholder.svg";
+                      }}
+                    />
+                  </div>
                 )}
                 <CardHeader>
                   <CardTitle className="text-xl">{project.title}</CardTitle>
@@ -150,15 +154,17 @@ const Portfolio = () => {
                 <Carousel className="w-full relative">
                   <CarouselContent>
                     {selectedProject.images?.map((image, imageIndex) => (
-                      <CarouselItem key={imageIndex}>
-                        <img
-                          src={image}
-                          alt={`${selectedProject.title} - Vue ${imageIndex + 1}`}
-                          className="w-full h-[60vh] object-contain"
-                          onError={(e) => {
-                            e.currentTarget.src = "/placeholder.svg";
-                          }}
-                        />
+                      <CarouselItem key={imageIndex} className="flex items-center justify-center">
+                        <div className="aspect-[4/3] w-full relative p-4">
+                          <img
+                            src={image}
+                            alt={`${selectedProject.title} - Vue ${imageIndex + 1}`}
+                            className="w-full h-full object-contain"
+                            onError={(e) => {
+                              e.currentTarget.src = "/placeholder.svg";
+                            }}
+                          />
+                        </div>
                       </CarouselItem>
                     ))}
                   </CarouselContent>
@@ -172,14 +178,16 @@ const Portfolio = () => {
                   </div>
                 </Carousel>
               ) : selectedProject.image && (
-                <img
-                  src={selectedProject.image}
-                  alt={selectedProject.title}
-                  className="w-full h-[60vh] object-contain"
-                  onError={(e) => {
-                    e.currentTarget.src = "/placeholder.svg";
-                  }}
-                />
+                <div className="aspect-[4/3] w-full relative p-4">
+                  <img
+                    src={selectedProject.image}
+                    alt={selectedProject.title}
+                    className="w-full h-full object-contain"
+                    onError={(e) => {
+                      e.currentTarget.src = "/placeholder.svg";
+                    }}
+                  />
+                </div>
               )}
 
               <div className="p-6">

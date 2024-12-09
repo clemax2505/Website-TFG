@@ -4,14 +4,23 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Star } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
 import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { useState } from "react";
 
 const Portfolio = () => {
+  const [selectedProject, setSelectedProject] = useState<any>(null);
+
   const projects = [
     {
       title: "PC Gaming",
@@ -48,7 +57,11 @@ const Portfolio = () => {
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <Card key={index} className="glass-card overflow-hidden hover:scale-105 transition-transform duration-300">
+              <Card 
+                key={index} 
+                className="glass-card overflow-hidden hover:scale-105 transition-transform duration-300 cursor-pointer"
+                onClick={() => setSelectedProject(project)}
+              >
                 {'images' in project ? (
                   <Carousel className="w-full">
                     <CarouselContent>
@@ -98,6 +111,55 @@ const Portfolio = () => {
           </div>
         </main>
         <Footer />
+
+        <Dialog open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>
+          <DialogContent className="max-w-4xl w-full bg-forge-dark">
+            <DialogHeader>
+              <DialogTitle className="text-2xl font-bold">{selectedProject?.title}</DialogTitle>
+              <p className="text-gray-400">{selectedProject?.specs}</p>
+            </DialogHeader>
+            
+            {'images' in selectedProject ? (
+              <Carousel className="w-full">
+                <CarouselContent>
+                  {selectedProject?.images.map((image: string, imageIndex: number) => (
+                    <CarouselItem key={imageIndex}>
+                      <img
+                        src={image}
+                        alt={`${selectedProject.title} - Vue ${imageIndex + 1}`}
+                        className="w-full h-[60vh] object-contain"
+                        onError={(e) => {
+                          e.currentTarget.src = "/placeholder.svg";
+                        }}
+                      />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+            ) : selectedProject?.image && (
+              <img
+                src={selectedProject.image}
+                alt={selectedProject?.title}
+                className="w-full h-[60vh] object-contain"
+                onError={(e) => {
+                  e.currentTarget.src = "/placeholder.svg";
+                }}
+              />
+            )}
+
+            <div className="mt-4">
+              <div className="flex items-center gap-1 mb-2">
+                {[...Array(selectedProject?.review.rating)].map((_, i) => (
+                  <Star key={i} className="w-6 h-6 fill-forge-orange text-forge-orange" />
+                ))}
+              </div>
+              <p className="text-gray-300 italic text-lg">&quot;{selectedProject?.review.comment}&quot;</p>
+              <p className="text-gray-400 mt-2">- {selectedProject?.review.author}</p>
+            </div>
+          </DialogContent>
+        </Dialog>
       </div>
     </PageTransition>
   );

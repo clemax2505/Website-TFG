@@ -1,6 +1,6 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Star, X } from "lucide-react";
+import { Star } from "lucide-react";
 import { Project } from "./types";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
@@ -16,13 +16,7 @@ export const ProjectDialog = ({ project, onClose }: ProjectDialogProps) => {
     <Dialog open={!!project} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl w-[95vw] bg-forge-dark p-0 sm:p-6 max-h-[90vh] overflow-hidden">
         <ScrollArea className="h-full max-h-[90vh]">
-          <DialogHeader className="p-6 relative">
-            <button
-              onClick={onClose}
-              className="absolute right-4 top-4 p-2 rounded-full bg-black/50 hover:bg-black/70 transition-colors"
-            >
-              <X className="h-6 w-6" />
-            </button>
+          <DialogHeader className="p-6">
             <DialogTitle className="text-2xl font-bold">{project.title}</DialogTitle>
             <p className="text-gray-400">{project.specs}</p>
           </DialogHeader>

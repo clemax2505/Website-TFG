@@ -69,7 +69,7 @@ const PCComponentsGuide = () => {
       </CardHeader>
       <CardContent>
         <Accordion type="single" collapsible className="w-full">
-          <AccordionItem value="guide">
+          <AccordionItem value="guide" className="border-none">
             <AccordionTrigger className="text-lg font-semibold">
               Guide détaillé des composants
             </AccordionTrigger>

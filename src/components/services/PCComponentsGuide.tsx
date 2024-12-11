@@ -69,29 +69,38 @@ const PCComponentsGuide = () => {
       </CardHeader>
       <CardContent>
         <Accordion type="single" collapsible className="w-full">
-          {components.map((component, index) => (
-            <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="flex items-center gap-4">
-                <div className="flex items-center gap-4">
-                  {component.icon}
-                  <span>{component.title}</span>
-                </div>
-              </AccordionTrigger>
-              <AccordionContent>
-                <div className="p-4 space-y-4">
-                  <p className="text-sm text-gray-400">{component.description}</p>
-                  <div className="mt-2">
-                    <p className="text-sm font-semibold text-forge-orange">Comment trouver l'information :</p>
-                    <p className="text-sm text-gray-400">{component.howTo}</p>
-                  </div>
-                  <div className="mt-2">
-                    <p className="text-sm font-semibold text-forge-orange">Problèmes potentiels :</p>
-                    <p className="text-sm text-gray-400">{component.healthIssues}</p>
-                  </div>
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
+          <AccordionItem value="guide" className="border-none">
+            <AccordionTrigger className="text-lg font-semibold">
+              Guide détaillé des composants
+            </AccordionTrigger>
+            <AccordionContent>
+              <Accordion type="single" collapsible className="w-full">
+                {components.map((component, index) => (
+                  <AccordionItem key={index} value={`item-${index}`}>
+                    <AccordionTrigger className="flex items-center gap-4">
+                      <div className="flex items-center gap-4">
+                        {component.icon}
+                        <span>{component.title}</span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div className="p-4 space-y-4">
+                        <p className="text-sm text-gray-400">{component.description}</p>
+                        <div className="mt-2">
+                          <p className="text-sm font-semibold text-forge-orange">Comment trouver l'information :</p>
+                          <p className="text-sm text-gray-400">{component.howTo}</p>
+                        </div>
+                        <div className="mt-2">
+                          <p className="text-sm font-semibold text-forge-orange">Problèmes potentiels :</p>
+                          <p className="text-sm text-gray-400">{component.healthIssues}</p>
+                        </div>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </AccordionContent>
+          </AccordionItem>
         </Accordion>
       </CardContent>
     </Card>

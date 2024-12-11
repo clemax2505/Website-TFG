@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Cpu, HardDrive, Microchip, Power, Box, CircuitBoard, Fan } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
@@ -64,14 +64,11 @@ const PCComponentsGuide = () => {
 
   return (
     <Card className="glass-card mb-8">
-      <CardHeader>
-        <CardTitle className="text-2xl text-center">Guide des Composants PC</CardTitle>
-      </CardHeader>
-      <CardContent>
+      <CardContent className="pt-6">
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="guide" className="border-none">
-            <AccordionTrigger className="text-lg font-semibold">
-              Guide détaillé des composants
+            <AccordionTrigger className="text-2xl font-semibold text-center w-full">
+              Guide des Composants PC
             </AccordionTrigger>
             <AccordionContent>
               <Accordion type="single" collapsible className="w-full">

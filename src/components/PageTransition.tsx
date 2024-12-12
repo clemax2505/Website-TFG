@@ -9,7 +9,7 @@ const PageTransition = ({ children }: PageTransitionProps) => {
   const pageVariants = {
     initial: {
       opacity: 0,
-      y: 20,
+      y: 10,
     },
     animate: {
       opacity: 1,
@@ -17,15 +17,15 @@ const PageTransition = ({ children }: PageTransitionProps) => {
     },
     exit: {
       opacity: 0,
-      y: -20,
+      y: -10,
     },
   };
 
   const pageTransition = {
     type: "tween",
-    ease: "anticipate",
-    duration: 0.5,
-    willChange: "transform",
+    ease: "easeInOut",
+    duration: 0.3,
+    willChange: "transform, opacity",
   };
 
   return (
@@ -38,7 +38,10 @@ const PageTransition = ({ children }: PageTransitionProps) => {
       style={{ 
         width: '100%',
         backfaceVisibility: 'hidden',
-        WebkitFontSmoothing: 'subpixel-antialiased',
+        WebkitFontSmoothing: 'antialiased',
+        WebkitTransform: 'translateZ(0)',
+        WebkitPerspective: '1000',
+        WebkitBackfaceVisibility: 'hidden',
       }}
     >
       {children}

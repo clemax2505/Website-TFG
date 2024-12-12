@@ -1,7 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { PCConfig } from "./types";
-import { Link } from "react-router-dom";
 
 interface PreBuiltPCCardProps {
   config: PCConfig;
@@ -19,11 +18,11 @@ const PreBuiltPCCard = ({ config }: PreBuiltPCCardProps) => {
         </div>
         <p className="text-gray-400 text-center">{config.description}</p>
         <div className="flex justify-center">
-          <Link to={`/quote?config=${config.id}`}>
+          <a href={config.link} target="_blank" rel="noopener noreferrer">
             <Button className="bg-forge-orange hover:bg-forge-red transition-colors">
               Voir la configuration
             </Button>
-          </Link>
+          </a>
         </div>
       </CardContent>
     </Card>

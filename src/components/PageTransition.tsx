@@ -25,6 +25,7 @@ const PageTransition = ({ children }: PageTransitionProps) => {
     type: "tween",
     ease: "anticipate",
     duration: 0.5,
+    willChange: "transform",
   };
 
   return (
@@ -34,7 +35,11 @@ const PageTransition = ({ children }: PageTransitionProps) => {
       animate="animate"
       exit="exit"
       transition={pageTransition}
-      style={{ width: '100%' }}
+      style={{ 
+        width: '100%',
+        backfaceVisibility: 'hidden',
+        WebkitFontSmoothing: 'subpixel-antialiased',
+      }}
     >
       {children}
     </motion.div>

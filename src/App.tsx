@@ -18,6 +18,7 @@ const Maintenance = lazy(() => import("./pages/Maintenance"));
 const LaptopService = lazy(() => import("./pages/LaptopService"));
 const Suggestions = lazy(() => import("./pages/Suggestions"));
 const PCAssembly = lazy(() => import("./pages/PCAssembly"));
+const PreBuiltPCs = lazy(() => import("./pages/PreBuiltPCs"));
 
 const ScrollToTop = () => {
   const location = useLocation();
@@ -94,6 +95,11 @@ const AnimatedRoutes = () => {
         <Route path="/pc-assembly" element={
           <Suspense fallback={<LoadingSpinner />}>
             <PCAssembly />
+          </Suspense>
+        } />
+        <Route path="/prebuilt" element={
+          <Suspense fallback={<LoadingSpinner />}>
+            <PreBuiltPCs />
           </Suspense>
         } />
       </Routes>

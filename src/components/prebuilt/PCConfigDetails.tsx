@@ -155,6 +155,7 @@ ${components.join('\n')}
 
   return (
     <div className="space-y-8">
+      {/* Images section hidden for now
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {images.map((image, index) => (
           <div key={index} className="aspect-video relative overflow-hidden rounded-lg">
@@ -167,6 +168,7 @@ ${components.join('\n')}
           </div>
         ))}
       </div>
+      */}
 
       <Card className="glass-card">
         <CardContent className="p-6">

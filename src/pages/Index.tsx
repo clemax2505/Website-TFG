@@ -10,8 +10,7 @@ const Index = () => {
     <PageTransition>
       <div className="min-h-screen flex flex-col">
         <Navbar />
-        <Hero />
-        <div className="container mx-auto px-4 py-12">
+        <div className="container mx-auto px-4 py-10">
           <Link to="/prebuilt">
             <Card className="glass-card hover:scale-105 transition-transform duration-300 cursor-pointer">
               <CardContent className="p-8 text-center">
@@ -21,6 +20,7 @@ const Index = () => {
             </Card>
           </Link>
         </div>
+        <Hero />
         <Footer />
       </div>
     </PageTransition>

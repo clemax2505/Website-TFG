@@ -1,7 +1,7 @@
 import { ArrowRight, Settings, Monitor, Laptop, Wrench } from "lucide-react";
 import { Link } from "react-router-dom";
 import { memo } from "react";
-import { Card, CardContent } from "@/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 
 const ServiceCard = memo(({ to, icon: Icon, title, description }: {
   to: string;

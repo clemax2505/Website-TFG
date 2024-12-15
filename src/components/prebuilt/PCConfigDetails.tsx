@@ -2,8 +2,8 @@ import { useParams } from "react-router-dom";
 import { PCConfig } from "./types";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { openEmailClient } from "@/utils/emailUtils";
 
-// Images placeholder pour chaque configuration
 const configImages: { [key: string]: string[] } = {
   "budget": [
     "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
@@ -43,7 +43,6 @@ const configImages: { [key: string]: string[] } = {
   ]
 };
 
-// Liste des composants spécifiques à chaque configuration
 const configComponents: { [key: string]: string[] } = {
   "budget": [
     "AMD Ryzen 5 5600x",
@@ -141,6 +140,19 @@ const PCConfigDetails = ({ configId }: { configId: string }) => {
   const images = configImages[configId] || [];
   const components = configComponents[configId] || [];
 
+  const handleEmailRequest = () => {
+    const emailBody = `
+Nouvelle demande de configuration PC
+
+Configuration demandée: ${configId}
+
+Liste des composants:
+${components.join('\n')}
+    `;
+
+    openEmailClient("Nouvelle demande de configuration PC", emailBody);
+  };
+
   return (
     <div className="space-y-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -171,11 +183,13 @@ const PCConfigDetails = ({ configId }: { configId: string }) => {
       </Card>
 
       <div className="flex justify-center">
-        <a href={`https://dropreference.com/fr/setups`} target="_blank" rel="noopener noreferrer">
-          <Button variant="outline" size="lg">
-            Voir sur Drop Reference
-          </Button>
-        </a>
+        <Button 
+          variant="outline" 
+          size="lg"
+          onClick={handleEmailRequest}
+        >
+          Demander un devis
+        </Button>
       </div>
     </div>
   );

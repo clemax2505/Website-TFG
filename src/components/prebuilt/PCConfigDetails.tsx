@@ -46,7 +46,7 @@ const configImages: { [key: string]: string[] } = {
 // Liste des composants spécifiques à chaque configuration
 const configComponents: { [key: string]: string[] } = {
   "budget": [
-    " AMD Ryzen 5 5600x",
+    "AMD Ryzen 5 5600x",
     "RX 6750 xt",
     "MSI B550-A PRO",
     "16 Go 3200 MHz DDR4 Furry Beast",

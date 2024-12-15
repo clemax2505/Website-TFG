@@ -36,6 +36,20 @@ const Services = () => {
               </Card>
             </Link>
 
+            <Link to="/prebuilt">
+              <Card className="glass-card hover:scale-105 transition-transform duration-300">
+                <CardHeader>
+                  <div className="flex justify-center mb-4">
+                    <Monitor className="w-12 h-12 text-forge-orange" />
+                  </div>
+                  <CardTitle className="text-xl text-center">PC Pré-configurés</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center text-gray-400">
+                  Découvrez notre sélection de PC gaming optimisés pour tous les budgets
+                </CardContent>
+              </Card>
+            </Link>
+
             <Link to="/pc-assembly">
               <Card className="glass-card hover:scale-105 transition-transform duration-300">
                 <CardHeader>

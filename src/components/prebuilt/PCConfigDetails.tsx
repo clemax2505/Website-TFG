@@ -129,7 +129,7 @@ const configComponents: { [key: string]: string[] } = {
     "Corsair ICUE Link TITAN 360",
     "Asus ROG CROSSHAIR X670E HERO",
     "64 Go DDR5 6000MHz G.Skill Trident Z5 Neo RGB",
-    "Crucial P3 2To + P3 2 To (NVMe)",
+    "Samsung 990 Pro 4 To (NVMe)",
     "RTX 4080 super MSI Gaming X Slim",
     "Corsair 5000T RGB",
     "Be quiet! Straight Power 12 1200W",

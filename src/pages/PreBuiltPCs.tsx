@@ -46,7 +46,7 @@ const PreBuiltPCs = () => {
       id: "extreme2", 
       name: "PC Gaming Master", 
       price: 2800, 
-      description: "Ryzen 7 7800X3D & RX 7900 XT",
+      description: "Ryzen 7 7800X3D & RX 7900 XTX",
     },
     { 
       id: "extreme3", 

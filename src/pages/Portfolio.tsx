@@ -21,14 +21,14 @@ const Portfolio = () => {
       }
     },
     {
-      title: "PC Gaming Corsair",
-      specs: "RTX 4060, R5 7600, 32GB RAM",
+      title: "Upgrade PC Gaming",
+      specs: "RTX 4060 ti, R5 7600X, 32GB RAM",
       images: [
         "/lovable-uploads/0301cec7-80eb-45f4-9b27-d47e1986a569.png",
         "/lovable-uploads/6149801e-76d3-46ae-bd81-20fb45fce259.png"
       ],
       review: {
-        author: "Alex",
+        author: "Cikay",
         rating: 5,
         comment: "Montage impeccable, cable management parfait. Le PC est silencieux et performant, exactement ce que je recherchais !"
       }

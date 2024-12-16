@@ -1,6 +1,7 @@
 import { ArrowRight, Settings, Monitor, Laptop, Wrench } from "lucide-react";
 import { Link } from "react-router-dom";
 import { memo } from "react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const ServiceCard = memo(({ to, icon: Icon, title, description }: {
   to: string;
@@ -65,6 +66,17 @@ const Hero = memo(() => {
               <button className="w-full md:w-auto px-8 py-4 bg-forge-dark hover:bg-forge-metal text-white rounded-lg font-bold flex items-center justify-center gap-2 transition-colors">
                 Nous contacter
               </button>
+            </Link>
+          </div>
+          <br></br>
+          <div className="container mx-auto px-4 py-10">
+            <Link to="/prebuilt">
+              <Card className="glass-card hover:scale-105 transition-transform duration-300 cursor-pointer">
+                <CardContent className="p-8 text-center">
+                  <h2 className="text-2xl font-bold text-forge-orange mb-4">PC Pré-configurés</h2>
+                  <p className="text-gray-400">Découvrez notre sélection de PC gaming optimisés pour tous les budgets</p>
+                </CardContent>
+              </Card>
             </Link>
           </div>
           

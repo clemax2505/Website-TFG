@@ -80,7 +80,7 @@ const configComponents: { [key: string]: string[] } = {
     "Asus Prime Z790-P WIFI",
     "32 Go DDR5 6000MHz Crucial White",
     "Crucial P3 2 To (NVMe)",
-    "Corsair RM1000e",
+    "Asus Prime 750W",
     "Corsair 3000D White",
     "Corsair H150I Elite Capellix XT White",
   ],

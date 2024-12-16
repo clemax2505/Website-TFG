@@ -15,32 +15,32 @@ const PreBuiltPCs = () => {
     { 
       id: "mid1", 
       name: "PC Gaming Plus", 
-      price: 1200, 
-      description: "Ryzen 5 5600x & RTX 4060",
+      price: 1250, 
+      description: "Ryzen 5 5600X & RTX 4060",
     },
     { 
       id: "mid2", 
       name: "PC Gaming Pro", 
       price: 1500, 
-      description: "Ryzen 7 5800x & RX 7700 XT",
+      description: "Ryzen 7 5800X & RX 7700 XT",
     },
     { 
       id: "high1", 
       name: "PC Gaming Elite", 
       price: 1800, 
-      description: "Intel I5 14600kf & RX 7800 XT",
+      description: "Intel I5 14600KF & RX 7800 XT",
     },
     { 
       id: "high2", 
       name: "PC Gaming Ultra", 
       price: 2350, 
-      description: "Intel I5 14600kf & RTX 4070 super",
+      description: "Intel I5 14600KF & RTX 4070 super",
     },
     { 
       id: "extreme1", 
       name: "PC Gaming Extreme", 
       price: 2500, 
-      description: "Intel I7 14700kf & RTX 4070 ti super",
+      description: "Intel I7 14700KF & RTX 4070 ti super",
     },
     { 
       id: "extreme2", 
@@ -52,7 +52,7 @@ const PreBuiltPCs = () => {
       id: "extreme3", 
       name: "PC Gaming Ultimate", 
       price: 3500, 
-      description: "Intel I9 14900kf & RTX 4080 super",
+      description: "Intel I9 14900KF & RTX 4080 super",
     },
     { 
       id: "extreme4", 

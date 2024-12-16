@@ -56,9 +56,9 @@ const PreBuiltPCs = () => {
     },
     { 
       id: "extreme4", 
-      name: "PC Gaming Legend", 
-      price: 4000, 
-      description: "Intel Core Ultra 9 285k & RTX 4080 super",
+      name: "The Overkill", 
+      price: 4500, 
+      description: "Ryzen 7 9800X3D & RTX 4080 super",
     }
   ];
 

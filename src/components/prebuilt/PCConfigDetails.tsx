@@ -76,12 +76,12 @@ const configComponents: { [key: string]: string[] } = {
   ],
   "high1": [
     "INTEL I5 14600KF",
-    "RTX 4060 ti Asus Dual Wite",
+    "RX 7800 XT HellBound Spectral",
     "Asus Prime Z790-P WIFI",
     "32 Go DDR5 6000MHz Crucial White",
     "Crucial P3 2 To (NVMe)",
     "Asus Prime 750W",
-    "Corsair 3000D White",
+    "Corsair 3000D RGB White",
     "Corsair H150I Elite Capellix XT White",
   ],
   "high2": [

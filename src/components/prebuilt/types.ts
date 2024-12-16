@@ -3,5 +3,5 @@ export interface PCConfig {
   name: string;
   price: number;
   description: string;
-  link: string;
+  link?: string; // Made optional with '?'
 }

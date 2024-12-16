@@ -80,7 +80,7 @@ const Hero = memo(() => {
             </Link>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto mb-16">
             {services.map((service) => (
               <ServiceCard key={service.to} {...service} />
             ))}

@@ -30,7 +30,7 @@ const Portfolio = () => {
       review: {
         author: "Cikay",
         rating: 5,
-        comment: "Montage impeccable, cable management parfait. Le PC est silencieux et performant, exactement ce que je recherchais !"
+        comment: "Clément a fait un travail remarquable sur le montage de mon nouvel ordinateur. Il a été extrêmement efficace, rapide et surtout de très bon conseil pour choisir le matériel adapté à mes besoins. Je suis entièrement satisfait et je recommande vivement ses services. Merci encore !"
       }
     }
   ];

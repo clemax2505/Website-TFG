@@ -31,7 +31,7 @@ const Navbar = () => {
   const navItems = [
     { name: "Accueil", path: "/" },
     { name: "Services", path: "/services" },
-    { name: "PC Pré-configurés", path: "/prebuilt" },
+    { name: "Prebuilt PC", path: "/prebuilt" },
     { name: "Portfolio", path: "/portfolio" },
     { name: "Contact", path: "/contact" },
     { name: "Suggestions", path: "/suggestions" },

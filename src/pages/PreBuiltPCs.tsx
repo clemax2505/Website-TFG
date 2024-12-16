@@ -33,7 +33,7 @@ const PreBuiltPCs = () => {
     { 
       id: "high2", 
       name: "PC Gaming Ultra", 
-      price: 2000, 
+      price: 2350, 
       description: "Intel I5 14600kf & RTX 4070 super",
     },
     { 

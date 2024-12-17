@@ -45,7 +45,7 @@ const configImages: { [key: string]: string[] } = {
 
 const configComponents: { [key: string]: string[] } = {
   "budget": [
-    "AMD Ryzen 5 5600x",
+    "AMD Ryzen 5 5600",
     "Bequiet pure Rock 2",
     "MSI B550-A PRO",
     "16 Go 3200 MHz DDR4 Fury Beast",
@@ -55,7 +55,7 @@ const configComponents: { [key: string]: string[] } = {
     "MSI A650bn",
   ],
   "mid1": [
-    "AMD Ryzen 5 5600x",
+    "AMD Ryzen 5 5600",
     "MSI 360R V2",
     "Asus ROG B550-F gaming WIFI II",
     "16 Go 3200MHz DDR4 Patriot Viper Steel",

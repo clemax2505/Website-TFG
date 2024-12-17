@@ -28,19 +28,19 @@ const PreBuiltPCs = () => {
       id: "high1", 
       name: "The Spectral", 
       price: 1800, 
-      description: "Intel I5 14600KF & RX 7800 XT",
+      description: "Intel i5-14600KF & RX 7800 XT",
     },
     { 
       id: "high2", 
       name: "Infinity", 
       price: 2350, 
-      description: "Intel I5 14600KF & RTX 4070 super",
+      description: "Intel i5-14600KF & RTX 4070 Super",
     },
     { 
       id: "extreme1", 
       name: "Tuffy", 
       price: 2500, 
-      description: "Intel I7 14700KF & RTX 4070 ti super",
+      description: "Intel i7-14700KF & RTX 4070 Ti Super",
     },
     { 
       id: "extreme2", 
@@ -52,13 +52,13 @@ const PreBuiltPCs = () => {
       id: "extreme3", 
       name: "Chill Guy", 
       price: 3500, 
-      description: "Intel I9 14900KF & RTX 4080 super",
+      description: "Intel i9-14900KF & RTX 4080 Super",
     },
     { 
       id: "extreme4", 
       name: "The Overkill", 
       price: 4500, 
-      description: "Ryzen 7 9800X3D & RTX 4080 super",
+      description: "Ryzen 7 9800X3D & RTX 4080 Super",
     }
   ];
 
@@ -68,7 +68,7 @@ const PreBuiltPCs = () => {
         <Navbar />
         <main className="container mx-auto px-4 py-24 flex-grow">
           <h1 className="text-4xl font-bold text-center mb-12 py-2 bg-clip-text text-transparent bg-gradient-to-r from-forge-orange to-forge-red">
-            PC Gaming Pré-configurés
+            PC Gaming préconfigurés
           </h1>
           <p className="text-xl text-gray-400 text-center mb-12 max-w-2xl mx-auto">
             Découvrez nos configurations optimisées pour chaque budget

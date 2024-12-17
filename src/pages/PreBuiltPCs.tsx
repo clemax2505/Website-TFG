@@ -10,13 +10,13 @@ const PreBuiltPCs = () => {
       id: "budget", 
       name: "Little Guy", 
       price: 1000, 
-      description: "Ryzen 5 5600X & RX 6750 XT",
+      description: "Ryzen 5 5600 & RX 6750 XT",
     },
     { 
       id: "mid1", 
       name: "Viper", 
       price: 1250, 
-      description: "Ryzen 5 5600X & RTX 4060",
+      description: "Ryzen 5 5600 & RTX 4060",
     },
     { 
       id: "mid2", 

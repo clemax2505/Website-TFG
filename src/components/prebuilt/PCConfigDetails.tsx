@@ -190,7 +190,7 @@ ${components.join('\n')}
           size="lg"
           onClick={handleEmailRequest}
         >
-          Demander un devis
+          Passer commande
         </Button>
       </div>
     </div>

@@ -11,53 +11,53 @@ const getImagesForConfig = (configId: string): { cpu: string; gpu: string } => {
   switch (configId) {
     case "budget":
       return {
-        cpu: "photo-1518770660439-4636190af475", // Ryzen 5 5600
-        gpu: "photo-1486312338219-ce68d2c6f44d"  // RX 6750 XT
+        cpu: "photo-1518770660439-4636190af475",
+        gpu: "/lovable-uploads/dd23d3d9-737b-424f-8d90-fb81c41d4af9.png"  // RTX 4060
       };
     case "mid1":
       return {
-        cpu: "photo-1518770660439-4636190af475", // Ryzen 5 5600
-        gpu: "photo-1531297484001-80022131f5a1"  // RTX 4060
+        cpu: "photo-1518770660439-4636190af475",
+        gpu: "/lovable-uploads/dd23d3d9-737b-424f-8d90-fb81c41d4af9.png"  // RTX 4060
       };
     case "mid2":
       return {
-        cpu: "photo-1518770660439-4636190af475", // Ryzen 7 5800X
-        gpu: "photo-1487058792275-0ad4aaf24ca7"  // RX 7700 XT
+        cpu: "photo-1518770660439-4636190af475",
+        gpu: "/lovable-uploads/34b124cd-c1b0-4293-b698-4579f8eaaa1b.png"  // RTX 4070 Super
       };
     case "high1":
       return {
-        cpu: "photo-1498050108023-c5249f4df085", // Intel i5-14600KF
-        gpu: "photo-1487058792275-0ad4aaf24ca7"  // RX 7800 XT
+        cpu: "photo-1498050108023-c5249f4df085",
+        gpu: "/lovable-uploads/34b124cd-c1b0-4293-b698-4579f8eaaa1b.png"  // RTX 4070 Super
       };
     case "high2":
       return {
-        cpu: "photo-1498050108023-c5249f4df085", // Intel i5-14600KF
-        gpu: "photo-1483058712412-4245e9b90334"  // RTX 4070 Super
+        cpu: "photo-1498050108023-c5249f4df085",
+        gpu: "/lovable-uploads/34b124cd-c1b0-4293-b698-4579f8eaaa1b.png"  // RTX 4070 Super
       };
     case "extreme1":
       return {
-        cpu: "photo-1498050108023-c5249f4df085", // Intel i7-14700KF
-        gpu: "photo-1483058712412-4245e9b90334"  // RTX 4070 Ti Super
+        cpu: "photo-1498050108023-c5249f4df085",
+        gpu: "/lovable-uploads/cc6c31e8-aa18-4dfd-a91a-f0a13da8ff0c.png"  // RTX 4080 Super
       };
     case "extreme2":
       return {
-        cpu: "photo-1518770660439-4636190af475", // Ryzen 7 7800X3D
-        gpu: "photo-1487058792275-0ad4aaf24ca7"  // RX 7900 XTX
+        cpu: "photo-1518770660439-4636190af475",
+        gpu: "/lovable-uploads/98ea2b52-1096-4f83-91f7-193f1dccc784.png"  // RTX 4080 Super PNY
       };
     case "extreme3":
       return {
-        cpu: "photo-1498050108023-c5249f4df085", // Intel i9-14900KF
-        gpu: "photo-1483058712412-4245e9b90334"  // RTX 4080 Super
+        cpu: "photo-1498050108023-c5249f4df085",
+        gpu: "/lovable-uploads/014377b2-46c5-4ceb-92ce-8b2fbb8dd10b.png"  // RTX 4080 Super MSI
       };
     case "extreme4":
       return {
-        cpu: "photo-1518770660439-4636190af475", // Ryzen 7 9800X3D
-        gpu: "photo-1483058712412-4245e9b90334"  // RTX 4080 Super
+        cpu: "photo-1518770660439-4636190af475",
+        gpu: "/lovable-uploads/014377b2-46c5-4ceb-92ce-8b2fbb8dd10b.png"  // RTX 4080 Super MSI
       };
     default:
       return {
         cpu: "photo-1518770660439-4636190af475",
-        gpu: "photo-1486312338219-ce68d2c6f44d"
+        gpu: "/lovable-uploads/dd23d3d9-737b-424f-8d90-fb81c41d4af9.png"
       };
   }
 };

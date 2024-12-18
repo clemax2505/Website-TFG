@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 
 const PCConfigDetailsPage = () => {
-  const { configId } = useParams();
   const navigate = useNavigate();
 
   return (
@@ -29,7 +28,7 @@ const PCConfigDetailsPage = () => {
           </h1>
 
           <div className="max-w-3xl mx-auto">
-            <PCConfigDetails configId={configId || ''} />
+            <PCConfigDetails />
           </div>
         </main>
         <Footer />

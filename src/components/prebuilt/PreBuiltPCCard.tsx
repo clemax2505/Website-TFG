@@ -12,7 +12,17 @@ const PreBuiltPCCard = ({ config }: PreBuiltPCCardProps) => {
     <Link to={`/prebuilt/${config.id}`} className="block">
       <Card className="glass-card hover:scale-105 transition-transform duration-300 cursor-pointer">
         <CardHeader>
-          <CardTitle className="text-xl text-center">{config.name}</CardTitle>
+          <div className="aspect-video w-full overflow-hidden rounded-t-lg">
+            <img
+              src={`https://images.unsplash.com/photo-1518770660439-4636190af475`}
+              alt={config.name}
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                e.currentTarget.src = "/placeholder.svg";
+              }}
+            />
+          </div>
+          <CardTitle className="text-xl text-center mt-4">{config.name}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="text-center">

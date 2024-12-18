@@ -99,7 +99,7 @@ const configComponents: { [key: string]: string[] } = {
     "Corsair iCUE LINK 6500X RGB",
     "Corsair RM1200x SHIFT",
     "Configurations ventilée uniquement avec des RX120 LINK",
-  ]
+  ],
   "extreme5": [
     "AMD Ryzen 7 9800X3D",
     "Corsair iCUE Link TITAN 360 RGB",
@@ -113,8 +113,9 @@ const configComponents: { [key: string]: string[] } = {
   ]
 };
 
-const PCConfigDetails = ({ configId }: { configId: string }) => {
-  const components = configComponents[configId] || [];
+const PCConfigDetails = () => {
+  const { configId } = useParams();
+  const components = configComponents[configId || ""] || [];
 
   const handleEmailRequest = () => {
     const emailBody = `

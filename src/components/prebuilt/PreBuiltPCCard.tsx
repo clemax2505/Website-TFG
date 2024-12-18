@@ -11,48 +11,48 @@ const getImagesForConfig = (configId: string): { cpu: string; gpu: string } => {
   switch (configId) {
     case "budget":
       return {
-        cpu: "photo-1518770660439-4636190af475", // Ryzen 5 5600
-        gpu: "photo-1486312338219-ce68d2c6f44d"  // RX 6750 XT
+        cpu: "@/components/prebuilt/pc-parts/R5 5600.png", // Ryzen 5 5600
+        gpu: "@/components/prebuilt/pc-parts/6750XT.png"  // RX 6750 XT
       };
     case "mid1":
       return {
-        cpu: "photo-1518770660439-4636190af475", // Ryzen 5 5600
-        gpu: "photo-1531297484001-80022131f5a1"  // RTX 4060
+        cpu: "@/components/prebuilt/pc-parts/R5 5600.png", // Ryzen 5 5600
+        gpu: "@/components/prebuilt/pc-parts/4060 EAGLE 3X.png"  // RTX 4060
       };
     case "mid2":
       return {
-        cpu: "photo-1518770660439-4636190af475", // Ryzen 7 5800X
-        gpu: "photo-1487058792275-0ad4aaf24ca7"  // RX 7700 XT
+        cpu: "@/components/prebuilt/pc-parts/R7 5800X.png", // Ryzen 7 5800X
+        gpu: "@/components/prebuilt/pc-parts/7700XT GIGABYTE GAMING OC.png"  // RX 7700 XT
       };
     case "high1":
       return {
-        cpu: "photo-1498050108023-c5249f4df085", // Intel i5-14600KF
-        gpu: "photo-1487058792275-0ad4aaf24ca7"  // RX 7800 XT
+        cpu: "@/components/prebuilt/pc-parts/i5-14600KF.png", // Intel i5-14600KF
+        gpu: "@/components/prebuilt/pc-parts/7800XT POWERCOLOR HELLBOUND.png"  // RX 7800 XT
       };
     case "high2":
       return {
-        cpu: "photo-1498050108023-c5249f4df085", // Intel i5-14600KF
-        gpu: "photo-1483058712412-4245e9b90334"  // RTX 4070 Super
+        cpu: "@/components/prebuilt/pc-parts/i5-14600KF.png", // Intel i5-14600KF
+        gpu: "@/components/prebuilt/pc-parts/4070 SUPER TWIN EDGE ZOTAC.png"  // RTX 4070 Super
       };
     case "extreme1":
       return {
-        cpu: "photo-1498050108023-c5249f4df085", // Intel i7-14700KF
-        gpu: "photo-1483058712412-4245e9b90334"  // RTX 4070 Ti Super
+        cpu: "@/components/prebuilt/pc-parts/i7-14700KF.png", // Intel i7-14700KF
+        gpu: "@/components/prebuilt/pc-parts/4070 Ti SUPER PNY EPIC-X RGB.png"  // RTX 4070 Ti Super
       };
     case "extreme2":
       return {
-        cpu: "photo-1518770660439-4636190af475", // Ryzen 7 7800X3D
-        gpu: "photo-1487058792275-0ad4aaf24ca7"  // RX 7900 XTX
+        cpu: "@/components/prebuilt/pc-parts/R7 7800X3D.png", // Ryzen 7 7800X3D
+        gpu: "@/components/prebuilt/pc-parts/7900XTX TAICHI.png"  // RX 7900 XTX
       };
     case "extreme3":
       return {
-        cpu: "photo-1498050108023-c5249f4df085", // Intel i9-14900KF
-        gpu: "photo-1483058712412-4245e9b90334"  // RTX 4080 Super
+        cpu: "@/components/prebuilt/pc-parts/i9-14900KF.png", // Intel i9-14900KF
+        gpu: "@/components/prebuilt/pc-parts/4080 SUPER PNY EPIC-X RGB.png"  // RTX 4080 Super
       };
     case "extreme4":
       return {
-        cpu: "photo-1518770660439-4636190af475", // Ryzen 7 9800X3D
-        gpu: "photo-1483058712412-4245e9b90334"  // RTX 4080 Super
+        cpu: "@/components/prebuilt/pc-parts/R7 9800X3D", // Ryzen 7 9800X3D
+        gpu: "@/components/prebuilt/pc-parts/4080 SUPER MSI GAMING X SLIM.png"  // RTX 4080 Super
       };
     default:
       return {

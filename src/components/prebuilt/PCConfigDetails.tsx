@@ -42,7 +42,8 @@ const configComponents: { [key: string]: string[] } = {
     "Crucial P3 2 To (NVMe)",
     "RX 7800 XT PowerColor HellBound Spectral",
     "Corsair 3000D RGB Airflow White",
-    "ASUS Prime AP-750G", 
+    "ASUS Prime AP-750G",
+    "Configurations ventilée uniquement avec des RX120 LINK",
   ],
   "high2": [
     "Intel Core i5-14600KF",
@@ -53,6 +54,7 @@ const configComponents: { [key: string]: string[] } = {
     "RTX 4070 Super Twin Edge Zotac",
     "Lian Li O11 Dynamic Mini",
     "Corsair RM1000X",
+    "Configurations ventilée uniquement avec des SL-120 Infinity",
   ],
   "extreme1": [
     "Intel Core i7-14700KF",
@@ -61,8 +63,9 @@ const configComponents: { [key: string]: string[] } = {
     "32 Go DDR5 6000 MHz Corsair Vengeance RGB",
     "Crucial P3 2 To (NVMe)",
     "RTX 4070 Ti Super PNY Epic-X-RGB",
-    "Corsair 3000D RGB Airflow",
+    "Corsair 3000D Airflow",
     "ASUS TUF Gaming 1000G",
+    "Configurations ventilée uniquement avec des TF120",
   ],
   "extreme2": [
     "AMD Ryzen 7 7800X3D",
@@ -73,6 +76,7 @@ const configComponents: { [key: string]: string[] } = {
     "RX 7900 XTX ASRock Phantom Gaming OC",
     "Corsair 5000D RGB Airflow",
     "Corsair RM1000X",
+    "Configurations ventilée uniquement avec des RX120 LINK",
   ],
   "extreme3": [
     "Intel Core i9-14900KF",
@@ -83,8 +87,20 @@ const configComponents: { [key: string]: string[] } = {
     "RTX 4080 Super PNY Epic-X-RGB",
     "Antec C8",
     "Corsair RM1000X",
+    "Configurations ventilée uniquement avec des RX120 LINK",
   ],
   "extreme4": [
+    "AMD Ryzen 7 9800X3D",
+    "ARCTIC Liquid Freezer III 360 A-RGB",
+    "Gigabyte X870E AORUS MASTER",
+    "64 Go DDR5 6000 MHz G.Skill Trident Z5 Neo RGB",
+    "Kingston KC3000 2 To x2 (NVMe)",
+    "ASRock Taichi OC Radeon RX 7900 XTX",
+    "Corsair iCUE LINK 6500X RGB",
+    "Corsair RM1200x SHIFT",
+    "Configurations ventilée uniquement avec des RX120 LINK",
+  ]
+  "extreme5": [
     "AMD Ryzen 7 9800X3D",
     "Corsair iCUE Link TITAN 360 RGB",
     "ASUS ROG Crosshair X670E Hero",
@@ -93,6 +109,7 @@ const configComponents: { [key: string]: string[] } = {
     "RTX 4080 Super MSI Gaming X Slim",
     "Corsair 5000T RGB",
     "Be Quiet! Straight Power 12 1200W",
+    "Configurations ventilée uniquement avec des RX120 LINK",
   ]
 };
 

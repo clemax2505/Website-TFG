@@ -56,6 +56,12 @@ const PreBuiltPCs = () => {
     },
     { 
       id: "extreme4", 
+      name: "The Master", 
+      price: 3800, 
+      description: "Ryzen 7 9800X3D & RX 7900 XTX",
+    },
+    { 
+      id: "extreme5", 
       name: "The Overkill", 
       price: 4500, 
       description: "Ryzen 7 9800X3D & RTX 4080 Super",

@@ -11,8 +11,8 @@ const getImagesForConfig = (configId: string): { cpu: string; gpu: string } => {
   switch (configId) {
     case "budget":
       return {
-        cpu: url"../pc-parts/R5 5600.png", 
-        gpu: "/components/prebuilt/pc-parts/6750XT.png"  
+        cpu: url "../pc-parts/R5 5600.png", 
+        gpu: url "/components/prebuilt/pc-parts/6750XT.png"  
       };
     case "mid1":
       return {
@@ -21,7 +21,7 @@ const getImagesForConfig = (configId: string): { cpu: string; gpu: string } => {
       };
     case "mid2":
       return {
-        cpu: "@/components/prebuilt/pc-parts/R7 5800X.png", 
+        cpu: url "@/components/prebuilt/pc-parts/R7 5800X.png", 
         gpu: "@/components/prebuilt/pc-parts/7700XT GIGABYTE GAMING OC.png"  
       };
     case "high1":

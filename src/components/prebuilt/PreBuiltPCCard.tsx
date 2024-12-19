@@ -11,12 +11,12 @@ const getImagesForConfig = (configId: string): { cpu: string; gpu: string } => {
   switch (configId) {
     case "budget":
       return {
-        cpu: url "../pc-parts/R5 5600.png", 
-        gpu: url "/components/prebuilt/pc-parts/6750XT.png"  
+        cpu: "/R5 5600.png", 
+        gpu: url "/6750XT.png"  
       };
     case "mid1":
       return {
-        cpu: "/components/prebuilt/pc-parts/R5 5600.png", 
+        cpu: src "/R5 5600.png", 
         gpu: "/components/prebuilt/pc-parts/4060 EAGLE 3X.png"  
       };
     case "mid2":

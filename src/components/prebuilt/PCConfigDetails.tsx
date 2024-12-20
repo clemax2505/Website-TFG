@@ -70,7 +70,7 @@ const configComponents: { [key: string]: string[] } = {
     "MSI MPG X670E Gaming Plus WiFi",
     "32 Go DDR5 6000 MHz G.Skill Trident Z5 Neo RGB",
     "KingStone KC3000 2 To + KC3000 1 To (NVMe)",
-    "RX 7900 XTX ASRock Phantom Gaming OC",
+    "RX 7900 XTX ASRock Taichi white",
     "Corsair 5000D RGB Airflow",
     "Corsair RM1000X",
   ],

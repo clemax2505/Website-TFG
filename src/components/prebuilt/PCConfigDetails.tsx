@@ -13,7 +13,7 @@ const configComponents: { [key: string]: string[] } = {
     "RX 6650 XT Speedster",
     "MSI MAG 100R",
     "MSI A650BN",
-  ]
+  ],
     "budget2": [
     "AMD Ryzen 5 5600",
     "Be Quiet Pure Rock 2",

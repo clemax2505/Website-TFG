@@ -8,62 +8,64 @@ interface PreBuiltPCCardProps {
 }
 
 const getImagesForConfig = (configId: string): { cpu: string; gpu: string } => {
+  const basePath = "/src/components/prebuilt/pc-parts";
+  
   switch (configId) {
     case "budget":
       return {
-        cpu: "/R5 5600.png", 
-        gpu: url "/6750XT.png"  
+        cpu: "/R5 5600.png",
+        gpu: "/6750XT.png"
       };
     case "mid1":
       return {
-        cpu: src "/R5 5600.png", 
-        gpu: "/components/prebuilt/pc-parts/4060 EAGLE 3X.png"  
+        cpu: "/R5 5600.png",
+        gpu: "/4060 EAGLE 3X.png"
       };
     case "mid2":
       return {
-        cpu: url "@/components/prebuilt/pc-parts/R7 5800X.png", 
-        gpu: "@/components/prebuilt/pc-parts/7700XT GIGABYTE GAMING OC.png"  
+        cpu: "/R7 5800X.png",
+        gpu: "/7700XT GIGABYTE GAMING OC.png"
       };
     case "high1":
       return {
-        cpu: "@/components/prebuilt/pc-parts/i5-14600KF.png", 
-        gpu: "@/components/prebuilt/pc-parts/7800XT POWERCOLOR HELLBOUND.png"  
+        cpu: "/i5-14600KF.png",
+        gpu: "/7800XT POWERCOLOR HELLBOUND.png"
       };
     case "high2":
       return {
-        cpu: "@/components/prebuilt/pc-parts/i5-14600KF.png", 
-        gpu: "@/components/prebuilt/pc-parts/4070 SUPER TWIN EDGE ZOTAC.png"  
+        cpu: "/i5-14600KF.png",
+        gpu: "/4070 SUPER TWIN EDGE ZOTAC.png"
       };
     case "extreme1":
       return {
-        cpu: "@/components/prebuilt/pc-parts/i7-14700KF.png", 
-        gpu: "@/components/prebuilt/pc-parts/4070 Ti SUPER PNY EPIC-X RGB.png"  
+        cpu: "/i7-14700KF.png",
+        gpu: "/4070 Ti SUPER PNY EPIC-X RGB.png"
       };
     case "extreme2":
       return {
-        cpu: "@/components/prebuilt/pc-parts/R7 7800X3D.png", 
-        gpu: "@/components/prebuilt/pc-parts/7900XTX TAICHI.png"  
+        cpu: "/R7 7800X3D.png",
+        gpu: "/7900XTX TAICHI.png"
       };
     case "extreme3":
       return {
-        cpu: "@/components/prebuilt/pc-parts/i9-14900KF.png", 
-        gpu: "@/components/prebuilt/pc-parts/4080 SUPER PNY EPIC-X RGB.png"  
+        cpu: "/i9-14900KF.png",
+        gpu: "/4080 SUPER PNY EPIC-X RGB.png"
       };
-      case "extreme4":
+    case "extreme4":
       return {
-        cpu: "@/components/prebuilt/pc-parts/R7 9800X3D.png",
-        gpu: "@/components/prebuilt/pc-parts/7900XTX TAICHI.png"  
+        cpu: "/R7 9800X3D.png",
+        gpu: "/7900XTX TAICHI.png"
       };
     case "extreme5":
       return {
-        cpu: "@/components/prebuilt/pc-parts/R7 9800X3D.png",
-        gpu: "@/components/prebuilt/pc-parts/4080 SUPER MSI GAMING X SLIM.png"
+        cpu: "/R7 9800X3D.png",
+        gpu: "/4080 SUPER MSI GAMING X SLIM.png"
       };
-   /*default:
+    default:
       return {
-        cpu: "photo-1518770660439-4636190af475",
-        gpu: "photo-1486312338219-ce68d2c6f44d"
-      };*/
+        cpu: "/placeholder.svg",
+        gpu: "/placeholder.svg"
+      };
   }
 };
 
@@ -77,9 +79,9 @@ const PreBuiltPCCard = ({ config }: PreBuiltPCCardProps) => {
           <div className="grid grid-cols-2 gap-2 aspect-video w-full overflow-hidden rounded-t-lg">
             <div className="relative">
               <img
-                src={`https://images.unsplash.com/${images.cpu}`}
+                src={images.cpu}
                 alt={`Processeur ${config.name}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
                 onError={(e) => {
                   e.currentTarget.src = "/placeholder.svg";
                 }}
@@ -90,9 +92,9 @@ const PreBuiltPCCard = ({ config }: PreBuiltPCCardProps) => {
             </div>
             <div className="relative">
               <img
-                src={`https://images.unsplash.com/${images.gpu}`}
+                src={images.gpu}
                 alt={`Carte graphique ${config.name}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
                 onError={(e) => {
                   e.currentTarget.src = "/placeholder.svg";
                 }}

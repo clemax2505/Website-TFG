@@ -9,7 +9,12 @@ interface PreBuiltPCCardProps {
 
 const getImagesForConfig = (configId: string): { cpu: string; gpu: string } => {
   switch (configId) {
-    case "budget":
+    case "budget1":
+      return {
+        cpu: "/src/components/prebuilt/pc-parts/R5 5600.png",
+        gpu: "/src/components/prebuilt/pc-parts/6650XT.png"
+      };
+    case "budget2":
       return {
         cpu: "/src/components/prebuilt/pc-parts/R5 5600.png",
         gpu: "/src/components/prebuilt/pc-parts/6750XT.png"

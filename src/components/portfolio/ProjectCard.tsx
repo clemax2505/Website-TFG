@@ -23,7 +23,7 @@ export const ProjectCard = ({ project, onSelect }: ProjectCardProps) => {
                   <img
                     src={image}
                     alt={`${project.title} - Vue ${imageIndex + 1}`}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain rounded-lg"
                     onError={(e) => {
                       e.currentTarget.src = "/placeholder.svg";
                     }}
@@ -46,7 +46,7 @@ export const ProjectCard = ({ project, onSelect }: ProjectCardProps) => {
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-contain"
+            className="w-full h-full object-contain rounded-lg"
             onError={(e) => {
               e.currentTarget.src = "/placeholder.svg";
             }}

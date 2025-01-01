@@ -7,7 +7,13 @@ import PreBuiltPCCard from "@/components/prebuilt/PreBuiltPCCard";
 const PreBuiltPCs = () => {
   const priceRanges: PCConfig[] = [
     { 
-      id: "budget", 
+      id: "budget1", 
+      name: "The Beginning", 
+      price: 800, 
+      description: "Ryzen 5 5600 & RX 6650 XT",
+    },
+    { 
+      id: "budget2", 
       name: "Little Guy", 
       price: 1000, 
       description: "Ryzen 5 5600 & RX 6750 XT",
@@ -56,6 +62,12 @@ const PreBuiltPCs = () => {
     },
     { 
       id: "extreme4", 
+      name: "The Master", 
+      price: 3800, 
+      description: "Ryzen 7 9800X3D & RX 7900 XTX",
+    },
+    { 
+      id: "extreme5", 
       name: "The Overkill", 
       price: 4500, 
       description: "Ryzen 7 9800X3D & RTX 4080 Super",

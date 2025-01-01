@@ -4,7 +4,17 @@ import { openEmailClient } from "@/utils/emailUtils";
 import PCComponentsList from "./PCComponentsList";
 
 const configComponents: { [key: string]: string[] } = {
-  "budget": [
+  "budget1": [
+    "AMD Ryzen 5 5600",
+    "Stock AMD ventirad",
+    "Gigabyte B550 GAMING X V2",
+    "16 Go DDR4 3200 MHz Lexar THOR ",
+    "WD_black SN770 1 To (NVMe)",
+    "RX 6650 XT Speedster",
+    "MSI MAG 100R",
+    "MSI A650BN",
+  ],
+    "budget2": [
     "AMD Ryzen 5 5600",
     "Be Quiet Pure Rock 2",
     "MSI B550-A PRO",
@@ -42,7 +52,8 @@ const configComponents: { [key: string]: string[] } = {
     "WD_black SN770 2 To (NVMe)",
     "RX 7800 XT PowerColor HellBound Spectral",
     "Corsair 3000D RGB Airflow White",
-    "ASUS Prime AP-750G", 
+    "ASUS Prime AP-750G",
+    "Configurations ventilée uniquement avec des RX120 LINK",
   ],
   "high2": [
     "Intel Core i5-14600KF",
@@ -53,6 +64,7 @@ const configComponents: { [key: string]: string[] } = {
     "RTX 4070 Super Twin Edge Zotac",
     "Lian Li O11 Dynamic Mini",
     "Corsair RM1000X",
+    "Configurations ventilée uniquement avec des SL-120 Infinity",
   ],
   "extreme1": [
     "Intel Core i7-14700KF",
@@ -61,8 +73,9 @@ const configComponents: { [key: string]: string[] } = {
     "32 Go DDR5 6000 MHz Lexar THOR RGB",
     "WD_black SN770 2 To (NVMe)",
     "RTX 4070 Ti Super PNY Epic-X-RGB",
-    "Corsair 3000D RGB Airflow",
+    "Corsair 3000D Airflow",
     "ASUS TUF Gaming 1000G",
+    "Configurations ventilée uniquement avec des TF120",
   ],
   "extreme2": [
     "AMD Ryzen 7 7800X3D",
@@ -73,6 +86,7 @@ const configComponents: { [key: string]: string[] } = {
     "RX 7900 XTX ASRock Taichi white",
     "Corsair 5000D RGB Airflow",
     "Corsair RM1000X",
+    "Configurations ventilée uniquement avec des RX120 LINK",
   ],
   "extreme3": [
     "Intel Core i9-14900KF",
@@ -83,8 +97,20 @@ const configComponents: { [key: string]: string[] } = {
     "RTX 4080 Super PNY Epic-X-RGB",
     "Antec C8",
     "Corsair RM1000X",
+    "Configurations ventilée uniquement avec des RX120 LINK",
   ],
   "extreme4": [
+    "AMD Ryzen 7 9800X3D",
+    "ARCTIC Liquid Freezer III 360 A-RGB",
+    "Gigabyte X870E AORUS MASTER",
+    "64 Go DDR5 6000 MHz G.Skill Trident Z5 Neo RGB",
+    "Kingston KC3000 2 To x2 (NVMe)",
+    "ASRock Taichi OC Radeon RX 7900 XTX",
+    "Corsair iCUE LINK 6500X RGB",
+    "Corsair RM1200x SHIFT",
+    "Configurations ventilée uniquement avec des RX120 LINK",
+  ],
+  "extreme5": [
     "AMD Ryzen 7 9800X3D",
     "Corsair iCUE Link TITAN 360 RGB",
     "ASUS ROG Crosshair X870E Hero",
@@ -93,11 +119,13 @@ const configComponents: { [key: string]: string[] } = {
     "RTX 4080 Super MSI Gaming X Slim",
     "Corsair 5000T RGB",
     "Be Quiet! Straight Power 12 1200W",
+    "Configurations ventilée uniquement avec des RX120 LINK",
   ]
 };
 
-const PCConfigDetails = ({ configId }: { configId: string }) => {
-  const components = configComponents[configId] || [];
+const PCConfigDetails = () => {
+  const { configId } = useParams();
+  const components = configComponents[configId || ""] || [];
 
   const handleEmailRequest = () => {
     const emailBody = `

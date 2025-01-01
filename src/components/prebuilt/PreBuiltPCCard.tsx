@@ -7,12 +7,107 @@ interface PreBuiltPCCardProps {
   config: PCConfig;
 }
 
+const getImagesForConfig = (configId: string): { cpu: string; gpu: string } => {
+  switch (configId) {
+    case "budget1":
+      return {
+        cpu: "/src/components/prebuilt/pc-parts/R5 5600.png",
+        gpu: "/src/components/prebuilt/pc-parts/6650XT.png"
+      };
+    case "budget2":
+      return {
+        cpu: "/src/components/prebuilt/pc-parts/R5 5600.png",
+        gpu: "/src/components/prebuilt/pc-parts/6750XT.png"
+      };
+    case "mid1":
+      return {
+        cpu: "/src/components/prebuilt/pc-parts/R5 5600.png",
+        gpu: "/src/components/prebuilt/pc-parts/4060 EAGLE 3X.png"
+      };
+    case "mid2":
+      return {
+        cpu: "/src/components/prebuilt/pc-parts/R7 5800X.png",
+        gpu: "/src/components/prebuilt/pc-parts/7700XT GIGABYTE GAMING OC.png"
+      };
+    case "high1":
+      return {
+        cpu: "/src/components/prebuilt/pc-parts/i5-14600KF.png",
+        gpu: "/src/components/prebuilt/pc-parts/7800XT POWERCOLOR HELLBOUND.png"
+      };
+    case "high2":
+      return {
+        cpu: "/src/components/prebuilt/pc-parts/i5-14600KF.png",
+        gpu: "/src/components/prebuilt/pc-parts/4070 SUPER TWIN EDGE ZOTAC.png"
+      };
+    case "extreme1":
+      return {
+        cpu: "/src/components/prebuilt/pc-parts/i7-14700KF.png",
+        gpu: "/src/components/prebuilt/pc-parts/4070 Ti SUPER PNY EPIC-X RGB.png"
+      };
+    case "extreme2":
+      return {
+        cpu: "/src/components/prebuilt/pc-parts/R7 7800X3D.png",
+        gpu: "/src/components/prebuilt/pc-parts/7900XTX TAICHI.png"
+      };
+    case "extreme3":
+      return {
+        cpu: "/src/components/prebuilt/pc-parts/i9-14900KF.png",
+        gpu: "/src/components/prebuilt/pc-parts/4080 SUPER PNY EPIC-X RGB.png"
+      };
+    case "extreme4":
+      return {
+        cpu: "/src/components/prebuilt/pc-parts/R7 9800X3D.png",
+        gpu: "/src/components/prebuilt/pc-parts/7900XTX TAICHI.png"
+      };
+    case "extreme5":
+      return {
+        cpu: "/src/components/prebuilt/pc-parts/R7 9800X3D.png",
+        gpu: "/src/components/prebuilt/pc-parts/4080 SUPER MSI GAMING X SLIM.png"
+      };
+    default:
+      return {
+        cpu: "/placeholder.svg",
+        gpu: "/placeholder.svg"
+      };
+  }
+};
+
 const PreBuiltPCCard = ({ config }: PreBuiltPCCardProps) => {
+  const images = getImagesForConfig(config.id);
+
   return (
     <Link to={`/prebuilt/${config.id}`} className="block">
       <Card className="glass-card hover:scale-105 transition-transform duration-300 cursor-pointer">
         <CardHeader>
-          <CardTitle className="text-xl text-center">{config.name}</CardTitle>
+          <div className="grid grid-cols-2 gap-2 aspect-video w-full overflow-hidden rounded-t-lg">
+            <div className="relative">
+              <img
+                src={images.cpu}
+                alt={`Processeur ${config.name}`}
+                className="w-full h-full object-contain"
+                onError={(e) => {
+                  e.currentTarget.src = "/placeholder.svg";
+                }}
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-xs p-1 text-center">
+                Processeur
+              </div>
+            </div>
+            <div className="relative">
+              <img
+                src={images.gpu}
+                alt={`Carte graphique ${config.name}`}
+                className="w-full h-full object-contain"
+                onError={(e) => {
+                  e.currentTarget.src = "/placeholder.svg";
+                }}
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-xs p-1 text-center">
+                Carte graphique
+              </div>
+            </div>
+          </div>
+          <CardTitle className="text-xl text-center mt-4">{config.name}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="text-center">

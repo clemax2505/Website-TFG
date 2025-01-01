@@ -8,58 +8,56 @@ interface PreBuiltPCCardProps {
 }
 
 const getImagesForConfig = (configId: string): { cpu: string; gpu: string } => {
-  const basePath = "/src/components/prebuilt/pc-parts";
-  
   switch (configId) {
     case "budget":
       return {
-        cpu: "/R5 5600.png",
-        gpu: "/6750XT.png"
+        cpu: "/src/components/prebuilt/pc-parts/R5 5600.png",
+        gpu: "/src/components/prebuilt/pc-parts/6750XT.png"
       };
     case "mid1":
       return {
-        cpu: "/R5 5600.png",
-        gpu: "/4060 EAGLE 3X.png"
+        cpu: "/src/components/prebuilt/pc-parts/R5 5600.png",
+        gpu: "/src/components/prebuilt/pc-parts/4060 EAGLE 3X.png"
       };
     case "mid2":
       return {
-        cpu: "/R7 5800X.png",
-        gpu: "/7700XT GIGABYTE GAMING OC.png"
+        cpu: "/src/components/prebuilt/pc-parts/R7 5800X.png",
+        gpu: "/src/components/prebuilt/pc-parts/7700XT GIGABYTE GAMING OC.png"
       };
     case "high1":
       return {
-        cpu: "/i5-14600KF.png",
-        gpu: "/7800XT POWERCOLOR HELLBOUND.png"
+        cpu: "/src/components/prebuilt/pc-parts/i5-14600KF.png",
+        gpu: "/src/components/prebuilt/pc-parts/7800XT POWERCOLOR HELLBOUND.png"
       };
     case "high2":
       return {
-        cpu: "/i5-14600KF.png",
-        gpu: "/4070 SUPER TWIN EDGE ZOTAC.png"
+        cpu: "/src/components/prebuilt/pc-parts/i5-14600KF.png",
+        gpu: "/src/components/prebuilt/pc-parts/4070 SUPER TWIN EDGE ZOTAC.png"
       };
     case "extreme1":
       return {
-        cpu: "/i7-14700KF.png",
-        gpu: "/4070 Ti SUPER PNY EPIC-X RGB.png"
+        cpu: "/src/components/prebuilt/pc-parts/i7-14700KF.png",
+        gpu: "/src/components/prebuilt/pc-parts/4070 Ti SUPER PNY EPIC-X RGB.png"
       };
     case "extreme2":
       return {
-        cpu: "/R7 7800X3D.png",
-        gpu: "/7900XTX TAICHI.png"
+        cpu: "/src/components/prebuilt/pc-parts/R7 7800X3D.png",
+        gpu: "/src/components/prebuilt/pc-parts/7900XTX TAICHI.png"
       };
     case "extreme3":
       return {
-        cpu: "/i9-14900KF.png",
-        gpu: "/4080 SUPER PNY EPIC-X RGB.png"
+        cpu: "/src/components/prebuilt/pc-parts/i9-14900KF.png",
+        gpu: "/src/components/prebuilt/pc-parts/4080 SUPER PNY EPIC-X RGB.png"
       };
     case "extreme4":
       return {
-        cpu: "/R7 9800X3D.png",
-        gpu: "/7900XTX TAICHI.png"
+        cpu: "/src/components/prebuilt/pc-parts/R7 9800X3D.png",
+        gpu: "/src/components/prebuilt/pc-parts/7900XTX TAICHI.png"
       };
     case "extreme5":
       return {
-        cpu: "/R7 9800X3D.png",
-        gpu: "/4080 SUPER MSI GAMING X SLIM.png"
+        cpu: "/src/components/prebuilt/pc-parts/R7 9800X3D.png",
+        gpu: "/src/components/prebuilt/pc-parts/4080 SUPER MSI GAMING X SLIM.png"
       };
     default:
       return {

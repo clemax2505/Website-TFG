@@ -4,7 +4,17 @@ import { openEmailClient } from "@/utils/emailUtils";
 import PCComponentsList from "./PCComponentsList";
 
 const configComponents: { [key: string]: string[] } = {
-  "budget": [
+  "budget1": [
+    "AMD Ryzen 5 5600",
+    "Stock AMD ventirad",
+    "Gigabyte B550 GAMING X V2",
+    "16 Go DDR4 3200 MHz Lexar THOR ",
+    "WD_black SN770 1 To (NVMe)",
+    "RX 6650 XT Speedster",
+    "MSI MAG 100R",
+    "MSI A650BN",
+  ]
+    "budget2": [
     "AMD Ryzen 5 5600",
     "Be Quiet Pure Rock 2",
     "MSI B550-A PRO",

@@ -51,8 +51,8 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <Logo className="h-12 w-12" />
-              <span className="text-xl font-bold text-white">The Gaming Forge</span>
+              <Logo className="h-8 w-8 sm:h-12 sm:w-12" />
+              <span className="text-lg sm:text-xl font-bold text-white">The Gaming Forge</span>
             </Link>
           </div>
 
@@ -73,6 +73,8 @@ const Navbar = () => {
             <button
               onClick={toggleMenu}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-forge-dark focus:outline-none"
+              aria-expanded={isOpen}
+              aria-label="Toggle menu"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -81,16 +83,17 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden">
+        <div className="md:hidden absolute w-full bg-forge-black glass-card">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
-              <NavLink
-                key={item.name}
-                to={item.path}
-                name={item.name}
-                isActive={isCurrentPath(item.path)}
-                onClick={toggleMenu}
-              />
+              <div key={item.name} className="block w-full">
+                <NavLink
+                  to={item.path}
+                  name={item.name}
+                  isActive={isCurrentPath(item.path)}
+                  onClick={toggleMenu}
+                />
+              </div>
             ))}
           </div>
         </div>

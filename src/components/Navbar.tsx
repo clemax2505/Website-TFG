@@ -11,7 +11,7 @@ const NavLink = memo(({ to, name, isActive, onClick }: {
 }) => (
   <Link
     to={to}
-    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+    className={`block w-full px-3 py-2 rounded-md text-sm font-medium transition-colors ${
       isActive
         ? "text-forge-orange bg-forge-dark"
         : "text-gray-300 hover:text-forge-orange"
@@ -84,9 +84,9 @@ const Navbar = () => {
 
       {isOpen && (
         <div className="md:hidden absolute w-full bg-forge-black glass-card">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
             {navItems.map((item) => (
-              <div key={item.name} className="block w-full">
+              <div key={item.name} className="w-full">
                 <NavLink
                   to={item.path}
                   name={item.name}

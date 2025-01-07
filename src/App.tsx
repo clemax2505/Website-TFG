@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect, lazy, Suspense } from "react";
 import { AnimatePresence } from "framer-motion";
+import React from 'react';
 
 // Lazy load pages
 const Index = lazy(() => import("./pages/Index"));
@@ -124,16 +125,18 @@ const queryClient = new QueryClient({
 });
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <ScrollToTop />
-        <AnimatedRoutes />
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+  <React.StrictMode>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <ScrollToTop />
+          <AnimatedRoutes />
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  </React.StrictMode>
 );
 
 export default App;

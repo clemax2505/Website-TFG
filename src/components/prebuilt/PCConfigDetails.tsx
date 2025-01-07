@@ -230,7 +230,28 @@ ${components.join('\n')}
           </Button>
         </div>
       </div>
-      
+      <Card className="glass-card">
+        <CardContent className="p-6">
+          <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <img
+                src={images.cpu}
+                alt="CPU"
+                className="w-full h-48 object-contain"
+              />
+            </div>
+            <div className="space-y-2">
+              <img
+                src={images.gpu}
+                alt="GPU"
+                className="w-full h-48 object-contain"
+              />
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      <PCComponentsList components={components} />
       <div className="lg:col-span-1">
         <PerformanceSection />
       </div>

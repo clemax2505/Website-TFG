@@ -1,5 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card";
-import PCComponentsList from "./PCComponentsList";
 
 interface ComponentsSectionProps {
   components: string[];
@@ -11,32 +10,43 @@ interface ComponentsSectionProps {
 
 const ComponentsSection = ({ components, images }: ComponentsSectionProps) => {
   return (
-    <div className="space-y-8">
-      <Card className="glass-card">
-        <CardContent className="p-6">
-          <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <img
-                src={images.cpu}
-                alt="CPU"
-                className="w-full h-48 object-contain"
-              />
-              <p className="text-center text-sm">Processeur</p>
-            </div>
-            <div className="space-y-2">
-              <img
-                src={images.gpu}
-                alt="GPU"
-                className="w-full h-48 object-contain"
-              />
-              <p className="text-center text-sm">Carte graphique</p>
+    <Card>
+      <CardContent className="p-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <div className="relative">
+            <img
+              src={images.cpu}
+              alt="CPU"
+              className="w-full h-48 object-contain"
+              onError={(e) => {
+                e.currentTarget.src = "/placeholder.svg";
+              }}
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center py-2">
+              Processeur
             </div>
           </div>
-        </CardContent>
-      </Card>
-
-      <PCComponentsList components={components} />
-    </div>
+          <div className="relative">
+            <img
+              src={images.gpu}
+              alt="GPU"
+              className="w-full h-48 object-contain"
+              onError={(e) => {
+                e.currentTarget.src = "/placeholder.svg";
+              }}
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center py-2">
+              Carte graphique
+            </div>
+          </div>
+        </div>
+        <ul className="space-y-2">
+          {components.map((component, index) => (
+            <li key={index} className="text-gray-200">{component}</li>
+          ))}
+        </ul>
+      </CardContent>
+    </Card>
   );
 };
 

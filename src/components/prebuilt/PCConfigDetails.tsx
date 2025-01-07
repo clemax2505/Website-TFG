@@ -230,7 +230,6 @@ ${components.join('\n')}
                 alt="CPU"
                 className="w-full h-48 object-contain"
               />
-              <p className="text-center text-sm">Processeur</p>
             </div>
             <div className="space-y-2">
               <img
@@ -238,7 +237,6 @@ ${components.join('\n')}
                 alt="GPU"
                 className="w-full h-48 object-contain"
               />
-              <p className="text-center text-sm">Carte graphique</p>
             </div>
           </div>
         </CardContent>

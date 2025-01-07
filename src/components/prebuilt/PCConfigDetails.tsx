@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import { openEmailClient } from "@/utils/emailUtils";
 import { priceRanges } from "@/pages/PreBuiltPCs";
 import ConfigHeader from "./ConfigHeader";

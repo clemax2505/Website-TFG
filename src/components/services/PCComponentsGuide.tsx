@@ -36,7 +36,7 @@ const PCComponentsGuide = () => {
       icon: <Power className="w-8 h-8 text-forge-orange" />,
       title: "Alimentation",
       description: "Fournit l'énergie nécessaire à tous les composants",
-      howTo: "Ouvrir le boîtier et regarder l'étiquette sur l'alimentation",
+      howTo: "Ouvrir le boîtier et regarder l'étiquette sur l'alimentation, ou utiliser un logiciel comme 'Speccy'",
       healthIssues: "Une alimentation défectueuse peut causer des redémarrages inattendus, des dommages aux composants, ou des problèmes de stabilité."
     },
     {

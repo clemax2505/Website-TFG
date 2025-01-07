@@ -89,7 +89,9 @@ const PreBuiltPCCard = ({ config }: PreBuiltPCCardProps) => {
                   e.currentTarget.src = "/placeholder.svg";
                 }}
               />
-             
+              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-xs p-1 text-center">
+                Processeur
+              </div>
             </div>
             <div className="relative">
               <img
@@ -100,7 +102,9 @@ const PreBuiltPCCard = ({ config }: PreBuiltPCCardProps) => {
                   e.currentTarget.src = "/placeholder.svg";
                 }}
               />
-              
+              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-xs p-1 text-center">
+                Carte graphique
+              </div>
             </div>
           </div>
           <CardTitle className="text-xl text-center mt-4">{config.name}</CardTitle>

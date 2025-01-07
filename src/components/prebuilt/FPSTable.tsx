@@ -2,9 +2,10 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 
 interface FPSTableProps {
   gameIndex: number;
+  resolution: 'FHD' | '2K' | '4K';
 }
 
-const FPSTable = ({ gameIndex }: FPSTableProps) => {
+const FPSTable = ({ gameIndex, resolution }: FPSTableProps) => {
   return (
     <Table>
       <TableHeader>

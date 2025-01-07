@@ -4,76 +4,76 @@ import PageTransition from "@/components/PageTransition";
 import { PCConfig } from "@/components/prebuilt/types";
 import PreBuiltPCCard from "@/components/prebuilt/PreBuiltPCCard";
 
-const PreBuiltPCs = () => {
-  const priceRanges: PCConfig[] = [
-    { 
-      id: "budget1", 
-      name: "The Beginning", 
-      price: 800, 
-      description: "Ryzen 5 5600 & RX 6650 XT",
-    },
-    { 
-      id: "budget2", 
-      name: "Little Guy", 
-      price: 1000, 
-      description: "Ryzen 5 5600 & RX 6750 XT",
-    },
-    { 
-      id: "mid1", 
-      name: "Viper", 
-      price: 1250, 
-      description: "Ryzen 5 5600 & RTX 4060",
-    },
-    { 
-      id: "mid2", 
-      name: "AirFlow Prime", 
-      price: 1500, 
-      description: "Ryzen 7 5800X & RX 7700 XT",
-    },
-    { 
-      id: "high1", 
-      name: "The Spectral", 
-      price: 1800, 
-      description: "Intel i5-14600KF & RX 7800 XT",
-    },
-    { 
-      id: "high2", 
-      name: "Infinity", 
-      price: 2350, 
-      description: "Intel i5-14600KF & RTX 4070 Super",
-    },
-    { 
-      id: "extreme1", 
-      name: "Tuffy", 
-      price: 2500, 
-      description: "Intel i7-14700KF & RTX 4070 Ti Super",
-    },
-    { 
-      id: "extreme2", 
-      name: "The Taichi", 
-      price: 2850, 
-      description: "Ryzen 7 7800X3D & RX 7900 XTX",
-    },
-    { 
-      id: "extreme3", 
-      name: "Chill Guy", 
-      price: 3500, 
-      description: "Intel i9-14900KF & RTX 4080 Super",
-    },
-    { 
-      id: "extreme4", 
-      name: "The Master", 
-      price: 3800, 
-      description: "Ryzen 7 9800X3D & RX 7900 XTX",
-    },
-    { 
-      id: "extreme5", 
-      name: "The Overkill", 
-      price: 4500, 
-      description: "Ryzen 7 9800X3D & RTX 4080 Super",
-    }
-  ];
+export const priceRanges: PCConfig[] = [
+  { 
+    id: "budget1", 
+    name: "The Beginning", 
+    price: 800, 
+    description: "Ryzen 5 5600 & RX 6650 XT",
+  },
+  { 
+    id: "budget2", 
+    name: "Little Guy", 
+    price: 1000, 
+    description: "Ryzen 5 5600 & RX 6750 XT",
+  },
+  { 
+    id: "mid1", 
+    name: "Viper", 
+    price: 1250, 
+    description: "Ryzen 5 5600 & RTX 4060",
+  },
+  { 
+    id: "mid2", 
+    name: "AirFlow Prime", 
+    price: 1500, 
+    description: "Ryzen 7 5800X & RX 7700 XT",
+  },
+  { 
+    id: "high1", 
+    name: "The Spectral", 
+    price: 1800, 
+    description: "Intel i5-14600KF & RX 7800 XT",
+  },
+  { 
+    id: "high2", 
+    name: "Infinity", 
+    price: 2350, 
+    description: "Intel i5-14600KF & RTX 4070 Super",
+  },
+  { 
+    id: "extreme1", 
+    name: "Tuffy", 
+    price: 2500, 
+    description: "Intel i7-14700KF & RTX 4070 Ti Super",
+  },
+  { 
+    id: "extreme2", 
+    name: "The Taichi", 
+    price: 2850, 
+    description: "Ryzen 7 7800X3D & RX 7900 XTX",
+  },
+  { 
+    id: "extreme3", 
+    name: "Chill Guy", 
+    price: 3500, 
+    description: "Intel i9-14900KF & RTX 4080 Super",
+  },
+  { 
+    id: "extreme4", 
+    name: "The Master", 
+    price: 3800, 
+    description: "Ryzen 7 9800X3D & RX 7900 XTX",
+  },
+  { 
+    id: "extreme5", 
+    name: "The Overkill", 
+    price: 4500, 
+    description: "Ryzen 7 9800X3D & RTX 4080 Super",
+  }
+];
 
+const PreBuiltPCs = () => {
   return (
     <PageTransition>
       <div className="min-h-screen flex flex-col">

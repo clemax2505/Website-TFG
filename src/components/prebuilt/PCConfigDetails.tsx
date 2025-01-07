@@ -6,6 +6,7 @@ import { priceRanges } from "@/pages/PreBuiltPCs";
 import ConfigHeader from "./ConfigHeader";
 import ComponentsSection from "./ComponentsSection";
 import PerformanceSection from "./PerformanceSection";
+import PCComponentsList from "./PCComponentsList";
 
 const configComponents: { [key: string]: string[] } = {
   "budget1": [

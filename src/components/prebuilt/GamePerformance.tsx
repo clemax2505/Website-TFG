@@ -7,11 +7,11 @@ interface GamePerformanceProps {
 
 const GamePerformance = ({ resolution }: GamePerformanceProps) => {
   const games = [
-    { id: 1, name: "/logo fortnite.png" },
-    { id: 2, name: "/logo Warzone.png" },
-    { id: 3, name: "/logo minecraft.png" },
-    { id: 4, name: "/logo valorant.png" },
-    { id: 5, name: "/logo gta v.png" },
+    { id: 1, "/logo fortnite.png" },
+    { id: 2, "/logo Warzone.png" },
+    { id: 3, "/logo minecraft.png" },
+    { id: 4, "/logo valorant.png" },
+    { id: 5, "/logo gta v.png" },
   ];
 
   return (

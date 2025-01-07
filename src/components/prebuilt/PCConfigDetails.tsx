@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { openEmailClient } from "@/utils/emailUtils";
 import PCComponentsList from "./PCComponentsList";
+import { priceRanges } from "@/pages/PreBuiltPCs";
+import { Card, CardContent } from "@/components/ui/card";
 
 const configComponents: { [key: string]: string[] } = {
   "budget1": [
@@ -123,15 +125,83 @@ const configComponents: { [key: string]: string[] } = {
   ]
 };
 
+const getImagesForConfig = (configId: string): { cpu: string; gpu: string } => {
+  switch (configId) {
+    case "budget1":
+      return {
+        cpu: "/R5 5600.png",
+        gpu: "/6650XT.png"
+      };
+    case "budget2":
+      return {
+        cpu: "/R5 5600.png",
+        gpu: "/6750XT.png"
+      };
+    case "mid1":
+      return {
+        cpu: "/R5 5600.png",
+        gpu: "/4060 EAGLE 3X.png"
+      };
+    case "mid2":
+      return {
+        cpu: "/R7 5800X.png",
+        gpu: "/7700XT GIGABYTE GAMING OC.png"
+      };
+    case "high1":
+      return {
+        cpu: "/i5-14600KF.png",
+        gpu: "/7800XT POWERCOLOR HELLBOUND.png"
+      };
+    case "high2":
+      return {
+        cpu: "/i5-14600KF.png",
+        gpu: "/4070 SUPER TWIN EDGE ZOTAC.png"
+      };
+    case "extreme1":
+      return {
+        cpu: "/i7-14700KF.png",
+        gpu: "/4070 Ti SUPER PNY EPIC-X RGB.png"
+      };
+    case "extreme2":
+      return {
+        cpu: "/R7 7800X3D.png",
+        gpu: "/7900XTX TAICHI.png"
+      };
+    case "extreme3":
+      return {
+        cpu: "/i9-14900KF.png",
+        gpu: "/4080 SUPER PNY EPIC-X RGB.png"
+      };
+    case "extreme4":
+      return {
+        cpu: "/R7 9800X3D.png",
+        gpu: "/7900XTX TAICHI.png"
+      };
+    case "extreme5":
+      return {
+        cpu: "/R7 9800X3D.png",
+        gpu: "/4080 SUPER MSI GAMING X SLIM.png"
+      };
+    default:
+      return {
+        cpu: "/placeholder.svg",
+        gpu: "/placeholder.svg"
+      };
+  }
+};
+
 const PCConfigDetails = () => {
   const { configId } = useParams();
   const components = configComponents[configId || ""] || [];
+  const images = getImagesForConfig(configId || "");
+  const selectedConfig = priceRanges.find(config => config.id === configId);
 
   const handleEmailRequest = () => {
     const emailBody = `
 Nouvelle demande de configuration PC
 
-Configuration demandée : ${configId}
+Configuration demandée : ${selectedConfig?.name || configId}
+Prix : ${selectedConfig?.price}€
 
 Liste des composants :
 ${components.join('\n')}
@@ -140,9 +210,42 @@ ${components.join('\n')}
     openEmailClient("Nouvelle demande de configuration PC", emailBody);
   };
 
+  if (!selectedConfig) {
+    return <div>Configuration non trouvée</div>;
+  }
+
   return (
     <div className="space-y-8">
+      <div className="text-center space-y-4">
+        <h2 className="text-3xl font-bold text-forge-orange">{selectedConfig.name}</h2>
+        <p className="text-2xl font-semibold">{selectedConfig.price}€</p>
+      </div>
+
+      <Card className="glass-card">
+        <CardContent className="p-6">
+          <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <img
+                src={images.cpu}
+                alt="CPU"
+                className="w-full h-48 object-contain"
+              />
+              <p className="text-center text-sm">Processeur</p>
+            </div>
+            <div className="space-y-2">
+              <img
+                src={images.gpu}
+                alt="GPU"
+                className="w-full h-48 object-contain"
+              />
+              <p className="text-center text-sm">Carte graphique</p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
       <PCComponentsList components={components} />
+      
       <div className="flex justify-center">
         <Button 
           variant="outline" 

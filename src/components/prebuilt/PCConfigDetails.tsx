@@ -1,12 +1,10 @@
 import { useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { openEmailClient } from "@/utils/emailUtils";
 import { priceRanges } from "@/pages/PreBuiltPCs";
 import ConfigHeader from "./ConfigHeader";
 import ComponentsSection from "./ComponentsSection";
 import PerformanceSection from "./PerformanceSection";
-import PCComponentsList from "./PCComponentsList";
 
 const configComponents: { [key: string]: string[] } = {
   "budget1": [

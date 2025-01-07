@@ -1,12 +1,9 @@
 import { useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { openEmailClient } from "@/utils/emailUtils";
-import { priceRanges } from "@/pages/PreBuiltPCs";
-import ConfigHeader from "./ConfigHeader";
-import ComponentsSection from "./ComponentsSection";
-import PerformanceSection from "./PerformanceSection";
-import { Card, CardContent } from "@/components/ui/card";
 import PCComponentsList from "./PCComponentsList";
+import { priceRanges } from "@/pages/PreBuiltPCs";
+import { Card, CardContent } from "@/components/ui/card";
 
 const configComponents: { [key: string]: string[] } = {
   "budget1": [
@@ -19,7 +16,7 @@ const configComponents: { [key: string]: string[] } = {
     "MSI MAG 100R",
     "MSI A650BN",
   ],
-  "budget2": [
+    "budget2": [
     "AMD Ryzen 5 5600",
     "Be Quiet Pure Rock 2",
     "MSI B550-A PRO",
@@ -218,20 +215,12 @@ ${components.join('\n')}
   }
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-      <div className="lg:col-span-2 space-y-8">
-        <ConfigHeader config={selectedConfig} />
-        <ComponentsSection components={components} images={images} />
-        <div className="flex justify-center">
-          <Button 
-            variant="outline" 
-            size="lg"
-            onClick={handleEmailRequest}
-          >
-            Passer commande
-          </Button>
-        </div>
+    <div className="space-y-8">
+      <div className="text-center space-y-4">
+        <h2 className="text-3xl font-bold text-forge-orange">{selectedConfig.name}</h2>
+        <p className="text-2xl font-semibold">{selectedConfig.price}€</p>
       </div>
+
       <Card className="glass-card">
         <CardContent className="p-6">
           <div className="grid grid-cols-2 gap-4">
@@ -254,8 +243,15 @@ ${components.join('\n')}
       </Card>
 
       <PCComponentsList components={components} />
-      <div className="lg:col-span-1">
-        <PerformanceSection />
+      
+      <div className="flex justify-center">
+        <Button 
+          variant="outline" 
+          size="lg"
+          onClick={handleEmailRequest}
+        >
+          Passer commande
+        </Button>
       </div>
     </div>
   );

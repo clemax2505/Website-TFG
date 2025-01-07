@@ -1,9 +1,12 @@
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { openEmailClient } from "@/utils/emailUtils";
 import PCComponentsList from "./PCComponentsList";
 import { priceRanges } from "@/pages/PreBuiltPCs";
 import { Card, CardContent } from "@/components/ui/card";
+import GamePerformance from "./GamePerformance";
+import ResolutionSelector from "./ResolutionSelector";
 
 const configComponents: { [key: string]: string[] } = {
   "budget1": [
@@ -192,6 +195,7 @@ const getImagesForConfig = (configId: string): { cpu: string; gpu: string } => {
 
 const PCConfigDetails = () => {
   const { configId } = useParams();
+  const [resolution, setResolution] = useState<"FHD" | "2K" | "4K">("FHD");
   const components = configComponents[configId || ""] || [];
   const images = getImagesForConfig(configId || "");
   const selectedConfig = priceRanges.find(config => config.id === configId);
@@ -221,39 +225,51 @@ ${components.join('\n')}
         <p className="text-2xl font-semibold">{selectedConfig.price}€</p>
       </div>
 
-      <Card className="glass-card">
-        <CardContent className="p-6">
-          <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <img
-                src={images.cpu}
-                alt="CPU"
-                className="w-full h-48 object-contain"
-              />
-              <p className="text-center text-sm">Processeur</p>
-            </div>
-            <div className="space-y-2">
-              <img
-                src={images.gpu}
-                alt="GPU"
-                className="w-full h-48 object-contain"
-              />
-              <p className="text-center text-sm">Carte graphique</p>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="space-y-8">
+          <Card className="glass-card">
+            <CardContent className="p-6">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <img
+                    src={images.cpu}
+                    alt="CPU"
+                    className="w-full h-48 object-contain"
+                  />
+                  <p className="text-center text-sm">Processeur</p>
+                </div>
+                <div className="space-y-2">
+                  <img
+                    src={images.gpu}
+                    alt="GPU"
+                    className="w-full h-48 object-contain"
+                  />
+                  <p className="text-center text-sm">Carte graphique</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
-      <PCComponentsList components={components} />
-      
-      <div className="flex justify-center">
-        <Button 
-          variant="outline" 
-          size="lg"
-          onClick={handleEmailRequest}
-        >
-          Passer commande
-        </Button>
+          <PCComponentsList components={components} />
+          
+          <div className="flex justify-center">
+            <Button 
+              variant="outline" 
+              size="lg"
+              onClick={handleEmailRequest}
+            >
+              Passer commande
+            </Button>
+          </div>
+        </div>
+
+        <div className="space-y-8">
+          <ResolutionSelector
+            selectedResolution={resolution}
+            onResolutionChange={setResolution}
+          />
+          <GamePerformance resolution={resolution} />
+        </div>
       </div>
     </div>
   );

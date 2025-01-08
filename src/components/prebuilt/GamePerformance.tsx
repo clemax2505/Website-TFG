@@ -7,11 +7,11 @@ interface GamePerformanceProps {
 
 const GamePerformance = ({ resolution }: GamePerformanceProps) => {
   const games = [
-    { id: 1, "/logo fortnite.png" },
-    { id: 2, "/logo Warzone.png" },
-    { id: 3, "/logo minecraft.png" },
-    { id: 4, "/logo valorant.png" },
-    { id: 5, "/logo gta v.png" },
+    { id: 1, image: "/logo fortnite.png" },
+    { id: 2, image: "/logo Warzone.png" },
+    { id: 3, image: "/logo minecraft.png" },
+    { id: 4, image: "/logo valorant.png" },
+    { id: 5, image: "/logo gta v.png" },
   ];
 
   return (
@@ -25,27 +25,33 @@ const GamePerformance = ({ resolution }: GamePerformanceProps) => {
         <div className="space-y-6">
           {games.map((game) => (
             <div key={game.id} className="flex gap-4 items-center">
-              <div className="w-32 h-20 bg-forge-dark rounded-lg flex items-center justify-center">
-                {game.name}
+              <div className="w-32 h-20 bg-forge-dark rounded-lg flex items-center justify-center overflow-hidden">
+                <img 
+                  src={game.image} 
+                  alt="Game logo" 
+                  className="w-full h-full object-contain p-2"
+                />
               </div>
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead className="text-center">Ultra</TableHead>
-                    <TableHead className="text-center">Haut</TableHead>
-                    <TableHead className="text-center">Moyen</TableHead>
-                    <TableHead className="text-center">Bas</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  <TableRow>
-                    <TableCell className="text-center">-</TableCell>
-                    <TableCell className="text-center">-</TableCell>
-                    <TableCell className="text-center">-</TableCell>
-                    <TableCell className="text-center">-</TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
+              <div className="flex-grow">
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead className="text-center w-1/4">Ultra</TableHead>
+                      <TableHead className="text-center w-1/4">Haut</TableHead>
+                      <TableHead className="text-center w-1/4">Moyen</TableHead>
+                      <TableHead className="text-center w-1/4">Bas</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell className="text-center">-</TableCell>
+                      <TableCell className="text-center">-</TableCell>
+                      <TableCell className="text-center">-</TableCell>
+                      <TableCell className="text-center">-</TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </div>
             </div>
           ))}
         </div>

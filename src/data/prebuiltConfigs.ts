@@ -269,7 +269,7 @@ export const prebuiltConfigs: { [key: string]: PCConfigDetailed } = {
     id: "infinity",
     name: "Infinity",
     price: 2460.64,
-    description: "Ryzen 5 5600 & RX 6650 XT",
+    description: "Intel i5-14600KF & RTX 4070 Super",
     components: [
      "Intel Core i5-14600KF",
      "MSI 360R V2",

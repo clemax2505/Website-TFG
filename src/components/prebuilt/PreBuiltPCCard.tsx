@@ -21,7 +21,7 @@ const getImagesForConfig = (configId: string): { cpu: string; gpu: string } => {
       };
     case "mid1":
       return {
-        cpu: "/R5 5600.png",
+        cpu: "/R7 5700X.png",
         gpu: "/4060 EAGLE 3X.png"
       };
     case "mid2":

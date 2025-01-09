@@ -9,57 +9,57 @@ interface PreBuiltPCCardProps {
 
 const getImagesForConfig = (configId: string): { cpu: string; gpu: string } => {
   switch (configId) {
-    case "budget1":
+    case "thebeginning":
       return {
         cpu: "/R5 5600.png",
         gpu: "/6650XT.png"
       };
-    case "budget2":
+    case "littleguy":
       return {
         cpu: "/R5 5600.png",
         gpu: "/6750XT.png"
       };
-    case "mid1":
+    case "viper":
       return {
         cpu: "/R7 5700X.png",
         gpu: "/4060 EAGLE 3X.png"
       };
-    case "mid2":
+    case "airflowprime":
       return {
         cpu: "/R7 5800X.png",
         gpu: "/7700XT GIGABYTE GAMING OC.png"
       };
-    case "high1":
+    case "thehellbound":
       return {
         cpu: "/i5-14600KF.png",
         gpu: "/7800XT POWERCOLOR HELLBOUND.png"
       };
-    case "high2":
+    case "infinity":
       return {
         cpu: "/i5-14600KF.png",
         gpu: "/4070 SUPER TWIN EDGE ZOTAC.png"
       };
-    case "extreme1":
+    case "tuffy":
       return {
         cpu: "/i7-14700KF.png",
         gpu: "/4070 Ti SUPER PNY EPIC-X RGB.png"
       };
-    case "extreme2":
+    case "thetaichi":
       return {
         cpu: "/R7 7800X3D.png",
         gpu: "/7900XTX TAICHI.png"
       };
-    case "extreme3":
+    case "chillguy":
       return {
         cpu: "/i9-14900KF.png",
         gpu: "/4080 SUPER PNY EPIC-X RGB.png"
       };
-    case "extreme4":
+    case "themaster":
       return {
         cpu: "/R7 9800X3D.png",
         gpu: "/7900XTX TAICHI.png"
       };
-    case "extreme5":
+    case "theoverkill":
       return {
         cpu: "/R7 9800X3D.png",
         gpu: "/4080 SUPER MSI GAMING X SLIM.png"

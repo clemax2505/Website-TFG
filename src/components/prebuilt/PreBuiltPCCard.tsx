@@ -42,7 +42,7 @@ const getImagesForConfig = (configId: string): { cpu: string; gpu: string } => {
     case "tuffy":
       return {
         cpu: "/i7-14700KF.png",
-        gpu: "/4070 Ti SUPER PNY EPIC-X RGB.png"
+        gpu: "/4070 TI TUF GAMING OC.png"
       };
     case "thetaichi":
       return {
@@ -57,7 +57,7 @@ const getImagesForConfig = (configId: string): { cpu: string; gpu: string } => {
     case "themaster":
       return {
         cpu: "/R7 9800X3D.png",
-        gpu: "/7900XTX TAICHI.png"
+        gpu: "/7900XTX SAPPHIRE NITRO +.png"
       };
     case "theoverkill":
       return {

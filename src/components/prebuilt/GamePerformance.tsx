@@ -45,18 +45,12 @@ const GamePerformance = ({ resolution, config }: GamePerformanceProps) => {
                   <Table>
                     <TableHeader>
                       <TableRow>
-                        <TableHead className="text-center w-1/4">Ultra</TableHead>
-                        <TableHead className="text-center w-1/4">Haut</TableHead>
-                        <TableHead className="text-center w-1/4">Moyen</TableHead>
-                        <TableHead className="text-center w-1/4">Bas</TableHead>
+                        <TableHead className="text-center w-1/4">FPS moyens</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
                       <TableRow>
-                        <TableCell className="text-center">{performance.ultra || "-"}</TableCell>
-                        <TableCell className="text-center">{performance.high || "-"}</TableCell>
-                        <TableCell className="text-center">{performance.medium || "-"}</TableCell>
-                        <TableCell className="text-center">{performance.low || "-"}</TableCell>
+                        <TableCell className="text-center">{performance.FPS_moyens || "-"}</TableCell>
                       </TableRow>
                     </TableBody>
                   </Table>

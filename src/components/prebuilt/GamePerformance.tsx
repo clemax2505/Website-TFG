@@ -1,6 +1,6 @@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card, CardContent } from "@/components/ui/card";
-import { PCConfigDetailed } from "@/data/prebuiltConfigs";
+import { PCConfigDetailed } from "@/data/types";
 
 interface GamePerformanceProps {
   resolution: "FHD" | "2K" | "4K";

@@ -50,7 +50,7 @@ const GamePerformance = ({ resolution, config }: GamePerformanceProps) => {
                     </TableHeader>
                     <TableBody>
                       <TableRow>
-                        <TableCell className="text-center">{performance.FPS_moyens || "-"}</TableCell>
+                        <TableCell className="text-center">{performance.FPS_moyen || "-"}</TableCell>
                       </TableRow>
                     </TableBody>
                   </Table>

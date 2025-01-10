@@ -75,6 +75,7 @@ export const prebuiltConfigs: { [key: string]: PCConfigDetailed } = {
         "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
       }
     }
+   <p>"Sources :PC-Builds.com, TechPowerUp, Tom's Hardware, UserBenchmark, Gamers Nexus, Hardware Unboxed."<\p>
   },
  littleguy: {
     id: "littleguy",

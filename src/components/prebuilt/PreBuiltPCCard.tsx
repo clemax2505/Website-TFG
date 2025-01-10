@@ -42,7 +42,7 @@ const getImagesForConfig = (configId: string): { cpu: string; gpu: string } => {
     case "tuffy":
       return {
         cpu: "/pc-parts/cpu/i7-14700KF.png",
-        gpu: "/pc-parts/gpu/4070 TI TUF GAMING OC.png"
+        gpu: "/pc-parts/gpu/4070 TI SUPER TUF GAMING OC.png"
       };
     case "thetaichi":
       return {

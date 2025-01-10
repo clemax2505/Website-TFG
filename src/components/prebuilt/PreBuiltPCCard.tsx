@@ -22,7 +22,7 @@ const getImagesForConfig = (configId: string): { cpu: string; gpu: string } => {
     case "viper":
       return {
         cpu: "/R7 5700X.png",
-        gpu: "/4060 EAGLE 3X.png"
+        gpu: "/4060 EAGLE OC.png"
       };
     case "airflowprime":
       return {

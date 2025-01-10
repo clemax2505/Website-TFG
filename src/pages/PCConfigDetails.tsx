@@ -24,7 +24,7 @@ const PCConfigDetailsPage = () => {
           </Button>
           
           <h1 className="text-4xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-forge-orange to-forge-red">
-            Détails de la Configuration
+            Détails de la Configuration<br></br><br></br>
           </h1>
 
           <div className="max-w-3xl mx-auto">

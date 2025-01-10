@@ -65,6 +65,9 @@ const GamePerformance = ({ resolution, config }: GamePerformanceProps) => {
             );
           })}
         </div>
+        <div className="mt-6 text-xs text-gray-400 text-center">
+          Sources: PC-Builds.com, TechPowerUp, Tom's Hardware, UserBenchmark, Gamers Nexus, Hardware Unboxed
+        </div>
       </CardContent>
     </Card>
   );

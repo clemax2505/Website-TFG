@@ -21,7 +21,7 @@ export const priceRanges: PCConfig[] = [
     id: "viper", 
     name: "Viper", 
     price: 1233.89, 
-    description: "Ryzen 5 5600 & RTX 4060",
+    description: "Ryzen 5 5700X & RTX 4060",
   },
   { 
     id: "airflowprime", 

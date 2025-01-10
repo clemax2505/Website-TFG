@@ -283,7 +283,7 @@ export const prebuiltConfigs: { [key: string]: PCConfigDetailed } = {
   ],
     images: {
       cpu: "/pc-parts/cpu/i5-14600KF.png",
-      gpu: "/pc-parts/gpu/4070 TI SUPER TUF GAMING OC.png"
+      gpu: "/pc-parts/gpu/4070 SUPER TWIN EDGE ZOTAC.png"
     },
     gamePerformance: {
       fortnite: {
@@ -331,7 +331,7 @@ export const prebuiltConfigs: { [key: string]: PCConfigDetailed } = {
   ],
     images: {
       cpu: "/pc-parts/cpu/i7-14700KF.png",
-      gpu: "/pc-parts/gpu/6650XT.png"
+      gpu: "/pc-parts/gpu/4070 TI SUPER TUF GAMING OC.png"
     },
     gamePerformance: {
       fortnite: {

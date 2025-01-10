@@ -50,29 +50,29 @@ export const prebuiltConfigs: { [key: string]: PCConfigDetailed } = {
     },
     gamePerformance: {
       fortnite: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+        fhd: { FPS_moyen: 0 },
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       warzone: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+        fhd: { FPS_moyen: 0 },
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       minecraft: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+        fhd: { FPS_moyen: 0 },
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       valorant: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+        fhd: { FPS_moyen: 0 },
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       gta: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+        fhd: { FPS_moyen: 0 },
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       }
     }
   },
@@ -97,29 +97,29 @@ export const prebuiltConfigs: { [key: string]: PCConfigDetailed } = {
     },
     gamePerformance: {
       fortnite: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+        fhd: { FPS_moyen: 0 },
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       warzone: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+        fhd: { FPS_moyen: 0 },
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       minecraft: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+        fhd: { FPS_moyen: 0 },
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       valorant: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+        fhd: { FPS_moyen: 0 },
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       gta: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+        fhd: { FPS_moyen: 0 },
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       }
     }
   },
@@ -144,29 +144,29 @@ export const prebuiltConfigs: { [key: string]: PCConfigDetailed } = {
     },
     gamePerformance: {
       fortnite: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+        fhd: { FPS_moyen: 0 },
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       warzone: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+        fhd: { FPS_moyen: 0 },
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       minecraft: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+        fhd: { FPS_moyen: 0 },
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       valorant: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+        fhd: { FPS_moyen: 0 },
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       gta: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+        fhd: { FPS_moyen: 0 },
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       }
     }
   },
@@ -191,29 +191,29 @@ export const prebuiltConfigs: { [key: string]: PCConfigDetailed } = {
     },
     gamePerformance: {
       fortnite: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+        fhd: { FPS_moyen: 0 },
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       warzone: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+        fhd: { FPS_moyen: 0 },
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       minecraft: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+        fhd: { FPS_moyen: 0 },
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       valorant: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+        fhd: { FPS_moyen: 0 },
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       gta: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+        fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       }
     }
   },
@@ -239,29 +239,29 @@ export const prebuiltConfigs: { [key: string]: PCConfigDetailed } = {
     },
     gamePerformance: {
       fortnite: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+         fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       warzone: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+         fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       minecraft: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+       fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       valorant: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+         fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       gta: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+         fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       }
     }
   },
@@ -287,29 +287,29 @@ export const prebuiltConfigs: { [key: string]: PCConfigDetailed } = {
     },
     gamePerformance: {
       fortnite: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+         fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       warzone: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+         fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       minecraft: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+       fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       valorant: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+         fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       gta: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+         fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       }
     }
   },
@@ -335,29 +335,29 @@ export const prebuiltConfigs: { [key: string]: PCConfigDetailed } = {
     },
     gamePerformance: {
       fortnite: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+         fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       warzone: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+         fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       minecraft: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+       fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       valorant: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+         fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       gta: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+         fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       }
     }
   },
@@ -383,29 +383,29 @@ export const prebuiltConfigs: { [key: string]: PCConfigDetailed } = {
     },
     gamePerformance: {
       fortnite: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+         fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       warzone: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+         fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       minecraft: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+       fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       valorant: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+         fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       gta: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+         fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       }
     }
   },
@@ -431,29 +431,29 @@ export const prebuiltConfigs: { [key: string]: PCConfigDetailed } = {
     },
     gamePerformance: {
       fortnite: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+         fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       warzone: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+         fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       minecraft: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+       fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       valorant: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+         fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       gta: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+         fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       }
     }
   },
@@ -479,29 +479,29 @@ export const prebuiltConfigs: { [key: string]: PCConfigDetailed } = {
     },
     gamePerformance: {
       fortnite: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+         fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       warzone: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+         fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       minecraft: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+       fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       valorant: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+         fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       gta: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+         fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       }
     }
   },
@@ -527,29 +527,29 @@ theoverkill: {
     },
     gamePerformance: {
       fortnite: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+         fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       warzone: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+         fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       minecraft: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+       fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       valorant: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+         fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       },
       gta: {
-        fhd: { ultra: 0, high: 0, medium: 0, low: 0 },
-        "2k": { ultra: 0, high: 0, medium: 0, low: 0 },
-        "4k": { ultra: 0, high: 0, medium: 0, low: 0 }
+         fhd: { FPS_moyen: 0},
+        "2k": { FPS_moyen: 0 },
+        "4k": { FPS_moyen: 0 }
       }
     }
   },

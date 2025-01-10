@@ -6,14 +6,14 @@ export const theBeginning: PCConfigDetailed = {
   price: 829.96,
   description: "Ryzen 5 5600 & RX 6650 XT",
   components: [
-    "AMD Ryzen 5 5600",
-    "Stock AMD ventirad",
-    "Gigabyte B550 GAMING X V2",
-    "16 Go DDR4 3200 MHz Lexar THOR ",
-    "WD_black SN770 1 To (NVMe)",
-    "RX 6650 XT Speedster",
-    "MSI MAG 100R",
-    "MSI A650BN",
+    "CPU : AMD Ryzen 5 5600",
+    "Refroidissement : Stock AMD ventirad",
+    "Carte mère : Gigabyte B550 GAMING X V2",
+    "RAM : 16 Go DDR4 3200 MHz Lexar THOR",
+    "Stockage : WD_black SN770 1 To (NVMe)",
+    "GPU : RX 6650 XT Speedster",
+    "Boitier : MSI MAG 100R",
+    "PSU : MSI A650BN"
   ],
   images: {
     cpu: "/pc-parts/cpu/R5 5600.png",

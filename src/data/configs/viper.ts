@@ -6,14 +6,14 @@ export const viper: PCConfigDetailed = {
   price: 1233.89,
   description: "Ryzen 7 5700X & RTX 4060",
   components: [
-    "AMD Ryzen 7 5700X",
-    "MSI 360R V2",
-    "ASUS ROG B550-F Gaming WiFi II",
-    "16 Go DDR4 3200 MHz Patriot Viper Steel",
-    "WD_black SN770 2 To (NVMe)",
-    "RTX 4060 EAGLE OC",
-    "Corsair 3000D Airflow",
-    "ASUS Prime AP-750G",
+    "CPU : AMD Ryzen 7 5700X",
+    "Refroidissement : MSI 360R V2",
+    "Carte mère : ASUS ROG B550-F Gaming WiFi II",
+    "RAM : 16 Go DDR4 3200 MHz Patriot Viper Steel",
+    "Stockage : WD_black SN770 2 To (NVMe)",
+    "GPU : RTX 4060 EAGLE OC",
+    "Boitier : Corsair 3000D Airflow",
+    "PSU : ASUS Prime AP-750G"
   ],
   images: {
     cpu: "/pc-parts/cpu/R7 5700X.png",

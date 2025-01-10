@@ -6,14 +6,14 @@ export const littleGuy: PCConfigDetailed = {
   price: 1041.35,
   description: "Ryzen 5 5600 & RX 6750 XT",
   components: [
-    "AMD Ryzen 5 5600",
-    "Be Quiet Pure Rock 2",
-    "MSI B550-A PRO",
-    "16 Go DDR4 3200 MHz Kingston Fury Beast",
-    "WD_black SN770 1 To (NVMe)",
-    "RX 6750 XT Speedster",
-    "MSI MAG 120A Airflow",
-    "MSI A650BN",
+    "CPU : AMD Ryzen 5 5600",
+    "Refroidissement : Be Quiet Pure Rock 2",
+    "Carte mère : MSI B550-A PRO",
+    "RAM : 16 Go DDR4 3200 MHz Kingston Fury Beast",
+    "Stockage : WD_black SN770 1 To (NVMe)",
+    "GPU : RX 6750 XT Speedster",
+    "Boitier : MSI MAG 120A Airflow",
+    "PSU : MSI A650BN"
   ],
   images: {
     cpu: "/pc-parts/cpu/R5 5600.png",

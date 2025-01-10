@@ -6,14 +6,14 @@ export const airflowPrime: PCConfigDetailed = {
   price: 1442.18,
   description: "Ryzen 7 5800X & RX 7700 XT",
   components: [
-    "AMD Ryzen 7 5800X",
-    "MSI 360R V2",
-    "ASUS ROG B550-F Gaming WiFi II",
-    "32 Go DDR4 3600 MHz Lexar Ares RGB",
-    "WD_black SN770 2 To (NVMe)",
-    "RX 7700 XT Gigabyte Gaming OC",
-    "Corsair 4000D Airflow",
-    "ASUS Prime AP-750G",
+    "CPU : AMD Ryzen 7 5800X",
+    "Refroidissement : MSI 360R V2",
+    "Carte mère : ASUS ROG B550-F Gaming WiFi II",
+    "RAM : 32 Go DDR4 3600 MHz Lexar Ares RGB",
+    "Stockage : WD_black SN770 2 To (NVMe)",
+    "GPU : RX 7700 XT Gigabyte Gaming OC",
+    "Boitier : Corsair 4000D Airflow",
+    "PSU : ASUS Prime AP-750G"
   ],
   images: {
     cpu: "/pc-parts/cpu/R7 5800X.png",

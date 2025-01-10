@@ -34,7 +34,7 @@ ${selectedConfig.components.join('\n')}
   }
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-12 px-4 max-w-7xl mx-auto">
       <div className="text-center space-y-4">
         <h2 className="text-3xl font-bold text-forge-orange">{selectedConfig.name}</h2>
         <p className="text-2xl font-semibold">{selectedConfig.price}€</p>

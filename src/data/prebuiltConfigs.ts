@@ -45,8 +45,8 @@ export const prebuiltConfigs: { [key: string]: PCConfigDetailed } = {
       "MSI A650BN",
     ],
     images: {
-      cpu: "/pc-parts/cpu/R5 5600.png",
-      gpu: "/pc-parts/gpu/6650XT.png"
+      cpu: "/public/pc-parts/cpu/R5 5600.png",
+      gpu: "/public/pc-parts/gpu/6650XT.png"
     },
     gamePerformance: {
       fortnite: {
@@ -92,8 +92,8 @@ export const prebuiltConfigs: { [key: string]: PCConfigDetailed } = {
     "MSI A650BN",
    ],
     images: {
-      cpu: "/pc-parts/cpu/R5 5600.png",
-      gpu: "/pc-parts/gpu/6750XT.png"
+      cpu: "/public/pc-parts/cpu/R5 5600.png",
+      gpu: "/public/pc-parts/gpu/6750XT.png"
     },
     gamePerformance: {
       fortnite: {
@@ -139,8 +139,8 @@ export const prebuiltConfigs: { [key: string]: PCConfigDetailed } = {
      "ASUS Prime AP-750G",
   ],
     images: {
-      cpu: "/pc-parts/cpu/R7 5700X.png",
-      gpu: "/pc-parts/gpu/4060 EAGLE OC.png"
+      cpu: "/public/pc-parts/cpu/R7 5700X.png",
+      gpu: "/public/pc-parts/gpu/4060 EAGLE OC.png"
     },
     gamePerformance: {
       fortnite: {

@@ -140,7 +140,7 @@ export const prebuiltConfigs: { [key: string]: PCConfigDetailed } = {
   ],
     images: {
       cpu: "/R7 5700X.png",
-      gpu: "/4060 EAGLE 3X.png"
+      gpu: "/4060 EAGLE OC.png"
     },
     gamePerformance: {
       fortnite: {

@@ -48,7 +48,7 @@ const configComponents: { [key: string]: string[] } = {
   ],
   "thehellbound": [
     "Intel Core i5-14600KF",
-    "arctic liquid freezer III Whtie",
+    "ARCTIC Liquid Freezer 360 III White",
     "ASUS Prime Z790-P WiFi",
     "32 Go DDR5 6000 MHz G.Skill Ripjaws M5 RGB",
     "WD_black SN770 2 To (NVMe)",

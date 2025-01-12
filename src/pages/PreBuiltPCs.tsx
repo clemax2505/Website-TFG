@@ -25,7 +25,7 @@ export const priceRanges: PCConfig[] = [
   },
   { 
     id: "airflowprime", 
-    name: "AirFlow Prime", 
+    name: "Airflow Prime", 
     price: 1442.18, 
     description: "Ryzen 7 5800X & RX 7700 XT",
   },

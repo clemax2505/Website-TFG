@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect, lazy, Suspense } from "react";
 import { AnimatePresence } from "framer-motion";
+import PreBuiltPCs from "./pages/PreBuiltPCs"; // Direct import instead of lazy loading
 
 // Lazy load pages
 const Index = lazy(() => import("./pages/Index"));
@@ -18,7 +19,6 @@ const Maintenance = lazy(() => import("./pages/Maintenance"));
 const LaptopService = lazy(() => import("./pages/LaptopService"));
 const Suggestions = lazy(() => import("./pages/Suggestions"));
 const PCAssembly = lazy(() => import("./pages/PCAssembly"));
-const PreBuiltPCs = lazy(() => import("./pages/PreBuiltPCs"));
 const PCConfigDetails = lazy(() => import("./pages/PCConfigDetails"));
 
 const ScrollToTop = () => {
@@ -98,11 +98,7 @@ const AnimatedRoutes = () => {
             <PCAssembly />
           </Suspense>
         } />
-        <Route path="/prebuilt" element={
-          <Suspense fallback={<LoadingSpinner />}>
-            <PreBuiltPCs />
-          </Suspense>
-        } />
+        <Route path="/prebuilt" element={<PreBuiltPCs />} />
         <Route path="/prebuilt/:configId" element={
           <Suspense fallback={<LoadingSpinner />}>
             <PCConfigDetails />

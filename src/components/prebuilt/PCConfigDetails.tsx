@@ -8,6 +8,7 @@ import GamePerformance from "./GamePerformance";
 import ResolutionSelector from "./ResolutionSelector";
 import { prebuiltConfigs } from "@/data/prebuiltConfigs";
 
+
 const PCConfigDetails = () => {
   const { configId } = useParams();
   const [resolution, setResolution] = useState<"FHD" | "2K" | "4K">("FHD");

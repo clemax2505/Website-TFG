@@ -1,33 +1,54 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { openEmailClient } from "@/utils/emailUtils";
 import PCComponentsList from "./PCComponentsList";
 import { Card, CardContent } from "@/components/ui/card";
 import GamePerformance from "./GamePerformance";
 import ResolutionSelector from "./ResolutionSelector";
 import { prebuiltConfigs } from "@/data/prebuiltConfigs";
-
+import { useToast } from "@/components/ui/use-toast";
 
 const PCConfigDetails = () => {
+  const { toast } = useToast();
   const { configId } = useParams();
   const [resolution, setResolution] = useState<"FHD" | "2K" | "4K">("FHD");
+  const [isLoading, setIsLoading] = useState(false);
   const selectedConfig = prebuiltConfigs[configId || ""];
 
-  const handleEmailRequest = () => {
+  const handleCheckout = async () => {
     if (!selectedConfig) return;
+    
+    setIsLoading(true);
+    try {
+      const response = await fetch('/api/create-checkout-session', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          configId: configId,
+          configName: selectedConfig.name,
+          price: selectedConfig.price
+        }),
+      });
 
-    const emailBody = `
-Nouvelle demande de configuration PC
-
-Configuration demandée : ${selectedConfig.name}
-Prix : ${selectedConfig.price}€
-
-Liste des composants :
-${selectedConfig.components.join('\n')}
-    `;
-
-    openEmailClient("Nouvelle demande de configuration PC", emailBody);
+      const { url } = await response.json();
+      
+      if (url) {
+        window.location.href = url;
+      } else {
+        throw new Error("No checkout URL received");
+      }
+    } catch (error) {
+      console.error('Error during checkout:', error);
+      toast({
+        title: "Erreur",
+        description: "Une erreur est survenue lors de la redirection vers le paiement.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   if (!selectedConfig) {
@@ -72,9 +93,10 @@ ${selectedConfig.components.join('\n')}
             <Button 
               variant="outline" 
               size="lg"
-              onClick={handleEmailRequest}
+              onClick={handleCheckout}
+              disabled={isLoading}
             >
-              Passer commande
+              {isLoading ? "Redirection..." : "Passer commande"}
             </Button>
           </div>
         </div>

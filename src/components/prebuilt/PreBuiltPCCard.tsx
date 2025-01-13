@@ -57,7 +57,7 @@ const getImagesForConfig = (configId: string): { cpu: string; gpu: string } => {
     case "themaster":
       return {
         cpu: "/pc-parts/cpu/R7 9800X3D.png",
-        gpu: "/pc-parts/gpu/7900XTX SAPPHIRE NITRO +.png"
+        gpu: "/pc-parts/gpu/7900XTX SAPPHIRE NITRO.png"
       };
     case "theoverkill":
       return {

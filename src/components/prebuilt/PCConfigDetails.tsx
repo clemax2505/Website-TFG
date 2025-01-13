@@ -8,6 +8,20 @@ import ResolutionSelector from "./ResolutionSelector";
 import { prebuiltConfigs } from "@/data/prebuiltConfigs";
 import { useToast } from "@/components/ui/use-toast";
 
+const stripeLinks: { [key: string]: string } = {
+  thebeginning: "https://buy.stripe.com/3cs02RcxD1Zp8EM9AC",
+  littleguy: "https://buy.stripe.com/3cs4j7btzdI77AIfZ1",
+  viper: "https://buy.stripe.com/5kAcPD2X347x5sA28c",
+  airflowprime: "https://buy.stripe.com/8wM9Dr55bgUj8EM149",
+  thehellbound: "https://buy.stripe.com/4gwaHv7djbzZ5sAaEK",
+  infinity: "https://buy.stripe.com/4gw5nb9lr1Zp8EMbIP",
+  tuffy: "https://buy.stripe.com/7sI16V417fQfg7ecMU",
+  thetaichi: "https://buy.stripe.com/5kA5nb7dj7jJ1ck6ox",
+  chillguy: "https://buy.stripe.com/dR6g1P69fcE39IQeV4",
+  themaster: "https://buy.stripe.com/eVa16Vbtz6fF6wE28j",
+  theoverkill: "https://buy.stripe.com/3cs02R55bavV1ckdR2"
+};
+
 const PCConfigDetails = () => {
   const { toast } = useToast();
   const { configId } = useParams();
@@ -15,40 +29,28 @@ const PCConfigDetails = () => {
   const [isLoading, setIsLoading] = useState(false);
   const selectedConfig = prebuiltConfigs[configId || ""];
 
-  const handleCheckout = async () => {
-    if (!selectedConfig) return;
-    
-    setIsLoading(true);
-    try {
-      const response = await fetch('/api/create-checkout-session', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          configId: configId,
-          configName: selectedConfig.name,
-          price: selectedConfig.price
-        }),
-      });
-
-      const { url } = await response.json();
-      
-      if (url) {
-        window.location.href = url;
-      } else {
-        throw new Error("No checkout URL received");
-      }
-    } catch (error) {
-      console.error('Error during checkout:', error);
+  const handleCheckout = () => {
+    if (!selectedConfig || !configId) {
       toast({
         title: "Erreur",
-        description: "Une erreur est survenue lors de la redirection vers le paiement.",
+        description: "Configuration non trouvée",
         variant: "destructive"
       });
-    } finally {
-      setIsLoading(false);
+      return;
     }
+
+    const stripeLink = stripeLinks[configId];
+    if (!stripeLink) {
+      toast({
+        title: "Erreur",
+        description: "Lien de paiement non trouvé",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    setIsLoading(true);
+    window.location.href = stripeLink;
   };
 
   if (!selectedConfig) {

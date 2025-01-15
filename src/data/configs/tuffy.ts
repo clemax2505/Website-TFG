@@ -3,7 +3,7 @@ import { PCConfigDetailed } from "../types";
 export const tuffy: PCConfigDetailed = {
   id: "tuffy",
   name: "Tuffy",
-  price: 2610.98,
+  price: 2660.98,
   description: "i7-14700KF & RTX 4070 Ti super",
   components: [
     "CPU : Intel Core i7-14700KF",
@@ -12,7 +12,7 @@ export const tuffy: PCConfigDetailed = {
     "RAM : 32 Go DDR5 6000 MHz Lexar THOR RGB",
     "Stockage : WD_black SN770 2 To (NVMe)",
     "GPU : RTX 4070 Ti super TUF GAMING OC",
-    "Boitier : Corsair 3000D Airflow",
+    "Boitier : NZXT H7 Flow 2024",
     "PSU : ASUS TUF Gaming 1000G",
     "Ventilation : Configurations ventilée uniquement avec des TF120"
   ],

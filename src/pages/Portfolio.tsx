@@ -43,7 +43,6 @@ const Portfolio = () => {
       review: {
         author: "Olivier",
         rating: 5,
-        comment: "Service impeccable, très professionnel. Le PC est comme neuf et beaucoup plus performant."
       }
     }
   ];

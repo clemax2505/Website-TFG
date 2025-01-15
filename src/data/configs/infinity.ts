@@ -7,7 +7,7 @@ export const infinity: PCConfigDetailed = {
   description: "Intel i5-14600KF & RTX 4070 Super",
   components: [
     "CPU : Intel Core i5-14600KF",
-    "Refroidissement : MSI 360R V2",
+    "Refroidissement : ARCTIC Liquid Freezer III 240 ",
     "Carte mère : MSI MPG Z790 Edge TI Max WiFi",
     "RAM : 32 Go DDR5 6000 MHz Lexar THOR RGB",
     "Stockage : WD_black SN770 2 To (NVMe)",

@@ -7,7 +7,7 @@ export const airflowPrime: PCConfigDetailed = {
   description: "Ryzen 7 5800X & RX 7700 XT",
   components: [
     "CPU : AMD Ryzen 7 5800X",
-    "Refroidissement : MSI 360R V2",
+    "Refroidissement : MSI 240R V2",
     "Carte mère : ASUS ROG B550-F Gaming WiFi II",
     "RAM : 32 Go DDR4 3600 MHz Lexar Ares RGB",
     "Stockage : WD_black SN770 2 To (NVMe)",

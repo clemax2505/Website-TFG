@@ -1,49 +1,35 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { openEmailClient } from "@/utils/emailUtils";
 
 const PCAssemblyForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [selectedPlan, setSelectedPlan] = useState<string>("");
-  const [isRecommended, setIsRecommended] = useState(false);
-
-  const components = [
-    "CPU", "Carte mère", "RAM", "Carte graphique", 
-    "Stockage", "Boîtier", "Alimentation", "Refroidissement"
-  ];
+  const [assemblyOption, setAssemblyOption] = useState("basic");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     const formData = new FormData(e.target as HTMLFormElement);
-    const data = Object.fromEntries(formData.entries());
-    
-    const componentsList = components
-      .map(comp => `${comp}: ${data[comp.toLowerCase()]}`)
-      .join('\n');
-
     const emailBody = `
 Nouvelle demande de montage PC
 
-Forfait choisi: ${selectedPlan}
-Email client: ${data.email}
-Configuration conseillée par Clément: ${isRecommended ? 'Oui' : 'Non'}
-
+Email client: ${formData.get('email')}
+Option de montage: ${assemblyOption}
 Liste des composants:
-${componentsList}
+${formData.get('components')}
 
-Ventilateurs supplémentaires: ${data.fans || 'Aucun'}`;
+Précisions supplémentaires: ${formData.get('details') || 'Aucune'}`;
 
     try {
       openEmailClient("Nouvelle demande de montage PC", emailBody);
-
+      
       toast({
         title: "Demande envoyée !",
         description: "Votre client email va s'ouvrir avec les informations pré-remplies.",
@@ -60,103 +46,39 @@ Ventilateurs supplémentaires: ${data.fans || 'Aucun'}`;
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 p-6">
+    <form onSubmit={handleSubmit} className="space-y-6">
       <div className="space-y-4">
-        <Label>Choisissez votre forfait</Label>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <Button
-            type="button"
-            variant={selectedPlan === "Basic" ? "default" : "outline"}
-            className={`p-4 h-auto ${
-              selectedPlan === "Basic" ? "bg-forge-orange" : ""
-            }`}
-            onClick={() => setSelectedPlan("Basic")}
-          >
-            <div className="text-left">
-              <div className="font-bold">Basic</div>
-              <div className="text-sm text-gray-400">
-                <ul>
-                <li>Montage PC</li>
-                <li>Cable management</li>
-                <li>Mise à jour du bios + XMP</li>
-                </ul>
-              </div>
-              <div className="mt-2">35€</div>
-            </div>
-          </Button>
-
-          <Button
-            type="button"
-            variant={selectedPlan === "Standard" ? "default" : "outline"}
-            className={`p-4 h-auto ${
-              selectedPlan === "Standard" ? "bg-forge-orange" : ""
-            }`}
-            onClick={() => setSelectedPlan("Standard")}
-          >
-            <div className="text-left">
-              <div className="font-bold">Standard</div>
-              <div className="text-sm text-gray-400">
-                <ul>
-                <li>Montage PC</li>
-                <li>Cable management</li>
-                <li>Mise à jour du bios + XMP</li>
-                <li>Installation de windows (sans activation)</li>
-                <li>Installation des drivers</li>
-                </ul>
-              </div>
-              <div className="mt-2">45€</div>
-            </div>
-          </Button>
-
-          <Button
-            type="button"
-            variant={selectedPlan === "Premium" ? "default" : "outline"}
-            className={`p-4 h-auto ${
-              selectedPlan === "Premium" ? "bg-forge-orange" : ""
-            }`}
-            onClick={() => setSelectedPlan("Premium")}
-          >
-            <div className="text-left">
-              <div className="font-bold">Premium</div>
-              <div className="text-sm text-gray-400">
-                <ul>
-                <li>Montage PC</li>
-                <li>Cable management</li>
-                <li>Mise à jour du bios + XMP</li>
-                <li>Installation de windows (avec activation)</li>
-                <li>Installation des drivers</li>
-                <li>Installation des logiciels de gestion </li>
-                </ul>
-              </div>
-              <div className="mt-2">75€</div>
-            </div>
-          </Button>
-        </div>
-      </div>
-
-      <div className="space-y-4">
-        <div className="flex justify-between items-center">
-          <Label>Liste des composants</Label>
-          <Link to="/services?openGuide=true" className="text-sm text-forge-orange hover:text-forge-red">
-            Je ne sais pas, comment savoir ?
-          </Link>
-        </div>
-        {components.map((component) => (
-          <Input
-            key={component}
-            name={component.toLowerCase()}
-            placeholder={component}
-            className="mb-2"
-          />
-        ))}
+        <Label>Option de montage</Label>
+        <RadioGroup value={assemblyOption} onValueChange={setAssemblyOption} className="space-y-2">
+          <div className="flex items-center space-x-2">
+            <RadioGroupItem value="basic" id="basic" />
+            <Label htmlFor="basic">Montage basique (69€)</Label>
+          </div>
+          <div className="flex items-center space-x-2">
+            <RadioGroupItem value="premium" id="premium" />
+            <Label htmlFor="premium">Montage premium avec gestion des câbles optimisée (89€)</Label>
+          </div>
+        </RadioGroup>
       </div>
 
       <div className="space-y-2">
-        <Label>Ventilateurs supplémentaires (optionnel)</Label>
-        <Input
-          name="fans"
-          placeholder="Ex: 3x Arctic P12 PWM PST"
-          className="mb-2"
+        <Label htmlFor="components">Liste des composants</Label>
+        <Textarea
+          id="components"
+          name="components"
+          placeholder="Listez vos composants ici..."
+          className="min-h-[100px]"
+          required
+        />
+      </div>
+
+      <div className="space-y-2">
+        <Label htmlFor="details">Précisions supplémentaires</Label>
+        <Textarea
+          id="details"
+          name="details"
+          placeholder="Ajoutez ici toute information complémentaire..."
+          className="min-h-[100px]"
         />
       </div>
 
@@ -171,24 +93,14 @@ Ventilateurs supplémentaires: ${data.fans || 'Aucun'}`;
         />
       </div>
 
-      <div className="flex items-center space-x-2">
-        <Checkbox
-          id="recommended"
-          checked={isRecommended}
-          onCheckedChange={(checked) => setIsRecommended(checked as boolean)}
-        />
-        <Label htmlFor="recommended" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-          Configuration conseillée par Clément
-        </Label>
-      </div>
-
       <Button 
         type="submit" 
         className="w-full bg-forge-orange hover:bg-forge-red"
-        disabled={isSubmitting || !selectedPlan}
+        disabled={isSubmitting}
       >
         {isSubmitting ? "Envoi en cours..." : "Envoyer la demande"}
       </Button>
+      <div className="h-8"></div>
     </form>
   );
 };

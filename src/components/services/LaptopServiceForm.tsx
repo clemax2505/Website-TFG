@@ -19,6 +19,7 @@ const LaptopServiceForm = () => {
     { id: "battery", label: "Changement batterie" },
     { id: "cleaning", label: "Nettoyage poussière" },
     { id: "thermal", label: "Changement pâte thermique" },
+    { id: "other", label: "Je ne sais pas / autre" },
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -121,6 +122,7 @@ Description du problème: ${formData.get('description')}${selectedServicesText}`
         {isSubmitting ? "Envoi en cours..." : "Envoyer la demande"}
       </Button>
     </form>
+<div className="h-8"></div>
   );
 };
 

@@ -12,7 +12,7 @@ const PCUpgradeForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const components = [
-    "CPU", "GPU", "RAM", "Stockage", "Alimentation", "Boîtier", "Carte Mère", "Refroidissement CPU"
+    "CPU", "GPU", "RAM", "Stockage", "Alimentation", "Boîtier", "Carte Mère", "Refroidissement CPU", "Je ne sais pas / autre"
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -128,7 +128,7 @@ ${data.details}`;
         className="w-full bg-forge-orange hover:bg-forge-red"
         disabled={isSubmitting}
       >
-        {isSubmitting ? "Préparation..." : "Faire une demande"}
+        {isSubmitting ? "Envoi en cours..." : "Envoyer la demande"}
       </Button>
     </form>
   );

@@ -36,7 +36,7 @@ const Services = () => {
           <PCComponentsGuide />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <Link to="/custom-pc">
+            <Link to="/quote">
               <Card className="glass-card hover:scale-105 transition-transform duration-300">
                 <CardHeader>
                   <div className="flex justify-center mb-4">

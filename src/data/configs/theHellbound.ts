@@ -7,7 +7,7 @@ export const theHellbound: PCConfigDetailed = {
   description: "i5-14600KF & RX 7800 XT",
   components: [
     "CPU : Intel Core i5-14600KF",
-    "Refroidissement : ARCTIC Liquid Freezer III 360 White",
+    "Refroidissement : ARCTIC Liquid Freezer III 240 White",
     "Carte mère : ASUS Prime Z790-P WiFi",
     "RAM : 32 Go DDR5 6000 MHz G.Skill Ripjaws M5 RGB",
     "Stockage : WD_black SN770 2 To (NVMe)",

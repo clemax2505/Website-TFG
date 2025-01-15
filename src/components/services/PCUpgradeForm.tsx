@@ -28,7 +28,8 @@ const PCUpgradeForm = () => {
     
     const componentsToUpgrade = [
        "CPU", "GPU", "RAM", "Stockage", "Alimentation", "Boîtier", "Carte Mère", "Refroidissement CPU", "Je ne sais pas / autre"
-      ];
+      ]
+      
       .filter(comp => data[`upgrade-${comp}`] === 'on')
       .join(', ');
 

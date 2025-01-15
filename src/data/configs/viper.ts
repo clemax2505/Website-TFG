@@ -7,7 +7,7 @@ export const viper: PCConfigDetailed = {
   description: "Ryzen 7 5700X & RTX 4060",
   components: [
     "CPU : AMD Ryzen 7 5700X",
-    "Refroidissement : MSI 360R V2",
+    "Refroidissement : MSI 240R V2",
     "Carte mère : ASUS ROG B550-F Gaming WiFi II",
     "RAM : 16 Go DDR4 3200 MHz Patriot Viper Steel",
     "Stockage : WD_black SN770 2 To (NVMe)",

@@ -44,7 +44,7 @@ export const priceRanges: PCConfig[] = [
   { 
     id: "tuffy", 
     name: "Tuffy", 
-    price: 2610.98, 
+    price: 2660.98, 
     description: "Intel i7-14700KF & RTX 4070 Ti Super",
   },
   { 

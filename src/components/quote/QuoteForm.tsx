@@ -104,7 +104,7 @@ ${additionalDetails}`;
         className="w-full bg-forge-orange hover:bg-forge-red"
         disabled={isSubmitting}
       >
-        {isSubmitting ? "Préparation..." : "Obtenir mon devis"}
+        {isSubmitting ? "Préparation..." : "Faire une demande"}
       </Button>
     </form>
   );

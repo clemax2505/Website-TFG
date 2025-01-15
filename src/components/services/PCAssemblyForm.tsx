@@ -4,6 +4,7 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/components/ui/use-toast";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { openEmailClient } from "@/utils/emailUtils";
 
 const PCAssemblyForm = () => {
@@ -132,7 +133,12 @@ ${componentsList}`;
       </div>
 
       <div className="space-y-4">
-        <Label>Liste des composants</Label>
+        <div className="flex justify-between items-center">
+          <Label>Liste des composants</Label>
+          <Link to="/maintenance#guide" className="text-sm text-forge-orange hover:text-forge-red">
+            Je ne sais pas, comment savoir ?
+          </Link>
+        </div>
         {components.map((component) => (
           <Input
             key={component}
@@ -151,6 +157,15 @@ ${componentsList}`;
           name="email"
           placeholder="votre@email.com"
           required
+        />
+      </div>
+
+      <div className="space-y-2">
+        <Label>Ventilateurs supplémentaires (optionnel)</Label>
+        <Input
+          name="fans"
+          placeholder="Ex: 3x Arctic P12 PWM PST"
+          className="mb-2"
         />
       </div>
 

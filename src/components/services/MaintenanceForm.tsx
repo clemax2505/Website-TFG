@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { useState } from "react";
 import { openEmailClient } from "@/utils/emailUtils";
@@ -58,6 +59,16 @@ Services demandés: ${services}`;
           <Checkbox id="checkup" name="checkup" />
           <Label htmlFor="checkup">Check up général</Label>
         </div>
+      </div>
+
+      <div className="space-y-2">
+        <Label htmlFor="details">Précisions supplémentaires</Label>
+        <Textarea
+          id="details"
+          name="details"
+          placeholder="Ajoutez ici toute information complémentaire concernant votre demande..."
+          className="min-h-[100px]"
+        />
       </div>
 
       <div className="space-y-2">

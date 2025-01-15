@@ -22,7 +22,7 @@ const Hero = memo(() => {
       to: "/laptop-service",
       icon: Laptop,
       title: "PC Portable Gaming",
-      description: "Configuration personnalisée selon vos besoins"
+      description: "Soins personnalisés selon vos besoins"
     },
     {
       to: "/upgrade",

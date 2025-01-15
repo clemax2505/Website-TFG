@@ -152,6 +152,15 @@ Ventilateurs supplémentaires: ${data.fans || 'Aucun'}`;
       </div>
 
       <div className="space-y-2">
+        <Label>Ventilateurs supplémentaires (optionnel)</Label>
+        <Input
+          name="fans"
+          placeholder="Ex: 3x Arctic P12 PWM PST"
+          className="mb-2"
+        />
+      </div>
+
+      <div className="space-y-2">
         <Label htmlFor="email">Email</Label>
         <Input
           id="email"
@@ -159,15 +168,6 @@ Ventilateurs supplémentaires: ${data.fans || 'Aucun'}`;
           name="email"
           placeholder="votre@email.com"
           required
-        />
-      </div>
-
-      <div className="space-y-2">
-        <Label>Ventilateurs supplémentaires (optionnel)</Label>
-        <Input
-          name="fans"
-          placeholder="Ex: 3x Arctic P12 PWM PST"
-          className="mb-2"
         />
       </div>
 

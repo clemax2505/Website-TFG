@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { useState } from "react";
 import { openEmailClient } from "@/utils/emailUtils";
+import { Link } from "react-router-dom";
 
 const MaintenanceForm = () => {
   const { toast } = useToast();
@@ -24,7 +25,8 @@ const MaintenanceForm = () => {
 Nouvelle demande de maintenance
 
 Email client: ${formData.get('email')}
-Services demandés: ${services}`;
+Services demandés: ${services}
+Précisions supplémentaires: ${formData.get('details') || 'Aucune'}`;
 
     try {
       openEmailClient("Nouvelle demande de maintenance", emailBody);
@@ -62,7 +64,12 @@ Services demandés: ${services}`;
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="details">Précisions supplémentaires</Label>
+        <div className="flex justify-between items-center">
+          <Label htmlFor="details">Précisions supplémentaires</Label>
+          <Link to="/services?openGuide=true" className="text-sm text-forge-orange hover:text-forge-red">
+            Je ne sais pas, comment savoir ?
+          </Link>
+        </div>
         <Textarea
           id="details"
           name="details"

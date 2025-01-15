@@ -59,70 +59,72 @@ Description du problème: ${formData.get('description')}${selectedServicesText}`
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 p-6">
-      <div className="space-y-2">
-        <Label htmlFor="model">Modèle de PC portable</Label>
-        <Input
-          id="model"
-          name="model"
-          placeholder="Ex: ASUS ROG Strix G15"
-          required
-        />
-      </div>
-
-      <div className="space-y-4">
-        <Label>Services requis</Label>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {services.map((service) => (
-            <div key={service.id} className="flex items-center space-x-2">
-              <Checkbox
-                id={service.id}
-                checked={selectedServices.includes(service.id)}
-                onCheckedChange={(checked) => {
-                  setSelectedServices(prev =>
-                    checked
-                      ? [...prev, service.id]
-                      : prev.filter(id => id !== service.id)
-                  );
-                }}
-              />
-              <Label htmlFor={service.id}>{service.label}</Label>
-            </div>
-          ))}
+    <>
+      <form onSubmit={handleSubmit} className="space-y-6 p-6">
+        <div className="space-y-2">
+          <Label htmlFor="model">Modèle de PC portable</Label>
+          <Input
+            id="model"
+            name="model"
+            placeholder="Ex: ASUS ROG Strix G15"
+            required
+          />
         </div>
-      </div>
 
-      <div className="space-y-2">
-        <Label htmlFor="description">Description du problème</Label>
-        <Textarea
-          id="description"
-          name="description"
-          placeholder="Décrivez le problème que vous rencontrez..."
-          className="min-h-[100px]"
-          required
-        />
-      </div>
+        <div className="space-y-4">
+          <Label>Services requis</Label>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {services.map((service) => (
+              <div key={service.id} className="flex items-center space-x-2">
+                <Checkbox
+                  id={service.id}
+                  checked={selectedServices.includes(service.id)}
+                  onCheckedChange={(checked) => {
+                    setSelectedServices(prev =>
+                      checked
+                        ? [...prev, service.id]
+                        : prev.filter(id => id !== service.id)
+                    );
+                  }}
+                />
+                <Label htmlFor={service.id}>{service.label}</Label>
+              </div>
+            ))}
+          </div>
+        </div>
 
-      <div className="space-y-2">
-        <Label htmlFor="email">Email</Label>
-        <Input
-          id="email"
-          type="email"
-          name="email"
-          placeholder="votre@email.com"
-          required
-        />
-      </div>
+        <div className="space-y-2">
+          <Label htmlFor="description">Description du problème</Label>
+          <Textarea
+            id="description"
+            name="description"
+            placeholder="Décrivez le problème que vous rencontrez..."
+            className="min-h-[100px]"
+            required
+          />
+        </div>
 
-      <Button 
-        type="submit" 
-        className="w-full bg-forge-orange hover:bg-forge-red"
-        disabled={isSubmitting}
-      >
-        {isSubmitting ? "Envoi en cours..." : "Envoyer la demande"}
-      </Button>
-    </form>
-<div className="h-8"></div>
+        <div className="space-y-2">
+          <Label htmlFor="email">Email</Label>
+          <Input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="votre@email.com"
+            required
+          />
+        </div>
+
+        <Button 
+          type="submit" 
+          className="w-full bg-forge-orange hover:bg-forge-red"
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? "Envoi en cours..." : "Envoyer la demande"}
+        </Button>
+      </form>
+      <div className="h-8"></div>
+    </>
   );
 };
 

@@ -13,7 +13,7 @@ const Portfolio = () => {
     {
       title: "PC Gaming",
       specs: "RTX 4060 ti, R5 7500f, 32GB RAM",
-      image: "/lovable-uploads/63f481a5-f036-45d7-81ab-201926c66c18.png",
+      image: "/portfolio/gloo/gloo.png",
       review: {
         author: "Gloo",
         rating: 5,
@@ -24,13 +24,25 @@ const Portfolio = () => {
       title: "Upgrade PC Gaming",
       specs: "RTX 4060 ti, R5 7600X, 32GB RAM",
       images: [
-        "/lovable-uploads/0301cec7-80eb-45f4-9b27-d47e1986a569.png",
-        "/lovable-uploads/6149801e-76d3-46ae-bd81-20fb45fce259.png"
+        "/portfolio/cikay/cikay-front.png",
+        "/portfolio/cikay/cikay-back.png"
       ],
       review: {
         author: "Cikay",
         rating: 5,
         comment: "Clément a fait un travail remarquable sur le montage de mon nouvel ordinateur. Il a été extrêmement efficace, rapide et surtout de très bon conseil pour choisir le matériel adapté à mes besoins. Je suis entièrement satisfait et je recommande vivement ses services. Merci encore !"
+      }
+    },
+    {
+      title: "Demontage remontage & cable management, changement pâte thermique et depoussierage, ajout d'un ssd et de 3 ventilateurs",
+      specs: "RTX 4060, i5 10600, 16GB RAM",
+      images: [
+        "/portfolio/olivier/olivier-after.png",
+        "/portfolio/olivier/olivier-before.png"
+      ],
+      review: {
+        author: "Olivier",
+        rating: 5,
       }
     }
   ];

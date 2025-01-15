@@ -32,6 +32,17 @@ const Portfolio = () => {
         rating: 5,
         comment: "Clément a fait un travail remarquable sur le montage de mon nouvel ordinateur. Il a été extrêmement efficace, rapide et surtout de très bon conseil pour choisir le matériel adapté à mes besoins. Je suis entièrement satisfait et je recommande vivement ses services. Merci encore !"
       }
+    },
+    {
+      title: "Demontage remontage & cable management, changement pâte thermique et depoussierage",
+      specs: "RTX 4060, i5 10600, 16GB RAM",
+      image: "/portfolio/olivier/olivier-before.png",
+             "/portfolio/olivier/olivier-after.png",
+      review: {
+        author: "Olivier",
+        rating: 5,
+        comment: ""
+      }
     }
   ];
 

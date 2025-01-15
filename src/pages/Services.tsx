@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,6 +9,18 @@ import PCComponentsGuide from "@/components/services/PCComponentsGuide";
 import PageTransition from "@/components/PageTransition";
 
 const Services = () => {
+  const [searchParams] = useSearchParams();
+  const openGuide = searchParams.get("openGuide") === "true";
+
+  useEffect(() => {
+    if (openGuide) {
+      const guideElement = document.querySelector('[data-guide-trigger]');
+      if (guideElement instanceof HTMLElement) {
+        guideElement.click();
+      }
+    }
+  }, [openGuide]);
+
   return (
     <PageTransition>
       <div className="min-h-screen flex flex-col">

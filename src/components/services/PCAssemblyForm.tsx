@@ -37,7 +37,9 @@ Email client: ${data.email}
 Configuration conseillée par Clément: ${isRecommended ? 'Oui' : 'Non'}
 
 Liste des composants:
-${componentsList}`;
+${componentsList}
+
+Ventilateurs supplémentaires: ${data.fans || 'Aucun'}`;
 
     try {
       openEmailClient("Nouvelle demande de montage PC", emailBody);
@@ -135,7 +137,7 @@ ${componentsList}`;
       <div className="space-y-4">
         <div className="flex justify-between items-center">
           <Label>Liste des composants</Label>
-          <Link to="/maintenance#guide" className="text-sm text-forge-orange hover:text-forge-red">
+          <Link to="/services?openGuide=true" className="text-sm text-forge-orange hover:text-forge-red">
             Je ne sais pas, comment savoir ?
           </Link>
         </div>

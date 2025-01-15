@@ -34,16 +34,16 @@ const Portfolio = () => {
       }
     },
     {
-      title: "Demontage remontage & cable management, changement pâte thermique et depoussierage",
+      title: "Demontage remontage & cable management, changement pâte thermique et depoussierage, ajout d'un ssd et de 3 ventilateurs",
       specs: "RTX 4060, i5 10600, 16GB RAM",
       images: [
-        "/portfolio/olivier/olivier-before.png",
-        "/portfolio/olivier/olivier-after.png"
+        "/portfolio/olivier/olivier-after.png",
+        "/portfolio/olivier/olivier-before.png"
       ],
       review: {
         author: "Olivier",
         rating: 5,
-        comment: ""
+        comment:
       }
     }
   ];

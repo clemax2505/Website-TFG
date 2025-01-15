@@ -4,6 +4,7 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/components/ui/use-toast";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { openEmailClient } from "@/utils/emailUtils";
 
 const PCAssemblyForm = () => {
@@ -36,7 +37,9 @@ Email client: ${data.email}
 Configuration conseillée par Clément: ${isRecommended ? 'Oui' : 'Non'}
 
 Liste des composants:
-${componentsList}`;
+${componentsList}
+
+Ventilateurs supplémentaires: ${data.fans || 'Aucun'}`;
 
     try {
       openEmailClient("Nouvelle demande de montage PC", emailBody);
@@ -132,7 +135,9 @@ ${componentsList}`;
       </div>
 
       <div className="space-y-4">
-        <Label>Liste des composants</Label>
+        <div className="flex justify-between items-center">
+          <Label>Liste des composants</Label>
+        </div>
         {components.map((component) => (
           <Input
             key={component}
@@ -141,6 +146,15 @@ ${componentsList}`;
             className="mb-2"
           />
         ))}
+      </div>
+
+      <div className="space-y-2">
+        <Label>Ventilateurs supplémentaires (optionnel)</Label>
+        <Input
+          name="fans"
+          placeholder="Ex: 3x Arctic P12 PWM PST"
+          className="mb-2"
+        />
       </div>
 
       <div className="space-y-2">

@@ -10,7 +10,6 @@ const Services = lazy(() => import("@/pages/Services"));
 const Portfolio = lazy(() => import("@/pages/Portfolio"));
 const Quote = lazy(() => import("@/pages/Quote"));
 const Contact = lazy(() => import("@/pages/Contact"));
-const CustomPC = lazy(() => import("@/pages/CustomPC"));
 const Upgrade = lazy(() => import("@/pages/Upgrade"));
 const Maintenance = lazy(() => import("@/pages/Maintenance"));
 const LaptopService = lazy(() => import("@/pages/LaptopService"));
@@ -47,11 +46,6 @@ const AppRoutes = () => {
         <Route path="/contact" element={
           <Suspense fallback={<LoadingSpinner />}>
             <Contact />
-          </Suspense>
-        } />
-        <Route path="/custom-pc" element={
-          <Suspense fallback={<LoadingSpinner />}>
-            <CustomPC />
           </Suspense>
         } />
         <Route path="/upgrade" element={

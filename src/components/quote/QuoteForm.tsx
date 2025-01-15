@@ -57,56 +57,59 @@ ${additionalDetails}`;
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-8">
-      <BudgetSlider budget={budget} setBudget={setBudget} />
-      <PreferenceSelector preference={preference} setPreference={setPreference} />
-      <OSSelector os={os} setOs={setOs} customOs={customOs} setCustomOs={setCustomOs} />
-      <AssemblyOptions
-        includeAssembly={includeAssembly}
-        selectedAssemblyPlan={selectedAssemblyPlan}
-        setIncludeAssembly={setIncludeAssembly}
-        setSelectedAssemblyPlan={setSelectedAssemblyPlan}
-      />
-
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Usage principal</label>
-        <Input
-          placeholder="Ex: Gaming, Streaming, Montage vidéo..."
-          value={usage}
-          onChange={(e) => setUsage(e.target.value)}
-          required
+    <>
+      <form onSubmit={handleSubmit} className="space-y-8">
+        <BudgetSlider budget={budget} setBudget={setBudget} />
+        <PreferenceSelector preference={preference} setPreference={setPreference} />
+        <OSSelector os={os} setOs={setOs} customOs={customOs} setCustomOs={setCustomOs} />
+        <AssemblyOptions
+          includeAssembly={includeAssembly}
+          selectedAssemblyPlan={selectedAssemblyPlan}
+          setIncludeAssembly={setIncludeAssembly}
+          setSelectedAssemblyPlan={setSelectedAssemblyPlan}
         />
-      </div>
 
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Email</label>
-        <Input
-          type="email"
-          placeholder="votre@email.com"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-      </div>
+        <div className="space-y-2">
+          <label className="text-sm font-medium">Usage principal</label>
+          <Input
+            placeholder="Ex: Gaming, Streaming, Montage vidéo..."
+            value={usage}
+            onChange={(e) => setUsage(e.target.value)}
+            required
+          />
+        </div>
 
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Détails supplémentaires</label>
-        <Textarea 
-          placeholder="Ajoutez ici toute information complémentaire concernant votre projet..."
-          value={additionalDetails}
-          onChange={(e) => setAdditionalDetails(e.target.value)}
-          className="min-h-[100px]"
-        />
-      </div>
+        <div className="space-y-2">
+          <label className="text-sm font-medium">Email</label>
+          <Input
+            type="email"
+            placeholder="votre@email.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </div>
 
-      <Button 
-        type="submit" 
-        className="w-full bg-forge-orange hover:bg-forge-red"
-        disabled={isSubmitting}
-      >
-        {isSubmitting ? "Préparation..." : "Obtenir mon devis"}
-      </Button>
-    </form>
+        <div className="space-y-2">
+          <label className="text-sm font-medium">Détails supplémentaires</label>
+          <Textarea 
+            placeholder="Ajoutez ici toute information complémentaire concernant votre projet..."
+            value={additionalDetails}
+            onChange={(e) => setAdditionalDetails(e.target.value)}
+            className="min-h-[100px]"
+          />
+        </div>
+
+        <Button 
+          type="submit" 
+          className="w-full bg-forge-orange hover:bg-forge-red"
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? "Préparation..." : "Envoyer la demande"}
+        </Button>
+      </form>
+      <div className="h-8"></div>
+    </>
   );
 };
 

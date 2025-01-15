@@ -22,7 +22,7 @@ const Hero = memo(() => {
       to: "/laptop-service",
       icon: Laptop,
       title: "PC Portable Gaming",
-      description: "Configuration personnalisée selon vos besoins"
+      description: "Soins personnalisés selon vos besoins"
     },
     {
       to: "/upgrade",
@@ -70,7 +70,7 @@ const Hero = memo(() => {
           </p>
           
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-12">
-            <Link to="/custom-pc" className="w-full md:w-auto">
+            <Link to="/quote" className="w-full md:w-auto">
               <button className="w-full md:w-auto px-8 py-4 bg-forge-orange hover:bg-forge-red text-white rounded-lg font-bold flex items-center justify-center gap-2 transition-colors">
                 PC Gaming Sur Mesure
                 <ArrowRight className="h-5 w-5" />

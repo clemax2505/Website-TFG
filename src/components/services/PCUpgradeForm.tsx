@@ -5,13 +5,14 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { openEmailClient } from "@/utils/emailUtils";
 
 const PCUpgradeForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const components = [
-    "CPU", "GPU", "RAM", "Stockage", "Alimentation", "Boîtier", "Carte Mère", "Refroidissement CPU"
+    "CPU", "GPU", "RAM", "Stockage", "Alimentation", "Boîtier", "Carte Mère", "Refroidissement CPU", "Je ne sais pas / autre"
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -71,7 +72,12 @@ ${data.details}`;
   return (
     <form onSubmit={handleSubmit} onKeyDown={handleKeyDown} className="space-y-4 p-6">
       <div className="space-y-2">
-        <Label>Configuration actuelle</Label>
+        <div className="flex justify-between items-center">
+          <Label>Configuration actuelle</Label>
+          <Link to="/maintenance#guide" className="text-sm text-forge-orange hover:text-forge-red">
+            Je ne sais pas, comment savoir ?
+          </Link>
+        </div>
         {components.map((component) => (
           <Input
             key={component}
@@ -122,7 +128,7 @@ ${data.details}`;
         className="w-full bg-forge-orange hover:bg-forge-red"
         disabled={isSubmitting}
       >
-        {isSubmitting ? "Préparation..." : "Demander un devis"}
+        {isSubmitting ? "Envoi en cours..." : "Envoyer la demande"}
       </Button>
     </form>
   );

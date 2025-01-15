@@ -137,9 +137,6 @@ Ventilateurs supplémentaires: ${data.fans || 'Aucun'}`;
       <div className="space-y-4">
         <div className="flex justify-between items-center">
           <Label>Liste des composants</Label>
-          <Link to="/services?openGuide=true" className="text-sm text-forge-orange hover:text-forge-red">
-            Je ne sais pas, comment savoir ?
-          </Link>
         </div>
         {components.map((component) => (
           <Input

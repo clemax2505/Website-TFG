@@ -26,7 +26,8 @@ const PCUpgradeForm = () => {
       .map(comp => `${comp}: ${data[comp.toLowerCase()]}`)
       .join('\n');
     
-    const componentsToUpgrade = components
+    const componentsToUpgrade = [
+       "CPU", "GPU", "RAM", "Stockage", "Alimentation", "Boîtier", "Carte Mère", "Refroidissement CPU", "Je ne sais pas / autre"
       .filter(comp => data[`upgrade-${comp}`] === 'on')
       .join(', ');
 

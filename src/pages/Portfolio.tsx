@@ -43,6 +43,7 @@ const Portfolio = () => {
       review: {
         author: "Olivier",
         rating: 5,
+        comment: "La compatibilté des élements est vérifiée, cable management au top, merci eaucoup !"
       }
     }
   ];

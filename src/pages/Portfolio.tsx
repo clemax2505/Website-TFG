@@ -11,7 +11,19 @@ const Portfolio = () => {
 
   const projects = [
     {
-      title: "PC Gaming",
+      title: "Montage PC gaming",
+      specs: "RTX 4070 super, i7 14700kf, 32GB RAM",
+      images: [
+        "/portfolio/guillaume/guillaume-front.png",
+      ],
+      review: {
+        author: "Guillaume",
+        rating: 5,
+        comment: "Cable management au top, montage et assemblage vraiment parfait et conseils très pertinents ! Merci pour tout."
+      }
+    },
+    {
+      title: "Montage PC gaming",
       specs: "RTX 4060 ti, R5 7500f, 32GB RAM",
       image: "/portfolio/gloo/gloo.png",
       review: {
@@ -21,7 +33,7 @@ const Portfolio = () => {
       }
     },
     {
-      title: "Upgrade PC Gaming",
+      title: "Upgrade PC gaming",
       specs: "RTX 4060 ti, R5 7600X, 32GB RAM",
       images: [
         "/portfolio/cikay/cikay-front.png",
@@ -43,7 +55,7 @@ const Portfolio = () => {
       review: {
         author: "Olivier",
         rating: 5,
-        comment: "La compatibilté des élements est vérifiée, cable management au top, merci eaucoup !"
+        comment: "La compatibilté des éléments est vérifiée, cable management au top, merci beaucoup !"
       }
     }
   ];

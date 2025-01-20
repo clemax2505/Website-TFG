@@ -13,7 +13,7 @@ const Portfolio = () => {
     {
       title: "Montage PC gaming",
       specs: "RTX 4070 super, i7 14700kf, 32GB RAM",
-      images: [
+      image: [
         "/portfolio/guillaume/guillaume-front.png",
       ],
       review: {

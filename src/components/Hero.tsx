@@ -12,7 +12,7 @@ const ServiceCard = memo(({ to, icon: Icon, title, description }: {
   <Link to={to} className="glass-card p-6 rounded-lg hover:scale-105 transition-transform duration-300">
     <Icon className="h-8 w-8 text-forge-orange mx-auto mb-4" />
     <h3 className="text-lg font-bold mb-2">{title}</h3>
-    <p className="text-gray-400">{description}</p>
+    <p className="text-gray-600 dark:text-gray-400">{description}</p>
   </Link>
 ));
 
@@ -65,7 +65,7 @@ const Hero = memo(() => {
           <h1 className="text-4xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-forge-orange to-forge-red">
             <br></br><br></br>Forgez Votre PC Gaming Idéal !<br></br><br></br>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
             Création sur mesure, amélioration et maintenance de PC gaming par des experts passionnés
           </p>
           
@@ -88,7 +88,7 @@ const Hero = memo(() => {
               <Card className="glass-card hover:scale-105 transition-transform duration-300 cursor-pointer">
                 <CardContent className="p-8 text-center">
                   <h2 className="text-2xl font-bold text-forge-orange mb-4">PC Pré-configurés</h2>
-                  <p className="text-gray-400">Découvrez notre sélection de PC gaming optimisés pour tous les budgets</p>
+                  <p className="text-gray-600 dark:text-gray-400">Découvrez notre sélection de PC gaming optimisés pour tous les budgets</p>
                 </CardContent>
               </Card>
             </Link>

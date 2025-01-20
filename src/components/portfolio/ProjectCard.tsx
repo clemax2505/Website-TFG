@@ -55,7 +55,7 @@ export const ProjectCard = ({ project, onSelect }: ProjectCardProps) => {
       )}
       <CardHeader>
         <CardTitle className="text-xl">{project.title}</CardTitle>
-        <p className="text-sm text-gray-400">{project.specs}</p>
+        <p className="text-gray-700 dark:text-gray-400">{project.specs}</p>
       </CardHeader>
       <CardContent>
         <div className="border-t border-gray-700 pt-4">
@@ -64,8 +64,8 @@ export const ProjectCard = ({ project, onSelect }: ProjectCardProps) => {
               <Star key={i} className="w-4 h-4 fill-forge-orange text-forge-orange" />
             ))}
           </div>
-          <p className="text-gray-300 italic">&quot;{project.review.comment}&quot;</p>
-          <p className="text-sm text-gray-400 mt-2">- {project.review.author}</p>
+          <p className="text-gray-700 dark:text-gray-300 italic">&quot;{project.review.comment}&quot;</p>
+          <p className="text-sm text-gray-700 dark:text-gray-400 mt-2">- {project.review.author}</p>
         </div>
       </CardContent>
     </Card>

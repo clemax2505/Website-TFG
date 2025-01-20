@@ -2,6 +2,7 @@ import { useState, memo, useCallback } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import Logo from "./Logo";
+import ThemeToggle from "./ThemeToggle";
 
 const NavLink = memo(({ to, name, isActive, onClick }: { 
   to: string; 
@@ -13,8 +14,8 @@ const NavLink = memo(({ to, name, isActive, onClick }: {
     to={to}
     className={`block w-full px-3 py-2 rounded-md text-sm font-medium transition-colors ${
       isActive
-        ? "text-forge-orange bg-forge-dark"
-        : "text-gray-300 hover:text-forge-orange"
+        ? "text-forge-orange bg-secondary"
+        : "text-foreground hover:text-forge-orange"
     }`}
     onClick={onClick}
   >
@@ -52,11 +53,11 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
               <Logo className="h-8 w-8 sm:h-12 sm:w-12" />
-              <span className="text-lg sm:text-xl font-bold text-white">The Gaming Forge</span>
+              <span className="text-lg sm:text-xl font-bold text-foreground">The Gaming Forge</span>
             </Link>
           </div>
 
-          <div className="hidden md:block">
+          <div className="hidden md:flex md:items-center">
             <div className="ml-10 flex items-baseline space-x-4">
               {navItems.map((item) => (
                 <NavLink
@@ -67,12 +68,16 @@ const Navbar = () => {
                 />
               ))}
             </div>
+            <div className="ml-4">
+              <ThemeToggle />
+            </div>
           </div>
 
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle />
             <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-forge-dark focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-forge-orange hover:bg-secondary focus:outline-none"
               aria-expanded={isOpen}
               aria-label="Toggle menu"
             >
@@ -83,7 +88,7 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden absolute w-full bg-forge-black glass-card">
+        <div className="md:hidden absolute w-full glass-card">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
             {navItems.map((item) => (
               <div key={item.name} className="w-full">

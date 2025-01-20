@@ -68,7 +68,7 @@ export const ProjectDialog = ({ project, onClose }: ProjectDialogProps) => {
               ))}
             </div>
             <p className="text-gray-300 italic text-lg">&quot;{project.review.comment}&quot;</p>
-            <p className="text-gray-400 mt-2">- {project.review.author}</p>
+            <p className="text-gray-400 mt-2">- {project.review.author}<br></br><br></br></p>
           </div>
         </ScrollArea>
       </DialogContent>

@@ -67,8 +67,8 @@ export const ProjectDialog = ({ project, onClose }: ProjectDialogProps) => {
                 <Star key={i} className="w-6 h-6 fill-forge-orange text-forge-orange" />
               ))}
             </div>
-            <p className="text-gray-300 italic text-lg">&quot;{project.review.comment}&quot;</p>
-            <p className="text-gray-400 mt-2">- {project.review.author}<br></br><br></br></p>
+            <p className="text-white-300 italic text-lg">&quot;{project.review.comment}&quot;</p>
+            <p className="text-white-400 mt-2">- {project.review.author}<br></br><br></br></p>
           </div>
         </ScrollArea>
       </DialogContent>

@@ -18,7 +18,7 @@ export const ProjectDialog = ({ project, onClose }: ProjectDialogProps) => {
         <ScrollArea className="h-full max-h-[90vh]">
           <DialogHeader className="p-6">
             <DialogTitle className="text-2xl font-bold">{project.title}</DialogTitle>
-            <p className="text-white-400">{project.specs}</p>
+            <p className="text-gray-400">{project.specs}</p>
           </DialogHeader>
           
           {'images' in project ? (
@@ -41,10 +41,10 @@ export const ProjectDialog = ({ project, onClose }: ProjectDialogProps) => {
               </CarouselContent>
               <div className="absolute inset-0 flex items-center justify-between p-4 pointer-events-none">
                 <div className="pointer-events-auto">
-                  <CarouselPrevious className="relative -left-0 h-8 w-8 bg-black/50 " />
+                  <CarouselPrevious className="relative -left-0 h-8 w-8 bg-black/50 hover:bg-black/70" />
                 </div>
                 <div className="pointer-events-auto">
-                  <CarouselNext className="relative -right-0 h-8 w-8 bg-black/50 " />
+                  <CarouselNext className="relative -right-0 h-8 w-8 bg-black/50 hover:bg-black/70" />
                 </div>
               </div>
             </Carousel>
@@ -67,8 +67,8 @@ export const ProjectDialog = ({ project, onClose }: ProjectDialogProps) => {
                 <Star key={i} className="w-6 h-6 fill-forge-orange text-forge-orange" />
               ))}
             </div>
-            <p className="text-white-300 italic text-lg">&quot;{project.review.comment}&quot;</p>
-            <p className="text-white-400 mt-2">- {project.review.author}<br></br><br></br></p>
+            <p className="text-gray-300 italic text-lg">&quot;{project.review.comment}&quot;</p>
+            <p className="text-gray-400 mt-2">- {project.review.author}<br></br><br></br></p>
           </div>
         </ScrollArea>
       </DialogContent>

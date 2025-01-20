@@ -13,7 +13,7 @@ const PCComponentsList = ({ components }: PCComponentsListProps) => {
           {components.map((component, index) => (
             <li key={index} className="flex items-center gap-6">
               <div className="h-2 w-2 rounded-full bg-forge-orange shrink-0"></div>
-              <span className="text-gray-700 dark:text-gray-300">{component}</span>
+              <span>{component}</span>
             </li>
           ))}
         </ul>

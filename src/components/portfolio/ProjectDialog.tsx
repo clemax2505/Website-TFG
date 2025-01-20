@@ -18,7 +18,7 @@ export const ProjectDialog = ({ project, onClose }: ProjectDialogProps) => {
         <ScrollArea className="h-full max-h-[90vh]">
           <DialogHeader className="p-6">
             <DialogTitle className="text-2xl font-bold">{project.title}</DialogTitle>
-            <p className="text-gray-700 dark:text-gray-400">{project.specs}</p>
+            <p className="text-gray-400">{project.specs}</p>
           </DialogHeader>
           
           {'images' in project ? (
@@ -67,8 +67,8 @@ export const ProjectDialog = ({ project, onClose }: ProjectDialogProps) => {
                 <Star key={i} className="w-6 h-6 fill-forge-orange text-forge-orange" />
               ))}
             </div>
-            <p className="text-gray-700 dark:text-gray-300 italic text-lg">&quot;{project.review.comment}&quot;</p>
-            <p className="text-gray-700 dark:text-gray-400 mt-2">- {project.review.author}</p>
+            <p className="text-gray-300 italic text-lg">&quot;{project.review.comment}&quot;</p>
+            <p className="text-gray-400 mt-2">- {project.review.author}</p>
           </div>
         </ScrollArea>
       </DialogContent>

@@ -9,11 +9,11 @@ import { useState } from "react";
 const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const projects: Project[] = [
+  const projects = [
     {
       title: "Montage PC gaming",
       specs: "RTX 4070 super, i7 14700kf, 32GB RAM",
-      images: [
+      image: [
         "/portfolio/guillaume/guillaume-front.png",
       ],
       review: {

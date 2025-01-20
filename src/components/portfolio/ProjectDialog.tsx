@@ -18,7 +18,7 @@ export const ProjectDialog = ({ project, onClose }: ProjectDialogProps) => {
         <ScrollArea className="h-full max-h-[90vh]">
           <DialogHeader className="p-6">
             <DialogTitle className="text-2xl font-bold">{project.title}</DialogTitle>
-            <p className="text-gray-400">{project.specs}</p>
+            <p className="text-white-400">{project.specs}</p>
           </DialogHeader>
           
           {'images' in project ? (
@@ -44,7 +44,7 @@ export const ProjectDialog = ({ project, onClose }: ProjectDialogProps) => {
                   <CarouselPrevious className="relative -left-0 h-8 w-8 bg-black/50 hover:bg-black/70" />
                 </div>
                 <div className="pointer-events-auto">
-                  <CarouselNext className="relative -right-0 h-8 w-8 bg-black/50 hover:bg-black/70" />
+                  <CarouselNext className="relative -right-0 h-8 w-8 bg-black/50 " />
                 </div>
               </div>
             </Carousel>

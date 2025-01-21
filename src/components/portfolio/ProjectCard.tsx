@@ -24,6 +24,7 @@ export const ProjectCard = ({ project, onSelect }: ProjectCardProps) => {
                     src={image}
                     alt={`${project.title} - Vue ${imageIndex + 1}`}
                     className="w-full h-full object-contain rounded-lg"
+                    loading="lazy"
                     onError={(e) => {
                       e.currentTarget.src = "/placeholder.svg";
                     }}
@@ -53,6 +54,7 @@ export const ProjectCard = ({ project, onSelect }: ProjectCardProps) => {
             src={project.image}
             alt={project.title}
             className="w-full h-full object-contain rounded-lg"
+            loading="lazy"
             onError={(e) => {
               e.currentTarget.src = "/placeholder.svg";
             }}
@@ -60,8 +62,8 @@ export const ProjectCard = ({ project, onSelect }: ProjectCardProps) => {
         </div>
       )}
       <CardHeader>
-        <CardTitle className="text-xl">{project.title}</CardTitle>
-        <p className="text-sm text-gray-700 dark:text-gray-400">{project.specs}</p>
+        <CardTitle className="text-xl text-white">{project.title}</CardTitle>
+        <p className="text-sm text-white">{project.specs}</p>
       </CardHeader>
       <CardContent>
         <div className="border-t border-gray-700 pt-4">
@@ -70,8 +72,8 @@ export const ProjectCard = ({ project, onSelect }: ProjectCardProps) => {
               <Star key={i} className="w-4 h-4 fill-forge-orange text-forge-orange" />
             ))}
           </div>
-          <p className="text-gray-700 dark:text-gray-300 italic">&quot;{project.review.comment}&quot;</p>
-          <p className="text-sm text-gray-700 dark:text-gray-400 mt-2">- {project.review.author}</p>
+          <p className="text-white italic">&quot;{project.review.comment}&quot;</p>
+          <p className="text-sm text-white mt-2">- {project.review.author}</p>
         </div>
       </CardContent>
     </Card>

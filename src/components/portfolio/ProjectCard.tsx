@@ -1,5 +1,4 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Star } from "lucide-react";
 import { Project } from "./types";
 
@@ -14,57 +13,40 @@ export const ProjectCard = ({ project, onSelect }: ProjectCardProps) => {
       className="glass-card overflow-hidden hover:scale-105 transition-transform duration-300 cursor-pointer"
       onClick={() => onSelect(project)}
     >
-      {'images' in project ? (
-        <Carousel className="w-full relative">
-          <CarouselContent>
-            {project.images?.map((image, imageIndex) => (
-              <CarouselItem key={imageIndex} className="flex items-center justify-center">
-                <div className="aspect-[4/3] w-full relative">
-                  <img
-                    src={image}
-                    alt={`${project.title} - Vue ${imageIndex + 1}`}
-                    className="w-full h-full object-contain rounded-lg"
-                    loading="lazy"
-                    onError={(e) => {
-                      e.currentTarget.src = "/placeholder.svg";
-                    }}
-                  />
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <div className="absolute inset-0 flex items-center justify-between p-2 pointer-events-none">
-            <div className="pointer-events-auto">
-              <CarouselPrevious 
-                className="relative -left-0 h-8 w-8 bg-black/50 hover:bg-black/70" 
-                onClick={(e) => {
-                  e.stopPropagation();
+      <div className="relative">
+        {'images' in project ? (
+          <>
+            <div className="aspect-[4/3] w-full relative">
+              <img
+                src={project.images?.[0]}
+                alt={`${project.title} - Vue 1`}
+                className="w-full h-full object-contain rounded-lg"
+                loading="lazy"
+                onError={(e) => {
+                  e.currentTarget.src = "/placeholder.svg";
                 }}
               />
             </div>
-            <div className="pointer-events-auto">
-              <CarouselNext 
-                className="relative -right-0 h-8 w-8 bg-black/50 hover:bg-black/70" 
-                onClick={(e) => {
-                  e.stopPropagation();
-                }}
-              />
-            </div>
+            {project.images && project.images.length > 1 && (
+              <div className="absolute bottom-2 right-2 bg-black/70 text-white px-2 py-1 rounded-full text-sm">
+                +{project.images.length - 1}
+              </div>
+            )}
+          </>
+        ) : (
+          <div className="aspect-[4/3] w-full relative">
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-full object-contain rounded-lg"
+              loading="lazy"
+              onError={(e) => {
+                e.currentTarget.src = "/placeholder.svg";
+              }}
+            />
           </div>
-        </Carousel>
-      ) : (
-        <div className="aspect-[4/3] w-full relative">
-          <img
-            src={project.image}
-            alt={project.title}
-            className="w-full h-full object-contain rounded-lg"
-            loading="lazy"
-            onError={(e) => {
-              e.currentTarget.src = "/placeholder.svg";
-            }}
-          />
-        </div>
-      )}
+        )}
+      </div>
       <CardHeader>
         <CardTitle className="text-xl text-white">{project.title}</CardTitle>
         <p className="text-sm text-white">{project.specs}</p>

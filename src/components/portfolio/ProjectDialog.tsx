@@ -40,13 +40,9 @@ export const ProjectDialog = ({ project, onClose }: ProjectDialogProps) => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <div className="absolute inset-0 flex items-center justify-between p-4 pointer-events-none">
-                <div className="pointer-events-auto">
-                  <CarouselPrevious className="relative -left-0 h-8 w-8 bg-black/50 hover:bg-black/70" />
-                </div>
-                <div className="pointer-events-auto">
-                  <CarouselNext className="relative -right-0 h-8 w-8 bg-black/50 hover:bg-black/70" />
-                </div>
+              <div className="absolute inset-0 flex items-center justify-between p-4">
+                <CarouselPrevious className="relative -left-0 h-8 w-8 bg-black/50 hover:bg-black/70" />
+                <CarouselNext className="relative -right-0 h-8 w-8 bg-black/50 hover:bg-black/70" />
               </div>
             </Carousel>
           ) : project.image && (

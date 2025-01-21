@@ -28,7 +28,7 @@ export const ProjectCard = ({ project, onSelect }: ProjectCardProps) => {
               />
             </div>
             {project.images && project.images.length > 1 && (
-              <div className="absolute bottom-2 right-2 bg-black/70 text-white px-2 py-1 rounded-full text-sm">
+              <div className="absolute top-2 right-2 bg-black/70 text-white px-2 py-1 rounded-full text-sm">
                 +{project.images.length - 1}
               </div>
             )}

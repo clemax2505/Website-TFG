@@ -7,7 +7,6 @@ export interface Review {
 export interface Project {
   title: string;
   specs: string;
-  image?: string;
-  images?: string[];
+  images: string[];
   review: Review;
 }

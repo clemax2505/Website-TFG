@@ -13,7 +13,7 @@ const Portfolio = () => {
     {
       title: "Montage PC gaming",
       specs: "RTX 4070 super, i7 14700kf, 32GB RAM",
-      image:  "/portfolio/guillaume/guillaume-front.png",
+      images: ["/portfolio/guillaume/guillaume-front.png"],
       review: {
         author: "Guillaume",
         rating: 5,
@@ -23,7 +23,7 @@ const Portfolio = () => {
     {
       title: "Montage PC gaming",
       specs: "RTX 4060 ti, R5 7500f, 32GB RAM",
-      image: "/portfolio/gloo/gloo.png",
+      images: ["/portfolio/gloo/gloo.png"],
       review: {
         author: "Gloo",
         rating: 5,

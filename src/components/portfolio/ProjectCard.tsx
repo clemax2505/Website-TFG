@@ -37,13 +37,17 @@ export const ProjectCard = ({ project, onSelect }: ProjectCardProps) => {
             <div className="pointer-events-auto">
               <CarouselPrevious 
                 className="relative -left-0 h-8 w-8 bg-black/50 hover:bg-black/70" 
-                onClick={(e) => e.stopPropagation()}
+                onClick={(e) => {
+                  e.stopPropagation();
+                }}
               />
             </div>
             <div className="pointer-events-auto">
               <CarouselNext 
                 className="relative -right-0 h-8 w-8 bg-black/50 hover:bg-black/70" 
-                onClick={(e) => e.stopPropagation()}
+                onClick={(e) => {
+                  e.stopPropagation();
+                }}
               />
             </div>
           </div>

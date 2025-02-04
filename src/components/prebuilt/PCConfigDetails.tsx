@@ -68,7 +68,7 @@ const PCConfigDetails = () => {
         <div className="space-y-8">
           <Card className="glass-card">
             <CardContent className="p-6">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-3 gap-4">
                 <div className="space-y-2">
                   <img
                     src={selectedConfig.images.cpu}
@@ -84,6 +84,14 @@ const PCConfigDetails = () => {
                     className="w-full h-48 object-contain"
                   />
                   <p className="text-center text-sm">Carte graphique</p>
+                </div>
+                <div className="space-y-2">
+                  <img
+                    src="/placeholder.svg"
+                    alt="Carte mère"
+                    className="w-full h-48 object-contain"
+                  />
+                  <p className="text-center text-sm">Carte mère</p>
                 </div>
               </div>
             </CardContent>

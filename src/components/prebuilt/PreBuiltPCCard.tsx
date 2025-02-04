@@ -7,67 +7,79 @@ interface PreBuiltPCCardProps {
   config: PCConfig;
 }
 
-const getImagesForConfig = (configId: string): { cpu: string; gpu: string } => {
+const getImagesForConfig = (configId: string): { cpu: string; gpu: string; motherboard: string } => {
   switch (configId) {
     case "thebeginning":
       return {
         cpu: "/pc-parts/cpu/R5 5600.png",
-        gpu: "/pc-parts/gpu/6650XT.png"
+        gpu: "/pc-parts/gpu/6650XT.png",
+        motherboard: "/placeholder.svg"
       };
     case "littleguy":
       return {
         cpu: "/pc-parts/cpu/R5 5600.png",
-        gpu: "/pc-parts/gpu/6750XT.png"
+        gpu: "/pc-parts/gpu/6750XT.png",
+        motherboard: "/placeholder.svg"
       };
     case "viper":
       return {
         cpu: "/pc-parts/cpu/R7 5700X.png",
-        gpu: "/pc-parts/gpu/4060 EAGLE OC.png"
+        gpu: "/pc-parts/gpu/4060 EAGLE OC.png",
+        motherboard: "/placeholder.svg"
       };
     case "airflowprime":
       return {
         cpu: "/pc-parts/cpu/R7 5800X.png",
-        gpu: "/pc-parts/gpu/7700XT GIGABYTE GAMING OC.png"
+        gpu: "/pc-parts/gpu/7700XT GIGABYTE GAMING OC.png",
+        motherboard: "/placeholder.svg"
       };
     case "thehellbound":
       return {
         cpu: "/pc-parts/cpu/i5-14600KF.png",
-        gpu: "/pc-parts/gpu/7800XT POWERCOLOR HELLBOUND.png"
+        gpu: "/pc-parts/gpu/7800XT POWERCOLOR HELLBOUND.png",
+        motherboard: "/placeholder.svg"
       };
     case "infinity":
       return {
         cpu: "/pc-parts/cpu/i5-14600KF.png",
-        gpu: "/pc-parts/gpu/4070 SUPER TWIN EDGE ZOTAC.png"
+        gpu: "/pc-parts/gpu/4070 SUPER TWIN EDGE ZOTAC.png",
+        motherboard: "/placeholder.svg"
       };
     case "tuffy":
       return {
         cpu: "/pc-parts/cpu/i7-14700KF.png",
-        gpu: "/pc-parts/gpu/4070 TI SUPER TUF GAMING OC.png"
+        gpu: "/pc-parts/gpu/4070 TI SUPER TUF GAMING OC.png",
+        motherboard: "/placeholder.svg"
       };
     case "thetaichi":
       return {
         cpu: "/pc-parts/cpu/R7 7800X3D.png",
-        gpu: "/pc-parts/gpu/7900XTX TAICHI.png"
+        gpu: "/pc-parts/gpu/7900XTX TAICHI.png",
+        motherboard: "/placeholder.svg"
       };
     case "chillguy":
       return {
         cpu: "/pc-parts/cpu/i9-14900KF.png",
-        gpu: "/pc-parts/gpu/4080 SUPER PNY EPIC-X RGB.png"
+        gpu: "/pc-parts/gpu/4080 SUPER PNY EPIC-X RGB.png",
+        motherboard: "/placeholder.svg"
       };
     case "themaster":
       return {
         cpu: "/pc-parts/cpu/R7 9800X3D.png",
-        gpu: "/pc-parts/gpu/7900XTX SAPPHIRE NITRO.png"
+        gpu: "/pc-parts/gpu/7900XTX SAPPHIRE NITRO.png",
+        motherboard: "/placeholder.svg"
       };
     case "theoverkill":
       return {
         cpu: "/pc-parts/cpu/R7 9800X3D.png",
-        gpu: "/pc-parts/gpu/4080 SUPER MSI GAMING X SLIM.png"
+        gpu: "/pc-parts/gpu/4080 SUPER MSI GAMING X SLIM.png",
+        motherboard: "/placeholder.svg"
       };
     default:
       return {
         cpu: "/placeholder.svg",
-        gpu: "/placeholder.svg"
+        gpu: "/placeholder.svg",
+        motherboard: "/placeholder.svg"
       };
   }
 };
@@ -79,7 +91,7 @@ const PreBuiltPCCard = ({ config }: PreBuiltPCCardProps) => {
     <Link to={`/prebuilt/${config.id}`} className="block">
       <Card className="glass-card hover:scale-105 transition-transform duration-300 cursor-pointer">
         <CardHeader>
-          <div className="grid grid-cols-2 gap-2 aspect-video w-full overflow-hidden rounded-t-lg">
+          <div className="grid grid-cols-3 gap-2 aspect-video w-full overflow-hidden rounded-t-lg">
             <div className="relative">
               <img
                 src={images.cpu}
@@ -104,6 +116,19 @@ const PreBuiltPCCard = ({ config }: PreBuiltPCCardProps) => {
               />
               <div className="absolute bottom-0 left-0 right-0 text-white text-xs p-1 text-center">
                 Carte graphique
+              </div>
+            </div>
+            <div className="relative">
+              <img
+                src={images.motherboard}
+                alt={`Carte mère ${config.name}`}
+                className="w-full h-full object-contain"
+                onError={(e) => {
+                  e.currentTarget.src = "/placeholder.svg";
+                }}
+              />
+              <div className="absolute bottom-0 left-0 right-0 text-white text-xs p-1 text-center">
+                Carte mère
               </div>
             </div>
           </div>

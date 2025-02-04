@@ -88,10 +88,10 @@ const PCConfigDetails = () => {
                 <div className="space-y-2">
                   <img
                     src="/placeholder.svg"
-                    alt="Carte mère"
+                    alt="Boitier"
                     className="w-full h-48 object-contain"
                   />
-                  <p className="text-center text-sm">Carte mère</p>
+                  <p className="text-center text-sm">Boitier</p>
                 </div>
               </div>
             </CardContent>

@@ -120,7 +120,7 @@ const PreBuiltPCCard = ({ config }: PreBuiltPCCardProps) => {
             </div>
             <div className="relative">
               <img
-                src={images.motherboard}
+                src={images.case}
                 alt={`Boitier ${config.name}`}
                 className="w-full h-full object-contain"
                 onError={(e) => {

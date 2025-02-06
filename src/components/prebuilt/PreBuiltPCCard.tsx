@@ -13,67 +13,67 @@ const getImagesForConfig = (configId: string): { cpu: string; gpu: string; case:
       return {
         cpu: "/pc-parts/cpu/R5 5600.png",
         gpu: "/pc-parts/gpu/6650XT.png",
-        case: "/placeholder.svg"
+        case: "/pc-parts/case/tecware forge M2.png"
       };
     case "littleguy":
       return {
         cpu: "/pc-parts/cpu/R5 5600.png",
         gpu: "/pc-parts/gpu/6750XT.png",
-        case: "/placeholder.svg"
+        case: "/pc-parts/case/msi mag forge 100m noir.png"
       };
     case "viper":
       return {
         cpu: "/pc-parts/cpu/R7 5700X.png",
         gpu: "/pc-parts/gpu/4060 EAGLE OC.png",
-        case: "/placeholder.svg"
+        case: "/pc-parts/case/3000D noir.png"
       };
-    case "airflowprime":
+    case "pulsar":
       return {
         cpu: "/pc-parts/cpu/R7 5800X.png",
         gpu: "/pc-parts/gpu/7700XT GIGABYTE GAMING OC.png",
-        case: "/placeholder.svg"
+        case: "/pc-parts/case/phanteks xt pro ultra noir.png"
       };
-    case "thehellbound":
+    case "thehellhound":
       return {
         cpu: "/pc-parts/cpu/i5-14600KF.png",
         gpu: "/pc-parts/gpu/7800XT POWERCOLOR HELLBOUND.png",
-        case: "/placeholder.svg"
+        case: "/pc-parts/case/4000D white.png"
       };
     case "infinity":
       return {
         cpu: "/pc-parts/cpu/i5-14600KF.png",
         gpu: "/pc-parts/gpu/4070 SUPER TWIN EDGE ZOTAC.png",
-        case: "/placeholder.svg"
+        case: "/pc-parts/case/O11 dynamic mini.png"
       };
     case "tuffy":
       return {
         cpu: "/pc-parts/cpu/i7-14700KF.png",
         gpu: "/pc-parts/gpu/4070 TI SUPER TUF GAMING OC.png",
-        case: "/placeholder.svg"
+        case: "/pc-parts/case/tuf gt502 plus noir.png"
       };
     case "thetaichi":
       return {
         cpu: "/pc-parts/cpu/R7 7800X3D.png",
         gpu: "/pc-parts/gpu/7900XTX TAICHI.png",
-        case: "/placeholder.svg"
+        case: "/pc-parts/case/5000D rgb noir.png"
       };
     case "chillguy":
       return {
         cpu: "/pc-parts/cpu/i9-14900KF.png",
         gpu: "/pc-parts/gpu/4080 SUPER PNY EPIC-X RGB.png",
-        case: "/placeholder.svg"
+        case: "/pc-parts/case/antec c8.png"
       };
     case "themaster":
       return {
         cpu: "/pc-parts/cpu/R7 9800X3D.png",
         gpu: "/pc-parts/gpu/7900XTX SAPPHIRE NITRO.png",
-        case: "/placeholder.svg"
+        case: "/pc-parts/case/hyte y70 noir.png"
       };
     case "theoverkill":
       return {
         cpu: "/pc-parts/cpu/R7 9800X3D.png",
         gpu: "/pc-parts/gpu/4080 SUPER MSI GAMING X SLIM.png",
-        case: "/placeholder.svg"
+        case: "/pc-parts/case/7000x rgb.png"
       };
     default:
       return {

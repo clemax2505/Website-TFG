@@ -1,8 +1,8 @@
 import { PCConfigDetailed } from "../types";
 
 export const theHellbound: PCConfigDetailed = {
-  id: "thehellbound",
-  name: "The HellBound",
+  id: "thehellhound",
+  name: "The HellHound",
   price: 1978.89,
   description: "i5-14600KF & RX 7800 XT",
   components: [

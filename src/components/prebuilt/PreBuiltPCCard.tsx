@@ -128,7 +128,7 @@ const PreBuiltPCCard = ({ config }: PreBuiltPCCardProps) => {
                 }}
               />
               <div className="absolute bottom-0 left-0 right-0 text-white text-xs p-1 text-center">
-                Carte mère
+                Boitier
               </div>
             </div>
           </div>

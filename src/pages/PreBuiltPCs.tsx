@@ -24,13 +24,13 @@ export const priceRanges: PCConfig[] = [
     description: "Ryzen 5 5700X & RTX 4060",
   },
   { 
-    id: "airflowprime", 
-    name: "Airflow Prime", 
+    id: "pulsar", 
+    name: "Pulsar", 
     price: 1442.18, 
     description: "Ryzen 7 5800X & RX 7700 XT",
   },
   { 
-    id: "thehellbound", 
+    id: "thehellhound", 
     name: "The HellBound", 
     price: 1978.89, 
     description: "Intel i5-14600KF & RX 7800 XT",

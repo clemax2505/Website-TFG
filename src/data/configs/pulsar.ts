@@ -1,6 +1,6 @@
 import { PCConfigDetailed } from "../types";
 
-export const airflowPrime: PCConfigDetailed = {
+export const pulsar: PCConfigDetailed = {
   id: "pulsar",
   name: "Pulsar",
   price: 1442.18,

@@ -1,6 +1,6 @@
 import { PCConfigDetailed } from "../types";
 
-export const theHellbound: PCConfigDetailed = {
+export const theHellhound: PCConfigDetailed = {
   id: "thehellhound",
   name: "The HellHound",
   price: 1978.89,

@@ -1,8 +1,8 @@
 import { PCConfigDetailed } from "../types";
 
 export const airflowPrime: PCConfigDetailed = {
-  id: "airflowprime",
-  name: "Airflow Prime",
+  id: "pulsar",
+  name: "Pulsar",
   price: 1442.18,
   description: "Ryzen 7 5800X & RX 7700 XT",
   components: [

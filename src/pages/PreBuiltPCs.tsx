@@ -31,7 +31,7 @@ export const priceRanges: PCConfig[] = [
   },
   { 
     id: "thehellhound", 
-    name: "The HellBound", 
+    name: "The Hellhound", 
     price: 1978.89, 
     description: "Intel i5-14600KF & RX 7800 XT",
   },

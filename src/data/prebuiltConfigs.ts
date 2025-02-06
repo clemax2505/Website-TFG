@@ -2,8 +2,8 @@ import { PCConfigDetailed } from "./types";
 import { theBeginning } from "./configs/theBeginning";
 import { littleGuy } from "./configs/littleGuy";
 import { viper } from "./configs/viper";
-import { airflowPrime } from "./configs/airflowPrime";
-import { theHellbound } from "./configs/theHellbound";
+import { airflowPrime } from "./configs/pulsar";
+import { theHellbound } from "./configs/theHellhound";
 import { infinity } from "./configs/infinity";
 import { tuffy } from "./configs/tuffy";
 import { theTaichi } from "./configs/theTaichi";
@@ -15,8 +15,8 @@ export const prebuiltConfigs: { [key: string]: PCConfigDetailed } = {
   thebeginning: theBeginning,
   littleguy: littleGuy,
   viper: viper,
-  airflowprime: airflowPrime,
-  thehellbound: theHellbound,
+  pulsar: pulsar,
+  thehellhound: theHellhound,
   infinity: infinity,
   tuffy: tuffy,
   thetaichi: theTaichi,

@@ -85,8 +85,7 @@ const getImagesForConfig = (configId: string): { cpu: string; gpu: string; case:
       return {
         cpu: "/pc-parts/cpu/R7 9800X3D.png",
         gpu: "/pc-parts/gpu/4080 SUPER PALIT GamingPro.png",
-        case: "/pc-parts/case/view 270 plus tg argb noir.png
-"
+        case: "/pc-parts/case/view 270 plus tg argb noir.png"
       };
     case "themaster":
       return {

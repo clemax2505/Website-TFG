@@ -4,10 +4,10 @@ import { littleGuy } from "./configs/littleguy";
 import { cheapy } from "./configs/cheapy";
 import { viper } from "./configs/viper";
 import { pulsar } from "./configs/pulsar";
+import { phantomatic } from "./configs/phantomatic";
 import { arcticold } from "./configs/arcticold";
 import { infinity } from "./configs/infinity";
 import { thehellhound } from "./configs/thehellhound";
-import { thetaichi } from "./configs/thetaichi";
 import { nitrous } from "./configs/nitrous";
 import { tuffy } from "./configs/tuffy";
 import { chillguy } from "./configs/chillguy";
@@ -21,10 +21,10 @@ export const prebuiltConfigs: { [key: string]: PCConfigDetailed } = {
   cheapy: cheapy,
   viper: viper,
   pulsar: pulsar,
+  phantomatic: phantomatic,
   arcticold: arcticold,
   infinity: infinity,
   thehellhound: thetellhound,
-  thetaichi: thetaichi,
   nitrous: nitrous,
   tuffy: tuffy,
   chillguy: chillguy,

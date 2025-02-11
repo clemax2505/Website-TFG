@@ -36,6 +36,12 @@ export const priceRanges: PCConfig[] = [
     description: "Ryzen 5 7600X & RX 7800 XT",
   },
   { 
+    id: "phantomatic", 
+    name: "Phantomatic", 
+    price: 1690.61, 
+    description: "Ryzen 7 7700X & RX 7800 XT",
+  },
+  { 
     id: "arcticold", 
     name: "Arcticold", 
     price: 2042.93, 
@@ -52,12 +58,6 @@ export const priceRanges: PCConfig[] = [
     name: "The Hellhound", 
     price: 2428.06, 
     description: "Ryzen 7 9700X & RX 7900 XT",
-  },
-  { 
-    id: "thetaichi", 
-    name: "The Taichi", 
-    price: 2808.34, 
-    description: "Ryzen 7 9800X3D & RX 7900 XTX",
   },
   { 
     id: "nitrous", 

@@ -1,26 +1,33 @@
 import { PCConfigDetailed } from "./types";
-import { theBeginning } from "./configs/theBeginning";
-import { littleGuy } from "./configs/littleGuy";
+import { thebeginning } from "./configs/thebeginning";
+import { littleGuy } from "./configs/littleguy";
+import { cheapy } from "./configs/cheapy";
 import { viper } from "./configs/viper";
 import { pulsar } from "./configs/pulsar";
-import { theHellhound } from "./configs/theHellhound";
+import { arcticold } from "./configs/arcticold";
 import { infinity } from "./configs/infinity";
+import { thehellhound } from "./configs/thehellhound";
+import { thetaichi } from "./configs/thetaichi";
+import { nitrous } from "./configs/nitrous";
 import { tuffy } from "./configs/tuffy";
-import { theTaichi } from "./configs/theTaichi";
-import { chillGuy } from "./configs/chillGuy";
-import { theMaster } from "./configs/theMaster";
-import { theOverkill } from "./configs/theOverkill";
+import { chillguy } from "./configs/chillguy";
+import { neonotte } from "./configs/neonotte";
+import { themaster } from "./configs/themaster";
+import { theoverkill } from "./configs/theoverkill";
 
 export const prebuiltConfigs: { [key: string]: PCConfigDetailed } = {
-  thebeginning: theBeginning,
-  littleguy: littleGuy,
+  thebeginning: thebeginning,
+  littleguy: littleguy,
+  cheapy: cheapy,
   viper: viper,
   pulsar: pulsar,
-  thehellhound: theHellhound,
+  arcticold: arcticold,
   infinity: infinity,
+  thehellhound: thetellhound,
+  thetaichi: thetaichi,
+  nitrous: nitrous,
   tuffy: tuffy,
-  thetaichi: theTaichi,
-  chillguy: chillGuy,
-  themaster: theMaster,
-  theoverkill: theOverkill
+  chillguy: chillguy,
+  themaster: themaster,
+  theoverkill: theoverkill
 };

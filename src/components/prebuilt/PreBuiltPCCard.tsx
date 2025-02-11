@@ -17,62 +17,87 @@ const getImagesForConfig = (configId: string): { cpu: string; gpu: string; case:
       };
     case "littleguy":
       return {
-        cpu: "/pc-parts/cpu/R5 5600.png",
-        gpu: "/pc-parts/gpu/6750XT.png",
+        cpu: "/pc-parts/cpu/R5 7500F.png",
+        gpu: "/pc-parts/gpu/6650XT.png",
         case: "/pc-parts/case/msi mag forge 100m noir.png"
+      };
+    case "cheapy":
+      return {
+        cpu: "/pc-parts/cpu/R5 7600X.png",
+        gpu: "/pc-parts/gpu/6750XT.png",
+        case: "/pc-parts/case/3000D noir.png"
       };
     case "viper":
       return {
-        cpu: "/pc-parts/cpu/R7 5700X.png",
-        gpu: "/pc-parts/gpu/4060 EAGLE OC.png",
-        case: "/pc-parts/case/3000D noir.png"
+        cpu: "/pc-parts/cpu/R5 7500F.png",
+        gpu: "/pc-parts/gpu/6750 XT.png",
+        case: "/pc-parts/case/msi mag forge 112r noir.png"
       };
     case "pulsar":
       return {
-        cpu: "/pc-parts/cpu/R7 5800X.png",
-        gpu: "/pc-parts/gpu/7700XT GIGABYTE GAMING OC.png",
+        cpu: "/pc-parts/cpu/R5 7600X.png",
+        gpu: "/pc-parts/gpu/7800XT PULSE.png",
         case: "/pc-parts/case/phanteks xt pro ultra noir.png"
       };
-    case "thehellhound":
+    case "phantomatic":
       return {
-        cpu: "/pc-parts/cpu/i5-14600KF.png",
-        gpu: "/pc-parts/gpu/7800XT POWERCOLOR HELLBOUND.png",
-        case: "/pc-parts/case/4000D white.png"
+        cpu: "/pc-parts/cpu/R7 7700X.png",
+        gpu: "/pc-parts/gpu/7800XT ASRock Phantom Gaming OC.png",
+        case: "/pc-parts/case/msi mag forge 100r noir.png"
+      };
+    case "arcticold":
+      return {
+        cpu: "/pc-parts/cpu/R7 7700X.png",
+        gpu: "/pc-parts/gpu/7900 GRE.png",
+        case: "/pc-parts/case/6500X rgb noir.png"
       };
     case "infinity":
       return {
-        cpu: "/pc-parts/cpu/i5-14600KF.png",
-        gpu: "/pc-parts/gpu/4070 SUPER TWIN EDGE ZOTAC.png",
+        cpu: "/pc-parts/cpu/R7 9700X.png",
+        gpu: "/pc-parts/gpu/7900XTX.png",
         case: "/pc-parts/case/O11 dynamic mini.png"
+      };
+    case "thehellhound":
+      return {
+        cpu: "/pc-parts/cpu/R7 9700X.png",
+        gpu: "/pc-parts/gpu/7900XT POWERCOLOR HELLBOUND.png",
+        case: "/pc-parts/case/4000D white.png"
+      };
+    case "nitrous":
+      return {
+        cpu: "/pc-parts/cpu/R7 9800X3D.png",
+        gpu: "/pc-parts/gpu/7900XTX SAPPHIRE NITRO.png",
+        case: "/pc-parts/case/phanteks xt pro ultra noir.png"
       };
     case "tuffy":
       return {
-        cpu: "/pc-parts/cpu/i7-14700KF.png",
+        cpu: "/pc-parts/cpu/R7 9800X3D.png",
         gpu: "/pc-parts/gpu/4070 TI SUPER TUF GAMING OC.png",
         case: "/pc-parts/case/tuf gt502 plus noir.png"
       };
-    case "thetaichi":
-      return {
-        cpu: "/pc-parts/cpu/R7 7800X3D.png",
-        gpu: "/pc-parts/gpu/7900XTX TAICHI.png",
-        case: "/pc-parts/case/5000D rgb noir.png"
-      };
     case "chillguy":
       return {
-        cpu: "/pc-parts/cpu/i9-14900KF.png",
-        gpu: "/pc-parts/gpu/4080 SUPER PNY EPIC-X RGB.png",
+        cpu: "/pc-parts/cpu/R7 9800X3D.png",
+        gpu: "/pc-parts/gpu/7900XTX SAPPHIRE NITRO.png",
         case: "/pc-parts/case/antec c8.png"
+      };
+    case "neonotte":
+      return {
+        cpu: "/pc-parts/cpu/R7 9800X3D.png",
+        gpu: "/pc-parts/gpu/4080 SUPER PALIT GamingPro.png",
+        case: "/pc-parts/case/view 270 plus tg argb noir.png
+"
       };
     case "themaster":
       return {
         cpu: "/pc-parts/cpu/R7 9800X3D.png",
-        gpu: "/pc-parts/gpu/7900XTX SAPPHIRE NITRO.png",
+        gpu: "/pc-parts/gpu/4080 SUPER PNY XLR8 Gaming VERTO EPIC-X RGB.png",
         case: "/pc-parts/case/hyte y70 noir.png"
       };
     case "theoverkill":
       return {
-        cpu: "/pc-parts/cpu/R7 9800X3D.png",
-        gpu: "/pc-parts/gpu/4080 SUPER MSI GAMING X SLIM.png",
+        cpu: "/pc-parts/cpu/R9 9950X.png",
+        gpu: "/pc-parts/gpu/4090 ROH STRIX GAMING OC.png",
         case: "/pc-parts/case/7000x rgb.png"
       };
     default:

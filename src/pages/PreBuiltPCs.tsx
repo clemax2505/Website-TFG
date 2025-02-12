@@ -26,7 +26,7 @@ export const priceRanges: PCConfig[] = [
   { 
     id: "viper", 
     name: "Viper", 
-    price: 1186.56, 
+    price: 1286.56, 
     description: "Ryzen 5 7600X & RX 6750 XT",
   },
   { 
@@ -38,7 +38,7 @@ export const priceRanges: PCConfig[] = [
   { 
     id: "phantomatic", 
     name: "Phantomatic", 
-    price: 1690.61, 
+    price: 1790.61, 
     description: "Ryzen 7 7700X & RX 7800 XT",
   },
   { 
@@ -56,43 +56,43 @@ export const priceRanges: PCConfig[] = [
   { 
     id: "thehellhound", 
     name: "The Hellhound", 
-    price: 2428.06, 
+    price: 2459.44, 
     description: "Ryzen 7 9700X & RX 7900 XT",
   },
   { 
     id: "nitrous", 
     name: "Nitrous", 
-    price: 2812.08, 
+    price: 2838.09, 
     description: "Ryzen 7 9800X3D & RX 7900 XTX",
   },
   { 
     id: "tuffy", 
     name: "Tuffy", 
-    price: 2934.53, 
+    price: 2997.95, 
     description: "Ryzen 7 9800X3D & RTX 4070 Ti SUPER",
   },
   { 
     id: "chillguy", 
     name: "Chill Guy", 
-    price: 3199.71, 
+    price: 3181.69, 
     description: "Ryzen 7 9800X3D & RX 7900 XTX",
   },
   { 
     id: "neonotte", 
     name: "Neo Notte", 
-    price: 3239.44, 
+    price: 3158.44, 
     description: "Ryzen 7 9800X3D & RTX 4080 SUPER",
   },
   { 
     id: "themaster", 
     name: "The Master", 
-    price: 3742.90, 
+    price: 3941.15, 
     description: "Ryzen 7 9800X3D & RTX 4080 SUPER",
   },
   { 
     id: "theoverkill", 
     name: "The Overkill", 
-    price: 6167.62, 
+    price: 6323.31, 
     description: "Ryzen 9 9950X & RTX 4090",
   }
 ];

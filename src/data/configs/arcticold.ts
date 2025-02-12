@@ -16,10 +16,6 @@ export const arcticold: PCConfigDetailed = {
     "PSU : Corsair RM1000X",
     "Ventilation : Configurations ventilée uniquement avec des AF120"
   ],
-  images: {
-    cpu: "/pc-parts/cpu/R7 7800X3D.png",
-    gpu: "/pc-parts/gpu/7900XTX TAICHI.png"
-  },
   gamePerformance: {
     fortnite: {
       fhd: { FPS_moyen: "300+" },

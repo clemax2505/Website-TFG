@@ -60,7 +60,7 @@ const getImagesForConfig = (configId: string): { cpu: string; gpu: string; case:
     case "thehellhound":
       return {
         cpu: "/pc-parts/cpu/R7 9700X.png",
-        gpu: "/pc-parts/gpu/7900XT POWERCOLOR HELLBOUND SPECTRAL.png",
+        gpu: "/pc-parts/gpu/7900XT POWERCOLOR HELLHOUND SPECTRAL.png",
         case: "/pc-parts/case/4000D white.png"
       };
     case "nitrous":

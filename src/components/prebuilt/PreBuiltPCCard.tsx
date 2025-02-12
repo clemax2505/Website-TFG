@@ -48,8 +48,8 @@ const getImagesForConfig = (configId: string): { cpu: string; gpu: string; case:
     case "arcticold":
       return {
         cpu: "/pc-parts/cpu/R7 7700X.png",
-        gpu: "/pc-parts/gpu/7900 GRE.png",
-        case: "/pc-parts/case/6500X noir.png"
+        gpu: "/pc-parts/gpu/7900GRE.png",
+        case: "/pc-parts/case/6500x noir.png"
       };
     case "infinity":
       return {

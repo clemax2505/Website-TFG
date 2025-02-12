@@ -20,13 +20,13 @@ export const priceRanges: PCConfig[] = [
   { 
     id: "cheapy", 
     name: "Cheapy", 
-    price: 1188.58, 
+    price: 1078.77, 
     description: "Ryzen 5 7500F & RX 6750 XT",
   },
   { 
     id: "viper", 
     name: "Viper", 
-    price: 1332.99, 
+    price: 1186.56, 
     description: "Ryzen 5 7600X & RX 6750 XT",
   },
   { 

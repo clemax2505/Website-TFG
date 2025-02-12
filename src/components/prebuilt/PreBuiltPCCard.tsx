@@ -42,14 +42,14 @@ const getImagesForConfig = (configId: string): { cpu: string; gpu: string; case:
     case "phantomatic":
       return {
         cpu: "/pc-parts/cpu/R7 7700X.png",
-        gpu: "/pc-parts/gpu/7800XT ASRock Phantom Gaming OC.png",
+        gpu: "/pc-parts/gpu/7800XT ASROCK PHANTOM GAMING.png",
         case: "/pc-parts/case/msi mag forge 100r noir.png"
       };
     case "arcticold":
       return {
         cpu: "/pc-parts/cpu/R7 7700X.png",
         gpu: "/pc-parts/gpu/7900 GRE.png",
-        case: "/pc-parts/case/6500X rgb noir.png"
+        case: "/pc-parts/case/6500X noir.png"
       };
     case "infinity":
       return {
@@ -60,7 +60,7 @@ const getImagesForConfig = (configId: string): { cpu: string; gpu: string; case:
     case "thehellhound":
       return {
         cpu: "/pc-parts/cpu/R7 9700X.png",
-        gpu: "/pc-parts/gpu/7900XT POWERCOLOR HELLBOUND.png",
+        gpu: "/pc-parts/gpu/7900XT POWERCOLOR HELLBOUND SPECTRAL.png",
         case: "/pc-parts/case/4000D white.png"
       };
     case "nitrous":
@@ -84,19 +84,19 @@ const getImagesForConfig = (configId: string): { cpu: string; gpu: string; case:
     case "neonotte":
       return {
         cpu: "/pc-parts/cpu/R7 9800X3D.png",
-        gpu: "/pc-parts/gpu/4080 SUPER PALIT GamingPro.png",
+        gpu: "/pc-parts/gpu/4080 SUPER PALIT GAMING PRO.png",
         case: "/pc-parts/case/view 270 plus tg argb noir.png"
       };
     case "themaster":
       return {
         cpu: "/pc-parts/cpu/R7 9800X3D.png",
-        gpu: "/pc-parts/gpu/4080 SUPER PNY XLR8 Gaming VERTO EPIC-X RGB.png",
+        gpu: "/pc-parts/gpu/4080 SUPER PNY EPIC-X RGB.png",
         case: "/pc-parts/case/hyte y70 noir.png"
       };
     case "theoverkill":
       return {
         cpu: "/pc-parts/cpu/R9 9950X.png",
-        gpu: "/pc-parts/gpu/4090 ROH STRIX GAMING OC.png",
+        gpu: "/pc-parts/gpu/4090 ASUS ROG STRIX.png",
         case: "/pc-parts/case/7000x rgb.png"
       };
     default:

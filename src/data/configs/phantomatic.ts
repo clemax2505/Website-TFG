@@ -4,18 +4,17 @@ import { PCConfigDetailed } from "../types";
 export const phantomatic: PCConfigDetailed = {
   id: "phantomatic",
   name: "Phantomatic",
-  price: 2938.45,
-  description: "Ryzen 7 7800X3D & RX 7900 XTX",
+  price: 1690.61,
+  description: "Ryzen 7 7700X & RX 7800 XT",
   components: [
-    "CPU : AMD Ryzen 7 7800X3D",
-    "Refroidissement : ARCTIC Liquid Freezer III 360 (avec AF120)",
-    "Carte mère : MSI X670E GAMING PLUS WIFI",
-    "RAM : 32 Go DDR5 6000 MHz G.Skill Trident Z5 Neo RGB",
-    "Stockage : KingStone KC3000 2 To (NVMe)",
-    "GPU : RX 7900 XTX ASRock Taichi white",
-    "Boitier : Corsair 5000D RGB Airflow",
-    "PSU : Corsair RM1000X",
-    "Ventilation : Configurations ventilée uniquement avec des AF120"
+    "CPU : AMD Ryzen 7 7700X",
+    "Refroidissement : ARCTIC Liquid Freezer III 240 A-RGB",
+    "Carte mère : Gigabyte B650 EAGLE AX",
+    "RAM : Kingston FURY Beast RGB 32 GB (2 x 16 GB) DDR5-6000 CL30",
+    "Stockage : Western Digital Black SN770 2 TB (NVMe)",
+    "GPU : RX 7800 XT ASRock Phantom Gaming OC",
+    "Boitier : MSI MAG FORGE 100R",
+    "PSU : MSI MAG A850GL",
   ],
   images: {
     cpu: "/pc-parts/cpu/R7 7800X3D.png",

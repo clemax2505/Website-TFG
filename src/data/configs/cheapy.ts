@@ -4,18 +4,17 @@ import { PCConfigDetailed } from "../types";
 export const cheapy: PCConfigDetailed = {
   id: "cheapy",
   name: "Cheapy",
-  price: 2938.45,
-  description: "Ryzen 7 7800X3D & RX 7900 XTX",
+  price: 978.77,
+  description: "Ryzen 5 7500F & RX 6750 XT",
   components: [
-    "CPU : AMD Ryzen 7 7800X3D",
-    "Refroidissement : ARCTIC Liquid Freezer III 360 (avec AF120)",
-    "Carte mère : MSI X670E GAMING PLUS WIFI",
-    "RAM : 32 Go DDR5 6000 MHz G.Skill Trident Z5 Neo RGB",
-    "Stockage : KingStone KC3000 2 To (NVMe)",
-    "GPU : RX 7900 XTX ASRock Taichi white",
-    "Boitier : Corsair 5000D RGB Airflow",
-    "PSU : Corsair RM1000X",
-    "Ventilation : Configurations ventilée uniquement avec des AF120"
+    "CPU : AMD Ryzen 5 7500F",
+    "Refroidissement : Thermalright Assassin X Refined SE RGB",
+    "Carte mère : Gigabyte B650 EAGLE AX",
+    "RAM : Patriot Viper Venom 32 GB (2 x 16 GB) DDR5-6000 CL30",
+    "Stockage : Patriot P400 Lite 1 TB (NVMe)",
+    "GPU : RX 6750 XT XFX Speedster QICK 319",
+    "Boitier : MSI MAG FORGE 112R",
+    "PSU : MSI MAG A650BN",
   ],
   images: {
     cpu: "/pc-parts/cpu/R7 7800X3D.png",

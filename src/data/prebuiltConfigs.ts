@@ -1,4 +1,4 @@
-import { PCConfigDetailed } from "./types";
+import { PCConfigDetailed } from "./types.ts";
 import { thebeginning } from "./configs/thebeginning.ts";
 import { littleGuy } from "./configs/littleguy.ts";
 import { cheapy } from "./configs/cheapy.ts";

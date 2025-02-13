@@ -3,19 +3,20 @@ import { PCConfigDetailed } from "../types";
 export const arcticold: PCConfigDetailed = {
   id: "arcticold",
   name: "Arcticold",
-  price: 2938.45,
-  description: "Ryzen 7 7800X3D & RX 7900 XTX",
+  price: 1942.93,
+  description: "Ryzen 7 7700X & RX 7900 GRE",
   components: [
-    "CPU : AMD Ryzen 7 7800X3D",
-    "Refroidissement : ARCTIC Liquid Freezer III 360 (avec AF120)",
-    "Carte mère : MSI X670E GAMING PLUS WIFI",
-    "RAM : 32 Go DDR5 6000 MHz G.Skill Trident Z5 Neo RGB",
-    "Stockage : KingStone KC3000 2 To (NVMe)",
-    "GPU : RX 7900 XTX ASRock Taichi white",
-    "Boitier : Corsair 5000D RGB Airflow",
-    "PSU : Corsair RM1000X",
-    "Ventilation : Configurations ventilée uniquement avec des AF120"
+    "CPU : AMD Ryzen 7 7700X",
+    "Refroidissement : ARCTIC Liquid Freezer III 360 A-RGB",
+    "Carte mère : Gigabyte B650 EAGLE AX",
+    "RAM : Lexar Ares RGB 32 GB (2 x 16 GB) DDR5-6000 CL30",
+    "Stockage : Western Digital Black SN770 2 TB (NVMe)",
+    "GPU : RX 7900 GRE XFX",
+    "Boitier : Corsair 6500X",
+    "PSU : MSI MPG A1000G",
+    "Ventilation : Configurations ventilée uniquement avec des ARCTIC P12"
   ],
+  
   gamePerformance: {
     fortnite: {
       fhd: { FPS_moyen: "300+" },

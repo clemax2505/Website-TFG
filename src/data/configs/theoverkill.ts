@@ -1,20 +1,20 @@
 import { PCConfigDetailed } from "../types";
 
-export const theOverkill: PCConfigDetailed = {
+export const theoverkill: PCConfigDetailed = {
   id: "theoverkill",
   name: "The Overkill",
-  price: 4499.44,
-  description: "Ryzen 7 9800X3D & RTX 4080 Super",
+  price: 6323.31,
+  description: "Ryzen 9 9950X & RTX 4090",
   components: [
-    "CPU : AMD Ryzen 7 9800X3D",
-    "Refroidissement : ARCTIC Liquid Freezer III 360 (avec RX120)",
-    "Carte mère : Gigabyte X870E AORUS MASTER",
-    "RAM : 64 Go DDR5 6000 MHz G.Skill Trident Z5 Neo RGB",
-    "Stockage : Kingston KC3000 2 To (NVMe)",
-    "GPU : RX 7900 XTX Sapphire NITRO+",
-    "Boitier : Corsair iCUE LINK 6500X RGB",
-    "PSU : Corsair RM1200x SHIFT",
-    "Ventilation : Configurations ventilée uniquement avec des RX120 LINK"
+    "CPU : AMD Ryzen 9 9950X",
+    "Refroidissement : ARCTIC Liquid Freezer III 420 A-RGB (avec AF120)",
+    "Carte mère : Asus ROG CROSSHAIR X870E HERO",
+    "RAM : G.Skill Trident Z5 Neo RGB 64 GB (4 x 16 GB) DDR5-6000 CL30",
+    "Stockage : Samsung 990 Pro 4 TB (NVMe)",
+    "GPU : RTX 4090 Asus ROG STRIX GAMING OC",
+    "Boitier : Corsair iCUE 7000X RGB",
+    "PSU : SeaSonic VERTEX GX-1200",
+    "Ventilation : Configurations ventilée uniquement avec des RX140"
   ],
   images: {
     cpu: "/pc-parts/cpu/R7 9800X3D.png",

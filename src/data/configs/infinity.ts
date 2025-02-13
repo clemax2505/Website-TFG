@@ -3,18 +3,18 @@ import { PCConfigDetailed } from "../types";
 export const infinity: PCConfigDetailed = {
   id: "infinity",
   name: "Infinity",
-  price: 2460.64,
-  description: "Intel i5-14600KF & RTX 4070 Super",
+  price: 2297.79,
+  description: "Ryzen 7 9700X & RX 7900 XTX",
   components: [
-    "CPU : Intel Core i5-14600KF",
-    "Refroidissement : ARCTIC Liquid Freezer III 240",
-    "Carte mère : MSI MPG Z790 Edge TI Max WiFi",
-    "RAM : 32 Go DDR5 6000 MHz Lexar THOR RGB",
-    "Stockage : WD_black SN770 2 To (NVMe)",
-    "GPU : RTX 4070 super Zotac Twin Edge",
-    "Boitier : Lian Li O11 Dynamic Mini",
-    "PSU : Corsair SF1000",
-    "Ventilation : Configurations ventilée uniquement avec des SL Infinity"
+    "CPU : AMD Ryzen 7 9700X",
+    "Refroidissement : ARCTIC Liquid Freezer III 240 A-RGB (avec SL-Infinity)",
+    "Carte mère : Gigabyte B650 EAGLE AX",
+    "RAM : G.Skill Ripjaws M5 RGB 32 GB (2 x 16 GB) DDR5-6000 CL30",
+    "Stockage : Western Digital Black SN770 2 TB (NVMe)",
+    "GPU : RX 7900 XTX XFX Speedster MERC 310",
+    "Boitier : Lian Li O11 Dynamic Mini ",
+    "PSU : Corsair SF1000L",
+    "Ventilation : Configurations ventilée uniquement avec des SL-Infinity"
   ],
   images: {
     cpu: "/pc-parts/cpu/i5-14600KF.png",

@@ -3,19 +3,19 @@ import { PCConfigDetailed } from "../types";
 export const nitrous: PCConfigDetailed = {
   id: "nitrous",
   name: "Nitrous",
-  price: 2938.45,
-  description: "Ryzen 7 7800X3D & RX 7900 XTX",
+  price: 2738.09,
+  description: "Ryzen 7 9800X3D & RX 7900 XTX",
   components: [
     "CPU : AMD Ryzen 7 7800X3D",
-    "Refroidissement : ARCTIC Liquid Freezer III 360 (avec AF120)",
-    "Carte mère : MSI X670E GAMING PLUS WIFI",
-    "RAM : 32 Go DDR5 6000 MHz G.Skill Trident Z5 Neo RGB",
-    "Stockage : KingStone KC3000 2 To (NVMe)",
-    "GPU : RX 7900 XTX ASRock Taichi white",
-    "Boitier : Corsair 5000D RGB Airflow",
-    "PSU : Corsair RM1000X",
-    "Ventilation : Configurations ventilée uniquement avec des AF120"
+    "Refroidissement : ARCTIC Liquid Freezer III 360 A-RGB",
+    "Carte mère : Gigabyte X870 AORUS ELITE WIFI7",
+    "RAM : G.Skill Trident Z5 Neo RGB 32 GB (2 x 16 GB) DDR5-6000 CL30",
+    "Stockage : Kingston KC3000 2.048 TB (NVMe)",
+    "GPU : RX 7900 XTX Sapphire NITRO+",
+    "Boitier : Phanteks XT PRO ULTRA",
+    "PSU : Corsair RM1000x (2024)",
   ],
+  
   images: {
     cpu: "/pc-parts/cpu/R7 7800X3D.png",
     gpu: "/pc-parts/gpu/7900XTX TAICHI.png"

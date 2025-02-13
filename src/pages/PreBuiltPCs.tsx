@@ -32,7 +32,7 @@ export const priceRanges: PCConfig[] = [
   { 
     id: "pulsar", 
     name: "Pulsar", 
-    price: 1433.17, 
+    price: 1479.17, 
     description: "Ryzen 5 7600X & RX 7800 XT",
   },
   { 

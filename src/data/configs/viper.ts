@@ -3,17 +3,17 @@ import { PCConfigDetailed } from "../types";
 export const viper: PCConfigDetailed = {
   id: "viper",
   name: "Viper",
-  price: 1233.89,
-  description: "Ryzen 7 5700X & RTX 4060",
+  price: 1186.56,
+  description: "Ryzen 5 7600X & RX 6750 XT",
   components: [
-    "CPU : AMD Ryzen 7 5700X",
-    "Refroidissement : MSI 240R V2",
-    "Carte mère : ASUS ROG B550-F Gaming WiFi II",
-    "RAM : 16 Go DDR4 3200 MHz Patriot Viper Steel",
-    "Stockage : WD_black SN770 2 To (NVMe)",
-    "GPU : RTX 4060 EAGLE OC",
-    "Boitier : Corsair 3000D Airflow",
-    "PSU : ASUS Prime AP-750G"
+    "CPU : AMD Ryzen 5 7600X",
+    "Refroidissement : Thermalright Assassin X Refined SE RGB",
+    "Carte mère : Gigabyte B650 EAGLE AX",
+    "RAM : Patriot Viper Venom 32 GB (2 x 16 GB) DDR5-6000 CL30",
+    "Stockage : Western Digital Black SN770 1 TB (NVMe)",
+    "GPU : RX 6750 XT XFX Speedster QICK 319",
+    "Boitier : Corsair 3000D AIRFLOW",
+    "PSU : MSI MAG A650GL",
   ],
   images: {
     cpu: "/pc-parts/cpu/R7 5700X.png",

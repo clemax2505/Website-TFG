@@ -1,19 +1,19 @@
 import { PCConfigDetailed } from "./types";
-import { thebeginning } from "./configs/thebeginning";
-import { littleGuy } from "./configs/littleguy";
-import { cheapy } from "./configs/cheapy";
-import { viper } from "./configs/viper";
-import { pulsar } from "./configs/pulsar";
-import { phantomatic } from "./configs/phantomatic";
-import { arcticold } from "./configs/arcticold";
-import { infinity } from "./configs/infinity";
-import { thehellhound } from "./configs/thehellhound";
-import { nitrous } from "./configs/nitrous";
-import { tuffy } from "./configs/tuffy";
-import { chillguy } from "./configs/chillguy";
-import { neonotte } from "./configs/neonotte";
-import { themaster } from "./configs/themaster";
-import { theoverkill } from "./configs/theoverkill";
+import { thebeginning } from "./configs/thebeginning.ts";
+import { littleGuy } from "./configs/littleguy.ts";
+import { cheapy } from "./configs/cheapy.ts";
+import { viper } from "./configs/viper.ts";
+import { pulsar } from "./configs/pulsar.ts";
+import { phantomatic } from "./configs/phantomatic.ts";
+import { arcticold } from "./configs/arcticold.ts";
+import { infinity } from "./configs/infinity.ts";
+import { thehellhound } from "./configs/thehellhound.ts";
+import { nitrous } from "./configs/nitrous.ts";
+import { tuffy } from "./configs/tuffy.ts";
+import { chillguy } from "./configs/chillguy.ts";
+import { neonotte } from "./configs/neonotte.ts";
+import { themaster } from "./configs/themaster.ts";
+import { theoverkill } from "./configs/theoverkill.ts";
 
 export const prebuiltConfigs: { [key: string]: PCConfigDetailed } = {
   thebeginning: thebeginning,

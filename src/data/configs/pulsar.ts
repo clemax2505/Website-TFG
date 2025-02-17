@@ -1,19 +1,19 @@
 import { PCConfigDetailed } from "../types";
 
-export const airflowPrime: PCConfigDetailed = {
-  id: "airflowprime",
-  name: "Airflow Prime",
-  price: 1442.18,
-  description: "Ryzen 7 5800X & RX 7700 XT",
+export const pulsar: PCConfigDetailed = {
+  id: "pulsar",
+  name: "Pulsar",
+  price: 1355.91,
+  description: "Ryzen 5 7600X & RX 7800 XT",
   components: [
-    "CPU : AMD Ryzen 7 5800X",
-    "Refroidissement : MSI 240R V2",
-    "Carte mère : ASUS ROG B550-F Gaming WiFi II",
-    "RAM : 32 Go DDR4 3600 MHz Lexar Ares RGB",
-    "Stockage : WD_black SN770 2 To (NVMe)",
-    "GPU : RX 7700 XT Gigabyte Gaming OC",
-    "Boitier : Corsair 4000D Airflow",
-    "PSU : ASUS Prime AP-750G"
+    "CPU : AMD Ryzen 5 7600X",
+    "Refroidissement : Thermalright Assassin X Refined SE RGB",
+    "Carte mère : Gigabyte B650 EAGLE AX",
+    "RAM : Lexar Ares RGB 32 GB (2 x 16 GB) DDR5-6000 CL30",
+    "Stockage : Patriot P400 Lite 2 TB (NVMe)",
+    "GPU : RX 7800 XT Sapphire PULSE",
+    "Boitier : Phanteks XT PRO ULTRA",
+    "PSU : MSI MAG A750GL",
   ],
   images: {
     cpu: "/pc-parts/cpu/R7 5800X.png",

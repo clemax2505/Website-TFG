@@ -1,20 +1,20 @@
 import { PCConfigDetailed } from "../types";
 
-export const theHellbound: PCConfigDetailed = {
-  id: "thehellbound",
-  name: "The HellBound",
-  price: 1978.89,
-  description: "i5-14600KF & RX 7800 XT",
+export const thehellhound: PCConfigDetailed = {
+  id: "thehellhound",
+  name: "The Hellhound",
+  price: 2359.44,
+  description: "Ryzen 7 9800X3D & RX 7900 XTX",
   components: [
-    "CPU : Intel Core i5-14600KF",
-    "Refroidissement : ARCTIC Liquid Freezer III 240 White",
-    "Carte mère : ASUS Prime Z790-P WiFi",
-    "RAM : 32 Go DDR5 6000 MHz G.Skill Ripjaws M5 RGB",
-    "Stockage : WD_black SN770 2 To (NVMe)",
-    "GPU : RX 7800 XT PowerColor HellBound Spectral",
-    "Boitier : Corsair 3000D RGB Airflow White",
-    "PSU : ASUS Prime AP-750G",
-    "Ventilation : Configurations ventilée uniquement avec des RX120 LINK"
+    "CPU : AMD Ryzen 7 7800X3D",
+    "Refroidissement : ARCTIC Liquid Freezer III 240 A-RGB Blanc",
+    "Carte mère : Gigabyte B650 AORUS ELITE AX ICE",
+    "RAM : G.Skill Ripjaws M5 RGB 32 GB (2 x 16 GB) DDR5-6000 CL30 Blanc",
+    "Stockage : Kingston KC3000 2.048 TB(NVMe)",
+    "GPU : RX 7900 XTX PowerColor Hellhound OC",
+    "Boitier : Corsair 4000D Airflow",
+    "PSU : MSI MAG A850GL",
+    "Ventilation : Configurations ventilée uniquement avec des SP120 Blanc"
   ],
   images: {
     cpu: "/pc-parts/cpu/i5-14600KF.png",

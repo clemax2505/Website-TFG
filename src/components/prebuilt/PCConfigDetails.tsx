@@ -12,8 +12,8 @@ const stripeLinks: { [key: string]: string } = {
   thebeginning: "https://buy.stripe.com/3cs02RcxD1Zp8EM9AC",
   littleguy: "https://buy.stripe.com/3cs4j7btzdI77AIfZ1",
   viper: "https://buy.stripe.com/5kAcPD2X347x5sA28c",
-  airflowprime: "https://buy.stripe.com/8wM9Dr55bgUj8EM149",
-  thehellbound: "https://buy.stripe.com/4gwaHv7djbzZ5sAaEK",
+  pulsar: "https://buy.stripe.com/8wM9Dr55bgUj8EM149",
+  thehellhound: "https://buy.stripe.com/4gwaHv7djbzZ5sAaEK",
   infinity: "https://buy.stripe.com/4gw5nb9lr1Zp8EMbIP",
   tuffy: "https://buy.stripe.com/7sI16V417fQfg7ecMU",
   thetaichi: "https://buy.stripe.com/5kA5nb7dj7jJ1ck6ox",
@@ -68,7 +68,7 @@ const PCConfigDetails = () => {
         <div className="space-y-8">
           <Card className="glass-card">
             <CardContent className="p-6">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-3 gap-4">
                 <div className="space-y-2">
                   <img
                     src={selectedConfig.images.cpu}
@@ -84,6 +84,14 @@ const PCConfigDetails = () => {
                     className="w-full h-48 object-contain"
                   />
                   <p className="text-center text-sm">Carte graphique</p>
+                </div>
+                <div className="space-y-2">
+                  <img
+                    src="/placeholder.svg"
+                    alt="Boitier"
+                    className="w-full h-48 object-contain"
+                  />
+                  <p className="text-center text-sm">Boitier</p>
                 </div>
               </div>
             </CardContent>

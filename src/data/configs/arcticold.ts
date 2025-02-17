@@ -19,7 +19,7 @@ export const arcticold: PCConfigDetailed = {
   
   images: {
     cpu: "/pc-parts/cpu/R7 7700X.png",
-    gpu: "/pc-parts/gpu/7700GRE.png",
+    gpu: "/pc-parts/gpu/7900GRE.png",
     case: "/pc-parts/case/6500x noir.png"
   },
   

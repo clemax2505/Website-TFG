@@ -23,13 +23,13 @@ const getImagesForConfig = (configId: string): { cpu: string; gpu: string; case:
       };
     case "cheapy":
       return {
-        cpu: "/pc-parts/cpu/R5 7600X.png",
+        cpu: "/pc-parts/cpu/R5 7500F.png",
         gpu: "/pc-parts/gpu/6750XT.png",
         case: "/pc-parts/case/3000D noir.png"
       };
     case "viper":
       return {
-        cpu: "/pc-parts/cpu/R5 7500F.png",
+        cpu: "/pc-parts/cpu/R5 7600X.png",
         gpu: "/pc-parts/gpu/6750XT.png",
         case: "/pc-parts/case/msi mag forge 112r noir.png"
       };

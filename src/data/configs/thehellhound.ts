@@ -17,8 +17,9 @@ export const thehellhound: PCConfigDetailed = {
     "Ventilation : Configurations ventilée uniquement avec des SP120 Blanc"
   ],
   images: {
-    cpu: "/pc-parts/cpu/i5-14600KF.png",
-    gpu: "/pc-parts/gpu/7800XT POWERCOLOR HELLBOUND.png"
+    cpu: "/pc-parts/cpu/R7 9800X3D.png",
+    gpu: "/pc-parts/gpu/7900XTX POWERCOLOR HELLBOUND.png",
+    case: "/pc-parts/case/4000D white.png"
   },
   gamePerformance: {
     fortnite: {

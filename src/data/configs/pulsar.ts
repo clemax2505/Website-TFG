@@ -16,8 +16,9 @@ export const pulsar: PCConfigDetailed = {
     "PSU : MSI MAG A750GL",
   ],
   images: {
-    cpu: "/pc-parts/cpu/R7 5800X.png",
-    gpu: "/pc-parts/gpu/7700XT GIGABYTE GAMING OC.png"
+    cpu: "/pc-parts/cpu/R5 7600X.png",
+    gpu: "/pc-parts/gpu/7800XT PULSE.png",
+    case: "/pc-parts/case/phanteks xt pro ultra noir.png"
   },
   gamePerformance: {
     fortnite: {

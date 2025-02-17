@@ -17,8 +17,9 @@ export const infinity: PCConfigDetailed = {
     "Ventilation : Configurations ventilée uniquement avec des SL-Infinity"
   ],
   images: {
-    cpu: "/pc-parts/cpu/i5-14600KF.png",
-    gpu: "/pc-parts/gpu/4070 SUPER TWIN EDGE ZOTAC.png"
+    cpu: "/pc-parts/cpu/R7 9700X.png",
+    gpu: "/pc-parts/gpu/7900XTX.png",
+    case: "/pc-parts/case/O11 dynamic mini.png"
   },
   gamePerformance: {
     fortnite: {

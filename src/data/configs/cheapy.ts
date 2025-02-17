@@ -17,8 +17,8 @@ export const cheapy: PCConfigDetailed = {
     "PSU : MSI MAG A650BN",
   ],
   images: {
-    cpu: "/pc-parts/cpu/R7 7800X3D.png",
-    gpu: "/pc-parts/gpu/7900XTX TAICHI.png"
+    cpu: "/pc-parts/cpu/R5 7500F.png",
+    gpu: "/pc-parts/gpu/6750XT.png"
   },
   gamePerformance: {
     fortnite: {

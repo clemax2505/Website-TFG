@@ -17,6 +17,12 @@ export const arcticold: PCConfigDetailed = {
     "Ventilation : Configurations ventilée uniquement avec des ARCTIC P12"
   ],
   
+  images: {
+    cpu: "/pc-parts/cpu/R7 7700X.png",
+    gpu: "/pc-parts/gpu/7700GRE.png",
+    case: "/pc-parts/case/6500x noir.png"
+  },
+  
   gamePerformance: {
     fortnite: {
       fhd: { FPS_moyen: "300+" },

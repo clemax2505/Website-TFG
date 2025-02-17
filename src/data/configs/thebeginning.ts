@@ -17,7 +17,8 @@ export const thebeginning: PCConfigDetailed = {
   ],
   images: {
     cpu: "/pc-parts/cpu/R5 5600.png",
-    gpu: "/pc-parts/gpu/6650XT.png"
+    gpu: "/pc-parts/gpu/6650XT.png",
+    case: "/pc-parts/case/tecware forge M2.png"
   },
   gamePerformance: {
     fortnite: {

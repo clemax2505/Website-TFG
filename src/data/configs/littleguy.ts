@@ -16,8 +16,9 @@ export const littleguy: PCConfigDetailed = {
     "PSU : MSI MAG A650BN",
   ],
   images: {
-    cpu: "/pc-parts/cpu/R5 5600.png",
-    gpu: "/pc-parts/gpu/6750XT.png"
+    cpu: "/pc-parts/cpu/R5 7500F.png",
+    gpu: "/pc-parts/gpu/6650XT.png",
+    case: "/pc-parts/case/msi mag forge 100R noir.png"
   },
   gamePerformance: {
     fortnite: {

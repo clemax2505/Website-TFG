@@ -24,7 +24,7 @@ export const prebuiltConfigs: { [key: string]: PCConfigDetailed } = {
   phantomatic: phantomatic,
   arcticold: arcticold,
   infinity: infinity,
-  thehellhound: thetellhound,
+  thehellhound: thehellhound,
   nitrous: nitrous,
   tuffy: tuffy,
   chillguy: chillguy,

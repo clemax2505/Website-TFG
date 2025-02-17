@@ -18,7 +18,8 @@ export const themaster: PCConfigDetailed = {
   ],
   images: {
     cpu: "/pc-parts/cpu/R7 9800X3D.png",
-    gpu: "/pc-parts/gpu/7900XTX SAPPHIRE NITRO.png"
+    gpu: "/pc-parts/gpu/4080 SUPER PNY EPIC-X RGB.png",
+    case: "/pc-parts/case/hyte y70 noir.png"
   },
   gamePerformance: {
     fortnite: {

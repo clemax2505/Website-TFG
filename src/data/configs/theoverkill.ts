@@ -17,8 +17,9 @@ export const theoverkill: PCConfigDetailed = {
     "Ventilation : Configurations ventilée uniquement avec des RX140"
   ],
   images: {
-    cpu: "/pc-parts/cpu/R7 9800X3D.png",
-    gpu: "/pc-parts/gpu/4080 SUPER MSI GAMING X SLIM.png"
+    cpu: "/pc-parts/cpu/R9 9950X.png",
+    gpu: "/pc-parts/gpu/4090 ASUS ROG STRIX.png",
+    case: "/pc-parts/case/7000x rgb.png"
   },
   gamePerformance: {
     fortnite: {

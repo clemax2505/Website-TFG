@@ -15,10 +15,10 @@ export const nitrous: PCConfigDetailed = {
     "Boitier : Phanteks XT PRO ULTRA",
     "PSU : Corsair RM1000x (2024)",
   ],
-  
   images: {
-    cpu: "/pc-parts/cpu/R7 7800X3D.png",
-    gpu: "/pc-parts/gpu/7900XTX TAICHI.png"
+    cpu: "/pc-parts/cpu/R7 9800X3D.png",
+    gpu: "/pc-parts/gpu/7900XTX SAPPHIRE NITRO.png",
+    case: "/pc-parts/case/phanteks xt pro ultra noir.png"
   },
   gamePerformance: {
     fortnite: {

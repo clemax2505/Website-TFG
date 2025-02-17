@@ -17,8 +17,9 @@ export const chillguy: PCConfigDetailed = {
     "Ventilation : Configurations ventilée uniquement avec des AF120"
   ],
   images: {
-    cpu: "/pc-parts/cpu/i9-14900KF.png",
-    gpu: "/pc-parts/gpu/4080 SUPER PNY EPIC-X RGB.png"
+    cpu: "/pc-parts/cpu/R7 9800X3D.png",
+    gpu: "/pc-parts/gpu/7900XTX SAPPHIRE NITRO.png",
+    case: "/pc-parts/case/antec c8.png"
   },
   gamePerformance: {
     fortnite: {

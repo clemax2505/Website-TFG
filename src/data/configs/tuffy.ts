@@ -17,8 +17,9 @@ export const tuffy: PCConfigDetailed = {
     "Ventilation : Configurations ventilée uniquement avec des TF120"
   ],
   images: {
-    cpu: "/pc-parts/cpu/i7-14700KF.png",
-    gpu: "/pc-parts/gpu/4070 TI SUPER TUF GAMING OC.png"
+    cpu: "/pc-parts/cpu/R7 9800X3D.png",
+    gpu: "/pc-parts/gpu/4070 Ti SUPER TUF GAMING OC.png",
+    case: "/pc-parts/case/tuf gt502 plus noir.png"
   },
   gamePerformance: {
     fortnite: {

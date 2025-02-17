@@ -17,8 +17,9 @@ export const phantomatic: PCConfigDetailed = {
     "PSU : MSI MAG A850GL",
   ],
   images: {
-    cpu: "/pc-parts/cpu/R7 7800X3D.png",
-    gpu: "/pc-parts/gpu/7900XTX TAICHI.png"
+    cpu: "/pc-parts/cpu/R7 7700X.png",
+    gpu: "/pc-parts/gpu/7800XT ASROCK PHANTOM GAMING.png",
+    case: "/pc-parts/case/msi mag forge 100r noir.png"
   },
   gamePerformance: {
     fortnite: {

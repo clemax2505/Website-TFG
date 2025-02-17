@@ -16,8 +16,9 @@ export const viper: PCConfigDetailed = {
     "PSU : MSI MAG A650GL",
   ],
   images: {
-    cpu: "/pc-parts/cpu/R7 5700X.png",
-    gpu: "/pc-parts/gpu/4060 EAGLE OC.png"
+    cpu: "/pc-parts/cpu/R7 7600X.png",
+    gpu: "/pc-parts/gpu/6750XT.png",
+    case: "/pc-parts/case/300D noir.png"
   },
   gamePerformance: {
     fortnite: {

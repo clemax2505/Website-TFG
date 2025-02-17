@@ -17,8 +17,9 @@ export const neonotte: PCConfigDetailed = {
     "Ventilation : Configurations ventilée uniquement avec des CT120"
   ],
   images: {
-    cpu: "/pc-parts/cpu/R7 7800X3D.png",
-    gpu: "/pc-parts/gpu/7900XTX TAICHI.png"
+    cpu: "/pc-parts/cpu/R7 9800X3D.png",
+    gpu: "/pc-parts/gpu/4080 SUPER PALIT GAMING OC.png",
+    case: "/pc-parts/case/view 270 plus tg argb noir.png"
   },
   gamePerformance: {
     fortnite: {

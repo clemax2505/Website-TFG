@@ -18,7 +18,8 @@ export const cheapy: PCConfigDetailed = {
   ],
   images: {
     cpu: "/pc-parts/cpu/R5 7500F.png",
-    gpu: "/pc-parts/gpu/6750XT.png"
+    gpu: "/pc-parts/gpu/6750XT.png",
+    case: "/pc-parts/case/msi mag forge 112r noir.png"
   },
   gamePerformance: {
     fortnite: {

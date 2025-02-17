@@ -1,6 +1,6 @@
 import { PCConfigDetailed } from "./types";
 import { thebeginning } from "./configs/thebeginning";
-import { littleGuy } from "./configs/littleguy";
+import { littleguy } from "./configs/littleguy";
 import { cheapy } from "./configs/cheapy";
 import { viper } from "./configs/viper";
 import { pulsar } from "./configs/pulsar";

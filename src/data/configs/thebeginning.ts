@@ -1,9 +1,8 @@
 import { PCConfigDetailed } from "../types";
-
 export const thebeginning: PCConfigDetailed = {
   id: "the beginning",
   name: "The Beginning",
-  price: 739.38,
+  price: 839.38,
   description: "Ryzen 5 5600 & RX 6650 XT",
   components: [
     "CPU : AMD Ryzen 5 5600",
@@ -20,7 +19,7 @@ export const thebeginning: PCConfigDetailed = {
     gpu: "/pc-parts/gpu/6650XT.png",
     case: "/pc-parts/case/tecware forge M2.png"
   },
-gamePerformance: {
+  gamePerformance: {
     warzone: {
         moyen: {
             fhd: { FPS_moyen: "115" },

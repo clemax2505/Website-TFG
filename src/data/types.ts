@@ -13,7 +13,6 @@ export interface PCPerformance {
 export interface GamePerformance {
     moyen : {
       fhd: PCPerformance;
-      "2k": PCPerformance;
       "4k": PCPerformance;
 }
     ultra : {

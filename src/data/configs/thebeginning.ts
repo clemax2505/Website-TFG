@@ -52,7 +52,6 @@ gamePerformance: {
       	   fhd: { FPS_moyen: "--" },
       	   "2k": { FPS_moyen: "--" },
       	   "4k": { FPS_moyen: "--" }
-	}
     },
     rdr2: {
 	moyen: {
@@ -63,7 +62,6 @@ gamePerformance: {
       	   fhd: { FPS_moyen: "--" },
       	   "2k": { FPS_moyen: "--" },
       	   "4k": { FPS_moyen: "--" }
-	}
     },
     valorant: {
 	moyen: {
@@ -74,7 +72,6 @@ gamePerformance: {
       	   fhd: { FPS_moyen: "--" },
       	   "2k": { FPS_moyen: "--" },
       	   "4k": { FPS_moyen: "--" }
-	}
     }
   }
 };

@@ -42,36 +42,39 @@ gamePerformance: {
             "2k": { FPS_moyen: "--" },
             "4k": { FPS_moyen: "--" }
         }
-    }, 
+    },
     minecraft: {
-	moyen: { 
-      	   fhd: { FPS_moyen: "335" },
-      	   "4k": { FPS_moyen: "335" }
-	},
-	ultra: {
-      	   fhd: { FPS_moyen: "--" },
-      	   "2k": { FPS_moyen: "--" },
-      	   "4k": { FPS_moyen: "--" }
+        moyen: {
+            fhd: { FPS_moyen: "335" },
+            "4k": { FPS_moyen: "335" }
+        },
+        ultra: {
+            fhd: { FPS_moyen: "--" },
+            "2k": { FPS_moyen: "--" },
+            "4k": { FPS_moyen: "--" }
+        }
     },
     rdr2: {
-	moyen: {
-      	   fhd: { FPS_moyen: "100" },
-      	   "4k": { FPS_moyen: "45" }
-	},
-	ultra: {
-      	   fhd: { FPS_moyen: "--" },
-      	   "2k": { FPS_moyen: "--" },
-      	   "4k": { FPS_moyen: "--" }
+        moyen: {
+            fhd: { FPS_moyen: "100" },
+            "4k": { FPS_moyen: "45" }
+        },
+        ultra: {
+            fhd: { FPS_moyen: "--" },
+            "2k": { FPS_moyen: "--" },
+            "4k": { FPS_moyen: "--" }
+        }
     },
     valorant: {
-	moyen: {
-      	   fhd: { FPS_moyen: "365" },
-      	   "4k": { FPS_moyen: "335" }
-	},
-	ultra: {
-      	   fhd: { FPS_moyen: "--" },
-      	   "2k": { FPS_moyen: "--" },
-      	   "4k": { FPS_moyen: "--" }
+        moyen: {
+            fhd: { FPS_moyen: "365" },
+            "4k": { FPS_moyen: "335" }
+        },
+        ultra: {
+            fhd: { FPS_moyen: "--" },
+            "2k": { FPS_moyen: "--" },
+            "4k": { FPS_moyen: "--" }
+        }
     }
-  }
+}
 };

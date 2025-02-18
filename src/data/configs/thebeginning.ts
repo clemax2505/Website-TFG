@@ -21,30 +21,60 @@ export const thebeginning: PCConfigDetailed = {
     case: "/pc-parts/case/tecware forge M2.png"
   },
   gamePerformance: {
-    fortnite: {
-      fhd: { FPS_moyen: "120-140" },
-      "2k": { FPS_moyen: "100-120" },
-      "4k": { FPS_moyen: "60-70" }
-    },
     warzone: {
-      fhd: { FPS_moyen: "90-110" },
-      "2k": { FPS_moyen: "75-90" },
-      "4k": { FPS_moyen: "45-55" }
+	moyen {
+      	   fhd: { FPS_moyen: "115" },
+      	   "4k": { FPS_moyen: "50" }
+        },
+	ultra {
+      	   fhd: { FPS_moyen: "--" },
+      	   "2k": { FPS_moyen: "--" },
+      	   "4k": { FPS_moyen: "--" }
+	}
+    },
+    cyberpunk2077: {
+	moyen {
+      	   fhd: { FPS_moyen: "75" },
+      	   "4k": { FPS_moyen: "25" }
+        },
+	ultra {
+      	   fhd: { FPS_moyen: "--" },
+      	   "2k": { FPS_moyen: "--" },
+      	   "4k": { FPS_moyen: "--" }
+	}
     },
     minecraft: {
-      fhd: { FPS_moyen: "250+" },
-      "2k": { FPS_moyen: "200+" },
-      "4k": { FPS_moyen: "150-200" }
+	moyen {
+      	   fhd: { FPS_moyen: "335" },
+      	   "4k": { FPS_moyen: "335" }
+        },
+	ultra {
+      	   fhd: { FPS_moyen: "--" },
+      	   "2k": { FPS_moyen: "--" },
+      	   "4k": { FPS_moyen: "--" }
+	}
+    },
+    rdr2: {
+	moyen {
+      	   fhd: { FPS_moyen: "100" },
+      	   "4k": { FPS_moyen: "45" }
+        },
+	ultra {
+      	   fhd: { FPS_moyen: "--" },
+      	   "2k": { FPS_moyen: "--" },
+      	   "4k": { FPS_moyen: "--" }
+	}
     },
     valorant: {
-      fhd: { FPS_moyen: "200-250" },
-      "2k": { FPS_moyen: "180-220" },
-      "4k": { FPS_moyen: "130-150" }
-    },
-    gta: {
-      fhd: { FPS_moyen: "100-120" },
-      "2k": { FPS_moyen: "80-100" },
-      "4k": { FPS_moyen: "50-60" }
+	moyen {
+      	   fhd: { FPS_moyen: "365" },
+      	   "4k": { FPS_moyen: "335" }
+        },
+	ultra {
+      	   fhd: { FPS_moyen: "--" },
+      	   "2k": { FPS_moyen: "--" },
+      	   "4k": { FPS_moyen: "--" }
+	}
     }
   }
 };

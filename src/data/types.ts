@@ -11,9 +11,15 @@ export interface PCPerformance {
 }
 
 export interface GamePerformance {
-  fhd: PCPerformance;
-  "2k": PCPerformance;
-  "4k": PCPerformance;
+    moyen : {
+      fhd: PCPerformance;
+      "4k": PCPerformance;
+}
+    ultra : {
+     fhd: PCPerformance;
+     "2k": PCPerformance;
+     "4k": PCPerformance;
+     }
 }
 
 export interface PCConfigDetailed extends PCConfig {

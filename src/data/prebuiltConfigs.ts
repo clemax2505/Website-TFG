@@ -28,6 +28,7 @@ export const prebuiltConfigs: { [key: string]: PCConfigDetailed } = {
   nitrous: nitrous,
   tuffy: tuffy,
   chillguy: chillguy,
+  neonotte: neonotte,
   themaster: themaster,
   theoverkill: theoverkill
 };

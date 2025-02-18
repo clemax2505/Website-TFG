@@ -9,11 +9,11 @@ interface GamePerformanceProps {
 
 const GamePerformance = ({ resolution, config }: GamePerformanceProps) => {
   const games = [
-    { id: 1, image: "/logos jeux/logo fortnite.png", key: "fortnite" },
-    { id: 2, image: "/logos jeux/logo Warzone.png", key: "warzone" },
+    { id: 1, image: "/logos jeux/logo warzone.png", key: "warzone" },
+    { id: 2, image: "/logos jeux/logo cyberpunk2077.png", key: "cyberpunk2077" },
     { id: 3, image: "/logos jeux/logo minecraft.png", key: "minecraft" },
-    { id: 4, image: "/logos jeux/logo valorant.png", key: "valorant" },
-    { id: 5, image: "/logos jeux/logo gta v.png", key: "gta" },
+    { id: 4, image: "/logos jeux/logo rdr2.png", key: "rdr2" },
+    { id: 5, image: "/logos jeux/logo valorant.png", key: "valorant" },
   ];
 
   const getPerformanceData = (gameKey: string) => {

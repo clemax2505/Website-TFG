@@ -11,7 +11,7 @@ import { thehellhound } from "./configs/thehellhound";
 import { nitrous } from "./configs/nitrous";
 import { tuffy } from "./configs/tuffy";
 import { chillguy } from "./configs/chillguy";
-import { neonotte } from "./configs/neonottes";
+import { neonotte } from "./configs/neonotte";
 import { themaster } from "./configs/themaster";
 import { theoverkill } from "./configs/theoverkill";
 

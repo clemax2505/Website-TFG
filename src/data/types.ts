@@ -24,10 +24,10 @@ export interface PCConfigDetailed extends PCConfig {
     case: string;
   };
   gamePerformance: {
-    fortnite: GamePerformance;
     warzone: GamePerformance;
+    cyberpunk2077: GamePerformance;
     minecraft: GamePerformance;
+    rdr2: GamePerformance;
     valorant: GamePerformance;
-    gta: GamePerformance;
   };
 }

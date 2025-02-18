@@ -1,5 +1,5 @@
 // Au début de la fonction PCConfigDetails
-console.log('configId:', configId);
+console.log('id:', id);
 console.log('prebuiltConfigs:', prebuiltConfigs);
 console.log('selectedConfig:', selectedConfig);
 
@@ -33,13 +33,13 @@ const stripeLinks: { [key: string]: string } = {
 
 const PCConfigDetails = () => {
   const { toast } = useToast();
-  const { configId } = useParams();
+  const { id } = useParams();
   const [resolution, setResolution] = useState<"FHD" | "2K" | "4K">("FHD");
   const [isLoading, setIsLoading] = useState(false);
-  const selectedConfig = prebuiltConfigs[configId || ""];
+  const selectedConfig = prebuiltConfigs[id || ""];
 
   const handleCheckout = () => {
-    if (!selectedConfig || !configId) {
+    if (!selectedConfig || !id) {
       toast({
         title: "Erreur",
         description: "Configuration non trouvée",
@@ -48,7 +48,7 @@ const PCConfigDetails = () => {
       return;
     }
 
-    const stripeLink = stripeLinks[configId];
+    const stripeLink = stripeLinks[id];
     if (!stripeLink) {
       toast({
         title: "Erreur",

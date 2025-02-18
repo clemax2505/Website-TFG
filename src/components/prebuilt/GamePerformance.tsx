@@ -17,8 +17,16 @@ const GamePerformance = ({ resolution, config }: GamePerformanceProps) => {
   ];
 
   const getPerformanceData = (gameKey: string) => {
-    const resolutionKey = resolution.toLowerCase() === "fhd" ? "fhd" : resolution.toLowerCase() as "2k" | "4k";
-    return config.gamePerformance[gameKey as keyof typeof config.gamePerformance][resolutionKey];
+    const resolutionKey = resolution.toLowerCase() as "fhd" | "2k" | "4k";
+    const gamePerf = config.gamePerformance[gameKey as keyof typeof config.gamePerformance];
+    
+    // Vérifiez d'abord si les données ultra sont disponibles pour cette résolution
+    if (gamePerf.ultra[resolutionKey]?.FPS_moyen !== "--") {
+      return gamePerf.ultra[resolutionKey];
+    }
+    
+    // Sinon, retournez les données moyennes
+    return gamePerf.moyen[resolutionKey === "2k" ? "4k" : resolutionKey];
   };
 
   return (
@@ -50,7 +58,7 @@ const GamePerformance = ({ resolution, config }: GamePerformanceProps) => {
                     </TableHeader>
                     <TableBody>
                       <TableRow>
-                        <TableCell className="text-center">{performance.FPS_moyen || "-"}</TableCell>
+                        <TableCell className="text-center">{performance?.FPS_moyen || "-"}</TableCell>
                       </TableRow>
                     </TableBody>
                   </Table>

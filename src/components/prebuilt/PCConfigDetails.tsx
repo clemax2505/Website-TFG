@@ -1,3 +1,8 @@
+// Au début de la fonction PCConfigDetails
+console.log('configId:', configId);
+console.log('prebuiltConfigs:', prebuiltConfigs);
+console.log('selectedConfig:', selectedConfig);
+
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";

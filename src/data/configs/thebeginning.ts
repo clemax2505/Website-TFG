@@ -47,7 +47,7 @@ gamePerformance: {
 	moyen: { 
       	   fhd: { FPS_moyen: "335" },
       	   "4k": { FPS_moyen: "335" }
-	}
+	},
 	ultra: {
       	   fhd: { FPS_moyen: "--" },
       	   "2k": { FPS_moyen: "--" },
@@ -57,7 +57,7 @@ gamePerformance: {
 	moyen: {
       	   fhd: { FPS_moyen: "100" },
       	   "4k": { FPS_moyen: "45" }
-	}
+	},
 	ultra: {
       	   fhd: { FPS_moyen: "--" },
       	   "2k": { FPS_moyen: "--" },
@@ -67,7 +67,7 @@ gamePerformance: {
 	moyen: {
       	   fhd: { FPS_moyen: "365" },
       	   "4k": { FPS_moyen: "335" }
-	}
+	},
 	ultra: {
       	   fhd: { FPS_moyen: "--" },
       	   "2k": { FPS_moyen: "--" },

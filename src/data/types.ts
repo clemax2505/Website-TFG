@@ -21,6 +21,7 @@ export interface PCConfigDetailed extends PCConfig {
   images: {
     cpu: string;
     gpu: string;
+    case: string;
   };
   gamePerformance: {
     fortnite: GamePerformance;

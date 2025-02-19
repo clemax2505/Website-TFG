@@ -16,19 +16,19 @@ const stripeLinks: { [key: string]: string } = {
 
 const PCConfigDetails = () => {
   const { toast } = useToast();
-  const { id } = useParams<{ id: string }>();
+  const { ConfigId } = useParams<{ ConfigId: string }>();
   const [resolution, setResolution] = useState<"FHD" | "2K" | "4K">("FHD");
   const [isLoading, setIsLoading] = useState(false);
 
   // Vérifier si l'id existe et si la config correspondante existe
-  if (!id || !prebuiltConfigs[id]) {
+  if (!id || !prebuiltConfigs[ConfigId]) {
     return <div>Configuration non trouvée</div>;
   }
 
-  const selectedConfig = prebuiltConfigs[id];
+  const selectedConfig = prebuiltConfigs[ConfigId];
 
   const handleCheckout = () => {
-    const stripeLink = stripeLinks[id];
+    const stripeLink = stripeLinks[ConfigId];
     if (!stripeLink) {
       toast({
         title: "Erreur",

@@ -1,24 +1,25 @@
 import { PCConfigDetailed } from "../types";
 
-export const theTaichi: PCConfigDetailed = {
-  id: "thetaichi",
-  name: "The Taichi",
-  price: 2938.45,
-  description: "Ryzen 7 7800X3D & RX 7900 XTX",
+export const neonotte: PCConfigDetailed = {
+  id: "neonotte",
+  name: "Neo Notte",
+  price: 3058.44,
+  description: "Ryzen 7 9800X3D & RTX 4080 SUPER",
   components: [
     "CPU : AMD Ryzen 7 7800X3D",
-    "Refroidissement : ARCTIC Liquid Freezer III 360 (avec AF120)",
-    "Carte mère : MSI X670E GAMING PLUS WIFI",
-    "RAM : 32 Go DDR5 6000 MHz G.Skill Trident Z5 Neo RGB",
-    "Stockage : KingStone KC3000 2 To (NVMe)",
-    "GPU : RX 7900 XTX ASRock Taichi white",
-    "Boitier : Corsair 5000D RGB Airflow",
-    "PSU : Corsair RM1000X",
-    "Ventilation : Configurations ventilée uniquement avec des AF120"
+    "Refroidissement : Thermalright Frozen Notte ARGB",
+    "Carte mère : Gigabyte X870E AORUS ELITE WIFI7",
+    "RAM : G.Skill Trident Z5 Neo RGB 32 GB (2 x 16 GB) DDR5-6000 CL30",
+    "Stockage : Western Digital WD_Black SN850X 2 TB (NVMe)",
+    "GPU : RTX 4080 SUPER Palit GamingPro",
+    "Boitier : Thermaltake View 270 Plus TG ARGB",
+    "PSU : MSI MPG A1000G",
+    "Ventilation : Configurations ventilée uniquement avec des CT120"
   ],
   images: {
-    cpu: "/pc-parts/cpu/R7 7800X3D.png",
-    gpu: "/pc-parts/gpu/7900XTX TAICHI.png"
+    cpu: "/pc-parts/cpu/R7 9800X3D.png",
+    gpu: "/pc-parts/gpu/4080 SUPER PALIT GAMING OC.png",
+    case: "/pc-parts/case/view 270 plus tg argb noir.png"
   },
   gamePerformance: {
     fortnite: {

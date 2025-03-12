@@ -6,40 +6,44 @@ import { Card, CardContent } from "@/components/ui/card";
 import GamePerformance from "./GamePerformance";
 import ResolutionSelector from "./ResolutionSelector";
 import { prebuiltConfigs } from "@/data/prebuiltConfigs";
+console.log("prebuiltConfigs:", prebuiltConfigs);
 import { useToast } from "@/components/ui/use-toast";
+
 
 const stripeLinks: { [key: string]: string } = {
   thebeginning: "https://buy.stripe.com/3cs02RcxD1Zp8EM9AC",
   littleguy: "https://buy.stripe.com/3cs4j7btzdI77AIfZ1",
+  cheapy: "https://buy.stripe.com/28ocPD1SZ5bBbQY9AN",
   viper: "https://buy.stripe.com/5kAcPD2X347x5sA28c",
-  airflowprime: "https://buy.stripe.com/8wM9Dr55bgUj8EM149",
-  thehellbound: "https://buy.stripe.com/4gwaHv7djbzZ5sAaEK",
+  pulsar: "https://buy.stripe.com/aEUdTHapveMb7AI28m",
+  phantomatic: "https://buy.stripe.com/8wMeXLbtzfQf08g14j",
+  arcticold: "https://buy.stripe.com/eVa6rf69f5bB4ow5kA",
   infinity: "https://buy.stripe.com/4gw5nb9lr1Zp8EMbIP",
-  tuffy: "https://buy.stripe.com/7sI16V417fQfg7ecMU",
-  thetaichi: "https://buy.stripe.com/5kA5nb7dj7jJ1ck6ox",
+  thehellhound: "https://buy.stripe.com/4gwaHv7djbzZ5sAaEK",
+  nitrous: "https://buy.stripe.com/5kAcPD8hn9rRaMUfZf",
+  tuffy: "https://buy.stripe.com/7sI16V417fQfg7ecMU",  
   chillguy: "https://buy.stripe.com/dR6g1P69fcE39IQeV4",
+  neonotte: "https://buy.stripe.com/28ocPD7dj5bB7AI00i",
   themaster: "https://buy.stripe.com/eVa16Vbtz6fF6wE28j",
   theoverkill: "https://buy.stripe.com/3cs02R55bavV1ckdR2"
 };
 
 const PCConfigDetails = () => {
   const { toast } = useToast();
-  const { configId } = useParams();
+  const { id } = useParams<{ id: string }>();
+  console.log("ID reçu:", id);
   const [resolution, setResolution] = useState<"FHD" | "2K" | "4K">("FHD");
   const [isLoading, setIsLoading] = useState(false);
-  const selectedConfig = prebuiltConfigs[configId || ""];
+
+  // Vérifier si l'id existe et si la config correspondante existe
+  if (!id || !prebuiltConfigs[id]) {
+    return <div>Configuration non trouvée</div>;
+  }
+
+  const selectedConfig = prebuiltConfigs[id];
 
   const handleCheckout = () => {
-    if (!selectedConfig || !configId) {
-      toast({
-        title: "Erreur",
-        description: "Configuration non trouvée",
-        variant: "destructive"
-      });
-      return;
-    }
-
-    const stripeLink = stripeLinks[configId];
+    const stripeLink = stripeLinks[id];
     if (!stripeLink) {
       toast({
         title: "Erreur",
@@ -53,10 +57,6 @@ const PCConfigDetails = () => {
     window.location.href = stripeLink;
   };
 
-  if (!selectedConfig) {
-    return <div>Configuration non trouvée</div>;
-  }
-
   return (
     <div className="space-y-12 px-4 max-w-7xl mx-auto">
       <div className="text-center space-y-4">
@@ -68,7 +68,7 @@ const PCConfigDetails = () => {
         <div className="space-y-8">
           <Card className="glass-card">
             <CardContent className="p-6">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-3 gap-4">
                 <div className="space-y-2">
                   <img
                     src={selectedConfig.images.cpu}
@@ -84,6 +84,14 @@ const PCConfigDetails = () => {
                     className="w-full h-48 object-contain"
                   />
                   <p className="text-center text-sm">Carte graphique</p>
+                </div>
+                <div className="space-y-2">
+                  <img
+                    src={selectedConfig.images.case}
+                    alt="Boitier"
+                    className="w-full h-48 object-contain"
+                  />
+                  <p className="text-center text-sm">Boitier</p>
                 </div>
               </div>
             </CardContent>

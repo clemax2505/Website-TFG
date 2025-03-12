@@ -11,15 +11,9 @@ export interface PCPerformance {
 }
 
 export interface GamePerformance {
-  moyen: {
-    fhd: PCPerformance;
-    "4k": PCPerformance;
-  };
-  ultra: {
-    fhd: PCPerformance;
-    "2k": PCPerformance;
-    "4k": PCPerformance;
-  };
+  fhd: PCPerformance;
+  "2k": PCPerformance;
+  "4k": PCPerformance;
 }
 
 export interface PCConfigDetailed extends PCConfig {
@@ -27,13 +21,12 @@ export interface PCConfigDetailed extends PCConfig {
   images: {
     cpu: string;
     gpu: string;
-    case: string;
   };
   gamePerformance: {
+    fortnite: GamePerformance;
     warzone: GamePerformance;
-    cyberpunk2077: GamePerformance;
     minecraft: GamePerformance;
-    rdr2: GamePerformance;
     valorant: GamePerformance;
+    gta: GamePerformance;
   };
 }

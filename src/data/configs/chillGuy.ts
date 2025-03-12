@@ -1,25 +1,24 @@
 import { PCConfigDetailed } from "../types";
 
-export const chillguy: PCConfigDetailed = {
+export const chillGuy: PCConfigDetailed = {
   id: "chillguy",
   name: "Chill Guy",
-  price: 3081.69,
-  description: "Ryzen 7 9800X3D & RX 7900 XTX",
+  price: 3349.96,
+  description: "i9-14900KF & RTX 4080 Super",
   components: [
-    "CPU : AMD Ryzen 7 7800X3D",
-    "Refroidissement : ARCTIC Liquid Freezer III 360 A-RGB (avec RX120)",
-    "Carte mère : Gigabyte B850 AORUS ELITE WIFI7 ATX",
-    "RAM : G.Skill Trident Z5 Neo RGB 64 GB (2 x 32 GB) DDR5-6000 CL30",
-    "Stockage : Kingston KC3000 2.048 TB (NVMe)",
-    "GPU : RX 7900 XTX Sapphire NITRO+",
+    "CPU : Intel Core i9-14900KF",
+    "Refroidissement : Corsair iCUE Link TITAN 360 RGB",
+    "Carte mère : Gigabyte Z790 AORUS Master X",
+    "RAM : 64 Go DDR5 6000 MHz G.Skill Trident Z5 Neo RGB",
+    "Stockage : KingStone KC3000 2 To (NVMe)",
+    "GPU : RTX 4080 Super PNY Epic-X-RGB",
     "Boitier : Antec C8",
-    "PSU : MSI MPG A1000G",
-    "Ventilation : Configurations ventilée uniquement avec des AF120"
+    "PSU : Corsair RM1000X",
+    "Ventilation : Configurations ventilée uniquement avec des RX120 LINK"
   ],
   images: {
-    cpu: "/pc-parts/cpu/R7 9800X3D.png",
-    gpu: "/pc-parts/gpu/7900XTX SAPPHIRE NITRO.png",
-    case: "/pc-parts/case/antec c8.png"
+    cpu: "/pc-parts/cpu/i9-14900KF.png",
+    gpu: "/pc-parts/gpu/4080 SUPER PNY EPIC-X RGB.png"
   },
   gamePerformance: {
     fortnite: {

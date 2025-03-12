@@ -1,24 +1,23 @@
 import { PCConfigDetailed } from "../types";
 
-export const littleguy: PCConfigDetailed = {
+export const littleGuy: PCConfigDetailed = {
   id: "littleguy",
   name: "Little Guy",
-  price: 899.35,
-  description: "Ryzen 5 7500F & RX 6650 XT",
+  price: 1041.35,
+  description: "Ryzen 5 5600 & RX 6750 XT",
   components: [
-    "CPU : AMD Ryzen 5 7500F",
-    "Refroidissement : Ventirad d'origine AMD",
-    "Carte mère : Gigabyte B650 EAGLE AX",
-    "RAM : Patriot Viper Venom 32 GB (2 x 16 GB) DDR5-6000 CL30",
-    "Stockage : Patriot P400 Lite 1 TB(NVMe)",
-    "GPU : RX 6650 XT XFX Speedster SWFT 210",
-    "Boitier : MSI MAG FORGE 100R",
-    "PSU : MSI MAG A650BN",
+    "CPU : AMD Ryzen 5 5600",
+    "Refroidissement : Be Quiet Pure Rock 2",
+    "Carte mère : MSI B550-A PRO",
+    "RAM : 16 Go DDR4 3200 MHz Kingston Fury Beast",
+    "Stockage : WD_black SN770 1 To (NVMe)",
+    "GPU : RX 6750 XT Speedster",
+    "Boitier : MSI MAG 120A Airflow",
+    "PSU : MSI A650BN"
   ],
   images: {
-    cpu: "/pc-parts/cpu/R5 7500F.png",
-    gpu: "/pc-parts/gpu/6650XT.png",
-    case: "/pc-parts/case/msi mag forge 100R noir.png"
+    cpu: "/pc-parts/cpu/R5 5600.png",
+    gpu: "/pc-parts/gpu/6750XT.png"
   },
   gamePerformance: {
     fortnite: {

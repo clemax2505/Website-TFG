@@ -1,25 +1,24 @@
 import { PCConfigDetailed } from "../types";
 
-export const themaster: PCConfigDetailed = {
+export const theMaster: PCConfigDetailed = {
   id: "themaster",
   name: "The Master",
-  price: 3841.15,
-  description: "Ryzen 7 9800X3D & RTX 4080 SUPER",
+  price: 3688.08,
+  description: "Ryzen 7 9800X3D & RX 7900 XTX",
   components: [
     "CPU : AMD Ryzen 7 9800X3D",
-    "Refroidissement : ARCTIC Liquid Freezer III 360 A-RGB (avec RX120)",
+    "Refroidissement : ARCTIC Liquid Freezer III 360 (avec RX120)",
     "Carte mère : Gigabyte X870E AORUS MASTER",
-    "RAM : G.Skill Trident Z5 Neo RGB 64 GB (2 x 32 GB) DDR5-6000 CL30",
-    "Stockage : Kingston KC3000 2.048 TB (NVMe)",
-    "GPU : RTX 4080 SUPER PNY XLR8 Gaming VERTO EPIC-X RGB OC",
-    "Boitier : HYTE Y70",
-    "PSU : MSI MPG A1000G ",
-    "Ventilation : Configurations ventilée uniquement avec des RX120"
+    "RAM : 64 Go DDR5 6000 MHz G.Skill Trident Z5 Neo RGB",
+    "Stockage : Kingston KC3000 2 To (NVMe)",
+    "GPU : RX 7900 XTX Sapphire NITRO+",
+    "Boitier : Corsair iCUE LINK 6500X RGB",
+    "PSU : Corsair RM1200x SHIFT",
+    "Ventilation : Configurations ventilée uniquement avec des RX120 LINK"
   ],
   images: {
     cpu: "/pc-parts/cpu/R7 9800X3D.png",
-    gpu: "/pc-parts/gpu/4080 SUPER PNY EPIC-X RGB.png",
-    case: "/pc-parts/case/hyte y70 noir.png"
+    gpu: "/pc-parts/gpu/7900XTX SAPPHIRE NITRO.png"
   },
   gamePerformance: {
     fortnite: {

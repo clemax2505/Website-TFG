@@ -1,34 +1,26 @@
 import { PCConfigDetailed } from "./types";
-import { thebeginning } from "./configs/thebeginning";
-import { littleguy } from "./configs/littleguy";
-import { cheapy } from "./configs/cheapy";
+import { theBeginning } from "./configs/theBeginning";
+import { littleGuy } from "./configs/littleGuy";
 import { viper } from "./configs/viper";
-import { pulsar } from "./configs/pulsar";
-import { phantomatic } from "./configs/phantomatic";
-import { arcticold } from "./configs/arcticold";
+import { airflowPrime } from "./configs/airflowPrime";
+import { theHellbound } from "./configs/theHellbound";
 import { infinity } from "./configs/infinity";
-import { thehellhound } from "./configs/thehellhound";
-import { nitrous } from "./configs/nitrous";
 import { tuffy } from "./configs/tuffy";
-import { chillguy } from "./configs/chillguy";
-import { neonotte } from "./configs/neonotte";
-import { themaster } from "./configs/themaster";
-import { theoverkill } from "./configs/theoverkill";
+import { theTaichi } from "./configs/theTaichi";
+import { chillGuy } from "./configs/chillGuy";
+import { theMaster } from "./configs/theMaster";
+import { theOverkill } from "./configs/theOverkill";
 
 export const prebuiltConfigs: { [key: string]: PCConfigDetailed } = {
-  thebeginning: thebeginning,
-  littleguy: littleguy,
-  cheapy: cheapy,
+  thebeginning: theBeginning,
+  littleguy: littleGuy,
   viper: viper,
-  pulsar: pulsar,
-  phantomatic: phantomatic,
-  arcticold: arcticold,
+  airflowprime: airflowPrime,
+  thehellbound: theHellbound,
   infinity: infinity,
-  thehellhound: thehellhound,
-  nitrous: nitrous,
   tuffy: tuffy,
-  chillguy: chillguy,
-  neonotte: neonotte,
-  themaster: themaster,
-  theoverkill: theoverkill
+  thetaichi: theTaichi,
+  chillguy: chillGuy,
+  themaster: theMaster,
+  theoverkill: theOverkill
 };

@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -6,9 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import GamePerformance from "./GamePerformance";
 import ResolutionSelector from "./ResolutionSelector";
 import { prebuiltConfigs } from "@/data/prebuiltConfigs";
-console.log("prebuiltConfigs:", prebuiltConfigs);
-import { useToast } from "@/components/ui/use-toast";
-
+import { useToast } from "@/hooks/use-toast";
 
 const stripeLinks: { [key: string]: string } = {
   thebeginning: "https://buy.stripe.com/3cs02RcxD1Zp8EM9AC",
@@ -31,16 +30,25 @@ const stripeLinks: { [key: string]: string } = {
 const PCConfigDetails = () => {
   const { toast } = useToast();
   const { id } = useParams<{ id: string }>();
-  console.log("ID reçu:", id);
+  console.log("ID reçu depuis l'URL:", id);
+  console.log("Configurations disponibles:", Object.keys(prebuiltConfigs));
   const [resolution, setResolution] = useState<"FHD" | "2K" | "4K">("FHD");
   const [isLoading, setIsLoading] = useState(false);
 
   // Vérifier si l'id existe et si la config correspondante existe
   if (!id || !prebuiltConfigs[id]) {
-    return <div>Configuration non trouvée</div>;
+    console.log("Configuration non trouvée pour l'ID:", id);
+    return (
+      <div className="text-center py-12">
+        <h2 className="text-2xl font-bold mb-4">Configuration non trouvée</h2>
+        <p className="text-gray-400">L'ID demandé "{id}" ne correspond à aucune configuration disponible.</p>
+        <p className="text-sm text-gray-500 mt-2">Configurations disponibles: {Object.keys(prebuiltConfigs).join(", ")}</p>
+      </div>
+    );
   }
 
   const selectedConfig = prebuiltConfigs[id];
+  console.log("Configuration trouvée:", selectedConfig);
 
   const handleCheckout = () => {
     const stripeLink = stripeLinks[id];

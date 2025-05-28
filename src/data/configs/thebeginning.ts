@@ -1,6 +1,8 @@
+
 import { PCConfigDetailed } from "../types";
+
 export const thebeginning: PCConfigDetailed = {
-  id: "the beginning",
+  id: "thebeginning",
   name: "The Beginning",
   price: 839.38,
   description: "Ryzen 5 5600 & RX 6650 XT",

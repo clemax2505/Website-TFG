@@ -1,3 +1,4 @@
+
 import { PCConfigDetailed } from "../types";
 
 export const tuffy: PCConfigDetailed = {
@@ -22,30 +23,60 @@ export const tuffy: PCConfigDetailed = {
     case: "/pc-parts/case/tuf gt502 plus noir.png"
   },
   gamePerformance: {
-    fortnite: {
-      fhd: { FPS_moyen: "250-270" },
-      "2k": { FPS_moyen: "200-220" },
-      "4k": { FPS_moyen: "140-160" }
-    },
     warzone: {
-      fhd: { FPS_moyen: "160-180" },
-      "2k": { FPS_moyen: "140-160" },
-      "4k": { FPS_moyen: "100-120" }
+      moyen: {
+        fhd: { FPS_moyen: "160-180" },
+        "4k": { FPS_moyen: "100-120" }
+      },
+      ultra: {
+        fhd: { FPS_moyen: "140-160" },
+        "2k": { FPS_moyen: "120-140" },
+        "4k": { FPS_moyen: "80-100" }
+      }
+    },
+    cyberpunk2077: {
+      moyen: {
+        fhd: { FPS_moyen: "140-160" },
+        "4k": { FPS_moyen: "70-80" }
+      },
+      ultra: {
+        fhd: { FPS_moyen: "110-130" },
+        "2k": { FPS_moyen: "85-100" },
+        "4k": { FPS_moyen: "55-65" }
+      }
     },
     minecraft: {
-      fhd: { FPS_moyen: "450+" },
-      "2k": { FPS_moyen: "400+" },
-      "4k": { FPS_moyen: "350+" }
+      moyen: {
+        fhd: { FPS_moyen: "450+" },
+        "4k": { FPS_moyen: "350+" }
+      },
+      ultra: {
+        fhd: { FPS_moyen: "400+" },
+        "2k": { FPS_moyen: "350+" },
+        "4k": { FPS_moyen: "300+" }
+      }
+    },
+    rdr2: {
+      moyen: {
+        fhd: { FPS_moyen: "180-200" },
+        "4k": { FPS_moyen: "110-130" }
+      },
+      ultra: {
+        fhd: { FPS_moyen: "150-170" },
+        "2k": { FPS_moyen: "125-140" },
+        "4k": { FPS_moyen: "90-105" }
+      }
     },
     valorant: {
-      fhd: { FPS_moyen: "400+" },
-      "2k": { FPS_moyen: "350+" },
-      "4k": { FPS_moyen: "250+" }
-    },
-    gta: {
-      fhd: { FPS_moyen: "180-200" },
-      "2k": { FPS_moyen: "150-170" },
-      "4k": { FPS_moyen: "110-130" }
+      moyen: {
+        fhd: { FPS_moyen: "400+" },
+        "4k": { FPS_moyen: "250+" }
+      },
+      ultra: {
+        fhd: { FPS_moyen: "350+" },
+        "2k": { FPS_moyen: "300+" },
+        "4k": { FPS_moyen: "220+" }
+      }
     }
   }
 };

@@ -1,3 +1,4 @@
+
 import { ArrowRight, Settings, Monitor, Laptop, Wrench } from "lucide-react";
 import { Link } from "react-router-dom";
 import { memo } from "react";
@@ -63,10 +64,14 @@ const Hero = memo(() => {
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center mt-16 md:mt-0">
           <h1 className="text-4xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-forge-orange to-forge-red">
-            <br></br><br></br>Forgez Votre PC Gaming Idéal !<br></br><br></br>
+            <br></br><br></br>Assemblage PC Gaming Sur Mesure<br></br><br></br>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Création sur mesure, amélioration et maintenance de PC gaming par des experts passionnés
+          <p className="text-xl md:text-2xl text-gray-300 mb-4 max-w-4xl mx-auto">
+            <strong>The Gaming Forge</strong> - Votre spécialiste en création, assemblage et maintenance de PC gaming haute performance. 
+            Configurations sur mesure adaptées à tous les budgets et tous les jeux.
+          </p>
+          <p className="text-lg text-gray-400 mb-8 max-w-3xl mx-auto">
+            Montage PC gaming professionnel • Composants premium • Garantie complète • Support expert
           </p>
           
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-12">
@@ -78,7 +83,7 @@ const Hero = memo(() => {
             </Link>
             <Link to="/contact" className="w-full md:w-auto">
               <button className="w-full md:w-auto px-8 py-4 bg-forge-dark hover:bg-forge-metal text-white rounded-lg font-bold flex items-center justify-center gap-2 transition-colors">
-                Nous contacter
+                Devis Gratuit
               </button>
             </Link>
           </div>
@@ -87,8 +92,8 @@ const Hero = memo(() => {
             <Link to="/prebuilt">
               <Card className="glass-card hover:scale-105 transition-transform duration-300 cursor-pointer">
                 <CardContent className="p-8 text-center">
-                  <h2 className="text-2xl font-bold text-forge-orange mb-4">PC Pré-configurés</h2>
-                  <p className="text-gray-400">Découvrez notre sélection de PC gaming optimisés pour tous les budgets</p>
+                  <h2 className="text-2xl font-bold text-forge-orange mb-4">PC Gaming Pré-configurés</h2>
+                  <p className="text-gray-400">Découvrez notre sélection de PC gaming optimisés pour tous les budgets - Du gaming occasionnel au haut de gamme</p>
                 </CardContent>
               </Card>
             </Link>

@@ -3,6 +3,7 @@ import { ArrowRight, Settings, Monitor, Laptop, Wrench } from "lucide-react";
 import { Link } from "react-router-dom";
 import { memo } from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import Logo from "./Logo";
 
 const ServiceCard = memo(({ to, icon: Icon, title, description }: {
   to: string;
@@ -63,6 +64,9 @@ const Hero = memo(() => {
       </div>
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center mt-16 md:mt-0">
+          <div className="flex justify-center mb-8">
+            <Logo className="h-24 w-24 md:h-32 md:w-32" />
+          </div>
           <h1 className="text-4xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-forge-orange to-forge-red">
             <br></br><br></br>Assemblage PC Gaming Sur Mesure<br></br><br></br>
           </h1>

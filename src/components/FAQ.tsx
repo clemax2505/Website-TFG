@@ -10,28 +10,28 @@ interface FAQItem {
 
 const faqData: FAQItem[] = [
   {
-    question: "Quel est le délai pour assembler un PC gaming sur mesure ?",
-    answer: "Le délai d'assemblage varie entre 3 à 7 jours ouvrés selon la complexité de la configuration et la disponibilité des composants. Nous vous tenons informé à chaque étape du processus."
+    question: "Combien de temps faut-il pour assembler un PC gaming ?",
+    answer: "En général, il me faut 2 à 5 jours pour assembler votre PC selon la complexité de la configuration et la disponibilité des composants. Je vous tiens informé régulièrement de l'avancement."
   },
   {
-    question: "Proposez-vous une garantie sur vos PC gaming assemblés ?",
-    answer: "Oui, tous nos PC gaming bénéficient d'une garantie complète. Les composants sont couverts par leur garantie constructeur, et notre assemblage est garanti 2 ans. Nous assurons également le support technique."
+    question: "Proposez-vous une garantie sur l'assemblage ?",
+    answer: "Oui ! Mon travail d'assemblage est garanti, et tous les composants bénéficient de leur garantie constructeur. Je reste disponible pour vous aider en cas de problème."
   },
   {
-    question: "Puis-je choisir mes propres composants pour l'assemblage ?",
-    answer: "Absolument ! Nous acceptons vos composants ou vous conseillons sur la sélection optimale selon votre budget et vos besoins gaming. Notre expertise garantit la compatibilité et les performances."
+    question: "Puis-je fournir mes propres composants ?",
+    answer: "Absolument ! Je peux assembler votre PC avec vos composants ou vous conseiller sur les meilleurs choix selon votre budget. Je vérifie toujours la compatibilité avant l'assemblage."
   },
   {
-    question: "Quel budget prévoir pour un PC gaming performant ?",
-    answer: "Un PC gaming entrée de gamme commence à partir de 800€. Pour du milieu de gamme comptez 1200-1800€, et pour du haut de gamme 2000€+. Nous adaptons chaque configuration à votre budget."
+    question: "Quel budget prévoir pour un bon PC gaming ?",
+    answer: "Cela dépend de vos besoins ! Un PC gaming correct commence vers 700-800€. Pour du milieu de gamme, comptez 1000-1500€, et pour du haut de gamme 1800€+. Je m'adapte à tous les budgets."
   },
   {
-    question: "Effectuez-vous la maintenance de PC gaming ?",
-    answer: "Oui, nous proposons des services de maintenance complète : nettoyage interne, remplacement de pâte thermique, optimisation logicielle, et diagnostic de pannes. Service disponible sur site ou en atelier."
+    question: "Faites-vous de la maintenance de PC gaming ?",
+    answer: "Oui, je propose du nettoyage interne, remplacement de pâte thermique, diagnostic de pannes et optimisation. La maintenance régulière prolonge la durée de vie de votre PC."
   },
   {
-    question: "Quelles marques de composants utilisez-vous ?",
-    answer: "Nous travaillons exclusivement avec des marques premium : ASUS, MSI, Gigabyte, AMD, Intel, NVIDIA, Corsair, G.Skill, Samsung, Western Digital, et bien d'autres marques reconnues pour leur fiabilité."
+    question: "Comment choisissez-vous les composants ?",
+    answer: "Je sélectionne les composants en fonction de vos jeux favoris, votre budget et vos préférences. J'utilise uniquement des marques fiables que j'ai testées dans mes précédents montages."
   }
 ];
 
@@ -81,7 +81,7 @@ const FAQ = memo(() => {
             Questions Fréquentes
           </h2>
           <p className="text-xl text-gray-300">
-            Tout ce que vous devez savoir sur nos services d'assemblage PC gaming
+            Les réponses aux questions les plus courantes sur mes services
           </p>
         </div>
         

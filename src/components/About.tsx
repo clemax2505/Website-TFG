@@ -11,42 +11,43 @@ const About = memo(() => {
             À Propos de The Gaming Forge
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Experts passionnés en création de PC gaming sur mesure depuis plus de 5 ans
+            Étudiant passionné de 19 ans, expert en hardware gaming depuis 4 ans
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <Card className="glass-card">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-4 text-forge-orange">Notre Expertise</h3>
+              <h3 className="text-2xl font-bold mb-4 text-forge-orange">Mon Parcours</h3>
               <p className="text-gray-300 mb-4">
-                Chez The Gaming Forge, nous sommes spécialisés dans l'assemblage PC gaming haut de gamme, 
-                l'optimisation de configurations existantes et la maintenance professionnelle. 
-                Notre équipe d'experts sélectionne minutieusement chaque composant pour garantir 
-                des performances gaming optimales.
+                Passionné de technologie depuis mon adolescence, j'ai commencé à m'intéresser au hardware 
+                il y a 4 ans. Depuis, j'ai réalisé plus de 10 montages de tous types, du PC gaming 
+                budget au setup haut de gamme. Chaque projet est une nouvelle opportunité d'apprendre 
+                et de perfectionner mes compétences.
               </p>
               <ul className="text-gray-300 space-y-2">
-                <li>• Assemblage PC gaming personnalisé</li>
-                <li>• Upgrade et amélioration de composants</li>
-                <li>• Maintenance et nettoyage professionnel</li>
-                <li>• Support technique spécialisé</li>
+                <li>• 4 ans d'expérience en hardware</li>
+                <li>• Plus de 10 montages réalisés</li>
+                <li>• Configurations gaming optimisées</li>
+                <li>• Suivi personnalisé de chaque projet</li>
               </ul>
             </CardContent>
           </Card>
           
           <Card className="glass-card">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-4 text-forge-orange">Nos Valeurs</h3>
+              <h3 className="text-2xl font-bold mb-4 text-forge-orange">Ma Philosophie</h3>
               <p className="text-gray-300 mb-4">
-                La passion du gaming nous anime. Nous croyons que chaque joueur mérite une machine 
-                parfaitement adaptée à ses besoins et son budget. Notre approche personnalisée 
-                garantit satisfaction et performances exceptionnelles.
+                Je crois que chaque gamer mérite une machine parfaitement adaptée à ses besoins. 
+                Mon approche se base sur l'écoute, le conseil personnalisé et un assemblage 
+                minutieux. Étant moi-même gamer, je comprends l'importance d'avoir un PC 
+                performant et fiable.
               </p>
               <ul className="text-gray-300 space-y-2">
-                <li>• Conseil personnalisé gratuit</li>
-                <li>• Composants de marques premium</li>
-                <li>• Garantie et support après-vente</li>
-                <li>• Prix transparents et compétitifs</li>
+                <li>• Conseil personnalisé et à l'écoute</li>
+                <li>• Sélection rigoureuse des composants</li>
+                <li>• Assemblage soigné et testé</li>
+                <li>• Prix transparents et accessibles</li>
               </ul>
             </CardContent>
           </Card>

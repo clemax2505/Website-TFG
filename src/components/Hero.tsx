@@ -23,25 +23,25 @@ const Hero = memo(() => {
       to: "/laptop-service",
       icon: Laptop,
       title: "PC Portable Gaming",
-      description: "Soins personnalisés selon vos besoins"
+      description: "Diagnostic et optimisation personnalisés"
     },
     {
       to: "/upgrade",
       icon: Monitor,
       title: "Amélioration",
-      description: "Optimisation de votre configuration"
+      description: "Upgrade de votre configuration actuelle"
     },
     {
       to: "/maintenance",
       icon: Settings,
       title: "Maintenance",
-      description: "Nettoyage et entretien professionnel"
+      description: "Nettoyage et entretien complet"
     },
     {
       to: "/pc-assembly",
       icon: Wrench,
       title: "Montage PC",
-      description: "Service professionnel de montage"
+      description: "Assemblage soigné et professionnel"
     }
   ];
 
@@ -67,11 +67,11 @@ const Hero = memo(() => {
             <br></br><br></br>Assemblage PC Gaming Sur Mesure<br></br><br></br>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-4 max-w-4xl mx-auto">
-            <strong>The Gaming Forge</strong> - Votre spécialiste en création, assemblage et maintenance de PC gaming haute performance. 
-            Configurations sur mesure adaptées à tous les budgets et tous les jeux.
+            <strong>The Gaming Forge</strong> - Passionné de hardware depuis 4 ans avec plus de 10 montages réalisés. 
+            Je crée votre PC gaming idéal, adapté à votre budget et à vos jeux favoris.
           </p>
           <p className="text-lg text-gray-400 mb-8 max-w-3xl mx-auto">
-            Montage PC gaming professionnel • Composants premium • Garantie complète • Support expert
+            Assemblage minutieux • Composants sélectionnés • Conseils personnalisés • Passion du gaming
           </p>
           
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-12">
@@ -93,7 +93,7 @@ const Hero = memo(() => {
               <Card className="glass-card hover:scale-105 transition-transform duration-300 cursor-pointer">
                 <CardContent className="p-8 text-center">
                   <h2 className="text-2xl font-bold text-forge-orange mb-4">PC Gaming Pré-configurés</h2>
-                  <p className="text-gray-400">Découvrez notre sélection de PC gaming optimisés pour tous les budgets - Du gaming occasionnel au haut de gamme</p>
+                  <p className="text-gray-400">Découvrez ma sélection de configurations gaming optimisées - Du gaming occasionnel au très haut de gamme</p>
                 </CardContent>
               </Card>
             </Link>

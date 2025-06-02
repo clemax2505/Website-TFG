@@ -6,23 +6,23 @@ import { Shield, Zap, Users, Award } from "lucide-react";
 const advantages = [
   {
     icon: Shield,
-    title: "Garantie & Fiabilité",
-    description: "Tous nos PC gaming sont assemblés avec des composants premium et bénéficient d'une garantie complète pour votre tranquillité d'esprit."
+    title: "Approche Personnelle",
+    description: "En tant que passionné, je prends le temps d'écouter vos besoins et de vous conseiller la configuration parfaite pour votre style de jeu."
   },
   {
     icon: Zap,
-    title: "Performances Optimisées",
-    description: "Chaque configuration est testée et optimisée pour garantir les meilleures performances gaming selon votre budget et vos jeux favoris."
+    title: "Expérience Pratique",
+    description: "4 ans d'expérience et plus de 10 montages réalisés m'ont permis de maîtriser l'assemblage et l'optimisation de PC gaming."
   },
   {
     icon: Users,
-    title: "Support Expert",
-    description: "Notre équipe d'experts gaming vous accompagne avant, pendant et après votre achat avec un support technique personnalisé."
+    title: "Suivi Personnalisé",
+    description: "Je vous accompagne personnellement tout au long du projet, du choix des composants à la livraison de votre PC gaming."
   },
   {
     icon: Award,
-    title: "Qualité Premium",
-    description: "Nous sélectionnons uniquement des composants de marques reconnues pour leur qualité et leur durabilité dans le gaming intensif."
+    title: "Passion Authentique",
+    description: "Étant moi-même gamer, je comprends vos attentes et m'assure que votre PC soit parfaitement adapté à vos jeux favoris."
   }
 ];
 
@@ -35,7 +35,7 @@ const WhyChooseUs = memo(() => {
             Pourquoi Choisir The Gaming Forge ?
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            L'expertise et la passion du gaming au service de votre PC idéal
+            Une approche personnelle et passionnée pour votre PC gaming idéal
           </p>
         </div>
         

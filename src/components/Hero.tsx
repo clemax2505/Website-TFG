@@ -50,7 +50,7 @@ const Hero = memo(() => {
     <div className="relative min-h-screen">
       {/* Logo fixe en dessous du header */}
       <div className="fixed top-16 left-1/2 transform -translate-x-1/2 z-40 pt-4">
-        <Logo className="h-16 w-16 md:h-20 md:w-20" />
+        <Logo className="h-24 w-24 md:h-32 md:w-32 lg:h-40 lg:w-40" />
       </div>
 
       <div className="flex items-center justify-center min-h-screen">

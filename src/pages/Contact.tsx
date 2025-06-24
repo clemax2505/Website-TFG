@@ -1,3 +1,4 @@
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -5,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { openEmailClient } from "@/utils/emailUtils";
 import PageTransition from "@/components/PageTransition";
@@ -52,7 +54,11 @@ ${message}`;
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <main className="container mx-auto px-4 py-24">
-        <h1 className="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-forge-orange to-forge-red">Contactez-nous</h1>
+        <h1 className="text-4xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-forge-orange to-forge-red">Contactez-nous</h1>
+        <p className="text-xl text-gray-400 text-center mb-12 max-w-2xl mx-auto">
+          Une question sur mes services ? Besoin d'un conseil personnalisé ? N'hésitez pas à me contacter. Vous pouvez aussi consulter ma <Link to="/#faq" className="text-forge-orange hover:text-forge-red underline">FAQ</Link> pour les questions courantes ou découvrir mes <Link to="/services" className="text-forge-orange hover:text-forge-red underline">services détaillés</Link>.
+        </p>
+        
         <Card className="glass-card">
           <CardHeader>
             <CardTitle className="text-2xl">Envoyez-nous un message</CardTitle>
@@ -101,6 +107,15 @@ ${message}`;
             </form>
           </CardContent>
         </Card>
+        
+        <div className="text-center mt-12">
+          <p className="text-gray-300 mb-4">
+            Prêt à commencer votre projet PC gaming ? <Link to="/quote" className="text-forge-orange hover:text-forge-red underline">Demandez un devis personnalisé</Link> ou découvrez mes <Link to="/prebuilt" className="text-forge-orange hover:text-forge-red underline">configurations pré-établies</Link>.
+          </p>
+          <p className="text-gray-400">
+            Consultez également mon <Link to="/portfolio" className="text-forge-orange hover:text-forge-red underline">portfolio</Link> pour voir mes réalisations précédentes.
+          </p>
+        </div>
         </main>
         <Footer />
       </div>

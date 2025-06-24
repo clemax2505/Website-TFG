@@ -2,6 +2,7 @@
 import { memo } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, Zap, Users, Award } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const advantages = [
   {
@@ -35,7 +36,7 @@ const WhyChooseUs = memo(() => {
             Pourquoi Choisir The Gaming Forge ?
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Une approche personnelle et passionnée pour votre PC gaming idéal
+            Une approche personnelle et passionnée pour votre PC gaming idéal. Découvrez mes <Link to="/services" className="text-forge-orange hover:text-forge-red underline">services complets</Link> et mes <Link to="/prebuilt" className="text-forge-orange hover:text-forge-red underline">configurations pré-établies</Link>.
           </p>
         </div>
         
@@ -49,6 +50,12 @@ const WhyChooseUs = memo(() => {
               </CardContent>
             </Card>
           ))}
+        </div>
+        
+        <div className="text-center mt-12">
+          <p className="text-gray-300 mb-6">
+            Prêt à commencer votre projet ? <Link to="/quote" className="text-forge-orange hover:text-forge-red underline">Demandez un devis</Link> ou consultez mon <Link to="/portfolio" className="text-forge-orange hover:text-forge-red underline">portfolio</Link> pour voir mes réalisations précédentes.
+          </p>
         </div>
       </div>
     </section>

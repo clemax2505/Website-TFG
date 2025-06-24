@@ -1,6 +1,7 @@
 
 import { memo } from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 const About = memo(() => {
   return (
@@ -23,12 +24,12 @@ const About = memo(() => {
                 Passionné de technologie depuis mon adolescence, j'ai commencé à m'intéresser au hardware 
                 il y a 4 ans. Depuis, j'ai réalisé plus de 10 montages de tous types, du PC gaming 
                 budget au setup haut de gamme. Chaque projet est une nouvelle opportunité d'apprendre 
-                et de perfectionner mes compétences.
+                et de perfectionner mes compétences. Consultez mon <Link to="/portfolio" className="text-forge-orange hover:text-forge-red underline">portfolio</Link> pour voir mes réalisations.
               </p>
               <ul className="text-gray-300 space-y-2">
                 <li>• 4 ans d'expérience en hardware</li>
                 <li>• Plus de 10 montages réalisés</li>
-                <li>• Configurations gaming optimisées</li>
+                <li>• <Link to="/prebuilt" className="text-forge-orange hover:text-forge-red underline">Configurations gaming</Link> optimisées</li>
                 <li>• Suivi personnalisé de chaque projet</li>
               </ul>
             </CardContent>
@@ -41,12 +42,12 @@ const About = memo(() => {
                 Je crois que chaque gamer mérite une machine parfaitement adaptée à ses besoins. 
                 Mon approche se base sur l'écoute, le conseil personnalisé et un assemblage 
                 minutieux. Étant moi-même gamer, je comprends l'importance d'avoir un PC 
-                performant et fiable.
+                performant et fiable. Découvrez tous mes <Link to="/services" className="text-forge-orange hover:text-forge-red underline">services</Link> disponibles.
               </p>
               <ul className="text-gray-300 space-y-2">
-                <li>• Conseil personnalisé et à l'écoute</li>
+                <li>• <Link to="/quote" className="text-forge-orange hover:text-forge-red underline">Conseil personnalisé</Link> et à l'écoute</li>
                 <li>• Sélection rigoureuse des composants</li>
-                <li>• Assemblage soigné et testé</li>
+                <li>• <Link to="/pc-assembly" className="text-forge-orange hover:text-forge-red underline">Assemblage soigné</Link> et testé</li>
                 <li>• Prix transparents et accessibles</li>
               </ul>
             </CardContent>

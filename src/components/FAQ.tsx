@@ -2,6 +2,7 @@
 import { memo, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface FAQItem {
   question: string;
@@ -11,27 +12,27 @@ interface FAQItem {
 const faqData: FAQItem[] = [
   {
     question: "Combien de temps faut-il pour assembler un PC gaming ?",
-    answer: "En général, il me faut 2 à 5 jours pour assembler votre PC selon la complexité de la configuration et la disponibilité des composants. Je vous tiens informé régulièrement de l'avancement."
+    answer: "En général, il me faut 2 à 5 jours pour assembler votre PC selon la complexité de la configuration et la disponibilité des composants. Je vous tiens informé régulièrement de l'avancement. Découvrez mes différents services d'assemblage sur ma page services."
   },
   {
     question: "Proposez-vous une garantie sur l'assemblage ?",
-    answer: "Oui ! Mon travail d'assemblage est garanti, et tous les composants bénéficient de leur garantie constructeur. Je reste disponible pour vous aider en cas de problème."
+    answer: "Oui ! Mon travail d'assemblage est garanti, et tous les composants bénéficient de leur garantie constructeur. Je reste disponible pour vous aider en cas de problème et propose également des services de maintenance pour prolonger la durée de vie de votre PC."
   },
   {
     question: "Puis-je fournir mes propres composants ?",
-    answer: "Absolument ! Je peux assembler votre PC avec vos composants ou vous conseiller sur les meilleurs choix selon votre budget. Je vérifie toujours la compatibilité avant l'assemblage."
+    answer: "Absolument ! Je peux assembler votre PC avec vos composants ou vous conseiller sur les meilleurs choix selon votre budget. Je vérifie toujours la compatibilité avant l'assemblage. Consultez mes configurations pré-établies pour vous inspirer."
   },
   {
     question: "Quel budget prévoir pour un bon PC gaming ?",
-    answer: "Cela dépend de vos besoins ! Un PC gaming correct commence vers 700-800€. Pour du milieu de gamme, comptez 1000-1500€, et pour du haut de gamme 1800€+. Je m'adapte à tous les budgets."
+    answer: "Cela dépend de vos besoins ! Un PC gaming correct commence vers 700-800€. Pour du milieu de gamme, comptez 1000-1500€, et pour du haut de gamme 1800€+. Je m'adapte à tous les budgets. Demandez un devis personnalisé pour votre projet."
   },
   {
     question: "Faites-vous de la maintenance de PC gaming ?",
-    answer: "Oui, je propose du nettoyage interne, remplacement de pâte thermique, diagnostic de pannes et optimisation. La maintenance régulière prolonge la durée de vie de votre PC."
+    answer: "Oui, je propose du nettoyage interne, remplacement de pâte thermique, diagnostic de pannes et optimisation. La maintenance régulière prolonge la durée de vie de votre PC. Découvrez tous mes services de maintenance."
   },
   {
     question: "Comment choisissez-vous les composants ?",
-    answer: "Je sélectionne les composants en fonction de vos jeux favoris, votre budget et vos préférences. J'utilise uniquement des marques fiables que j'ai testées dans mes précédents montages."
+    answer: "Je sélectionne les composants en fonction de vos jeux favoris, votre budget et vos préférences. J'utilise uniquement des marques fiables que j'ai testées dans mes précédents montages. Consultez mon portfolio pour voir mes réalisations."
   }
 ];
 
@@ -81,7 +82,7 @@ const FAQ = memo(() => {
             Questions Fréquentes
           </h2>
           <p className="text-xl text-gray-300">
-            Les réponses aux questions les plus courantes sur mes services
+            Les réponses aux questions les plus courantes sur mes services. Besoin de plus d'informations ? <Link to="/contact" className="text-forge-orange hover:text-forge-red underline">Contactez-moi</Link> directement.
           </p>
         </div>
         
@@ -94,6 +95,12 @@ const FAQ = memo(() => {
               onToggle={() => toggleItem(index)}
             />
           ))}
+        </div>
+        
+        <div className="text-center mt-12">
+          <p className="text-gray-300">
+            Une question spécifique ? Consultez mes <Link to="/services" className="text-forge-orange hover:text-forge-red underline">services détaillés</Link> ou <Link to="/suggestions" className="text-forge-orange hover:text-forge-red underline">envoyez-moi vos suggestions</Link> pour améliorer le site.
+          </p>
         </div>
       </div>
     </section>

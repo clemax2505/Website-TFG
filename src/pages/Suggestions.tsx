@@ -1,3 +1,4 @@
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -5,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import PageTransition from "@/components/PageTransition";
 import { openEmailClient } from "@/utils/emailUtils";
@@ -53,7 +55,7 @@ const Suggestions = () => {
         <main className="container mx-auto px-4 py-24 flex-grow">
           <h1 className="text-4xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-forge-orange to-forge-red">Des idées pour le site ?</h1>
           <p className="text-xl text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-            Vos suggestions sont précieuses ! N'hésitez pas à partager vos idées pour améliorer le site.
+            Vos suggestions sont précieuses ! N'hésitez pas à partager vos idées pour améliorer le site. Vous pouvez aussi me <Link to="/contact" className="text-forge-orange hover:text-forge-red underline">contacter directement</Link> pour toute question sur mes <Link to="/services" className="text-forge-orange hover:text-forge-red underline">services PC gaming</Link>.
           </p>
 
           <Card className="glass-card max-w-2xl mx-auto">
@@ -94,6 +96,15 @@ const Suggestions = () => {
               </form>
             </CardContent>
           </Card>
+          
+          <div className="text-center mt-12">
+            <p className="text-gray-300 mb-4">
+              Intéressé par mes services ? Découvrez mon <Link to="/portfolio" className="text-forge-orange hover:text-forge-red underline">portfolio</Link> ou mes <Link to="/prebuilt" className="text-forge-orange hover:text-forge-red underline">configurations PC gaming</Link>.
+            </p>
+            <p className="text-gray-400">
+              Prêt à démarrer votre projet ? <Link to="/quote" className="text-forge-orange hover:text-forge-red underline">Demandez un devis personnalisé</Link>.
+            </p>
+          </div>
         </main>
         <Footer />
       </div>

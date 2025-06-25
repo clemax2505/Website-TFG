@@ -75,10 +75,10 @@ const Hero = memo(() => {
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-4 max-w-4xl mx-auto">
               <strong>The Gaming Forge</strong> - Passionné de hardware depuis 4 ans avec plus de 10 montages réalisés. 
-              Je crée votre PC gaming idéal, adapté à votre budget et à vos jeux favoris.
+              Je crée votre PC gaming idéal, adapté à votre budget et à vos jeux favoris. Découvrez mes <Link to="/portfolio" className="text-forge-orange hover:text-forge-red underline">réalisations précédentes</Link> et mes <Link to="/services" className="text-forge-orange hover:text-forge-red underline">services spécialisés</Link>.
             </p>
             <p className="text-lg text-gray-400 mb-8 max-w-3xl mx-auto">
-              Assemblage minutieux • Composants sélectionnés • Conseils personnalisés • Passion du gaming
+              Assemblage minutieux • Composants sélectionnés • Conseils personnalisés • Passion du gaming • <Link to="/maintenance" className="text-forge-orange hover:text-forge-red underline">Maintenance professionnelle</Link>
             </p>
             
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-12">
@@ -100,7 +100,7 @@ const Hero = memo(() => {
                 <Card className="glass-card hover:scale-105 transition-transform duration-300 cursor-pointer">
                   <CardContent className="p-8 text-center">
                     <h2 className="text-2xl font-bold text-forge-orange mb-4">PC Gaming Pré-configurés</h2>
-                    <p className="text-gray-400">Découvrez ma sélection de configurations gaming optimisées - Du gaming occasionnel au très haut de gamme</p>
+                    <p className="text-gray-400">Découvrez ma sélection de configurations gaming optimisées - Du gaming occasionnel au très haut de gamme. Besoin d'aide pour choisir ? <Link to="/contact" className="text-forge-orange hover:text-forge-red underline">Contactez-moi</Link> pour des conseils personnalisés.</p>
                   </CardContent>
                 </Card>
               </Link>

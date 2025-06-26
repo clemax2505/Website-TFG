@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -61,8 +60,19 @@ const PCConfigDetails = () => {
       return;
     }
 
+    console.log("Navigation vers:", stripeLink);
     setIsLoading(true);
-    window.location.href = stripeLink;
+    
+    // Utiliser une approche plus robuste pour la navigation
+    try {
+      window.open(stripeLink, '_blank', 'noopener,noreferrer');
+    } catch (error) {
+      console.error("Erreur lors de l'ouverture du lien:", error);
+      window.location.href = stripeLink;
+    } finally {
+      // Reset loading state après un délai court
+      setTimeout(() => setIsLoading(false), 1000);
+    }
   };
 
   return (
@@ -113,6 +123,7 @@ const PCConfigDetails = () => {
               size="lg"
               onClick={handleCheckout}
               disabled={isLoading}
+              type="button"
             >
               {isLoading ? "Redirection..." : "Passer commande"}
             </Button>

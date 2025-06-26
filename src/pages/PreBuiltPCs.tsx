@@ -2,102 +2,9 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
-import { PCConfig } from "@/components/prebuilt/types";
 import { Link } from "react-router-dom";
 import PreBuiltPCCard from "@/components/prebuilt/PreBuiltPCCard";
-
-export const priceRanges: PCConfig[] = [
-  { 
-    id: "thebeginning", 
-    name: "The Beginning", 
-    price: 839.38, 
-    description: "Ryzen 5 5600 & RX 6650 XT",
-  },
-  { 
-    id: "littleguy", 
-    name: "Little Guy", 
-    price: 999.35, 
-    description: "Ryzen 5 7500F & RX 6650 XT",
-  },
-  { 
-    id: "cheapy", 
-    name: "Cheapy", 
-    price: 1078.77, 
-    description: "Ryzen 5 7500F & RX 6750 XT",
-  },
-  { 
-    id: "viper", 
-    name: "Viper", 
-    price: 1286.56, 
-    description: "Ryzen 5 7600X & RX 6750 XT",
-  },
-  { 
-    id: "pulsar", 
-    name: "Pulsar", 
-    price: 1479.17, 
-    description: "Ryzen 5 7600X & RX 7800 XT",
-  },
-  { 
-    id: "phantomatic", 
-    name: "Phantomatic", 
-    price: 1790.61, 
-    description: "Ryzen 7 7700X & RX 7800 XT",
-  },
-  { 
-    id: "arcticold", 
-    name: "Arcticold", 
-    price: 2042.93, 
-    description: "Ryzen 7 7700X & RX 7900 GRE",
-  },
-  { 
-    id: "infinity", 
-    name: "Infinity", 
-    price: 2397.78, 
-    description: "Ryzen 7 9700X & RX 7900 XTX",
-  },
-  { 
-    id: "thehellhound", 
-    name: "The Hellhound", 
-    price: 2459.44, 
-    description: "Ryzen 7 9700X & RX 7900 XT",
-  },
-  { 
-    id: "nitrous", 
-    name: "Nitrous", 
-    price: 2838.09, 
-    description: "Ryzen 7 9800X3D & RX 7900 XTX",
-  },
-  { 
-    id: "tuffy", 
-    name: "Tuffy", 
-    price: 2997.95, 
-    description: "Ryzen 7 9800X3D & RTX 4070 Ti SUPER",
-  },
-  { 
-    id: "chillguy", 
-    name: "Chill Guy", 
-    price: 3181.69, 
-    description: "Ryzen 7 9800X3D & RX 7900 XTX",
-  },
-  { 
-    id: "neonotte", 
-    name: "Neo Notte", 
-    price: 3158.44, 
-    description: "Ryzen 7 9800X3D & RTX 4080 SUPER",
-  },
-  { 
-    id: "themaster", 
-    name: "The Master", 
-    price: 3941.15, 
-    description: "Ryzen 7 9800X3D & RTX 4080 SUPER",
-  },
-  { 
-    id: "theoverkill", 
-    name: "The Overkill", 
-    price: 6323.31, 
-    description: "Ryzen 9 9950X & RTX 4090",
-  }
-];
+import { allPrebuiltConfigs } from "@/data/allPrebuiltConfigs";
 
 const PreBuiltPCs = () => {
   return (
@@ -113,7 +20,7 @@ const PreBuiltPCs = () => {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {priceRanges.map((config) => (
+            {allPrebuiltConfigs.map((config) => (
               <PreBuiltPCCard key={config.id} config={config} />
             ))}
           </div>

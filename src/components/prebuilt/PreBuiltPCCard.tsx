@@ -1,116 +1,14 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { PCConfig } from "./types";
+import { PCConfigDetailed } from "@/data/types";
 import { Link } from "react-router-dom";
 
 interface PreBuiltPCCardProps {
-  config: PCConfig;
+  config: PCConfigDetailed;
 }
 
-const getImagesForConfig = (configId: string): { cpu: string; gpu: string; case: string } => {
-  switch (configId) {
-    case "thebeginning":
-      return {
-        cpu: "/pc-parts/cpu/R5 5600.png",
-        gpu: "/pc-parts/gpu/6650XT.png",
-        case: "/pc-parts/case/tecware forge M2.png"
-      };
-    case "littleguy":
-      return {
-        cpu: "/pc-parts/cpu/R5 7500F.png",
-        gpu: "/pc-parts/gpu/6650XT.png",
-        case: "/pc-parts/case/msi mag forge 100m noir.png"
-      };
-    case "cheapy":
-      return {
-        cpu: "/pc-parts/cpu/R5 7500F.png",
-        gpu: "/pc-parts/gpu/6750XT.png",
-        case: "/pc-parts/case/3000D noir.png"
-      };
-    case "viper":
-      return {
-        cpu: "/pc-parts/cpu/R5 7600X.png",
-        gpu: "/pc-parts/gpu/6750XT.png",
-        case: "/pc-parts/case/msi mag forge 112r noir.png"
-      };
-    case "pulsar":
-      return {
-        cpu: "/pc-parts/cpu/R5 7600X.png",
-        gpu: "/pc-parts/gpu/7800XT PULSE.png",
-        case: "/pc-parts/case/phanteks xt pro ultra noir.png"
-      };
-    case "phantomatic":
-      return {
-        cpu: "/pc-parts/cpu/R7 7700X.png",
-        gpu: "/pc-parts/gpu/7800XT ASROCK PHANTOM GAMING.png",
-        case: "/pc-parts/case/msi mag forge 100r noir.png"
-      };
-    case "arcticold":
-      return {
-        cpu: "/pc-parts/cpu/R7 7700X.png",
-        gpu: "/pc-parts/gpu/7900GRE.png",
-        case: "/pc-parts/case/6500x noir.png"
-      };
-    case "infinity":
-      return {
-        cpu: "/pc-parts/cpu/R7 9700X.png",
-        gpu: "/pc-parts/gpu/7900XTX.png",
-        case: "/pc-parts/case/O11 dynamic mini.png"
-      };
-    case "thehellhound":
-      return {
-        cpu: "/pc-parts/cpu/R7 9700X.png",
-        gpu: "/pc-parts/gpu/7900XT POWERCOLOR HELLHOUND SPECTRAL.png",
-        case: "/pc-parts/case/4000D white.png"
-      };
-    case "nitrous":
-      return {
-        cpu: "/pc-parts/cpu/R7 9800X3D.png",
-        gpu: "/pc-parts/gpu/7900XTX SAPPHIRE NITRO.png",
-        case: "/pc-parts/case/phanteks xt pro ultra noir.png"
-      };
-    case "tuffy":
-      return {
-        cpu: "/pc-parts/cpu/R7 9800X3D.png",
-        gpu: "/pc-parts/gpu/4070 TI SUPER TUF GAMING OC.png",
-        case: "/pc-parts/case/tuf gt502 plus noir.png"
-      };
-    case "chillguy":
-      return {
-        cpu: "/pc-parts/cpu/R7 9800X3D.png",
-        gpu: "/pc-parts/gpu/7900XTX SAPPHIRE NITRO.png",
-        case: "/pc-parts/case/antec c8.png"
-      };
-    case "neonotte":
-      return {
-        cpu: "/pc-parts/cpu/R7 9800X3D.png",
-        gpu: "/pc-parts/gpu/4080 SUPER PALIT GAMING PRO.png",
-        case: "/pc-parts/case/view 270 plus tg argb noir.png"
-      };
-    case "themaster":
-      return {
-        cpu: "/pc-parts/cpu/R7 9800X3D.png",
-        gpu: "/pc-parts/gpu/4080 SUPER PNY EPIC-X RGB.png",
-        case: "/pc-parts/case/hyte y70 noir.png"
-      };
-    case "theoverkill":
-      return {
-        cpu: "/pc-parts/cpu/R9 9950X.png",
-        gpu: "/pc-parts/gpu/4090 ASUS ROG STRIX.png",
-        case: "/pc-parts/case/7000x rgb.png"
-      };
-    default:
-      return {
-        cpu: "/placeholder.svg",
-        gpu: "/placeholder.svg",
-        case: "/placeholder.svg"
-      };
-  }
-};
-
 const PreBuiltPCCard = ({ config }: PreBuiltPCCardProps) => {
-  const images = getImagesForConfig(config.id);
-
   return (
     <Link to={`/prebuilt/${config.id}`} className="block">
       <Card className="glass-card hover:scale-105 transition-transform duration-300 cursor-pointer">
@@ -118,7 +16,7 @@ const PreBuiltPCCard = ({ config }: PreBuiltPCCardProps) => {
           <div className="grid grid-cols-3 gap-2 aspect-video w-full overflow-hidden rounded-t-lg">
             <div className="relative">
               <img
-                src={images.cpu}
+                src={config.images.cpu}
                 alt={`Processeur ${config.name}`}
                 className="w-full h-full object-contain"
                 onError={(e) => {
@@ -131,7 +29,7 @@ const PreBuiltPCCard = ({ config }: PreBuiltPCCardProps) => {
             </div>
             <div className="relative">
               <img
-                src={images.gpu}
+                src={config.images.gpu}
                 alt={`Carte graphique ${config.name}`}
                 className="w-full h-full object-contain"
                 onError={(e) => {
@@ -144,7 +42,7 @@ const PreBuiltPCCard = ({ config }: PreBuiltPCCardProps) => {
             </div>
             <div className="relative">
               <img
-                src={images.case}
+                src={config.images.case}
                 alt={`Boitier ${config.name}`}
                 className="w-full h-full object-contain"
                 onError={(e) => {

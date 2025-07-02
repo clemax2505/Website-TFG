@@ -5,7 +5,7 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
   {
     id: "thebeginning",
     name: "The Beginning",
-    price: 800.00,
+    price: 799.99,
     description: "Ryzen 5 5600 & RX 6650 XT",
     components: [
       "CPU : AMD Ryzen 5 5600",
@@ -83,7 +83,7 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
   {
     id: "littleguy",
     name: "Little Guy",
-    price: 975.00,
+    price: 974.99,
     description: "Ryzen 5 7500F & RX 6650 XT",
     components: [
       "CPU : AMD Ryzen 5 7500F",
@@ -161,7 +161,7 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
   {
     id: "cheapy",
     name: "Cheapy",
-    price: 1150.00,
+    price: 1149.99,
     description: "Ryzen 5 7600X & RX 6750 XT",
     components: [
       "CPU : AMD Ryzen 5 7600X",
@@ -317,7 +317,7 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
   {
     id: "pulsar",
     name: "Pulsar",
-    price: 1699,
+    price: 1699.99,
     description: "Ryzen 5 7700 & RX 9070",
     components: [
       "CPU : AMD Ryzen 5 7700",

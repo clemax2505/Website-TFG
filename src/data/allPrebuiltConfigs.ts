@@ -237,8 +237,8 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
     }
   },
   {
-    id: "viper",
-    name: "Viper",
+    id: "ares",
+    name: "Ares",
     price: 1499.99,
     description: "Ryzen 5 7700 & RX 7800 XT",
     components: [
@@ -315,8 +315,8 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
     }
   },
   {
-    id: "pulsar",
-    name: "Pulsar",
+    id: "thelegend",
+    name: "The legend",
     price: 1699.99,
     description: "Ryzen 5 7700 & RX 9070",
     components: [
@@ -393,8 +393,8 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
     }
   },
   {
-    id: "phantomatic",
-    name: "Phantomatic",
+    id: "2kking",
+    name: "2K King",
     price: 1999.99,
     description: "Ryzen 7 7800X3D & RX 7900 XT",
     components: [
@@ -471,8 +471,8 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
     }
   },
   {
-    id: "arcticold",
-    name: "Arcticold",
+    id: "skillissues",
+    name: "Skill Issues",
     price: 2999.99,
     description: "Ryzen 7 9800X3D & RTX 5080",
     components: [

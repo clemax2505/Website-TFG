@@ -90,7 +90,7 @@ const Hero = memo(() => {
               </Link>
               <Link to="/contact" className="w-full md:w-auto">
                 <button className="w-full md:w-auto px-8 py-4 bg-forge-dark hover:bg-forge-metal text-white rounded-lg font-bold flex items-center justify-center gap-2 transition-colors">
-                  Contactez moi !
+                  Contactez nous !
                 </button>
               </Link>
             </div>

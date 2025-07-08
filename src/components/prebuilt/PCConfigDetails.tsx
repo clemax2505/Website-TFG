@@ -83,41 +83,54 @@ const PCConfigDetails = () => {
         <p className="text-2xl font-semibold">{selectedConfig.price}€</p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className="space-y-8">
-          <Card className="glass-card">
-            <CardContent className="p-6">
-              <div className="grid grid-cols-2 gap-8">
-                <div className="space-y-4">
-                  <img
-                    src={selectedConfig.images.cpu}
-                    alt="CPU"
-                    className="w-full h-80 object-contain"
-                  />
-                  <p className="text-center text-lg font-medium">Processeur</p>
-                </div>
-                <div className="space-y-4">
-                  <img
-                    src={selectedConfig.images.gpu}
-                    alt="GPU"
-                    className="w-full h-80 object-contain"
-                  />
-                  <p className="text-center text-lg font-medium">Carte graphique</p>
-                </div>
-              </div>
-              <div className="mt-8 flex justify-center">
-                <div className="space-y-4 max-w-md">
-                  <img
-                    src={selectedConfig.images.case}
-                    alt="Boitier"
-                    className="w-full h-80 object-contain"
-                  />
-                  <p className="text-center text-lg font-medium">Boitier</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+      {/* Section des images principales - CPU et GPU plus grands */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
+        <Card className="glass-card">
+          <CardContent className="p-8">
+            <div className="space-y-6">
+              <img
+                src={selectedConfig.images.cpu}
+                alt="CPU"
+                className="w-full h-96 object-contain"
+              />
+              <p className="text-center text-xl font-medium">Processeur</p>
+            </div>
+          </CardContent>
+        </Card>
+        
+        <Card className="glass-card">
+          <CardContent className="p-8">
+            <div className="space-y-6">
+              <img
+                src={selectedConfig.images.gpu}
+                alt="GPU"
+                className="w-full h-96 object-contain"
+              />
+              <p className="text-center text-xl font-medium">Carte graphique</p>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
 
+      {/* Image du boitier - centrée */}
+      <div className="flex justify-center mb-16">
+        <Card className="glass-card max-w-lg">
+          <CardContent className="p-8">
+            <div className="space-y-6">
+              <img
+                src={selectedConfig.images.case}
+                alt="Boitier"
+                className="w-full h-80 object-contain"
+              />
+              <p className="text-center text-xl font-medium">Boitier</p>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Contenu principal en deux colonnes */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="space-y-8">
           <PCComponentsList components={selectedConfig.components} />
           
           <div className="flex justify-center">

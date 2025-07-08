@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -77,60 +76,58 @@ const PCConfigDetails = () => {
   };
 
   return (
-    <div className="space-y-12 px-4 max-w-7xl mx-auto">
+    <div className="space-y-8 px-4 max-w-7xl mx-auto">
       <div className="text-center space-y-4">
         <h2 className="text-3xl font-bold text-forge-orange">{selectedConfig.name}</h2>
         <p className="text-2xl font-semibold">{selectedConfig.price}€</p>
       </div>
 
-      {/* Section des images principales - CPU et GPU plus grands */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
+      {/* Section des images principales - CPU et GPU côte à côte */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
         <Card className="glass-card">
-          <CardContent className="p-8">
-            <div className="space-y-6">
+          <CardContent className="p-6">
+            <div className="space-y-4">
               <img
                 src={selectedConfig.images.cpu}
                 alt="CPU"
-                className="w-full h-96 object-contain"
+                className="w-full h-64 object-contain"
               />
-              <p className="text-center text-xl font-medium">Processeur</p>
+              <p className="text-center text-lg font-medium">Processeur</p>
             </div>
           </CardContent>
         </Card>
         
         <Card className="glass-card">
-          <CardContent className="p-8">
-            <div className="space-y-6">
+          <CardContent className="p-6">
+            <div className="space-y-4">
               <img
                 src={selectedConfig.images.gpu}
                 alt="GPU"
-                className="w-full h-96 object-contain"
+                className="w-full h-64 object-contain"
               />
-              <p className="text-center text-xl font-medium">Carte graphique</p>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-
-      {/* Image du boitier - centrée */}
-      <div className="flex justify-center mb-16">
-        <Card className="glass-card max-w-lg">
-          <CardContent className="p-8">
-            <div className="space-y-6">
-              <img
-                src={selectedConfig.images.case}
-                alt="Boitier"
-                className="w-full h-80 object-contain"
-              />
-              <p className="text-center text-xl font-medium">Boitier</p>
+              <p className="text-center text-lg font-medium">Carte graphique</p>
             </div>
           </CardContent>
         </Card>
       </div>
 
       {/* Contenu principal en deux colonnes */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <div className="space-y-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="space-y-6">
+          {/* Image du boitier */}
+          <Card className="glass-card">
+            <CardContent className="p-6">
+              <div className="space-y-4">
+                <img
+                  src={selectedConfig.images.case}
+                  alt="Boitier"
+                  className="w-full h-48 object-contain"
+                />
+                <p className="text-center text-lg font-medium">Boitier</p>
+              </div>
+            </CardContent>
+          </Card>
+
           <PCComponentsList components={selectedConfig.components} />
           
           <div className="flex justify-center">
@@ -146,7 +143,7 @@ const PCConfigDetails = () => {
           </div>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-6">
           <ResolutionSelector
             selectedResolution={resolution}
             onResolutionChange={setResolution}

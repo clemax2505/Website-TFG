@@ -98,7 +98,7 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
     images: {
       cpu: "/pc-parts/cpu/R5 7500F.png",
       gpu: "/pc-parts/gpu/6650XT.png",
-      case: "/pc-parts/case/msi mag forge 100R noir.png"
+      case: "/pc-parts/case/msi mag forge 100r noir.png"
     },
     gamePerformance: {
       warzone: {

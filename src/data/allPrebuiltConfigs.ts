@@ -252,9 +252,9 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
       "PSU : MSI MAG A650GL",
     ],
     images: {
-      cpu: "/pc-parts/cpu/R7 7600X.png",
+      cpu: "/pc-parts/cpu/R7 7700.png",
       gpu: "/pc-parts/gpu/6750XT.png",
-      case: "/pc-parts/case/300D noir.png"
+      case: "/pc-parts/case/corsair 3000d rgb airflow.png"
     },
     gamePerformance: {
       warzone: {
@@ -331,7 +331,7 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
     ],
     images: {
       cpu: "/pc-parts/cpu/R5 7600X.png",
-      gpu: "/pc-parts/gpu/7800XT PULSE.png",
+      gpu: "/pc-parts/gpu/9070 OC ASROCK STEEL LEGEND.png",
       case: "/pc-parts/case/phanteks xt pro ultra noir.png"
     },
     gamePerformance: {
@@ -410,7 +410,7 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
     images: {
       cpu: "/pc-parts/cpu/R7 7800X3D.png",
       gpu: "/pc-parts/gpu/7900XT.png",
-      case: "/pc-parts/case/phanteks xt pro ultra.png"
+      case: "/pc-parts/case/fractal design pop xl air rgb.png"
     },
     gamePerformance: {
       warzone: {
@@ -482,13 +482,13 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
       "RAM : G.Skill Trident Z5 Neo RGB 64 GB (2 x 32 GB) DDR5-6000 CL30",
       "Stockage : Western Digital Black SN850X 2 TB (NVMe)",
       "GPU : Gigabyte GAMING OC GeForce RTX 5080",
-      "Boitier : NZXT H9 Flow",
+      "Boitier : Corsair 6500X",
       "PSU : Corsair RM1000e",
       "Ventilation : Configurations ventilée uniquement avec des Corsair RS120 ARGB"
     ],
     images: {
       cpu: "/pc-parts/cpu/R7 9800X3D.png",
-      gpu: "/pc-parts/gpu/7900GRE.png",
+      gpu: "/pc-parts/gpu/5080 GIGABYTE GAMING OC.png",
       case: "/pc-parts/case/6500x noir.png"
     },
     gamePerformance: {

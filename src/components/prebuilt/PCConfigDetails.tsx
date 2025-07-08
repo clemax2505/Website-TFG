@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -86,30 +87,30 @@ const PCConfigDetails = () => {
         <div className="space-y-8">
           <Card className="glass-card">
             <CardContent className="p-6">
-              <div className="grid grid-cols-3 gap-4">
-                <div className="space-y-2">
+              <div className="grid grid-cols-3 gap-6">
+                <div className="space-y-4">
                   <img
                     src={selectedConfig.images.cpu}
                     alt="CPU"
-                    className="w-full h-48 object-contain"
+                    className="w-full h-80 object-contain"
                   />
-                  <p className="text-center text-sm">Processeur</p>
+                  <p className="text-center text-lg font-medium">Processeur</p>
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-4">
                   <img
                     src={selectedConfig.images.gpu}
                     alt="GPU"
-                    className="w-full h-48 object-contain"
+                    className="w-full h-80 object-contain"
                   />
-                  <p className="text-center text-sm">Carte graphique</p>
+                  <p className="text-center text-lg font-medium">Carte graphique</p>
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-4">
                   <img
                     src={selectedConfig.images.case}
                     alt="Boitier"
-                    className="w-full h-48 object-contain"
+                    className="w-full h-80 object-contain"
                   />
-                  <p className="text-center text-sm">Boitier</p>
+                  <p className="text-center text-lg font-medium">Boitier</p>
                 </div>
               </div>
             </CardContent>

@@ -12,18 +12,10 @@ const stripeLinks: { [key: string]: string } = {
   thebeginning: "https://buy.stripe.com/3cs02RcxD1Zp8EM9AC",
   littleguy: "https://buy.stripe.com/3cs4j7btzdI77AIfZ1",
   cheapy: "https://buy.stripe.com/28ocPD1SZ5bBbQY9AN",
-  viper: "https://buy.stripe.com/5kAcPD2X347x5sA28c",
-  pulsar: "https://buy.stripe.com/aEUdTHapveMb7AI28m",
-  phantomatic: "https://buy.stripe.com/8wMeXLbtzfQf08g14j",
-  arcticold: "https://buy.stripe.com/eVa6rf69f5bB4ow5kA",
-  infinity: "https://buy.stripe.com/4gw5nb9lr1Zp8EMbIP",
-  thehellhound: "https://buy.stripe.com/4gwaHv7djbzZ5sAaEK",
-  nitrous: "https://buy.stripe.com/5kAcPD8hn9rRaMUfZf",
-  tuffy: "https://buy.stripe.com/7sI16V417fQfg7ecMU",  
-  chillguy: "https://buy.stripe.com/dR6g1P69fcE39IQeV4",
-  neonotte: "https://buy.stripe.com/28ocPD7dj5bB7AI00i",
-  themaster: "https://buy.stripe.com/eVa16Vbtz6fF6wE28j",
-  theoverkill: "https://buy.stripe.com/3cs02R55bavV1ckdR2"
+  ares: "https://buy.stripe.com/5kAcPD2X347x5sA28c",
+  thelegend: "https://buy.stripe.com/8wM9Dr55bgUj8EM149",
+  2kking: "https://buy.stripe.com/4gw5nb9lr1Zp8EMbIP",
+  skillissues: "https://buy.stripe.com/4gwaHv7djbzZ5sAaEK",
 };
 
 const PCConfigDetails = () => {

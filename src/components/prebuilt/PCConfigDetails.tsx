@@ -9,13 +9,13 @@ import { prebuiltConfigs } from "@/data/prebuiltConfigs";
 import { useToast } from "@/hooks/use-toast";
 
 const stripeLinks: { [key: string]: string } = {
-  thebeginning: "https://buy.stripe.com/3cs02RcxD1Zp8EM9AC",
-  littleguy: "https://buy.stripe.com/3cs4j7btzdI77AIfZ1",
-  cheapy: "https://buy.stripe.com/28ocPD1SZ5bBbQY9AN",
-  ares: "https://buy.stripe.com/5kAcPD2X347x5sA28c",
-  thelegend: "https://buy.stripe.com/8wM9Dr55bgUj8EM149",
-  "2kking": "https://buy.stripe.com/4gw5nb9lr1Zp8EMbIP",
-  skillissues: "https://buy.stripe.com/4gwaHv7djbzZ5sAaEK",
+  thebeginning: "https://buy.stripe.com/9B64gyfYT5bn87caTO1RC0j",
+  littleguy: "https://buy.stripe.com/fZu28qaEz8nzfzE8LG1RC0k",
+  cheapy: "https://buy.stripe.com/14AaEW9Av7jv2MS9PK1RC0l",
+  ares: "https://buy.stripe.com/6oU28q13Z7jvcns0fa1RC0m",
+  thelegend: "https://buy.stripe.com/7sY8wO4gbdHTcns2ni1RC0n",
+  "2kking": "https://buy.stripe.com/cNi28q13ZfQ15Z4d1W1RC0p",
+  skillissues: "https://buy.stripe.com/00weVc7sn33fevA0fa1RC0o",
 };
 
 const PCConfigDetails = () => {

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -15,7 +14,7 @@ const stripeLinks: { [key: string]: string } = {
   cheapy: "https://buy.stripe.com/28ocPD1SZ5bBbQY9AN",
   ares: "https://buy.stripe.com/5kAcPD2X347x5sA28c",
   thelegend: "https://buy.stripe.com/8wM9Dr55bgUj8EM149",
-  2kking: "https://buy.stripe.com/4gw5nb9lr1Zp8EMbIP",
+  "2kking": "https://buy.stripe.com/4gw5nb9lr1Zp8EMbIP",
   skillissues: "https://buy.stripe.com/4gwaHv7djbzZ5sAaEK",
 };
 

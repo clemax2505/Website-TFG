@@ -71,7 +71,7 @@ const Hero = memo(() => {
         <div className="relative z-10 container mx-auto px-4">
           <div className="text-center pt-24 md:pt-32">
             <h1 className="text-4xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-forge-orange to-forge-red">
-              <br></br><br></br>Assemblage PC Gaming Sur Mesure<br></br><br></br>
+              <br></br><br></br>PC Gaming Sur Mesure<br></br><br></br>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-4 max-w-4xl mx-auto">
               <strong>The Gaming Forge</strong> - Passionné de hardware depuis 4 ans avec plus de 10 montages réalisés. 

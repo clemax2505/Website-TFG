@@ -5,6 +5,7 @@ import PCComponentsList from "./PCComponentsList";
 import { Card, CardContent } from "@/components/ui/card";
 import GamePerformance from "./GamePerformance";
 import ResolutionSelector from "./ResolutionSelector";
+import GraphicsSelector from "./GraphicsSelector";
 import { prebuiltConfigs } from "@/data/prebuiltConfigs";
 import { useToast } from "@/hooks/use-toast";
 
@@ -24,6 +25,7 @@ const PCConfigDetails = () => {
   console.log("ID reçu depuis l'URL:", id);
   console.log("Configurations disponibles:", Object.keys(prebuiltConfigs));
   const [resolution, setResolution] = useState<"FHD" | "2K" | "4K">("FHD");
+  const [graphics, setGraphics] = useState<"moyen" | "ultra">("moyen");
   const [isLoading, setIsLoading] = useState(false);
 
   // Vérifier si l'id existe et si la config correspondante existe
@@ -140,7 +142,11 @@ const PCConfigDetails = () => {
             selectedResolution={resolution}
             onResolutionChange={setResolution}
           />
-          <GamePerformance resolution={resolution} config={selectedConfig} />
+          <GraphicsSelector
+            selectedGraphics={graphics}
+            onGraphicsChange={setGraphics}
+          />
+          <GamePerformance resolution={resolution} graphics={graphics} config={selectedConfig} />
         </div>
       </div>
     </div>

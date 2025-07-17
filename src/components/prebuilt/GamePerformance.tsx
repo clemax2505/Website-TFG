@@ -4,10 +4,11 @@ import { PCConfigDetailed } from "@/data/types";
 
 interface GamePerformanceProps {
   resolution: "FHD" | "2K" | "4K";
+  graphics: "moyen" | "ultra";
   config: PCConfigDetailed;
 }
 
-const GamePerformance = ({ resolution, config }: GamePerformanceProps) => {
+const GamePerformance = ({ resolution, graphics, config }: GamePerformanceProps) => {
   const games = [
     { id: 1, image: "/logos jeux/logo warzone.png", key: "warzone" },
     { id: 2, image: "/logos jeux/logo cyberpunk2077.png", key: "cyberpunk2077" },
@@ -20,13 +21,20 @@ const GamePerformance = ({ resolution, config }: GamePerformanceProps) => {
     const resolutionKey = resolution.toLowerCase() as "fhd" | "2k" | "4k";
     const gamePerf = config.gamePerformance[gameKey as keyof typeof config.gamePerformance];
     
-    // Vérifiez d'abord si les données ultra sont disponibles pour cette résolution
-    if (gamePerf.ultra[resolutionKey]?.FPS_moyen !== "--") {
-      return gamePerf.ultra[resolutionKey];
+    // Utilisez les paramètres graphiques sélectionnés
+    const settingsData = gamePerf[graphics];
+    
+    // Pour les paramètres ultra, vérifiez si les données sont disponibles
+    if (graphics === "ultra" && settingsData[resolutionKey]?.FPS_moyen !== "--") {
+      return settingsData[resolutionKey];
     }
     
-    // Sinon, retournez les données moyennes
-    return gamePerf.moyen[resolutionKey === "2k" ? "4k" : resolutionKey];
+    // Pour les paramètres moyens ou si les données ultra ne sont pas disponibles, utilisez les données moyennes
+    if (graphics === "ultra") {
+      return gamePerf.moyen[resolutionKey === "2k" ? "4k" : resolutionKey];
+    }
+    
+    return settingsData[resolutionKey === "2k" ? "4k" : resolutionKey];
   };
 
   return (
@@ -34,7 +42,7 @@ const GamePerformance = ({ resolution, config }: GamePerformanceProps) => {
       <CardContent className="p-6">
         <div className="mb-4 text-center">
           <span className="text-lg font-semibold text-forge-orange">
-            Performance en {resolution}
+            Performance en {resolution} - {graphics === "moyen" ? "Medium" : "Ultra"}
           </span>
         </div>
         <div className="space-y-6">

@@ -114,17 +114,17 @@ const PCConfigDetails = () => {
         </CardContent>
       </Card>
 
-      <PCComponentsList components={selectedConfig.components} />
-      
       {/* Description par défaut */}
       <Card className="glass-card">
         <CardContent className="p-6">
-          <h3 className="text-lg font-semibold mb-4 text-forge-orange">Description</h3>
+          <h3 className="text-xl font-bold mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-forge-orange to-forge-red">Description</h3>
           <p className="text-gray-300 leading-relaxed">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </p>
         </CardContent>
       </Card>
+
+      <PCComponentsList components={selectedConfig.components} />
       
       <div className="flex justify-center mt-8">
         <Button 

@@ -3,9 +3,6 @@ import { useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import PCComponentsList from "./PCComponentsList";
 import { Card, CardContent } from "@/components/ui/card";
-import GamePerformance from "./GamePerformance";
-import ResolutionSelector from "./ResolutionSelector";
-import GraphicsSelector from "./GraphicsSelector";
 import { prebuiltConfigs } from "@/data/prebuiltConfigs";
 import { useToast } from "@/hooks/use-toast";
 
@@ -24,8 +21,6 @@ const PCConfigDetails = () => {
   const { id } = useParams<{ id: string }>();
   console.log("ID reçu depuis l'URL:", id);
   console.log("Configurations disponibles:", Object.keys(prebuiltConfigs));
-  const [resolution, setResolution] = useState<"FHD" | "2K" | "4K">("FHD");
-  const [graphics, setGraphics] = useState<"moyen" | "ultra">("moyen");
   const [isLoading, setIsLoading] = useState(false);
 
   // Vérifier si l'id existe et si la config correspondante existe
@@ -105,49 +100,32 @@ const PCConfigDetails = () => {
         </Card>
       </div>
 
-      {/* Contenu principal en deux colonnes */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className="space-y-6">
-          {/* Image du boitier */}
-          <Card className="glass-card">
-            <CardContent className="p-6">
-              <div className="space-y-4">
-                <img
-                  src={selectedConfig.images.case}
-                  alt="Boitier"
-                  className="w-full h-48 object-contain"
-                />
-                <p className="text-center text-lg font-medium">Boitier</p>
-              </div>
-            </CardContent>
-          </Card>
-
-          <PCComponentsList components={selectedConfig.components} />
-          
-          <div className="flex justify-center">
-            <Button 
-              variant="outline" 
-              size="lg"
-              onClick={handleCheckout}
-              disabled={isLoading}
-              type="button"
-            >
-              {isLoading ? "Redirection..." : "Passer commande"}
-            </Button>
+      {/* Image du boitier */}
+      <Card className="glass-card">
+        <CardContent className="p-6">
+          <div className="space-y-4">
+            <img
+              src={selectedConfig.images.case}
+              alt="Boitier"
+              className="w-full h-48 object-contain mx-auto"
+            />
+            <p className="text-center text-lg font-medium">Boitier</p>
           </div>
-        </div>
+        </CardContent>
+      </Card>
 
-        <div className="space-y-6">
-          <ResolutionSelector
-            selectedResolution={resolution}
-            onResolutionChange={setResolution}
-          />
-          <GraphicsSelector
-            selectedGraphics={graphics}
-            onGraphicsChange={setGraphics}
-          />
-          <GamePerformance resolution={resolution} graphics={graphics} config={selectedConfig} />
-        </div>
+      <PCComponentsList components={selectedConfig.components} />
+      
+      <div className="flex justify-center mt-8">
+        <Button 
+          variant="outline" 
+          size="lg"
+          onClick={handleCheckout}
+          disabled={isLoading}
+          type="button"
+        >
+          {isLoading ? "Redirection..." : "Passer commande"}
+        </Button>
       </div>
     </div>
   );

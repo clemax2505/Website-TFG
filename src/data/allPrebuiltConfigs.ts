@@ -7,6 +7,7 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
     name: "The Beginning",
     price: 799.99,
     description: "Ryzen 5 5600 & RX 6650 XT",
+    detailedDescription: "Configuration d'entrée de gamme parfaite pour débuter dans le gaming. Équipée d'un processeur AMD Ryzen 5 5600 et d'une carte graphique RX 6650 XT, cette machine vous permettra de jouer à la plupart des jeux récents en 1080p avec des paramètres moyens à élevés. Idéale pour les joueurs occasionnels ou ceux qui découvrent le monde du PC gaming.",
     components: [
       "CPU : AMD Ryzen 5 5600",
       "Refroidissement :Thermalright Assassin X Refined SE RGB",
@@ -28,6 +29,7 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
     name: "Little Guy",
     price: 974.99,
     description: "Ryzen 5 7500F & RX 6650 XT",
+    detailedDescription: "Une évolution moderne de notre configuration d'entrée, intégrant la dernière architecture AMD Ryzen 7000. Le Ryzen 5 7500F offre d'excellentes performances pour le gaming et le multitâche, tandis que la RX 6650 XT assure un gaming fluide en 1080p. Avec 32 GB de RAM DDR5-6000, vous bénéficiez d'une base solide pour les années à venir.",
     components: [
       "CPU : AMD Ryzen 5 7500F",
       "Refroidissement : Thermalright Assassin X Refined SE RGB",
@@ -49,6 +51,7 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
     name: "Cheapy",
     price: 1149.99,
     description: "Ryzen 5 7600X & RX 6750 XT",
+    detailedDescription: "La configuration Cheapy marque l'entrée dans le gaming sérieux. Avec son Ryzen 5 7600X débridé et sa RX 6750 XT plus puissante, elle vous permet de jouer confortablement en 1080p avec des paramètres élevés et même de vous aventurer en 1440p sur certains titres. Un excellent compromis performance/prix pour les gamers exigeants.",
     components: [
       "CPU : AMD Ryzen 5 7600X",
       "Refroidissement : Thermalright Assassin X Refined SE RGB",
@@ -70,6 +73,7 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
     name: "Ares",
     price: 1499.99,
     description: "Ryzen 5 7700 & RX 7800 XT",
+    detailedDescription: "Ares représente l'équilibre parfait entre performance et prix. Équipée d'un Ryzen 7 7700 et d'une puissante RX 7800 XT, cette configuration excelle en 1440p et peut même s'aventurer en 4K sur certains jeux. Le refroidissement AIO 240mm assure des températures optimales même lors des sessions les plus intenses. Parfaite pour les enthusiastes du gaming.",
     components: [
       "CPU : AMD Ryzen 5 7700",
       "Refroidissement : Thermalright Frozen Notte ARGB 240",
@@ -91,6 +95,7 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
     name: "The legend",
     price: 1699.99,
     description: "Ryzen 5 7700 & RX 9070",
+    detailedDescription: "The Legend incarne l'innovation avec la toute nouvelle génération de cartes graphiques RX 9070. Cette configuration de pointe offre des performances exceptionnelles en 1440p et 4K, avec une architecture moderne qui garantit une excellente longévité. Le refroidissement AIO 360mm maintient des températures optimales même lors des sessions gaming les plus exigeantes.",
     components: [
       "CPU : AMD Ryzen 5 7700",
       "Refroidissement : Thermalright Frozen Notte ARGB 360",
@@ -112,6 +117,7 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
     name: "2K King",
     price: 1999.99,
     description: "Ryzen 7 7800X3D & RX 7900 XT",
+    detailedDescription: "Le 2K King règne sur la résolution 1440p grâce au légendaire Ryzen 7 7800X3D, le processeur gaming ultime avec sa technologie 3D V-Cache. Associé à la puissante RX 7900 XT, il offre des performances exceptionnelles dans tous les jeux actuels. Cette configuration haut de gamme est conçue pour les joueurs qui ne font aucun compromis sur la performance.",
     components: [
       "CPU : AMD Ryzen 7 7800X3D",
       "Refroidissement : Thermalright Frozen Notte ARGB 360",
@@ -133,6 +139,7 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
     name: "Skill Issues",
     price: 2999.99,
     description: "Ryzen 7 9800X3D & RTX 5080",
+    detailedDescription: "Skill Issues représente l'absolue excellence technologique. Équipée du tout dernier Ryzen 7 9800X3D et de la révolutionnaire RTX 5080, cette machine de guerre repousse toutes les limites. Capable de faire tourner n'importe quel jeu en 4K avec ray tracing activé, elle s'adresse aux joueurs professionnels et aux enthusiastes qui exigent le summum de la performance. Les 64 GB de RAM haute performance garantissent une fluidité parfaite même dans les scenarios les plus exigeants.",
     components: [
       "CPU : AMD Ryzen 7 9800X3D",
       "Refroidissement : ARCTIC Liquid Freezer III 360 A-RGB",

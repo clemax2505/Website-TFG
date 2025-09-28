@@ -101,12 +101,6 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          
-          <div className="md:col-span-2 lg:col-span-1 text-center lg:text-left">
-            <p className="text-xs text-gray-400 mt-8 lg:mt-0">
-              © 2024 The Gaming Forge.<br/>Tous droits réservés.
-            </p>
-          </div>
         </div>
       </div>
     </footer>

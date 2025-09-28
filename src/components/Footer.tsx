@@ -6,55 +6,105 @@ const Footer = () => {
   return (
     <footer className="bg-forge-dark mt-auto">
       <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
-          <div className="sm:col-span-2 lg:col-span-1">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8">
+          <div className="md:col-span-2 lg:col-span-1">
             <h3 className="text-forge-orange font-bold mb-4">The Gaming Forge</h3>
-            <p className="text-gray-400">
+            <p className="text-gray-400 text-sm">
               Votre partenaire de confiance pour tous vos besoins en PC gaming
             </p>
           </div>
           
-          <div>
+          <div className="lg:col-span-1">
             <h3 className="text-forge-orange font-bold mb-4">Contact</h3>
-            <ul className="space-y-2 text-gray-400">
+            <ul className="space-y-2 text-gray-400 text-sm">
               <li>clementmontagepc@gmail.com</li>
               <li>Champagne Au Mont D'Or, Rhône</li>
             </ul>
+            <div className="mt-4">
+              <h4 className="text-forge-orange font-bold mb-2">Liens Utiles</h4>
+              <ul className="space-y-1">
+                <li><Link to="/contact" className="text-gray-400 hover:text-forge-orange text-sm">Contact</Link></li>
+                <li><Link to="/services" className="text-gray-400 hover:text-forge-orange text-sm">Services</Link></li>
+              </ul>
+            </div>
           </div>
           
+          {/* Configurations PC sur 4 colonnes */}
           <div>
-            <h3 className="text-forge-orange font-bold mb-4">Liens Utiles</h3>
+            <h3 className="text-forge-orange font-bold mb-4">Config Gaming</h3>
             <ul className="space-y-2">
-              <li><Link to="/contact" className="text-gray-400 hover:text-forge-orange">Contact</Link></li>
-              <li><Link to="/services" className="text-gray-400 hover:text-forge-orange">Services</Link></li>
+              <li>
+                <Link to="/prebuilt/thebeginning" className="text-gray-400 hover:text-forge-orange text-sm block">
+                  The Beginning<br/>
+                  <span className="text-forge-orange font-semibold">800€</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/prebuilt/littleguy" className="text-gray-400 hover:text-forge-orange text-sm block">
+                  Little Guy<br/>
+                  <span className="text-forge-orange font-semibold">975€</span>
+                </Link>
+              </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-forge-orange font-bold mb-4">Configurations PC</h3>
+            <h3 className="text-forge-orange font-bold mb-4">Config Pro</h3>
             <ul className="space-y-2">
-              {allPrebuiltConfigs.map((config) => (
-                <li key={config.id}>
-                  <Link 
-                    to={`/prebuilt/${config.id}`} 
-                    className="text-gray-400 hover:text-forge-orange text-sm"
-                  >
-                    {config.name} - {Math.round(config.price)}€
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link to="/prebuilt/cheapy" className="text-gray-400 hover:text-forge-orange text-sm block">
+                  Cheapy<br/>
+                  <span className="text-forge-orange font-semibold">1150€</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/prebuilt/ares" className="text-gray-400 hover:text-forge-orange text-sm block">
+                  Ares<br/>
+                  <span className="text-forge-orange font-semibold">1500€</span>
+                </Link>
+              </li>
             </ul>
           </div>
           
-          <div className="sm:col-span-2 lg:col-span-1">
-            <h3 className="text-forge-orange font-bold mb-4">Suivez-nous</h3>
-            <div className="flex space-x-4">
+          <div>
+            <h3 className="text-forge-orange font-bold mb-4">Config Elite</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/prebuilt/thelegend" className="text-gray-400 hover:text-forge-orange text-sm block">
+                  The Legend<br/>
+                  <span className="text-forge-orange font-semibold">1700€</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/prebuilt/2kking" className="text-gray-400 hover:text-forge-orange text-sm block">
+                  2K King<br/>
+                  <span className="text-forge-orange font-semibold">2000€</span>
+                </Link>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 className="text-forge-orange font-bold mb-4">Config Ultra</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/prebuilt/skillissues" className="text-gray-400 hover:text-forge-orange text-sm block">
+                  Skill Issues<br/>
+                  <span className="text-forge-orange font-semibold">3000€</span>
+                </Link>
+              </li>
+            </ul>
+            <div className="mt-6">
+              <h4 className="text-forge-orange font-bold mb-2">Suivez-nous</h4>
               <a href="https://www.instagram.com/the_gaming_forge/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-forge-orange">
-                <Instagram className="w-6 h-6" />
+                <Instagram className="w-5 h-5" />
               </a>
             </div>
-            <p className="mt-4 text-sm text-gray-400">
-              © 2024 The Gaming Forge. Tous droits réservés.
+          </div>
+          
+          <div className="md:col-span-2 lg:col-span-1 text-center lg:text-left">
+            <p className="text-xs text-gray-400 mt-8 lg:mt-0">
+              © 2024 The Gaming Forge.<br/>Tous droits réservés.
             </p>
           </div>
         </div>

@@ -60,10 +60,29 @@ const PreBuiltPCCard = ({ config }: PreBuiltPCCardProps) => {
           <div className="text-center">
             <span className="text-3xl font-bold text-forge-orange">{config.price}€</span>
           </div>
-          <p className="text-gray-400 text-center">{config.description}</p>
+          
+          {/* Description box */}
+          <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-4 rounded-lg border border-gray-700">
+            <h4 className="text-sm font-semibold text-forge-orange mb-2">Configuration</h4>
+            <p className="text-gray-300 text-sm mb-3">{config.description}</p>
+            <div className="space-y-1 text-xs text-gray-400">
+              {config.components.slice(0, 3).map((component, index) => (
+                <div key={index} className="flex items-center">
+                  <span className="text-forge-orange mr-2">•</span>
+                  {component}
+                </div>
+              ))}
+              {config.components.length > 3 && (
+                <div className="text-gray-500 italic">
+                  +{config.components.length - 3} autres composants...
+                </div>
+              )}
+            </div>
+          </div>
+          
           <div className="flex flex-col gap-2">
             <Button className="w-full bg-forge-orange hover:bg-forge-red transition-colors">
-              Voir les composants
+              Voir la configuration complète
             </Button>
           </div>
         </CardContent>

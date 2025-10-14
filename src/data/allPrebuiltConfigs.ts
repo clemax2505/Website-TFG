@@ -7,7 +7,7 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
     name: "The Beginning",
     price: 849.95,
     description: "Ryzen 5 5600 & RX 7600",
-    detailedDescription: "Un PC qui envoie du lourd dès le départ : Ryzen 5 5600, 16 Go de RAM et une RX 6650 XT prête à faire tourner tes jeux en 1080p ultra sans broncher. Avec son SSD NVMe d’1 To, tes chargements fileront plus vite que ton pote qui ragequit. Bref, une machine fiable, puissante et qui ne vide pas ton compte en banque.",
+    detailedDescription: "Le parfait premier pas dans le monde du gaming sérieux ! Avec un Ryzen 5 5600 et une RX 7600, tu profites de graphismes fluides en 1080p sans te ruiner. Ses 16 Go de RAM et son SSD NVMe d’1 To assurent vitesse et réactivité, pendant que le look RGB met l’ambiance. Bref, une config prête à te faire dire : “Et ce n'est que le début...”",
     components: [
       "CPU : AMD Ryzen 5 5600",
       "Refroidissement :Thermalright Assassin X Refined SE RGB",
@@ -29,7 +29,7 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
     name: "Little Guy",
     price: 999.92,
     description: "Ryzen 5 7500F & RTX 5060 8GB",
-    detailedDescription: "Ne te fie pas à son nom, ce “petit gars” cache un Ryzen 5 7500F et 32 Go de RAM DDR5 ultra rapides. Couplé à une RX 6650 XT, il te balance du gaming 1080p/1440p sans transpirer. Avec son SSD NVMe de 1 To, tes jeux se lancent avant même que tu aies le temps d’attraper ta boisson. Bref, un PC gamer compact, costaud et prêt à t’accompagner longtemps.",
+    detailedDescription: "Ce “petit gars” a de la patate ! Avec un Ryzen 5 7500F et une RTX 5060, il fait tourner tous tes jeux en 1080p ultra sans broncher. Ses 32 Go de DDR5 et son SSD NVMe d’1 To assurent une fluidité royale, même avec 15 applis ouvertes. Compact, stylé, et plus rapide que ton reflexe sur Alt+F4.",
     components: [
       "CPU : AMD Ryzen 5 7500F",
       "Refroidissement : Thermalright Assassin X Refined SE RGB",
@@ -51,7 +51,7 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
     name: "Cheapy",
     price: 1149.95,
     description: "Ryzen 5 7600X & RX 9060 XT",
-    detailedDescription: "Ne te laisse pas berner par son nom : ce PC a tout sauf l’air “cheap”. Avec un Ryzen 5 7600X et une RX 6750 XT, tu joues en 1440p ultra smooth, et ses 32 Go de DDR5 assurent que rien ne rame (sauf toi le lundi matin). Ajoute un SSD NVMe d’1 To et un boîtier MSI stylé, et tu obtiens une machine taillée pour le gaming costaud sans exploser ton portefeuille.",
+    detailedDescription: "Ne te fie pas à son nom : y’a rien de “cheap” ici. Le Ryzen 5 7600X et la RX 9060 XT envoient du lourd pour un gaming 1440p ultra fluide. Avec 32 Go de DDR5 et un SSD NVMe d’1 To, tout démarre avant même que t’aies fini ton café. Bref, un PC qui prouve qu’on peut être puissant sans exploser son budget.",
     components: [
       "CPU : AMD Ryzen 5 7600X",
       "Refroidissement : Thermalright Assassin X Refined SE RGB",
@@ -73,7 +73,7 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
     name: "Ares",
     price: 1475.99,
     description: "Ryzen 5 9600X & RTX 5060 Ti",
-    detailedDescription: "Avec son Ryzen 7 7700 et sa RX 7800 XT, Ares est un vrai dieu de la guerre vidéoludique : 1440p ultra fluide, 4K sans sourciller, et 32 Go de DDR5 qui font tourner tes applis comme des papillons. Son SSD NVMe de 2 To avale tes jeux aussi vite qu’un grec une pita. Bref, un PC gamer puissant, stylé et prêt à dominer le champ de bataille numérique.",
+    detailedDescription: "Ares ne plaisante pas : Ryzen 5 9600X, RTX 5060 Ti et 32 Go de DDR5, c’est le combo parfait pour dominer le champ de bataille en 1440p. Son SSD NVMe de 2 To charge tes jeux à la vitesse de la lumière, et le refroidissement ARGB garde le tout au frais avec style. Un vrai guerrier du gaming, prêt à livrer la guerre sainte contre les lags.",
     components: [
       "CPU : AMD Ryzen 5 9600X",
       "Refroidissement : Thermalright Frozen Notte ARGB 240",
@@ -96,7 +96,7 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
     name: "The legend",
     price: 1749.95,
     description: "Ryzen 5 7700X & RX 9070",
-    detailedDescription: "Avec un Ryzen 7 7700, une RX 9070 et un watercooling 360 mm, ce PC porte bien son nom : une vraie légende du gaming. 1440p ultra ? Trop facile. 4K ? Il te dit “même pas peur”. Avec 32 Go de DDR5 et 2 To de SSD NVMe, tu installes toute ta bibliothèque Steam sans réfléchir. Bref, une machine qui transforme chaque partie en épopée.",
+    detailedDescription: "Son nom dit tout : The Legend est taillé pour la gloire. Entre le Ryzen 7 7700X, la RX 9070 et 32 Go de DDR5, tu peux oublier les compromis, 1440p ou 4K, tout passe crème. Son watercooling 360 mm garde la bête au frais, pendant que le design RGB brille plus fort que ton KD. Une machine mythique, pour des performances légendaires.",
     components: [
       "CPU : AMD Ryzen 5 7700X",
       "Refroidissement : Corsair NAUTILUS 360 RS ARGB",
@@ -118,7 +118,7 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
     name: "2K King",
     price: 2199.99,
     description: "Ryzen 7 7800X3D & RTX 5070 Ti",
-    detailedDescription: "Ce roi du 1440p trône avec un Ryzen 7 7800X3D et une RX 7900 XT prête à écraser tout ce qui bouge. Avec 32 Go de DDR5 et 2 To de SSD NVMe ultra rapide, tu as de la place pour ton royaume entier (oui, même les 200 Go de Warzone). Et grâce au watercooling 360 mm, Sa Majesté reste au frais, même en pleine bataille.",
+    detailedDescription: "Le roi du 1440p trône ici, couronne vissée sur un Ryzen 7 7800X3D et un RTX 5070 Ti prêt à tout écraser. Avec 32 Go de DDR5 et un SSD NVMe Samsung 990 Pro de 2 To, la vitesse, c’est son royaume. Le refroidissement ARCTIC 360 garde le trône au frais, même en pleine guerre de FPS. Bref, longue vie au roi du 2K.",
     components: [
       "CPU : AMD Ryzen 7 7800X3D",
       "Refroidissement : ARCTIC Liquid Freezer III Pro A-RGB 360",
@@ -140,7 +140,7 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
     name: "Skill Issues",
     price: 3324.49,
     description: "Ryzen 7 9800X3D & RTX 5080",
-    detailedDescription: "Si tu rates tes headshots avec un Ryzen 7 9800X3D et une RTX 5080, c’est clairement pas la faute du PC. Avec 64 Go de DDR5, un SSD NVMe 2 To ultra rapide et un refroidissement liquide de compétition, cette bête est faite pour le 4K ultra, le streaming et même la conquête spatiale. Bref, la seule “skill issue” ici… c’est toi.",
+    detailedDescription: "Si tu perds avec ça, c’est clairement pas la faute du matos. Le Ryzen 7 9800X3D et la RTX 5080 forment un duo infernal taillé pour le 4K ultra (et même au-delà). 64 Go de DDR5, un SSD NVMe ultra-rapide et un refroidissement Corsair haut de gamme assurent des perfs monstrueuses et un silence royal. En clair : t’as plus d’excuse, c’est toi le problème.",
     components: [
       "CPU : AMD Ryzen 7 9800X3D",
       "Refroidissement : Corsair iCUE LINK TITAN 360 RX RGB",

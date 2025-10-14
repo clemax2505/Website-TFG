@@ -49,7 +49,7 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
   {
     id: "cheapy",
     name: "Cheapy",
-    price: 1149.95,
+    price: 1149.99,
     description: "Ryzen 5 7600X & RX 9060 XT",
     detailedDescription: "Ne te fie pas à son nom : y’a rien de “cheap” ici. Le Ryzen 5 7600X et la RX 9060 XT envoient du lourd pour un gaming 1440p ultra fluide. Avec 32 Go de DDR5 et un SSD NVMe d’1 To, tout démarre avant même que t’aies fini ton café. Bref, un PC qui prouve qu’on peut être puissant sans exploser son budget.",
     components: [

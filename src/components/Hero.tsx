@@ -60,7 +60,7 @@ const Hero = memo(() => {
               <br></br><br></br>PC Gaming Sur Mesure<br></br><br></br>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-4 max-w-4xl mx-auto">
-              <strong>The Gaming Forge</strong> - Passionné de hardware depuis 2019 ans avec plusieurs dizaines d'interventions réalisées. 
+              <strong>The Gaming Forge</strong> - Passionné de hardware depuis 2019 avec plusieurs dizaines d'interventions réalisées. 
               Je crée votre PC gaming idéal, adapté à votre budget et à vos jeux favoris. Découvrez mes <Link to="/portfolio" className="text-forge-orange hover:text-forge-red underline">réalisations précédentes</Link> et mes <Link to="/services" className="text-forge-orange hover:text-forge-red underline">services spécialisés</Link>.
             </p>
             <p className="text-lg text-gray-400 mb-8 max-w-3xl mx-auto">

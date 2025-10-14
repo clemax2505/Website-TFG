@@ -3,7 +3,6 @@ import { lazy, Suspense } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import LoadingSpinner from "./LoadingSpinner";
-import PreBuiltPCs from "@/pages/PreBuiltPCs";
 
 // Lazy load pages
 const Index = lazy(() => import("@/pages/Index"));
@@ -16,6 +15,7 @@ const Maintenance = lazy(() => import("@/pages/Maintenance"));
 const LaptopService = lazy(() => import("@/pages/LaptopService"));
 const Suggestions = lazy(() => import("@/pages/Suggestions"));
 const PCAssembly = lazy(() => import("@/pages/PCAssembly"));
+const PreBuiltPCs = lazy(() => import("@/pages/PreBuiltPCs"));
 const PCConfigDetails = lazy(() => import("@/pages/PCConfigDetails"));
 
 const AppRoutes = () => {
@@ -104,7 +104,14 @@ const AppRoutes = () => {
             </Suspense>
           } 
         />
-        <Route path="/prebuilt" element={<PreBuiltPCs />} />
+        <Route 
+          path="/prebuilt" 
+          element={
+            <Suspense fallback={<LoadingSpinner />}>
+              <PreBuiltPCs />
+            </Suspense>
+          } 
+        />
         <Route 
           path="/prebuilt/:id" 
           element={

@@ -13,7 +13,7 @@ const advantages = [
   {
     icon: Zap,
     title: "Expérience Pratique",
-    description: "4 ans d'expérience et plus de 10 montages réalisés m'ont permis de maîtriser l'assemblage et l'optimisation de PC gaming."
+    description: "5+ ans d'expérience et plusieurs dizaines d'interventions en tout genre réalisées m'ont permis de maîtriser l'assemblage et l'optimisation de PC gaming."
   },
   {
     icon: Users,
@@ -54,7 +54,7 @@ const WhyChooseUs = memo(() => {
         
         <div className="text-center mt-12">
           <p className="text-gray-300 mb-6">
-            Prêt à commencer votre projet ? <Link to="/quote" className="text-forge-orange hover:text-forge-red underline">Demandez un devis</Link> ou consultez mon <Link to="/portfolio" className="text-forge-orange hover:text-forge-red underline">portfolio</Link> pour voir mes réalisations précédentes.
+            Prêt à commencer votre projet ? <Link to="/quote" className="text-forge-orange hover:text-forge-red underline">Demandez un PC sur mesure</Link> ou consultez mon <Link to="/portfolio" className="text-forge-orange hover:text-forge-red underline">portfolio</Link> pour voir mes réalisations précédentes.
           </p>
         </div>
       </div>

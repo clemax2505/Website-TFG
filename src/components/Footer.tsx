@@ -36,13 +36,13 @@ const Footer = () => {
               <li>
                 <Link to="/prebuilt/thebeginning" className="text-gray-400 hover:text-forge-orange text-sm block">
                   The Beginning<br/>
-                  <span className="text-forge-orange font-semibold">800€</span>
+                  <span className="text-forge-orange font-semibold">850€</span>
                 </Link>
               </li>
               <li>
                 <Link to="/prebuilt/littleguy" className="text-gray-400 hover:text-forge-orange text-sm block">
                   Little Guy<br/>
-                  <span className="text-forge-orange font-semibold">975€</span>
+                  <span className="text-forge-orange font-semibold">1000€</span>
                 </Link>
               </li>
             </ul>
@@ -60,7 +60,7 @@ const Footer = () => {
               <li>
                 <Link to="/prebuilt/ares" className="text-gray-400 hover:text-forge-orange text-sm block">
                   Ares<br/>
-                  <span className="text-forge-orange font-semibold">1500€</span>
+                  <span className="text-forge-orange font-semibold">1475€</span>
                 </Link>
               </li>
             </ul>
@@ -72,13 +72,13 @@ const Footer = () => {
               <li>
                 <Link to="/prebuilt/thelegend" className="text-gray-400 hover:text-forge-orange text-sm block">
                   The Legend<br/>
-                  <span className="text-forge-orange font-semibold">1700€</span>
+                  <span className="text-forge-orange font-semibold">1750€</span>
                 </Link>
               </li>
               <li>
                 <Link to="/prebuilt/2kking" className="text-gray-400 hover:text-forge-orange text-sm block">
                   2K King<br/>
-                  <span className="text-forge-orange font-semibold">2000€</span>
+                  <span className="text-forge-orange font-semibold">2200€</span>
                 </Link>
               </li>
             </ul>
@@ -90,7 +90,7 @@ const Footer = () => {
               <li>
                 <Link to="/prebuilt/skillissues" className="text-gray-400 hover:text-forge-orange text-sm block">
                   Skill Issues<br/>
-                  <span className="text-forge-orange font-semibold">3000€</span>
+                  <span className="text-forge-orange font-semibold">3325€</span>
                 </Link>
               </li>
             </ul>

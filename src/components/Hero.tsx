@@ -86,7 +86,7 @@ const Hero = memo(() => {
                 <Card className="glass-card hover:scale-105 transition-transform duration-300 cursor-pointer">
                   <CardContent className="p-8 text-center">
                     <h2 className="text-2xl font-bold text-forge-orange mb-4">PC Gaming Pré-configurés</h2>
-                    <p className="text-gray-400">Découvrez ma sélection de configurations gaming optimisées - Du gaming occasionnel au très haut de gamme. Besoin d'aide pour choisir ? <Link to="/contact" className="text-forge-orange hover:text-forge-red underline">Contactez-moi</Link> pour des conseils personnalisés.</p>
+                    <p className="text-gray-400">Découvrez ma sélection de configurations gaming optimisées - Du gaming occasionnel au très haut de gamme. Besoin d'aide pour choisir ? Contactez-moi pour des conseils personnalisés.</p>
                   </CardContent>
                 </Card>
               </Link>

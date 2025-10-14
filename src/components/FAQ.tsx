@@ -24,7 +24,7 @@ const faqData: FAQItem[] = [
   },
   {
     question: "Quel budget prévoir pour un bon PC gaming ?",
-    answer: "Cela dépend de vos besoins ! Un PC gaming correct commence vers 700-800€. Pour du milieu de gamme, comptez 1000-1500€, et pour du haut de gamme 1800€+. Je m'adapte à tous les budgets. Demandez un devis personnalisé pour votre projet."
+    answer: "Cela dépend de vos besoins ! Un PC gaming correct commence vers 700-800€. Pour du milieu de gamme, comptez 1000-1500€, et pour du haut de gamme 1800€+. Je m'adapte à tous les budgets. Demandez un PC sur mesure pour votre projet."
   },
   {
     question: "Faites-vous de la maintenance de PC gaming ?",

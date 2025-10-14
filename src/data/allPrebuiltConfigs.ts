@@ -20,7 +20,7 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
     ],
     images: {
       cpu: "/pc-parts/cpu/R5 5600.png",
-      gpu: "/pc-parts/gpu/6650XT.png",
+      gpu: "/pc-parts/gpu/7600 GIGABYTE GAMING OC.png",
       case: "/pc-parts/case/tecware forge M2.png"
     }
   },
@@ -28,7 +28,7 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
     id: "littleguy",
     name: "Little Guy",
     price: 999.92,
-    description: "Ryzen 5 7500F & RTX 5060",
+    description: "Ryzen 5 7500F & RTX 5060 8GB",
     detailedDescription: "Ne te fie pas à son nom, ce “petit gars” cache un Ryzen 5 7500F et 32 Go de RAM DDR5 ultra rapides. Couplé à une RX 6650 XT, il te balance du gaming 1080p/1440p sans transpirer. Avec son SSD NVMe de 1 To, tes jeux se lancent avant même que tu aies le temps d’attraper ta boisson. Bref, un PC gamer compact, costaud et prêt à t’accompagner longtemps.",
     components: [
       "CPU : AMD Ryzen 5 7500F",
@@ -42,7 +42,7 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
     ],
     images: {
       cpu: "/pc-parts/cpu/R5 7500F.png",
-      gpu: "/pc-parts/gpu/6650XT.png",
+      gpu: "/pc-parts/gpu/5060 8GB MSI VENTUS 2X.png",
       case: "/pc-parts/case/msi mag forge 100r noir.png"
     }
   },
@@ -63,8 +63,8 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
       "PSU : MSI MAG A750BN",
     ],
     images: {
-      cpu: "/pc-parts/cpu/R5 7500F.png",
-      gpu: "/pc-parts/gpu/6750XT.png",
+      cpu: "/pc-parts/cpu/R5 7600X.png",
+      gpu: "/pc-parts/gpu/9060 XT GIGABYTE GAMING OC.png",
       case: "/pc-parts/case/msi mag forge 112r noir.png"
     }
   },
@@ -86,8 +86,8 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
       "Ventilation : 1 ventilateur AR120 en extraction",
     ],
     images: {
-      cpu: "/pc-parts/cpu/R7 7700.png",
-      gpu: "/pc-parts/gpu/6750XT.png",
+      cpu: "/pc-parts/cpu/R5 9600X.png",
+      gpu: "/pc-parts/gpu/5060 Ti PNY.png",
       case: "/pc-parts/case/corsair 3000d rgb airflow.png"
     }
   },
@@ -131,7 +131,7 @@ export const allPrebuiltConfigs: PCConfigDetailed[] = [
     ],
     images: {
       cpu: "/pc-parts/cpu/R7 7800X3D.png",
-      gpu: "/pc-parts/gpu/7900XT.png",
+      gpu: "/pc-parts/gpu/5070 tI ZOTAC SOLID SFF.png",
       case: "/pc-parts/case/fractal design pop xl air rgb.png"
     }
   },

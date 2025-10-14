@@ -12,7 +12,7 @@ const About = memo(() => {
             À Propos de The Gaming Forge
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Étudiant passionné de 19 ans, expert en hardware gaming depuis 4 ans
+            Étudiant passionné de 19 ans, expert en hardware gaming depuis 2019
           </p>
         </div>
         
@@ -22,13 +22,12 @@ const About = memo(() => {
               <h3 className="text-2xl font-bold mb-4 text-forge-orange">Mon Parcours</h3>
               <p className="text-gray-300 mb-4">
                 Passionné de technologie depuis mon adolescence, j'ai commencé à m'intéresser au hardware 
-                il y a 4 ans. Depuis, j'ai réalisé plus de 10 montages de tous types, du PC gaming 
+                en 2019. Depuis, j'ai réalisé plusieurs dizaines de montages de tous types, du PC gaming 
                 budget au setup haut de gamme. Chaque projet est une nouvelle opportunité d'apprendre 
                 et de perfectionner mes compétences. Consultez mon <Link to="/portfolio" className="text-forge-orange hover:text-forge-red underline">portfolio</Link> pour voir mes réalisations.
               </p>
               <ul className="text-gray-300 space-y-2">
-                <li>• 4 ans d'expérience en hardware</li>
-                <li>• Plus de 10 montages réalisés</li>
+                <li>• Depuis 2019 !</li>
                 <li>• <Link to="/prebuilt" className="text-forge-orange hover:text-forge-red underline">Configurations gaming</Link> optimisées</li>
                 <li>• Suivi personnalisé de chaque projet</li>
               </ul>
@@ -40,12 +39,11 @@ const About = memo(() => {
               <h3 className="text-2xl font-bold mb-4 text-forge-orange">Ma Philosophie</h3>
               <p className="text-gray-300 mb-4">
                 Je crois que chaque gamer mérite une machine parfaitement adaptée à ses besoins. 
-                Mon approche se base sur l'écoute, le conseil personnalisé et un assemblage 
+                Mon approche se base sur l'écoute, le <Link to="/quote" className="text-forge-orange hover:text-forge-red underline">conseil personnalisé</Link> et un assemblage 
                 minutieux. Étant moi-même gamer, je comprends l'importance d'avoir un PC 
                 performant et fiable. Découvrez tous mes <Link to="/services" className="text-forge-orange hover:text-forge-red underline">services</Link> disponibles.
               </p>
               <ul className="text-gray-300 space-y-2">
-                <li>• <Link to="/quote" className="text-forge-orange hover:text-forge-red underline">Conseil personnalisé</Link> et à l'écoute</li>
                 <li>• Sélection rigoureuse des composants</li>
                 <li>• <Link to="/pc-assembly" className="text-forge-orange hover:text-forge-red underline">Assemblage soigné</Link> et testé</li>
                 <li>• Prix transparents et accessibles</li>

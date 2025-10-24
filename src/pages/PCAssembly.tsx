@@ -9,16 +9,21 @@ const PCAssembly = () => {
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <main className="container mx-auto px-4 py-24 flex-grow">
-          <h1 className="text-4xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-forge-orange to-forge-red">
-            Service de Montage PC <br></br><br></br>
-          </h1>
-          <p className="text-xl text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-            Choisissez votre forfait et listez vos composants pour faire une demande personnalisée
-          </p>
+          <div className="text-center mb-16 space-y-4">
+            <h1 className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-forge-orange via-forge-red to-forge-orange animate-[gradient_6s_ease-in-out_infinite] bg-[length:200%_200%]">
+              Service de Montage PC
+            </h1>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Choisissez votre forfait et listez vos composants pour faire une demande personnalisée
+            </p>
+          </div>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <PCAssemblyForm />
-            <p className="text-sm text-gray-400 mt-4 text-center">Des frais de déplacement peuvent être appliqués selon votre localisation.</p>
+            <p className="text-sm text-muted-foreground mt-6 text-center flex items-center justify-center gap-2">
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-forge-orange"></span>
+              Des frais de déplacement peuvent être appliqués selon votre localisation
+            </p>
           </div>
         </main>
         <Footer />

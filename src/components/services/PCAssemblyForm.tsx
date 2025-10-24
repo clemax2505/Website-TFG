@@ -80,7 +80,7 @@ Ventilateurs supplémentaires: ${data.fans || 'Aucun'}`;
             <div className="space-y-4">
               <div className="flex justify-between items-start">
                 <h3 className="text-xl font-bold">Basic</h3>
-                <span className="text-2xl font-bold text-forge-orange">35€</span>
+                <span className="text-2xl font-bold text-forge-orange">50€</span>
               </div>
               <ul className="space-y-2 text-sm text-muted-foreground text-left">
                 <li className="flex items-start gap-2">
@@ -93,7 +93,7 @@ Ventilateurs supplémentaires: ${data.fans || 'Aucun'}`;
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-forge-orange mt-1">✓</span>
-                  <span>Mise à jour du bios + XMP</span>
+                  <span>PC vierge, tu mets l'OS que tu veux</span>
                 </li>
               </ul>
             </div>
@@ -114,7 +114,7 @@ Ventilateurs supplémentaires: ${data.fans || 'Aucun'}`;
             <div className="space-y-4">
               <div className="flex justify-between items-start">
                 <h3 className="text-xl font-bold">Standard</h3>
-                <span className="text-2xl font-bold text-forge-orange">45€</span>
+                <span className="text-2xl font-bold text-forge-orange">70€</span>
               </div>
               <ul className="space-y-2 text-sm text-muted-foreground text-left">
                 <li className="flex items-start gap-2">
@@ -153,7 +153,7 @@ Ventilateurs supplémentaires: ${data.fans || 'Aucun'}`;
             <div className="space-y-4">
               <div className="flex justify-between items-start">
                 <h3 className="text-xl font-bold">Premium</h3>
-                <span className="text-2xl font-bold text-forge-orange">75€</span>
+                <span className="text-2xl font-bold text-forge-orange">90€</span>
               </div>
               <ul className="space-y-2 text-sm text-muted-foreground text-left">
                 <li className="flex items-start gap-2">
@@ -178,7 +178,7 @@ Ventilateurs supplémentaires: ${data.fans || 'Aucun'}`;
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-forge-orange mt-1">✓</span>
-                  <span>Installation des logiciels de gestion</span>
+                  <span>Optimisation + Courbes de puissance des ventilo</span>
                 </li>
               </ul>
             </div>

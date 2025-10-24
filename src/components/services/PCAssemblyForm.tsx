@@ -198,7 +198,7 @@ Ventilateurs supplémentaires: ${data.fans || 'Aucun'}`;
               <Label className="text-sm font-medium">{component}</Label>
               <Input
                 name={component.toLowerCase()}
-                placeholder={`Ex: AMD Ryzen 7 5800X`}
+                placeholder={`Ton composant`}
                 className="transition-all duration-200 focus:ring-2 focus:ring-forge-orange"
               />
             </div>

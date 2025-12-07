@@ -14,7 +14,7 @@ Notre objectif est de vous fournir des solutions gaming ou professionnelle adapt
 
 ## Accéder au site
 
-**URL**: https://thegamingforge.com
+**URL**: https://www.the-gaming-forge.fr
 
 ## Informations techniques
 
